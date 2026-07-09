@@ -1,0 +1,5 @@
+.env
+1.Reactor_Agent/
+*.mp4
+__pycache__/
+.claude/settings.local.json

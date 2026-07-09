@@ -1,0 +1,314 @@
+[
+  {
+    "triple": [
+      "cathode flow plate",
+      "has",
+      "serpentine flow field"
+    ],
+    "text_evidence": "This is the assembly process of this reactor. Step 1, this is the cathode flow plate. It has a serpentine flow field. Step 2, this is the cathode electrode. The cathode is prepared",
+    "timestamp": [
+      0.0,
+      22.56
+    ]
+  },
+  {
+    "triple": [
+      "cathode electrode",
+      "prepared by",
+      "spray coating copper oxide catalysis onto H2C3 carbon paper"
+    ],
+    "text_evidence": "has a serpentine flow field. Step 2, this is the cathode electrode. The cathode is prepared by spray coating copper oxide catalysis onto H2C3 carbon paper. The catalysis loading is",
+    "timestamp": [
+      9.16,
+      32.24
+    ]
+  },
+  {
+    "triple": [
+      "catalysis loading",
+      "is",
+      "3 micrometer per centimeter square"
+    ],
+    "text_evidence": "by spray coating copper oxide catalysis onto H2C3 carbon paper. The catalysis loading is 3 micrometer per centimeter square. Step 3, this is the cathode gasket. The gasket thickness",
+    "timestamp": [
+      22.56,
+      55.88
+    ]
+  },
+  {
+    "triple": [
+      "cathode gasket",
+      "has thickness",
+      "0.2 millimeter"
+    ],
+    "text_evidence": "3 micrometer per centimeter square. Step 3, this is the cathode gasket. The gasket thickness is 0.2 millimeter and the indoor window size is 1 centimeter by 1 centimeter.",
+    "timestamp": [
+      32.24,
+      63.6
+    ]
+  },
+  {
+    "triple": [
+      "indoor window size",
+      "is",
+      "1 centimeter by 1 centimeter"
+    ],
+    "text_evidence": "is 0.2 millimeter and the indoor window size is 1 centimeter by 1 centimeter.",
+    "timestamp": [
+      55.88,
+      63.6
+    ]
+  },
+  {
+    "triple": [
+      "alkaline ion exchange membrane",
+      "placement",
+      "Step 4"
+    ],
+    "text_evidence": "Step 4, we will place an alkaline ion exchange membrane. This membrane is alkaline ion exchange",
+    "timestamp": [
+      85.88,
+      102.52
+    ]
+  },
+  {
+    "triple": [
+      "alkaline ion exchange membrane",
+      "material specification",
+      "cysteine X3760 bioform dioxide materials"
+    ],
+    "text_evidence": "membrane. The membrane is cysteine X3760 bioform dioxide materials. Step 5, this is",
+    "timestamp": [
+      102.52,
+      121.16
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "thickness",
+      "10 millimeter"
+    ],
+    "text_evidence": "the middle chamber. The chamber thickness is 10 millimeter and the window size is also",
+    "timestamp": [
+      121.16,
+      130.6
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "window size",
+      "1 by 1 centimeter"
+    ],
+    "text_evidence": "the middle chamber. The chamber thickness is 10 millimeter and the window size is also 1 by 1 centimeter. The chamber is used to hold the solid electrolyte. This blue one",
+    "timestamp": [
+      121.16,
+      139.72
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "function",
+      "hold the solid electrolyte"
+    ],
+    "text_evidence": "1 by 1 centimeter. The chamber is used to hold the solid electrolyte. This blue one",
+    "timestamp": [
+      130.6,
+      139.72
+    ]
+  },
+  {
+    "triple": [
+      "solid electrolyte",
+      "material specification",
+      "strong acid cation exchange resin beads"
+    ],
+    "text_evidence": "is solid electrolyte. The solid electrolyte is strong acid cation exchange resin beads",
+    "timestamp": [
+      139.72,
+      148.08
+    ]
+  },
+  {
+    "triple": [
+      "resin beads",
+      "particle size",
+      "600 to 800 micrometer"
+    ],
+    "text_evidence": "with a particle size of 600 to 800 micrometer. The resin beads are filled to fully occupy",
+    "timestamp": [
+      148.08,
+      156.52
+    ]
+  },
+  {
+    "triple": [
+      "resin beads",
+      "filled to occupy",
+      "middle chamber"
+    ],
+    "text_evidence": "the middle chamber.",
+    "timestamp": [
+      156.52,
+      181.2
+    ]
+  },
+  {
+    "triple": [
+      "anode gasket",
+      "placed",
+      "reactor"
+    ],
+    "text_evidence": "Step 6, we place this gasket. This is the anode gasket. The anode gasket thickness is",
+    "timestamp": [
+      181.2,
+      193.52
+    ]
+  },
+  {
+    "triple": [
+      "anode gasket",
+      "thickness",
+      "0.2 millimeter"
+    ],
+    "text_evidence": "Step 6, we place this gasket. This is the anode gasket. The anode gasket thickness is also 0.2 millimeter and the active window for this gasket is also 1 by 1 centimeter.",
+    "timestamp": [
+      181.2,
+      218.48
+    ]
+  },
+  {
+    "triple": [
+      "anode gasket",
+      "active window size",
+      "1 by 1 centimeter"
+    ],
+    "text_evidence": "also 0.2 millimeter and the active window for this gasket is also 1 by 1 centimeter.",
+    "timestamp": [
+      193.52,
+      218.48
+    ]
+  },
+  {
+    "triple": [
+      "anode side membrane",
+      "placed",
+      "reactor"
+    ],
+    "text_evidence": "Step 7, we place the anode side membrane.",
+    "timestamp": [
+      218.48,
+      228.52
+    ]
+  },
+  {
+    "triple": [
+      "anode side membrane",
+      "is",
+      "cation exchange membrane (CAM)"
+    ],
+    "text_evidence": "This is the anode side membrane. This is a cation exchange membrane or CAM. The membrane",
+    "timestamp": [
+      248.48,
+      259.6
+    ]
+  },
+  {
+    "triple": [
+      "anode side membrane",
+      "is",
+      "Nafion 117"
+    ],
+    "text_evidence": "is Nafion 117. Step 8, this is the anode. Number 8, this is the anode electrode. The anode",
+    "timestamp": [
+      259.6,
+      277.08
+    ]
+  },
+  {
+    "triple": [
+      "anode electrode",
+      "is prepared by",
+      "spray coating Pt/Ir catalysis onto H23C3 carbon paper"
+    ],
+    "text_evidence": "electrode is prepared by spray coating Pt/Ir catalysis onto H23C3 carbon paper. The catalyst",
+    "timestamp": [
+      277.12,
+      285.88
+    ]
+  },
+  {
+    "triple": [
+      "catalyst loading",
+      "is",
+      "2 milligram per centimeter square"
+    ],
+    "text_evidence": "loading is 2 milligram centimeter square and the actual area is also 1 by 1. Step 9, this",
+    "timestamp": [
+      285.88,
+      296.88
+    ]
+  },
+  {
+    "triple": [
+      "actual area",
+      "is",
+      "1 by 1"
+    ],
+    "text_evidence": "loading is 2 milligram centimeter square and the actual area is also 1 by 1. Step 9, this",
+    "timestamp": [
+      285.88,
+      296.88
+    ]
+  },
+  {
+    "triple": [
+      "anode flow plate",
+      "has",
+      "flow field"
+    ],
+    "text_evidence": "is the anode flow plate. It also has a flow field. Finally, after aligning all components,",
+    "timestamp": [
+      296.88,
+      324.88
+    ]
+  },
+  {
+    "triple": [
+      "electrode",
+      "assembly and tightening torque",
+      "0.3 newton meter"
+    ],
+    "text_evidence": "we will assemble and tighten the electrode using 0.3 newton meter.",
+    "timestamp": [
+      324.88,
+      337.88
+    ]
+  },
+  {
+    "triple": [
+      "cathode",
+      "feed gas",
+      "CO gas"
+    ],
+    "text_evidence": "OK, we will feed the cathode with a CO gas and we will feed the anode with 99W of hydrogen",
+    "timestamp": [
+      414.88,
+      439.38
+    ]
+  },
+  {
+    "triple": [
+      "anode",
+      "feed gas",
+      "99W of hydrogen plus 1% CO"
+    ],
+    "text_evidence": "OK, we will feed the cathode with a CO gas and we will feed the anode with 99W of hydrogen plus 1% CO.",
+    "timestamp": [
+      414.88,
+      446.38
+    ]
+  }
+]

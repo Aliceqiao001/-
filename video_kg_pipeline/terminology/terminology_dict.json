@@ -1,0 +1,10 @@
+{
+  "corrections": [
+    {"wrong": "Leven 117", "correct": "Nafion 117", "category": "membrane"},
+    {"wrong": "PT-Rosilium", "correct": "Pt/Ir", "category": "catalyst"}
+  ],
+  "unit_corrections": [
+    {"context_hint": "gasket thickness", "wrong_unit": "micrometer", "correct_unit": "millimeter"},
+    {"context_hint": "chamber thickness", "wrong_unit": "micrometer", "correct_unit": "millimeter"}
+  ]
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "index": 0,
+    "text": "This is the assembly process of this reactor. Step 1, this is the cathode flow plate. It",
+    "start_ts": 0.0,
+    "end_ts": 9.16,
+    "original_text": "This is the assembly process of this reactor. Step 1, this is the cathode flow plate. It"
+  },
+  {
+    "index": 1,
+    "text": "has a serpentine flow field. Step 2, this is the cathode electrode. The cathode is prepared",
+    "start_ts": 9.16,
+    "end_ts": 22.56,
+    "original_text": "has a serpentine flow field. Step 2, this is the cathode electrode. The cathode is prepared"
+  },
+  {
+    "index": 2,
+    "text": "by spray coating copper oxide catalysis onto H2C3 carbon paper. The catalysis loading is",
+    "start_ts": 22.56,
+    "end_ts": 32.24,
+    "original_text": "by spray coating copper oxide catalysis onto H2C3 carbon paper. The catalysis loading is"
+  },
+  {
+    "index": 3,
+    "text": "3 micrometer per centimeter square. Step 3, this is the cathode gasket. The gasket thickness",
+    "start_ts": 32.24,
+    "end_ts": 55.88,
+    "original_text": "3 micrometer per centimeter square. Step 3, this is the cathode gasket. The gasket thickness"
+  },
+  {
+    "index": 4,
+    "text": "is 0.2 millimeter and the indoor window size is 1 centimeter by 1 centimeter.",
+    "start_ts": 55.88,
+    "end_ts": 63.6,
+    "original_text": "is 0.2 micrometer and the indoor window size is 1 centimeter by 1 centimeter."
+  },
+  {
+    "index": 5,
+    "text": "Step 4, we will place an alkaline ion exchange membrane. This membrane is alkaline ion exchange",
+    "start_ts": 85.88,
+    "end_ts": 102.52,
+    "original_text": "Step 4, we will place an alkaline ion exchange membrane. This membrane is alkaline ion exchange"
+  },
+  {
+    "index": 6,
+    "text": "membrane. The membrane is cysteine X3760 bioform dioxide materials. Step 5, this is",
+    "start_ts": 102.52,
+    "end_ts": 121.16,
+    "original_text": "membrane. The membrane is cysteine X3760 bioform dioxide materials. Step 5, this is"
+  },
+  {
+    "index": 7,
+    "text": "the middle chamber. The chamber thickness is 10 millimeter and the window size is also",
+    "start_ts": 121.16,
+    "end_ts": 130.6,
+    "original_text": "the middle chamber. The chamber thickness is 10 micrometer and the window size is also"
+  },
+  {
+    "index": 8,
+    "text": "1 by 1 centimeter. The chamber is used to hold the solid electrolyte. This blue one",
+    "start_ts": 130.6,
+    "end_ts": 139.72,
+    "original_text": "1 by 1 centimeter. The chamber is used to hold the solid electrolyte. This blue one"
+  },
+  {
+    "index": 9,
+    "text": "is solid electrolyte. The solid electrolyte is strong acid cation exchange resin beads",
+    "start_ts": 139.72,
+    "end_ts": 148.08,
+    "original_text": "is solid electrolyte. The solid electrolyte is strong acid cation exchange resin beads"
+  },
+  {
+    "index": 10,
+    "text": "with a particle size of 600 to 800 micrometer. The resin beads are filled to fully occupy",
+    "start_ts": 148.08,
+    "end_ts": 156.52,
+    "original_text": "with a particle size of 600 to 800 micrometer. The resin beads are filled to fully occupy"
+  },
+  {
+    "index": 11,
+    "text": "the middle chamber.",
+    "start_ts": 156.52,
+    "end_ts": 181.2,
+    "original_text": "the middle chamber."
+  },
+  {
+    "index": 12,
+    "text": "Step 6, we place this gasket. This is the anode gasket. The anode gasket thickness is",
+    "start_ts": 181.2,
+    "end_ts": 193.52,
+    "original_text": "Step 6, we place this gasket. This is the anode gasket. The anode gasket thickness is"
+  },
+  {
+    "index": 13,
+    "text": "also 0.2 millimeter and the active window for this gasket is also 1 by 1 centimeter.",
+    "start_ts": 193.52,
+    "end_ts": 218.48,
+    "original_text": "also 0.2 micrometer and the active window for this gasket is also 1 by 1 centimeter."
+  },
+  {
+    "index": 14,
+    "text": "Step 7, we place the anode side membrane.",
+    "start_ts": 218.48,
+    "end_ts": 228.52,
+    "original_text": "Step 7, we place the anode side membrane."
+  },
+  {
+    "index": 15,
+    "text": "This is the anode side membrane. This is a cation exchange membrane or CAM. The membrane",
+    "start_ts": 248.48,
+    "end_ts": 259.6,
+    "original_text": "This is the anode side membrane. This is a cation exchange membrane or CAM. The membrane"
+  },
+  {
+    "index": 16,
+    "text": "is Nafion 117. Step 8, this is the anode. Number 8, this is the anode electrode. The anode",
+    "start_ts": 259.6,
+    "end_ts": 277.08,
+    "original_text": "is Leven 117. Step 8, this is the anode. Number 8, this is the anode electrode. The anode"
+  },
+  {
+    "index": 17,
+    "text": "electrode is prepared by spray coating Pt/Ir catalysis onto H23C3 carbon paper. The catalyst",
+    "start_ts": 277.12,
+    "end_ts": 285.88,
+    "original_text": "electrode is prepared by spray coating PT-Rosilium catalysis onto H23C3 carbon paper. The catalyst"
+  },
+  {
+    "index": 18,
+    "text": "loading is 2 milligram centimeter square and the actual area is also 1 by 1. Step 9, this",
+    "start_ts": 285.88,
+    "end_ts": 296.88,
+    "original_text": "loading is 2 milligram centimeter square and the actual area is also 1 by 1. Step 9, this"
+  },
+  {
+    "index": 19,
+    "text": "is the anode flow plate. It also has a flow field. Finally, after aligning all components,",
+    "start_ts": 296.88,
+    "end_ts": 324.88,
+    "original_text": "is the anode flow plate. It also has a flow field. Finally, after aligning all components,"
+  },
+  {
+    "index": 20,
+    "text": "we will assemble and tighten the electrode using 0.3 newton meter.",
+    "start_ts": 324.88,
+    "end_ts": 337.88,
+    "original_text": "we will assemble and tighten the electrode using 0.3 newton meter."
+  },
+  {
+    "index": 21,
+    "text": "Step 10, this is the anode.",
+    "start_ts": 354.88,
+    "end_ts": 361.88,
+    "original_text": "Step 10, this is the anode."
+  },
+  {
+    "index": 22,
+    "text": "OK, we will feed the cathode with a CO gas and we will feed the anode with 99W of hydrogen",
+    "start_ts": 414.88,
+    "end_ts": 439.38,
+    "original_text": "OK, we will feed the cathode with a CO gas and we will feed the anode with 99W of hydrogen"
+  },
+  {
+    "index": 23,
+    "text": "plus 1% CO.",
+    "start_ts": 439.38,
+    "end_ts": 446.38,
+    "original_text": "plus 1% CO."
+  }
+]
