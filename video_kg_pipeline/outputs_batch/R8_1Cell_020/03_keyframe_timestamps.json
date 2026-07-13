@@ -1,0 +1,689 @@
+[
+  {
+    "timestamp": 0.0,
+    "sources": [
+      "keyword"
+    ],
+    "triple": null,
+    "text_evidence": "Okay, for this reactor, compared to the last reactor, the key change in this reactor is",
+    "matched_keywords": [
+      "change"
+    ]
+  },
+  {
+    "timestamp": 13.52,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Okay, for this reactor, compared to the last reactor, the key change in this reactor is || that we replaced the AEM membrane with a PTFE separator, we will replace it.",
+    "matched_keywords": [],
+    "similarity": 0.362
+  },
+  {
+    "timestamp": 18.08,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "AEM membrane",
+      "replaced with",
+      "PTFE separator"
+    ],
+    "text_evidence": "that we replaced the AEM membrane with a PTFE separator, we will replace it.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 22.64,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "that we replaced the AEM membrane with a PTFE separator, we will replace it. || Because in the last reactor after the test, the AEM membrane was broken and also stuck",
+    "matched_keywords": [],
+    "similarity": 0.527
+  },
+  {
+    "timestamp": 29.24,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "AEM membrane",
+      "state after test",
+      "broken and stuck to catalyst layer"
+    ],
+    "text_evidence": "Because in the last reactor after the test, the AEM membrane was broken and also stuck to the catalyst layer during disassembly, this suggests that the AEM membrane will not",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 33.68,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "AEM membrane",
+      "mechanical stability",
+      "not stable under dual gas configuration"
+    ],
+    "text_evidence": "to the catalyst layer during disassembly, this suggests that the AEM membrane will not be mechanically stable enough under this dual gas configuration. || to the catalyst layer during disassembly, this suggests that the AEM membrane will not || be mechanically stable enough under this dual gas configuration.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 39.4,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "be mechanically stable enough under this dual gas configuration. || Therefore, in this reactor, we will use a PTFE membrane as the separator.",
+    "matched_keywords": [],
+    "similarity": 0.337
+  },
+  {
+    "timestamp": 46.44,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "uses",
+      "PTFE membrane as separator"
+    ],
+    "text_evidence": "Therefore, in this reactor, we will use a PTFE membrane as the separator.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 53.48,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Therefore, in this reactor, we will use a PTFE membrane as the separator. || The purpose is to improve mechanical stability, reduce membrane damage, and avoid strong adhesion",
+    "matched_keywords": [],
+    "similarity": 0.364
+  },
+  {
+    "timestamp": 58.88,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "PTFE membrane",
+      "purpose",
+      "improve mechanical stability"
+    ],
+    "text_evidence": "The purpose is to improve mechanical stability, reduce membrane damage, and avoid strong adhesion || The purpose is to improve mechanical stability, reduce membrane damage, and avoid strong adhesion between the membrane and the catalyst layer.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 64.28,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The purpose is to improve mechanical stability, reduce membrane damage, and avoid strong adhesion || between the membrane and the catalyst layer.",
+    "matched_keywords": [],
+    "similarity": 0.433
+  },
+  {
+    "timestamp": 68.04,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "structure",
+      "dual gas configuration"
+    ],
+    "text_evidence": "between the membrane and the catalyst layer. || The overall structure of this reactor is also dual gas configuration, so our cathode, PTFE",
+    "matched_keywords": [],
+    "similarity": 0.433
+  },
+  {
+    "timestamp": 72.42,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "components",
+      "cathode, PTFE separator, HOR anode"
+    ],
+    "text_evidence": "The overall structure of this reactor is also dual gas configuration, so our cathode, PTFE separator, and HOR anode. || The overall structure of this reactor is also dual gas configuration, so our cathode, PTFE || separator, and HOR anode.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 76.8,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "design",
+      "lacks",
+      "middle electrolyte chamber"
+    ],
+    "text_evidence": "separator, and HOR anode. || There is also no middle electrolyte chamber in this design.",
+    "matched_keywords": [],
+    "similarity": 0.358
+  },
+  {
+    "timestamp": 80.8,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "design",
+      "lacks",
+      "middle electrolyte chamber"
+    ],
+    "text_evidence": "Step one, this is the cathode flow plate, it is head of the printing flow field. || There is also no middle electrolyte chamber in this design. || Step one, this is the cathode flow plate, it is head of the printing flow field.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 84.6,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode flow plate",
+      "contains",
+      "serpentine flow field"
+    ],
+    "text_evidence": "Step one, this is the cathode flow plate, it is head of the serpentine flow field",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 105.84,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "This is the cathode electrode, this is the cathode electrode. || The cathode is prepared by spray-coating a cobalt-salt catalyst on the A233 carbon",
+    "matched_keywords": [],
+    "similarity": 0.548
+  },
+  {
+    "timestamp": 108.86,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "cathode",
+      "prepared by",
+      "spray-coating a cobalt-salt catalyst on H23C3 carbon paper"
+    ],
+    "text_evidence": "The cathode is prepared by spray-coating a cobalt-salt catalyst on the H23C3 carbon paper. || The cathode is prepared by spray-coating a cobalt-salt catalyst on the A233 carbon || paper.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 111.88,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "paper. || The catalyst loading is 3 milligrams per square meter, exercise area is also 1 by 1 centimeter.",
+    "matched_keywords": [],
+    "similarity": 0.17
+  },
+  {
+    "timestamp": 118.04,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "catalyst loading",
+      "is",
+      "3 milligrams per square meter"
+    ],
+    "text_evidence": "The catalyst loading is 3 milligrams per square meter, exercise area is also 1 by 1 centimeter.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 124.2,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The catalyst loading is 3 milligrams per square meter, exercise area is also 1 by 1 centimeter. || We added the cathode gasket, the gasket thickness is 0.2 micrometer, the silicon membrane,",
+    "matched_keywords": [],
+    "similarity": 0.333
+  },
+  {
+    "timestamp": 157.62,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "gasket thickness",
+      "is",
+      "0.2 millimeter"
+    ],
+    "text_evidence": "We added the cathode gasket, the gasket thickness is 0.2 millimeter, the silicon membrane, So, the gasket thickness is also 0.2 millimeter, but also the anode window size is 1 by 1 centimeter.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 161.08,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "and the silicon gasket. || So, the gasket thickness is also 0.2 micrometer, but also the anode window size is 1 by 1 centimeter.",
+    "matched_keywords": [],
+    "similarity": 0.495
+  },
+  {
+    "timestamp": 176.06,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode window size",
+      "is",
+      "1 by 1 centimeter"
+    ],
+    "text_evidence": "So, the gasket thickness is also 0.2 millimeter, but also the anode window size is 1 by 1 centimeter.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 192.0,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "PTFE separator",
+      "is made of",
+      "PTFE materials"
+    ],
+    "text_evidence": "Then, we will place the PTFE separator, yeah, this is the PTFE materials. || So, the gasket thickness is also 0.2 micrometer, but also the anode window size is 1 by 1 centimeter. || Then, we will place the PTFE separator, yeah, this is the PTFE materials.",
+    "matched_keywords": [
+      "place"
+    ]
+  },
+  {
+    "timestamp": 198.96,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "PTFE separator",
+      "is made of",
+      "PTFE materials"
+    ],
+    "text_evidence": "Then, we will place the PTFE separator, yeah, this is the PTFE materials.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 208.9,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "PTFE separator",
+      "replaces",
+      "sustained EM membrane"
+    ],
+    "text_evidence": "This PTFE separator replaces the sustained EM membrane of the last reactor.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 215.58,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "PTFE layer",
+      "acts as",
+      "physical separator between cathode and anode"
+    ],
+    "text_evidence": "In the design, this PTFE layer acts as a physical separator between the cathode and the anode.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 219.28,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "PTFE separator",
+      "is not",
+      "ion-chase membrane"
+    ],
+    "text_evidence": "In the design, this PTFE layer acts as a physical separator between the cathode and the anode. || It is not an ion-chase membrane, the goal is to reduce membrane breakage and avoid catalyst",
+    "matched_keywords": [],
+    "similarity": 0.399
+  },
+  {
+    "timestamp": 224.12,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "It is not an ion-chase membrane, the goal is to reduce membrane breakage and avoid catalyst || sticking during operation and disassembly.",
+    "matched_keywords": [],
+    "similarity": 0.202
+  },
+  {
+    "timestamp": 227.78,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "goal",
+      "is to avoid",
+      "catalyst sticking during operation and disassembly"
+    ],
+    "text_evidence": "sticking during operation and disassembly.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 231.44,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "sticking during operation and disassembly. || Before putting it into the cell, the PTFE separator will be, we will, like, it has been",
+    "matched_keywords": [],
+    "similarity": 0.308
+  },
+  {
+    "timestamp": 245.48,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "separator",
+      "condition/parameter setting",
+      "per-weighted in 1 molar KOH"
+    ],
+    "text_evidence": "Before putting it into the cell, the PTFE separator will be, we will, like, it has been || per-weighted in one molecule each, like this. || per-weighted in 1 molar KOH, like this.",
+    "matched_keywords": [],
+    "similarity": 0.28
+  },
+  {
+    "timestamp": 250.32,
+    "sources": [
+      "keyword",
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "separator",
+      "condition/parameter setting",
+      "per-weighted in 1 molar KOH"
+    ],
+    "text_evidence": "The purpose is to per-weighting step is to improve the ion-connect, so the per-weight || per-weighted in one molecule each, like this. || The purpose is to per-weighting step is to improve the ion-connect, so the per-weight",
+    "matched_keywords": [
+      "connect"
+    ]
+  },
+  {
+    "timestamp": 255.08,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "per-weighting step",
+      "purpose",
+      "reduce the initial resistance"
+    ],
+    "text_evidence": "The purpose is to per-weighting step is to improve the ion-connect, so the per-weight || separator and reduce the initial resistance.",
+    "matched_keywords": [],
+    "similarity": 0.325
+  },
+  {
+    "timestamp": 258.12,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "per-weighting step",
+      "purpose",
+      "reduce the initial resistance"
+    ],
+    "text_evidence": "At the same time, PTFE, yeah, in here is used to replace the EM, yeah, okay, then we place || separator and reduce the initial resistance. || At the same time, PTFE, yeah, in here is used to replace the EM, yeah, okay, then we place",
+    "matched_keywords": [
+      "place"
+    ]
+  },
+  {
+    "timestamp": 262.32,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "PTFE",
+      "operation/action performed",
+      "used to replace the EM"
+    ],
+    "text_evidence": "At the same time, PTFE, yeah, in here is used to replace the EM, yeah, okay, then we place",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 266.52,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "At the same time, PTFE, yeah, in here is used to replace the EM, yeah, okay, then we place || the weighted separator in here, between the anode and the cathode, yeah, okay, then we",
+    "matched_keywords": [],
+    "similarity": 0.416
+  },
+  {
+    "timestamp": 275.28,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "weighted separator",
+      "operation/action performed",
+      "placed between the anode and the cathode"
+    ],
+    "text_evidence": "the weighted separator in here, between the anode and the cathode, yeah, okay, then we",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 284.04,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "the weighted separator in here, between the anode and the cathode, yeah, okay, then we || will add the anode gasket, yeah, the anode gasket is totally similar with the cathode",
+    "matched_keywords": [],
+    "similarity": 0.533
+  },
+  {
+    "timestamp": 297.72,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode gasket",
+      "material",
+      "same material as cathode side gasket"
+    ],
+    "text_evidence": "will add the anode gasket, yeah, the anode gasket is totally similar with the cathode side gasket, with the same material and the same ion-window and the same thickness, okay.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 311.4,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "side gasket, with the same material and the same ion-window and the same thickness, okay. || Then we will, this is the anode side electrode, the anode electrode is also spray-coating",
+    "matched_keywords": [],
+    "similarity": 0.376
+  },
+  {
+    "timestamp": 317.4,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Then we will, this is the anode side electrode, the anode electrode is also spray-coating || the PTFE catalytic onto H2O3 carbon paper, the same loading and the same thickness, okay.",
+    "matched_keywords": [],
+    "similarity": 0.36
+  },
+  {
+    "timestamp": 321.64,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode electrode",
+      "coating",
+      "spray-coating PTFE catalytic onto H23C3 carbon paper"
+    ],
+    "text_evidence": "Then we will, this is the anode side electrode, the anode electrode is also spray-coating the PTFE catalytic onto H23C3 carbon paper the same loading and the same thickness, okay.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 331.88,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "anode electrode",
+      "coating",
+      "spray-coating PTFE catalytic onto H23C3 carbon paper"
+    ],
+    "text_evidence": "Then this is the anode side electrode, okay, after aligning all components, we will assemble || the PTFE catalytic onto H2O3 carbon paper, the same loading and the same thickness, okay. || Then this is the anode side electrode, okay, after aligning all components, we will assemble",
+    "matched_keywords": [
+      "assemble"
+    ]
+  },
+  {
+    "timestamp": 338.08,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "components",
+      "operation",
+      "aligning"
+    ],
+    "text_evidence": "Then this is the anode side electrode, okay, after aligning all components, we will assemble",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 344.28,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Then this is the anode side electrode, okay, after aligning all components, we will assemble || and tighten the reactor using a torque, torque of 0.3 newton meter, this reactor is tightened",
+    "matched_keywords": [],
+    "similarity": 0.306
+  },
+  {
+    "timestamp": 348.88,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "tightened using torque",
+      "0.3 newton meter"
+    ],
+    "text_evidence": "and tighten the reactor using a torque, torque of 0.3 newton meter, this reactor is tightened",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 353.48,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "and tighten the reactor using a torque, torque of 0.3 newton meter, this reactor is tightened || using four bolts in a diagonal sequence to ensure uniform compression.",
+    "matched_keywords": [],
+    "similarity": 0.381
+  },
+  {
+    "timestamp": 363.08,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "tightened using bolts",
+      "four bolts in a diagonal sequence"
+    ],
+    "text_evidence": "using four bolts in a diagonal sequence to ensure uniform compression.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 383.96,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "using four bolts in a diagonal sequence to ensure uniform compression. || In summary, this reactor keeps the same cathodic anode with the last reactor, but it replaces",
+    "matched_keywords": [],
+    "similarity": 0.184
+  },
+  {
+    "timestamp": 387.44,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "keeps cathodic anode",
+      "same as last reactor"
+    ],
+    "text_evidence": "In summary, this reactor keeps the same cathodic anode with the last reactor, but it replaces",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 390.92,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "In summary, this reactor keeps the same cathodic anode with the last reactor, but it replaces || the EM with a PTFE separator, this design is intended to improve the mechanical robustness",
+    "matched_keywords": [],
+    "similarity": 0.285
+  },
+  {
+    "timestamp": 395.08,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "replaces EM",
+      "PTFE separator"
+    ],
+    "text_evidence": "the EM with a PTFE separator, this design is intended to improve the mechanical robustness",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 399.24,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "design",
+      "intended to improve",
+      "mechanical robustness of EM fracture catalyst addition"
+    ],
+    "text_evidence": "the EM with a PTFE separator, this design is intended to improve the mechanical robustness || of the EM fracture catalyst addition and further, we will further test it. || the EM with a PTFE separator, this design is intended to improve the mechanical robustness of the EM fracture catalyst addition and further, we will further test it.",
+    "matched_keywords": [],
+    "similarity": 0.387
+  }
+]

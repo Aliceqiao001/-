@@ -1,0 +1,322 @@
+[
+  {
+    "timestamp": 5.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "This is the testing process for this reactor. || First, I will describe the gas feed conditions.",
+    "matched_keywords": [],
+    "similarity": 0.377
+  },
+  {
+    "timestamp": 9.0,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "anode feed gas",
+      "is",
+      "hydrogen"
+    ],
+    "text_evidence": "The anode feed gas is hydrogen with a flow rate of 20 fcl. || First, I will describe the gas feed conditions. || The anode feed gas is hydrogen with a flow rate of 20 fcl.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 13.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode feed gas",
+      "is",
+      "hydrogen"
+    ],
+    "text_evidence": "The anode feed gas is hydrogen with a flow rate of 20 fcl.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 18.0,
+    "sources": [
+      "keyword"
+    ],
+    "triple": [
+      "anode feed gas",
+      "is",
+      "hydrogen"
+    ],
+    "text_evidence": "The cathode feed gas is carbon monoxide with a flow rate of 10 fcl.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 22.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode feed gas",
+      "is",
+      "carbon monoxide"
+    ],
+    "text_evidence": "The cathode feed gas is carbon monoxide with a flow rate of 10 fcl.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 26.0,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "cathode feed gas",
+      "is",
+      "carbon monoxide"
+    ],
+    "text_evidence": "The working electrode is connected to the cathode. || The cathode feed gas is carbon monoxide with a flow rate of 10 fcl. || The working electrode is connected to the cathode.",
+    "matched_keywords": [
+      "connected"
+    ]
+  },
+  {
+    "timestamp": 30.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "working electrode",
+      "is connected to",
+      "cathode"
+    ],
+    "text_evidence": "The working electrode is connected to the cathode.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 34.0,
+    "sources": [
+      "keyword",
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "working electrode",
+      "is connected to",
+      "cathode"
+    ],
+    "text_evidence": "The counter electrode is connected to the anode. || The reference electrode is placed in the middle electrolyte chamber.",
+    "matched_keywords": [
+      "connected",
+      "placed"
+    ]
+  },
+  {
+    "timestamp": 41.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reference electrode",
+      "placed in",
+      "middle electrolyte chamber"
+    ],
+    "text_evidence": "The reference electrode is placed in the middle electrolyte chamber.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 48.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reference electrode",
+      "is",
+      "mercury oxide electrode"
+    ],
+    "text_evidence": "The reference electrode is a mercury oxide electrode.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 52.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The reference electrode is a mercury oxide electrode. || During the test, the middle chamber is filled with a circulating 1-molecule H liquid electrolyte.",
+    "matched_keywords": [],
+    "similarity": 0.401
+  },
+  {
+    "timestamp": 60.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "middle chamber",
+      "filled with",
+      "circulating 1-molecule H liquid electrolyte"
+    ],
+    "text_evidence": "During the test, the middle chamber is filled with a circulating 1-molecule H liquid electrolyte.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 69.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "During the test, the middle chamber is filled with a circulating 1-molecule H liquid electrolyte. || The middle chamber thickness is 3 micrometer.",
+    "matched_keywords": [],
+    "similarity": 0.485
+  },
+  {
+    "timestamp": 73.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "middle chamber thickness",
+      "is",
+      "3 millimeter"
+    ],
+    "text_evidence": "The middle chamber thickness is 3 millimeter.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 77.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The middle chamber thickness is 3 micrometer. || The circulating 1-molecule H provides a continuous ionic PSV between the cathode side am and anode side am.",
+    "matched_keywords": [],
+    "similarity": 0.255
+  },
+  {
+    "timestamp": 82.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "circulating 1-molecule H",
+      "provides",
+      "continuous ionic PSV between cathode side am and anode side am"
+    ],
+    "text_evidence": "The circulating 1-molecule H provides a continuous ionic PSV between the cathode side am and anode side am.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 88.0,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "circulating 1-molecule H",
+      "provides",
+      "continuous ionic PSV between cathode side am and anode side am"
+    ],
+    "text_evidence": "The electrolyte flow rate is 30 fcl. || The circulating 1-molecule H provides a continuous ionic PSV between the cathode side am and anode side am. || The electrolyte flow rate is 30 fcl.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 93.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "electrolyte flow rate",
+      "is",
+      "30 fcl"
+    ],
+    "text_evidence": "The electrolyte flow rate is 30 fcl.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 99.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The electrolyte flow rate is 30 fcl. || The purpose of reducing the chamber thickness is to shorten the ion transparent distance, reduce the ionic resistance and improve the overall cell and reduce the cell voltage.",
+    "matched_keywords": [],
+    "similarity": 0.173
+  },
+  {
+    "timestamp": 108.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "chamber thickness",
+      "purpose of reducing",
+      "shorten ion transparent distance, reduce ionic resistance, improve overall cell, reduce cell voltage"
+    ],
+    "text_evidence": "The purpose of reducing the chamber thickness is to shorten the ion transparent distance, reduce the ionic resistance and improve the overall cell and reduce the cell voltage.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 117.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The purpose of reducing the chamber thickness is to shorten the ion transparent distance, reduce the ionic resistance and improve the overall cell and reduce the cell voltage. || At the same time, the reference electrode allows to monitor the electrode potentials microdifferentially and on-off operation.",
+    "matched_keywords": [],
+    "similarity": 0.26
+  },
+  {
+    "timestamp": 123.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reference electrode",
+      "allows",
+      "monitor electrode potentials microdifferentially and on-off operation"
+    ],
+    "text_evidence": "At the same time, the reference electrode allows to monitor the electrode potentials microdifferentially and on-off operation.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 129.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "At the same time, the reference electrode allows to monitor the electrode potentials microdifferentially and on-off operation. || For this test, we will first perform a constant current operation to monitor the cell voltage stability during electrolysis.",
+    "matched_keywords": [],
+    "similarity": 0.475
+  },
+  {
+    "timestamp": 134.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "test",
+      "operation performed",
+      "constant current operation to monitor cell voltage stability during electrolysis"
+    ],
+    "text_evidence": "For this test, we will first perform a constant current operation to monitor the cell voltage stability during electrolysis.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 147.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "electrochemical impedance spectropase (PEIS)",
+      "purpose",
+      "evaluate the resistance of the electrode after generation"
+    ],
+    "text_evidence": "After the test, we will perform the electrochemical impedance spectropase or PEIS to evaluate the resistance of the electrode after generation.",
+    "matched_keywords": []
+  }
+]

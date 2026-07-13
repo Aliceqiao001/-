@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reactor_Agent 视频知识提取报告</title>
+<style>
+  :root {
+    --bg: #f1f4ef;
+    --surface: #ffffff;
+    --surface-2: #e9efe6;
+    --ink: #17211c;
+    --ink-soft: #4c5850;
+    --ink-faint: #7c8880;
+    --line: #d7ded2;
+    --accent: #2f7c68;
+    --accent-ink: #1e5747;
+    --accent-soft: #e2efe8;
+    --warn: #b1592c;
+    --warn-soft: #f7e6d9;
+    --warn-ink: #7a3a1a;
+    --neutral-soft: #eceee9;
+    --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "URW Palladio L", Georgia, serif;
+    --font-body: "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+    --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "SF Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0e1512;
+    --surface: #141d18;
+    --surface-2: #1a251f;
+    --ink: #e6ede7;
+    --ink-soft: #a3b3a8;
+    --ink-faint: #6d7d73;
+    --line: #263229;
+    --accent: #5cbfa0;
+    --accent-ink: #8fdcc2;
+    --accent-soft: #1b2e27;
+    --warn: #e2914f;
+    --warn-soft: #33251a;
+    --warn-ink: #f0b787;
+    --neutral-soft: #1b2420;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e1512;
+      --surface: #141d18;
+      --surface-2: #1a251f;
+      --ink: #e6ede7;
+      --ink-soft: #a3b3a8;
+      --ink-faint: #6d7d73;
+      --line: #263229;
+      --accent: #5cbfa0;
+      --accent-ink: #8fdcc2;
+      --accent-soft: #1b2e27;
+      --warn: #e2914f;
+      --warn-soft: #33251a;
+      --warn-ink: #f0b787;
+      --neutral-soft: #1b2420;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  .eyebrow {
+    font-family: var(--font-ui);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    font-weight: 600;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin: 0.5rem 0 0.6rem;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+
+  .subtitle {
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    max-width: 62ch;
+    text-wrap: pretty;
+  }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.6rem;
+    margin-top: 1.6rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--line);
+    font-family: var(--font-ui);
+  }
+
+  .meta-item { display: flex; flex-direction: column; gap: 0.15rem; }
+  .meta-num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 1.4rem;
+    color: var(--ink);
+  }
+  .meta-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  section { margin-top: 4rem; }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0 0 0.3rem;
+    letter-spacing: -0.005em;
+  }
+  .section-note {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    max-width: 66ch;
+    margin: 0 0 1.6rem;
+  }
+
+  p { max-width: 68ch; }
+  .prose p { margin: 0 0 1rem; }
+  .prose strong { color: var(--accent-ink); font-weight: 600; }
+
+  /* ---------- timeline ---------- */
+  .timeline {
+    position: relative;
+    margin-left: 0.4rem;
+    padding-left: 1.6rem;
+    border-left: 2px solid var(--line);
+  }
+  .tl-node { position: relative; padding-bottom: 2.1rem; }
+  .tl-node:last-child { padding-bottom: 0; }
+  .tl-dot {
+    position: absolute;
+    left: -1.98rem;
+    top: 0.25rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px var(--bg);
+  }
+  .tl-node.is-fail .tl-dot { background: var(--warn); }
+  .tl-gen {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.04em;
+  }
+  .tl-head {
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: 1.02rem;
+    margin: 0.1rem 0 0.35rem;
+  }
+  .tl-node.is-fail .tl-head { color: var(--warn-ink); }
+  .tl-body { color: var(--ink-soft); max-width: 64ch; font-size: 0.97rem; }
+  .tag {
+    display: inline-block;
+    font-family: var(--font-ui);
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.12rem 0.5rem;
+    border-radius: 3px;
+    background: var(--warn-soft);
+    color: var(--warn-ink);
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+
+  /* ---------- tables ---------- */
+  .table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 6px; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.86rem; min-width: 720px; }
+  thead th {
+    position: sticky; top: 0;
+    background: var(--surface-2);
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-align: left;
+    padding: 0.6rem 0.8rem;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  td {
+    padding: 0.5rem 0.8rem;
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  td.num, th.num { text-align: right; font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+  td.video-name { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-soft); white-space: normal; }
+  tr.group-r2 td, tr.group-r4 td, tr.group-r6 td, tr.group-r8 td, tr.group-r10 td { background: var(--neutral-soft); }
+  td.rgroup { font-family: var(--font-ui); font-weight: 700; color: var(--accent-ink); }
+
+  .bar-cell { display: flex; align-items: center; gap: 0.5rem; justify-content: flex-end; }
+  .bar-track { width: 54px; height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; }
+  .bar-fill { height: 100%; background: var(--accent); border-radius: 3px; }
+
+  .pill {
+    display: inline-block;
+    min-width: 1.4rem;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-variant-numeric: tabular-nums;
+    padding: 0.05rem 0.4rem;
+    border-radius: 999px;
+    background: var(--neutral-soft);
+    color: var(--ink-faint);
+  }
+  .pill.c-low { background: var(--warn-soft); color: var(--warn-ink); }
+  .pill.c-high { background: var(--warn); color: #fff; }
+  .pill.zero { opacity: 0.55; }
+
+  .status-empty { color: var(--ink-faint); font-style: italic; font-size: 0.82rem; }
+  .status-rerun { color: var(--accent-ink); font-size: 0.78rem; font-family: var(--font-ui); }
+
+  /* ---------- terminology grid ---------- */
+  .dict-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 0.6rem;
+  }
+  .dict-card {
+    border: 1px solid var(--line);
+    background: var(--surface);
+    border-radius: 6px;
+    padding: 0.65rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  .dict-wrong { font-family: var(--font-mono); color: var(--warn-ink); text-decoration: line-through; text-decoration-color: var(--warn); opacity: 0.85; }
+  .dict-arrow { color: var(--ink-faint); margin: 0 0.35rem; }
+  .dict-correct { font-family: var(--font-mono); color: var(--accent-ink); font-weight: 600; }
+  .dict-cat {
+    display: block;
+    margin-top: 0.3rem;
+    font-family: var(--font-ui);
+    font-size: 0.64rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .callout {
+    border-left: 3px solid var(--warn);
+    background: var(--warn-soft);
+    color: var(--warn-ink);
+    padding: 1rem 1.2rem;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.95rem;
+    max-width: 68ch;
+  }
+  .callout.good { border-left-color: var(--accent); background: var(--accent-soft); color: var(--accent-ink); }
+
+  .checklist { columns: 2; column-gap: 2.4rem; max-width: 68ch; }
+  .checklist li { break-inside: avoid; margin-bottom: 0.55rem; font-size: 0.92rem; color: var(--ink-soft); }
+  .checklist strong { color: var(--ink); }
+
+  footer {
+    margin-top: 4.5rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--line);
+    color: var(--ink-faint);
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 600px) {
+    .checklist { columns: 1; }
+    .page { padding: 2.6rem 1.1rem 4rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <p class="eyebrow">Reactor_Agent · video_kg_pipeline batch run</p>
+  <h1>十组反应器组装 / 测试 / 拆解视频知识提取报告</h1>
+  <p class="subtitle">R1–R10 共 35 段视频,逐个跑通语音转写 → 术语纠错 → 三元组抽取 → 关键帧视觉验证 → 图文绑定的全流程,并在每个视频后更新一次术语词典。R7–R10 为 2026-07-11 新增补跑,R10 目前仅有 1.Cell 阶段素材。</p>
+
+  <div class="meta-row">
+    <div class="meta-item"><span class="meta-num">35</span><span class="meta-label">videos processed</span></div>
+    <div class="meta-item"><span class="meta-num">10</span><span class="meta-label">reactor generations</span></div>
+    <div class="meta-item"><span class="meta-num">~110 min</span><span class="meta-label">total footage</span></div>
+    <div class="meta-item"><span class="meta-num">507</span><span class="meta-label">knowledge nodes</span></div>
+    <div class="meta-item"><span class="meta-num">49</span><span class="meta-label">dictionary rules learned</span></div>
+    <div class="meta-item"><span class="meta-num">8</span><span class="meta-label">videos re-run after fixes</span></div>
+  </div>
+
+  <section>
+    <h2>设计迭代主线</h2>
+    <p class="section-note">十代反应器不是十次独立实验,而是一条持续收敛的工程改进链条 —— 每一代都在回应上一代暴露的问题。R6 是唯一一次被视频明确记录"失效"的世代,R7-R9 是针对这次失效的连续收敛过程,R10 目前证据不足以判断是否接入同一条主线。</p>
+
+    <div class="timeline">
+      <div class="tl-node">
+        <div class="tl-dot"></div>
+        <div class="tl-gen">R1 / 基线</div>
+        <div class="tl-head">固态阳离子交换树脂电解质</div>
+        <div class="tl-body">中间腔室(10mm,窗口1×1cm)填充强酸性阳离子交换树脂珠(粒径600–800μm)。阴极 CuO / H23C3 碳纸,阳极 Pt-Ru-C / H23C3 碳纸(CO 耐受型 HOR 催化剂,呼应阳极 H₂+1%CO 进气)。膜为 Sustainion X37-60(阴极侧)+ Nafion 117(阳极侧)。0.3 N·m 扭矩组装。</div>
+      </div>
+
+      <div class="tl-node">
+        <div class="tl-dot"></div>
+        <div class="tl-gen">R2 → R3 / 渐进优化</div>
+        <div class="tl-head">给固态树脂通去离子水</div>
+        <div class="tl-body">结构不变,R2 在组装前对树脂做一次"预浸润"(pre-wetting),R3 进一步改成运行期间<strong>持续</strong>通入 DI 水 —— 目的都是提升固态电解质的离子电导率、降低初始电阻。两代验证了同一个假设的强化版本。</div>
+      </div>
+
+      <div class="tl-node">
+        <div class="tl-dot"></div>
+        <div class="tl-gen">R4 / 路线切换</div>
+        <div class="tl-head">固态树脂 → 循环液态 1M KOH</div>
+        <div class="tl-body">narrator 明确点出"关键变化":中间腔室的固态电解质层被替换为持续循环的 1M KOH 液态电解质。同时膜型号从 Sustainion X37-60 降级到 X37-50,垫片从 0.2mm 增厚到 0.3mm。测试目的写得很直接:验证循环液态电解质能否提升电化学性能。</div>
+      </div>
+
+      <div class="tl-node">
+        <div class="tl-dot"></div>
+        <div class="tl-gen">R5 / 减薄 + 加参比电极</div>
+        <div class="tl-head">腔室 10mm → 3mm,引入 Hg/HgO 参比电极</div>
+        <div class="tl-body">继续用液态 KOH,但把腔室厚度从 10mm 减到 3mm 以缩短离子传输距离、降低欧姆电阻、拉低电池电压;同时把氧化汞参比电极插入中间层,通过接线位置区分"阴极→中间腔室"电阻(R1)与"全电池"电阻(R3)。这一代还留下一套完整、可复用的拆解失效检查清单(见下文),但本身没有报告失效。</div>
+      </div>
+
+      <div class="tl-node is-fail">
+        <div class="tl-dot"></div>
+        <div class="tl-gen">R6 / 扩窗尝试<span class="tag">失效</span></div>
+        <div class="tl-head">腔室窗口 1×1cm → 3×3cm + 内部流道</div>
+        <div class="tl-body">保留 R5 的 3mm 腔室厚度,把窗口扩大到 3×3cm 并加一条内部流道,目标是增大电解质体积、改善分布,同时不牺牲离子传输距离。运行仅 10 分钟后即出现<strong>阴极水淹</strong>:narrator 当场判定"主要失效模式是阴极水淹,很可能是扩大后的腔室内液体积聚或压力不平衡导致"。拆解证实:阳极侧完全水淹、两侧 Sustainion 膜均有机械损伤(撕裂)、阴极表面出现蓝绿色沉积物(CuO 被电解质腐蚀的产物)。</div>
+      </div>
+
+      <div class="tl-node">
+        <div class="tl-dot"></div>
+        <div class="tl-gen">R7 / 结构性简化<span class="tag" style="background:var(--accent-soft);color:var(--accent-ink)">解决水淹</span></div>
+        <div class="tl-head">彻底移除中间腔室,只保留一张膜</div>
+        <div class="tl-body">不再修补腔室几何形状,而是直接把中间腔室整个拿掉:阴阳极之间只隔一张 Sustainion X37-50 膜,用 1M KOH 浸润,不再有任何液态/固态电解质夹层。narrator 明确说目的是"简化结构、移除液态中间层、避免液体导致的水淹或压力失衡"。测试视频证实<strong>没有再出现阴极水淹</strong>,气体通路保持开放干燥 —— 这是本次记录里唯一一次被验证成功解决上一代失效模式的设计改动。代价:拆解发现膜偏干、催化剂有脱落粘连迹象,为 R8 埋下伏笔。</div>
+      </div>
+
+      <div class="tl-node">
+        <div class="tl-dot"></div>
+        <div class="tl-gen">R8 / 隔膜换材料</div>
+        <div class="tl-head">AEM 离子交换膜 → 惰性 PTFE 隔膜(预浸润)</div>
+        <div class="tl-body">R7 测试后 AEM 膜破损并粘在催化层上,机械强度不足。R8 换用不导离子的纯物理 PTFE 隔膜,组装前用 1M KOH 预浸润一次以改善离子连接、降低初始电阻。拆解结果:<strong>不再水淹,但整体"干涸"</strong> —— 阳极、隔膜、阴极侧全部偏干,narrator 直接判定"一次性预加的电解质液滴不足以维持测试全程的水合"。失效模式从"水淹"变成了"缺水"。</div>
+      </div>
+
+      <div class="tl-node">
+        <div class="tl-dot"></div>
+        <div class="tl-gen">R9 / 连续供水</div>
+        <div class="tl-head">引入"微液滴系统"持续给隔膜供水</div>
+        <div class="tl-body">用随气流连续输送的水微液滴替代 R8 那种一次性预浸润。拆解证实液滴<strong>成功送达</strong>阳极碳纸背侧(大量可见水滴),但<strong>穿不透多孔碳纸</strong>到达催化剂-隔膜界面,那里仍然干燥。narrator 把限制因素从"供水总量不够"重新定位为"碳纸传质路径效率不够",并明确提出下一步方向:改善气体通道到催化剂-隔膜界面的液体传输效率。</div>
+      </div>
+
+      <div class="tl-node">
+        <div class="tl-dot"></div>
+        <div class="tl-gen">R10 / 平行的小型化装配路线<span class="tag" style="background:var(--warn-soft);color:var(--warn-ink)">仅1.Cell</span></div>
+        <div class="tl-head">夹具式小电池,教学录音,尚无测试/拆解素材</div>
+        <div class="tl-body">与 R1-R9 的流场板反应器结构不同,R10 用一套自制夹具("支撑 SELL 的架子")装配更紧凑的小电池,narrator 全程用中文讲解,且明确说明这是<strong>录给拍摄团队看的教学音轨</strong>("你们拍的时候不用说话,直接装就行"),不是随实验同步的组装记录。约 10 分钟即可装完一个电池,电极刻意裁小(0.5×0.5cm)以节省催化剂用量。这段素材首次触发了对中文转录的术语纠错("羊脊"→阳极、"音极"→阴极,均为同音异字误听)。是否是 R9 之后的正式迭代、还是并行的小型化验证平台,需要 2.Test/3.Post-test 素材补上后才能判断。</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>35 段视频处理清单</h2>
+    <p class="section-note">节点数 = 该视频最终产出的知识图谱条目数;冲突数 = 图文绑定阶段标记的图文不一致数(多数为 VLM 无法验证定量数值导致的保守判定,非真实矛盾,已在逐条记录中说明)。灰底行为按 R 分组的偶数分组,便于扫读。R8 的 2.Test 阶段沿用 R7 的测试记录(文件夹本身为空,未新增视频,不在下表中单独列出)。</p>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th><th>组</th><th>阶段</th><th>视频</th><th class="num">时长</th>
+            <th>状态</th><th class="num">节点数</th><th class="num">冲突</th>
+          </tr>
+        </thead>
+        <tbody id="video-table-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>术语词典演进(知识理解更新记录)</h2>
+    <p class="section-note">每条规则都是从某一段视频的实际 ASR 错误里学到的,加入后自动应用于所有后续视频。其中 3 条(Pt-Ru-C 相关)在 #10 视频发现原有纠错方向错误后,回头重跑了 4 段已完成的视频;R7-R10 补跑又发现 9 条新的英文误听变体,并首次为中文讲解视频(R10)加入了两条中文规则(同音异字纠错),证明匹配逻辑本身与语言无关。</p>
+    <div class="dict-grid" id="dict-grid"></div>
+  </section>
+
+  <section>
+    <h2>R5 拆解检查清单(可复用方法论)</h2>
+    <p class="section-note">来自 #18 视频,是判断膜电极组件(MEA)失效模式的标准检查项,后续世代的拆解视频可以直接对照使用。</p>
+    <ul class="checklist">
+      <li><strong>阳极流场板</strong> — 液体积聚 / 盐析 / 气体通道堵塞 / 流场颜色变化</li>
+      <li><strong>阳极电极</strong> — 催化层是否完整 / 表面是否被淹没 / 电解质残留 / 催化剂剥落或减薄</li>
+      <li><strong>阳极侧膜</strong> — 膜空间洁净度与均匀润湿 / 电解质窜漏 / 盐析 / 机械损伤 / 接触不均</li>
+      <li><strong>中间腔室</strong> — 是否均匀填充 / 气泡滞留 / 液相分级 / 盐析结晶 / 进出口堵塞</li>
+      <li><strong>阴极侧膜</strong> — 同阳极侧膜检查项</li>
+      <li><strong>阴极电极</strong> — 催化层附着情况 / 淹没或干涸 / 反应后变色 / 活性区域均匀性</li>
+      <li><strong>阴极流场板</strong> — 分流通道液体积聚</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>关键结论</h2>
+    <div class="prose">
+      <p>这批反应器针对的是 CO 还原 / 氢氧化(CORR–HOR)串联电解池:阴极通 CO 气体做还原反应,阳极通 H₂+1%CO 做抗中毒氢氧化,中间层负责离子传导。R1–R6 的演进主线在回答"中间腔室该用什么方式导离子,才能同时兼顾电导率、离子传输距离和机械可靠性":R1–R3 强化"固态树脂+加水";R4 换成循环液态电解质;R5 把腔室做薄;R6 试图扩大容量但引发阴极水淹、腐蚀催化剂、撕裂膜,10 分钟内失效。</p>
+      <p><strong>R7–R9 是针对 R6 失效的一条连续、自洽的收敛链条</strong>:R7 不再修补腔室几何形状,而是直接<strong>移除中间腔室</strong>,测试证实水淹问题确实消失,但拆解发现膜偏干、催化剂脱落粘连;R8 把 AEM 膜换成惰性 PTFE 隔膜(解决膜机械强度问题),但整体"干涸"成为新的失效模式;R9 引入连续"微液滴"供水,证实水能送达阳极气室,却穿不透多孔碳纸抵达真正需要水合的催化剂-隔膜界面 —— 问题从"供水总量不够"精确收敛到"碳纸传质路径效率不够"。三代迭代形成了一条教科书式的"发现失效模式 → 针对性改动 → 验证 → 暴露下一层瓶颈"的工程收敛过程,是本次批处理里信息密度最高的部分。R10 是一条尚未接入这条主线的平行小型化装配路线,目前只有 1.Cell 素材且是教学录音,暂无法判断与 R7-R9 主线的关系。</p>
+    </div>
+    <div class="callout good">
+      R7 的"移除中间腔室"是本次 35 段视频里唯一一次被完整验证成功解决上一代失效模式的改动 —— 测试阶段实时观察 + 拆解阶段物理证据双重印证,不再有阴极水淹。
+    </div>
+    <div class="callout">
+      R9 收尾时 narrator 明确提出的下一步方向是"改善气体通道到催化剂-隔膜界面的液体传输效率",这是当前证据链指向的直接改进方向,如果存在 R11,建议优先核对是否针对这一具体瓶颈(而不是笼统的"供水不足")做了改动。R10 补上 2.Test/3.Post-test 素材后,应优先确认它是否是这条主线的延续。
+    </div>
+  </section>
+
+  <section>
+    <h2>数据质量说明</h2>
+    <div class="prose">
+      <p>35 段视频里有 8 段(#8、#9、#12、#13、#21、#23、#31、#35)最终产出 0 个知识节点,原因分三类:一类是纯标签特写或无人声的环境音段,Whisper 在这类音频上容易输出与画面无关的幻觉文本;一类是拆解片段里 narrator 用词过于碎片化,GPT-4o 判断不足以构成可靠的实体关系;R7-R10 新增了第三类——<strong>#31(R9 "1.Cell-same with R8")整段是无关的相机测试录音,#35(R10 第二段素材)完全没有音轨</strong>,后者触发了 pipeline 的一处修复:`stage1_asr` 现在会先检测音轨是否存在,没有音轨就直接记录空转录并继续跑完剩余阶段,不再让整个 batch 因为一段静音素材而中断。以上都是合理的保守输出或素材本身的性质,不是流程故障。</p>
+      <p>#20 与 #25(均为 R6,ASR 质量明显下降的两段)里出现了若干高度扭曲、难以可靠还原的催化剂/基材描述,判断为一次性误听、不具规律性,未强行加入词典以免过拟合。气体流量单位在不同视频里出现 sccm / ccm / fcl / SACM 多种写法混用,其中 SACM 经画面仪表验证确系 sccm 的误听已加入词典,ccm、fcl 因存在误伤已正确文本的风险仍保留原文。#33(R9 拆解)还发现了一处术语纠错的<strong>假阳性</strong>:已有的碳纸型号模糊匹配规则(阈值 0.82)把这次本来识别正确的通用表述"the carbon paper"也错误地插入了"H23C3"型号名 —— 内容本身仍然事实正确(这批实验确实全程用 H23C3 碳纸),但不完全对应"原文逐字讲了什么",已记录该已知局限,未改动匹配算法本身。</p>
+      <p>本轮还发现并修复了一个纯 PowerShell 侧的问题(不影响任何已产出的知识数据):`run_one_video.ps1` 用 <code>Get-Content -Raw</code> 读取 <code>05_knowledge_graph.json</code> 打印节点/冲突数摘要时,Windows PowerShell 5.1 的默认编码会错误解码 UTF-8 多字节字符,导致中文讲解视频(R10)在这一步误报失败——Python 侧的知识图谱其实已经正确写盘。已改用 <code>[System.IO.File]::ReadAllText(..., UTF8)</code> 修复。</p>
+    </div>
+  </section>
+
+  <footer>
+    Pipeline:D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline(ASR: whisper-1 · 三元组抽取/冲突判断: gpt-4o · 视觉验证: gemini-2.5-flash,经 VectorEngine 网关)。词典文件:terminology/terminology_dict.json,共 49 条规则(含 2 条中文规则),随本次批处理逐步积累。R7-R10 数据于 2026-07-11 补跑并入本报告。
+  </footer>
+
+</div>
+
+<script>
+  const videos = [
+    [1,"R1","1.Cell","LRV_20260628_182829_01_070","7:28","ok",28,2],
+    [2,"R1","2.Test","LRV_20260628_184610_01_071","0:50","ok",6,0],
+    [3,"R2","1.Cell (1/3)","LRV_20260628_210422_01_072","2:47","ok",11,0],
+    [4,"R2","1.Cell (2/3)","LRV_20260628_210947_01_075","3:16","rerun",14,0],
+    [5,"R2","1.Cell (3/3)","LRV_20260628_211357_01_076","2:25","rerun",10,0],
+    [6,"R2","2.Test","LRV_20260629_180627_01_005","1:15","ok",11,2],
+    [7,"R3","2.Test","LRV_20260629_184212_01_006","1:04","ok",10,1],
+    [8,"R3","3.After test","LRV_20260629_191513_01_001","0:50","empty",0,0],
+    [9,"R4","1.Cell (1/2)","LRV_20260629_194144_01_004","0:09","empty",0,0],
+    [10,"R4","1.Cell (2/2)","LRV_20260629_194156_01_005","7:33","rerun",25,0],
+    [11,"R4","2.Test","LRV_20260629_214308_01_006","1:44","ok",14,1],
+    [12,"R4","3.After test (1/2)","LRV_20260630_164928_01_001","1:32","empty",0,0],
+    [13,"R4","3.After test (2/2)","LRV_20260630_182229_01_009","0:04","empty",0,0],
+    [14,"R5","1.Cell","LRV_20260630_190734_01_016","6:31","rerun",34,2],
+    [15,"R5","2.Test (1/2)","LRV_20260630_194818_01_001","2:35","ok",16,4],
+    [16,"R5","2.Test (2/2)","LRV_20260630_195116_01_002","0:30","ok",6,1],
+    [17,"R5","3.Post-test (1/2)","LRV_20260701_193034_01_001","0:33","empty",0,0],
+    [18,"R5","3.Post-test (2/2)","LRV_20260701_193246_01_002","4:49","rerun",40,2],
+    [19,"R5","recording-failed","LRV_20260630_184931_01_012","6:00","ok",22,3],
+    [20,"R6","1.Cell","LRV_20260701_195225_01_005","7:32","rerun",33,6],
+    [21,"R6","2.Test (1/4)","LRV_20260706_194802_01_001","0:27","empty",0,0],
+    [22,"R6","2.Test (2/4)","LRV_20260706_194900_01_002","1:47","ok",19,0],
+    [23,"R6","2.Test (3/4)","LRV_20260706_195058_01_003","0:41","empty",0,0],
+    [24,"R6","2.Test (4/4)","LRV_20260706_195153_01_004","0:17","ok",2,2],
+    [25,"R6","3.Post-test","LRV_20260706_191200_01_001","4:46","ok",21,3],
+    [26,"R7","1.Cell","VID_20260709_112816_00_002","7:12","rerun",32,4],
+    [27,"R7","2.Test","VID_20260709_120030_00_002","2:15","ok",20,4],
+    [28,"R7","3.Post-test","VID_20260709_131524_00_002","6:18","rerun",15,3],
+    [29,"R8","1.Cell","VID_20260709_132703_00_020","6:50","rerun",40,4],
+    [30,"R8","3.Post-test","VID_20260709_140234_00_020","2:31","ok",18,0],
+    [31,"R9","1.Cell-same with R8","VID_20260709_140622_00_025","3:34","unrelated",0,0],
+    [32,"R9","2.Test","VID_20260709_142320_00_026","0:23","ok",1,0],
+    [33,"R9","3.Post-test","VID_20260710_225040_00_010","5:21","ok",33,4],
+    [34,"R10","1.Cell (1/2,教学录音)","VID_20260708_202846_00_001","6:13","rerun",26,7],
+    [35,"R10","1.Cell (2/2,无音轨)","C0362","2:34","silent",0,0],
+  ];
+
+  const maxNodes = Math.max(...videos.map(v => v[6]));
+  const groupShade = new Set(["R2","R4","R6","R8","R10"]);
+
+  const statusHtml = (status, label) => {
+    if (status === "empty") return `<span class="status-empty">无有效知识</span>`;
+    if (status === "rerun") return `<span class="status-rerun">已修正重跑</span>`;
+    if (status === "unrelated") return `<span class="status-empty">内容与实验无关</span>`;
+    if (status === "silent") return `<span class="status-empty">无音轨</span>`;
+    return `<span class="status-empty" style="opacity:.4">—</span>`;
+  };
+
+  const conflictPill = (n) => {
+    let cls = "pill";
+    if (n === 0) cls += " zero";
+    else if (n <= 2) cls += " c-low";
+    else cls += " c-high";
+    return `<span class="${cls}">${n}</span>`;
+  };
+
+  const rows = videos.map(([idx, grp, stage, name, dur, status, nodes, conflicts]) => {
+    const shaded = groupShade.has(grp) ? ` class="group-${grp.toLowerCase()}"` : "";
+    const barPct = maxNodes ? Math.round((nodes / maxNodes) * 100) : 0;
+    return `<tr${shaded}>
+      <td class="num">${idx}</td>
+      <td class="rgroup">${grp}</td>
+      <td>${stage}</td>
+      <td class="video-name">${name}</td>
+      <td class="num">${dur}</td>
+      <td>${statusHtml(status)}</td>
+      <td class="num"><div class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:${barPct}%"></div></div>${nodes}</div></td>
+      <td class="num">${conflictPill(conflicts)}</td>
+    </tr>`;
+  }).join("");
+
+  document.getElementById("video-table-body").innerHTML = rows;
+
+  const dict = [
+    ["Leven 117","Nafion 117","membrane"],
+    ["Pt-Rosilium / PT-Rosilium","Pt-Ru-C","catalyst"],
+    ["H2C3 carbon paper","H23C3 carbon paper","substrate"],
+    ["ssm","sccm","unit-flow"],
+    ["cysteine X3760","Sustainion X37-60","membrane"],
+    ["PTO3C3 carbon catalysis","Pt-Ru-C catalyst","catalyst"],
+    ["potassium carbon catalysis","Pt-Ru-C catalyst","catalyst"],
+    ["QOH","KOH","electrolyte"],
+    ["Stenol X3750","Sustainion X37-50","membrane"],
+    ["1 molecule H / 1-molecule H","1 molar KOH","electrolyte"],
+    ["resistance of the 4-cell","resistance of the full cell","electrochemistry"],
+    ["sustained on X3750","Sustainion X37-50","membrane"],
+    ["4 balls","4 bolts","assembly"],
+    ["GATO 3-axis recombinant paper","H23C3 carbon paper","substrate"],
+    ["stainless steel S3750","Sustainion X37-50","membrane"],
+    ["spinning / spinting flow field","serpentine flow field","flow-field"],
+    ["one molecule each","1 molar KOH","electrolyte"],
+    ["toggle 2 Nm","torque of 2 Nm","assembly"],
+    ["gas thickness","gasket thickness","gasket"],
+    ["INR window","inner window","gasket"],
+    ["micrometer(s) / µm near gasket or chamber thickness","millimeter(s) / mm","unit"],
+    ["microgram(s) near catalyst/catalysis loading","milligram(s)","unit"],
+    ["cell X3-750","Sustainion X37-50","membrane"],
+    ["L2-3-6-3 carbon / H2-3-3 carbon / A233 carbon / H2S6-recommended","H23C3 carbon","substrate"],
+    ["PT-resilient","Pt-Ru-C","catalyst"],
+    ["PTFE-resilient spray-coating","Pt-Ru-C catalyst spray-coating","catalyst"],
+    ["SACM","sccm","unit-flow"],
+    ["羊脊 (yáng jǐ)","阳极 (anode)","electrode-cn"],
+    ["音极 (yīn jí)","阴极 (cathode)","electrode-cn"],
+  ];
+
+  document.getElementById("dict-grid").innerHTML = dict.map(([w,c,cat]) => `
+    <div class="dict-card">
+      <span class="dict-wrong">${w}</span><span class="dict-arrow">→</span><span class="dict-correct">${c}</span>
+      <span class="dict-cat">${cat}</span>
+    </div>
+  `).join("");
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+[
+  {
+    "triple": [
+      "cathode electrode",
+      "prepared by",
+      "spray coating copper oxide catalyst on H23C3 carbon paper"
+    ],
+    "text_evidence": "field, step 2, this is the cathode electrode, the cathode is prepared by spray coating copper oxide catalyst on H23C3 carbon paper the catalyst loading is 3mg per cm2, the active",
+    "timestamp": [
+      20.96,
+      63.08
+    ]
+  },
+  {
+    "triple": [
+      "copper oxide catalyst",
+      "loading",
+      "3mg per cm2"
+    ],
+    "text_evidence": "copper oxide catalyst on H23C3 carbon paper the catalyst loading is 3mg per cm2, the active",
+    "timestamp": [
+      50.16,
+      63.08
+    ]
+  },
+  {
+    "triple": [
+      "cathode gasket",
+      "thickness",
+      "0.2mm"
+    ],
+    "text_evidence": "step 3, this is the cathode gasket, the gasket thickness is 0.2mm, the gasket thickness is 0.2mm, the inner window size is 1x1cm, step 4, we place the alkaline ion exchange membrane,",
+    "timestamp": [
+      80.16,
+      134.44
+    ]
+  },
+  {
+    "triple": [
+      "cathode gasket inner window",
+      "size",
+      "1x1cm"
+    ],
+    "text_evidence": "0.2mm, the inner window size is 1x1cm, step 4, we place the alkaline ion exchange membrane,",
+    "timestamp": [
+      106.04,
+      134.44
+    ]
+  },
+  {
+    "triple": [
+      "alkaline ion exchange membrane",
+      "placed",
+      "reactor"
+    ],
+    "text_evidence": "0.2mm, the inner window size is 1x1cm, step 4, we place the alkaline ion exchange membrane,",
+    "timestamp": [
+      106.04,
+      134.44
+    ]
+  },
+  {
+    "triple": [
+      "membrane",
+      "is",
+      "cysteine X3760"
+    ],
+    "text_evidence": "this membrane is cysteine X3760, step 5, this is the middle chamber, the chamber thickness",
+    "timestamp": [
+      134.44,
+      149.8
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "thickness",
+      "10mm"
+    ],
+    "text_evidence": "this membrane is cysteine X3760, step 5, this is the middle chamber, the chamber thickness is 10mm and the window size is 1x1cm, this chamber is used to hold this solid electrolyte,",
+    "timestamp": [
+      134.44,
+      158.76
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "window size",
+      "1x1cm"
+    ],
+    "text_evidence": "is 10mm and the window size is 1x1cm, this chamber is used to hold this solid electrolyte,",
+    "timestamp": [
+      149.8,
+      158.76
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "used to hold",
+      "solid electrolyte"
+    ],
+    "text_evidence": "is 10mm and the window size is 1x1cm, this chamber is used to hold this solid electrolyte,",
+    "timestamp": [
+      149.8,
+      158.76
+    ]
+  },
+  {
+    "triple": [
+      "solid electrolyte",
+      "is",
+      "strong acid cation exchange resin base"
+    ],
+    "text_evidence": "this solid electrolyte is strong acid cation exchange resin base with a particle size of",
+    "timestamp": [
+      158.76,
+      165.2
+    ]
+  },
+  {
+    "triple": [
+      "solid electrolyte",
+      "particle size",
+      "1600-80"
+    ],
+    "text_evidence": "this solid electrolyte is strong acid cation exchange resin base with a particle size of 1600-80.",
+    "timestamp": [
+      158.76,
+      166.56
+    ]
+  }
+]

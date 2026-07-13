@@ -1,0 +1,134 @@
+[
+  {
+    "triple": [
+      "anode feed gas",
+      "is",
+      "hydrogen"
+    ],
+    "text_evidence": "The anode feed gas is hydrogen with a flow rate of 20 sccm.",
+    "timestamp": [
+      8.0,
+      19.0
+    ]
+  },
+  {
+    "triple": [
+      "anode feed gas flow rate",
+      "is",
+      "20 sccm"
+    ],
+    "text_evidence": "The anode feed gas is hydrogen with a flow rate of 20 sccm.",
+    "timestamp": [
+      8.0,
+      19.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode feed gas",
+      "is",
+      "carbon monoxide"
+    ],
+    "text_evidence": "The cathode feed gas is carbon monoxide with a flow rate of 10 sccm.",
+    "timestamp": [
+      19.0,
+      25.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode feed gas flow rate",
+      "is",
+      "10 sccm"
+    ],
+    "text_evidence": "The cathode feed gas is carbon monoxide with a flow rate of 10 sccm.",
+    "timestamp": [
+      19.0,
+      25.0
+    ]
+  },
+  {
+    "triple": [
+      "working electrode",
+      "is connected to",
+      "cathode"
+    ],
+    "text_evidence": "In this electrochemical setup, the working electrode is connected to the cathode.",
+    "timestamp": [
+      25.0,
+      33.0
+    ]
+  },
+  {
+    "triple": [
+      "counter electrode",
+      "is connected to",
+      "anode side"
+    ],
+    "text_evidence": "Both the counter electrode and the reference electrode are connected to the anode side.",
+    "timestamp": [
+      33.0,
+      43.0
+    ]
+  },
+  {
+    "triple": [
+      "reference electrode",
+      "is connected to",
+      "anode side"
+    ],
+    "text_evidence": "Both the counter electrode and the reference electrode are connected to the anode side.",
+    "timestamp": [
+      33.0,
+      43.0
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "contains",
+      "solid electrolyte"
+    ],
+    "text_evidence": "The middle chamber is filled with solid electrolyte, and the solid electrolyte is being pervaded before assembly.",
+    "timestamp": [
+      55.0,
+      63.0
+    ]
+  },
+  {
+    "triple": [
+      "solid electrolyte",
+      "is being pervaded",
+      "before assembly"
+    ],
+    "text_evidence": "The middle chamber is filled with solid electrolyte, and the solid electrolyte is being pervaded before assembly.",
+    "timestamp": [
+      55.0,
+      63.0
+    ]
+  },
+  {
+    "triple": [
+      "pervading",
+      "purpose",
+      "improve ionic conductivity of solid electrolyte"
+    ],
+    "text_evidence": "The purpose of pervading is to improve the ionic conductivity of the solid electrolyte and reduce the initial resistance of the middle layer.",
+    "timestamp": [
+      63.0,
+      75.0
+    ]
+  },
+  {
+    "triple": [
+      "pervading",
+      "purpose",
+      "reduce initial resistance of middle layer"
+    ],
+    "text_evidence": "The purpose of pervading is to improve the ionic conductivity of the solid electrolyte and reduce the initial resistance of the middle layer.",
+    "timestamp": [
+      63.0,
+      75.0
+    ]
+  }
+]

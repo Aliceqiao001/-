@@ -1,0 +1,398 @@
+[
+  {
+    "triple": [
+      "system",
+      "condition",
+      "safe"
+    ],
+    "text_evidence": "Okay, after confirming that the system is safe, we will loosen the four bolts gradually in a diagonal sequence and open the reactor.",
+    "timestamp": [
+      11.0,
+      29.0
+    ]
+  },
+  {
+    "triple": [
+      "four bolts",
+      "operation",
+      "loosened gradually in a diagonal sequence"
+    ],
+    "text_evidence": "Okay, after confirming that the system is safe, we will loosen the four bolts gradually in a diagonal sequence and open the reactor.",
+    "timestamp": [
+      11.0,
+      29.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "operation",
+      "opened"
+    ],
+    "text_evidence": "Okay, after confirming that the system is safe, we will loosen the four bolts gradually in a diagonal sequence and open the reactor.",
+    "timestamp": [
+      11.0,
+      29.0
+    ]
+  },
+  {
+    "triple": [
+      "anode flow plates",
+      "operation",
+      "inspected"
+    ],
+    "text_evidence": "First, we will inspect the anode flow plates at the back side of the anode carbon paper electrode.",
+    "timestamp": [
+      29.0,
+      47.0
+    ]
+  },
+  {
+    "triple": [
+      "back side of anode carbon paper electrode",
+      "location",
+      "anode flow plates"
+    ],
+    "text_evidence": "First, we will inspect the anode flow plates at the back side of the anode carbon paper electrode.",
+    "timestamp": [
+      29.0,
+      47.0
+    ]
+  },
+  {
+    "triple": [
+      "back side of the anode carbon paper electrode",
+      "faces",
+      "anode gas flow field"
+    ],
+    "text_evidence": "Flow plate at the back side of the anode carbon paper electrode. Here, the back side refers to the side facing the anode gas flow field.",
+    "timestamp": [
+      60.0,
+      77.0
+    ]
+  },
+  {
+    "triple": [
+      "back side of the anode carbon paper electrode",
+      "contains",
+      "visible water droplets"
+    ],
+    "text_evidence": "Oh, a large number of visible water droplets are present on the back side of the anode carbon paper.",
+    "timestamp": [
+      77.0,
+      88.0
+    ]
+  },
+  {
+    "triple": [
+      "micro-droplets",
+      "generate",
+      "delivery of water-containing droplets into the anode gas compartment"
+    ],
+    "text_evidence": "This confirms that the micro-droplets generate a successful delivery of water-containing droplets into the anode gas compartment.",
+    "timestamp": [
+      88.0,
+      97.0
+    ]
+  },
+  {
+    "triple": [
+      "anode carbon paper electrode",
+      "removed",
+      "carefully"
+    ],
+    "text_evidence": "Next, we carefully remove the anode carbon paper electrode and inspect the opposite side.",
+    "timestamp": [
+      97.0,
+      107.0
+    ]
+  },
+  {
+    "triple": [
+      "opposite side of anode carbon paper electrode",
+      "inspected",
+      "carefully"
+    ],
+    "text_evidence": "Next, we carefully remove the anode carbon paper electrode and inspect the opposite side.",
+    "timestamp": [
+      97.0,
+      107.0
+    ]
+  },
+  {
+    "triple": [
+      "catalyst coating side",
+      "facing",
+      "PTFE membrane"
+    ],
+    "text_evidence": "This is the catalyst coating side facing the PTFE membrane.",
+    "timestamp": [
+      109.0,
+      113.0
+    ]
+  },
+  {
+    "triple": [
+      "back side of H23C3 carbon paper",
+      "contains",
+      "many droplets"
+    ],
+    "text_evidence": "Although many droplets are present on the back side of H23C3 carbon paper the catalyst layer remains relatively dry.",
+    "timestamp": [
+      113.0,
+      122.0
+    ]
+  },
+  {
+    "triple": [
+      "catalyst layer",
+      "state",
+      "relatively dry"
+    ],
+    "text_evidence": "Although many droplets are present on the back side of H23C3 carbon paper the catalyst layer remains relatively dry.",
+    "timestamp": [
+      113.0,
+      122.0
+    ]
+  },
+  {
+    "triple": [
+      "micro-droplets",
+      "penetration evidence",
+      "none through H23C3 carbon paper to catalyst membrane interface"
+    ],
+    "text_evidence": "There is no clear evidence that the micro-droplets penetrated through H23C3 carbon paper and reached the catalyst membrane interface.",
+    "timestamp": [
+      125.0,
+      134.0
+    ]
+  },
+  {
+    "triple": [
+      "PTFE membrane",
+      "inspection",
+      "single PTFE membrane"
+    ],
+    "text_evidence": "We then inspect the single PTFE membrane.",
+    "timestamp": [
+      135.0,
+      147.0
+    ]
+  },
+  {
+    "triple": [
+      "PTFE membrane",
+      "appearance",
+      "very dry"
+    ],
+    "text_evidence": "The PTFE membrane also appears very dry, especially in the region that was in contact with the anode catalyst layer.",
+    "timestamp": [
+      147.0,
+      155.0
+    ]
+  },
+  {
+    "triple": [
+      "region in contact with anode catalyst layer",
+      "appearance",
+      "very dry"
+    ],
+    "text_evidence": "The PTFE membrane also appears very dry, especially in the region that was in contact with the anode catalyst layer. Still very dry on the anode side, especially in the region that was in contact with the anode catalyst layer.",
+    "timestamp": [
+      147.0,
+      170.0
+    ]
+  },
+  {
+    "triple": [
+      "structure",
+      "transport limitation",
+      "important"
+    ],
+    "text_evidence": "This observation reveals an important transport limitation in the structure.",
+    "timestamp": [
+      170.0,
+      178.0
+    ]
+  },
+  {
+    "triple": [
+      "micro-droplets",
+      "reached",
+      "back side of the anode carbon paper"
+    ],
+    "text_evidence": "The micro-droplets successfully reached the back side of the anode carbon paper, but they did not effectively pass through the porous carbon paper electrode to reach the catalyst layer at the PTFE interface.",
+    "timestamp": [
+      178.0,
+      193.0
+    ]
+  },
+  {
+    "triple": [
+      "micro-droplets",
+      "did not pass through",
+      "porous carbon paper electrode"
+    ],
+    "text_evidence": "The micro-droplets successfully reached the back side of the anode carbon paper, but they did not effectively pass through the porous carbon paper electrode to reach the catalyst layer at the PTFE interface.",
+    "timestamp": [
+      178.0,
+      193.0
+    ]
+  },
+  {
+    "triple": [
+      "main limitation",
+      "is",
+      "through-play transport of water on potassium-containing droplets across H23C3 carbon paper electrode"
+    ],
+    "text_evidence": "Instead, the main limitation is the through-play transport of water on the potassium-containing droplets across H23C3 carbon paper electrode.",
+    "timestamp": [
+      201.0,
+      214.0
+    ]
+  },
+  {
+    "triple": [
+      "H23C3 carbon paper",
+      "may act as",
+      "barrier"
+    ],
+    "text_evidence": "H23C3 carbon paper may act as a barrier because of its hydrophobicity, poor structural compression, or inefficient capillary transport.",
+    "timestamp": [
+      214.0,
+      227.0
+    ]
+  },
+  {
+    "triple": [
+      "H23C3 carbon paper",
+      "has property",
+      "hydrophobicity"
+    ],
+    "text_evidence": "H23C3 carbon paper may act as a barrier because of its hydrophobicity, poor structural compression, or inefficient capillary transport.",
+    "timestamp": [
+      214.0,
+      227.0
+    ]
+  },
+  {
+    "triple": [
+      "H23C3 carbon paper",
+      "has property",
+      "poor structural compression"
+    ],
+    "text_evidence": "H23C3 carbon paper may act as a barrier because of its hydrophobicity, poor structural compression, or inefficient capillary transport.",
+    "timestamp": [
+      214.0,
+      227.0
+    ]
+  },
+  {
+    "triple": [
+      "H23C3 carbon paper",
+      "has property",
+      "inefficient capillary transport"
+    ],
+    "text_evidence": "H23C3 carbon paper may act as a barrier because of its hydrophobicity, poor structural compression, or inefficient capillary transport.",
+    "timestamp": [
+      214.0,
+      227.0
+    ]
+  },
+  {
+    "triple": [
+      "water",
+      "accumulates",
+      "gas phase side"
+    ],
+    "text_evidence": "As a result, water accumulates on the gas phase side, while the electrochemical activity with the catalyst-separator interface remains dry.",
+    "timestamp": [
+      227.0,
+      238.0
+    ]
+  },
+  {
+    "triple": [
+      "electrochemical activity",
+      "remains",
+      "dry at catalyst-separator interface"
+    ],
+    "text_evidence": "As a result, water accumulates on the gas phase side, while the electrochemical activity with the catalyst-separator interface remains dry.",
+    "timestamp": [
+      227.0,
+      238.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "introduced",
+      "micro-droplets in the anode compartment"
+    ],
+    "text_evidence": "In summary, this reactor successfully introduced the micro-droplets in the anode compartment, but the droplets cannot effectively reach the catalysis layer through H23C3 carbon paper electrode.",
+    "timestamp": [
+      246.0,
+      262.0
+    ]
+  },
+  {
+    "triple": [
+      "micro-droplets",
+      "cannot effectively reach",
+      "catalysis layer through H23C3 carbon paper electrode"
+    ],
+    "text_evidence": "In summary, this reactor successfully introduced the micro-droplets in the anode compartment, but the droplets cannot effectively reach the catalysis layer through H23C3 carbon paper electrode.",
+    "timestamp": [
+      246.0,
+      262.0
+    ]
+  },
+  {
+    "triple": [
+      "next reactor design",
+      "would improve",
+      "liquid transparency from the gas channel to the catalyst-separator interface"
+    ],
+    "text_evidence": "The next reactor design would improve liquid transparency from the gas channel to the catalyst-separator interface, or some other ways to improve the hydrogen transparency and avoid e-flow and flooding.",
+    "timestamp": [
+      262.0,
+      280.0
+    ]
+  },
+  {
+    "triple": [
+      "next reactor design",
+      "would improve",
+      "hydrogen transparency"
+    ],
+    "text_evidence": "The next reactor design would improve liquid transparency from the gas channel to the catalyst-separator interface, or some other ways to improve the hydrogen transparency and avoid e-flow and flooding.",
+    "timestamp": [
+      262.0,
+      280.0
+    ]
+  },
+  {
+    "triple": [
+      "next reactor design",
+      "would avoid",
+      "e-flow and flooding"
+    ],
+    "text_evidence": "The next reactor design would improve liquid transparency from the gas channel to the catalyst-separator interface, or some other ways to improve the hydrogen transparency and avoid e-flow and flooding.",
+    "timestamp": [
+      262.0,
+      280.0
+    ]
+  },
+  {
+    "triple": [
+      "PTFE membrane",
+      "has become",
+      "very dry"
+    ],
+    "text_evidence": "This is the PTFE membrane. It has become very dry.",
+    "timestamp": [
+      280.0,
+      293.0
+    ]
+  }
+]

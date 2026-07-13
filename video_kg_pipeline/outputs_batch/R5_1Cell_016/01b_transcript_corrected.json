@@ -1,0 +1,233 @@
+[
+  {
+    "index": 0,
+    "text": "This is the assembly of this reactor. Step 1, this is the cathode flow plate. It has",
+    "start_ts": 0.0,
+    "end_ts": 11.0,
+    "original_text": "This is the assembly of this reactor. Step 1, this is the cathode flow plate. It has"
+  },
+  {
+    "index": 1,
+    "text": "laser-painting flow field. Step 2, this is the cathode electrode. The cathode is also",
+    "start_ts": 11.0,
+    "end_ts": 20.16,
+    "original_text": "laser-painting flow field. Step 2, this is the cathode electrode. The cathode is also"
+  },
+  {
+    "index": 2,
+    "text": "prepared by spray coating carbon dioxide catalysis onto H23C3 carbon paper The catalyst loading",
+    "start_ts": 20.16,
+    "end_ts": 27.56,
+    "original_text": "prepared by spray coating carbon dioxide catalysis onto 82363 carbon paper. The catalyst loading"
+  },
+  {
+    "index": 3,
+    "text": "is 3 mg per centimeter square and the active area is 1 by 1. Step 3, this is the cathode",
+    "start_ts": 27.56,
+    "end_ts": 40.44,
+    "original_text": "is 3 mg per centimeter square and the active area is 1 by 1. Step 3, this is the cathode"
+  },
+  {
+    "index": 4,
+    "text": "gasket. The gasket thickness is 0.3 millimeter and the ionizer window size is 1 by 1 centimeter.",
+    "start_ts": 40.44,
+    "end_ts": 51.72,
+    "original_text": "gasket. The gasket thickness is 0.3 micrometer and the ionizer window size is 1 by 1 centimeter."
+  },
+  {
+    "index": 5,
+    "text": "Step 4, we will place the cathode-side membrane. This is the cathode-side alkaline ion-chloride",
+    "start_ts": 51.72,
+    "end_ts": 65.6,
+    "original_text": "Step 4, we will place the cathode-side membrane. This is the cathode-side alkaline ion-chloride"
+  },
+  {
+    "index": 6,
+    "text": "membrane. The membrane is Sustainion X37-50. Step 5, this is the middle air-flight chamber.",
+    "start_ts": 65.6,
+    "end_ts": 81.04,
+    "original_text": "membrane. The membrane is sustained on X3750. Step 5, this is the middle air-flight chamber."
+  },
+  {
+    "index": 7,
+    "text": "The chamber thickness is 3 millimeter and the window size is 1 by 1. The chamber is",
+    "start_ts": 81.04,
+    "end_ts": 86.24,
+    "original_text": "The chamber thickness is 3 micrometer and the window size is 1 by 1. The chamber is"
+  },
+  {
+    "index": 8,
+    "text": "used to hold and circulate the liquid electrolytes. The electrolyte is 1 molar KOH and it",
+    "start_ts": 86.24,
+    "end_ts": 91.88,
+    "original_text": "used to hold and circulate the liquid electrolytes. The electrolyte is 1 molecule each and it"
+  },
+  {
+    "index": 9,
+    "text": "will be continuously circulated through the middle chamber during operation. Compared",
+    "start_ts": 91.88,
+    "end_ts": 97.56,
+    "original_text": "will be continuously circulated through the middle chamber during operation. Compared"
+  },
+  {
+    "index": 10,
+    "text": "to the previous design, the key change in this reactor is that the middle chamber thickness",
+    "start_ts": 97.56,
+    "end_ts": 103.0,
+    "original_text": "to the previous design, the key change in this reactor is that the middle chamber thickness"
+  },
+  {
+    "index": 11,
+    "text": "is reduced to 3 millimeter. The purpose is to shorten the ion transparent distance, reduce",
+    "start_ts": 103.0,
+    "end_ts": 109.32,
+    "original_text": "is reduced to 3 micrometer. The purpose is to shorten the ion transparent distance, reduce"
+  },
+  {
+    "index": 12,
+    "text": "the organic resistance from the liquid electro-layer and improve the overall and to decrease the",
+    "start_ts": 109.36,
+    "end_ts": 118.36,
+    "original_text": "the organic resistance from the liquid electro-layer and improve the overall and to decrease the"
+  },
+  {
+    "index": 13,
+    "text": "cell voltage. In addition, we induce this reference electrode into the middle layer.",
+    "start_ts": 118.36,
+    "end_ts": 135.36,
+    "original_text": "cell voltage. In addition, we induce this reference electrode into the middle layer."
+  },
+  {
+    "index": 14,
+    "text": "The reference electrode is a mercury oxide electrode which allows us to monitor the electrode",
+    "start_ts": 135.4,
+    "end_ts": 143.28,
+    "original_text": "The reference electrode is a mercury oxide electrode which allows us to monitor the electrode"
+  },
+  {
+    "index": 15,
+    "text": "potentials more accurately during operation. Step 6, we add the anode gasket. The anode",
+    "start_ts": 143.28,
+    "end_ts": 151.72,
+    "original_text": "potentials more accurately during operation. Step 6, we add the anode gasket. The anode"
+  },
+  {
+    "index": 16,
+    "text": "gasket is also 0.3 millimeter.",
+    "start_ts": 151.72,
+    "end_ts": 154.72,
+    "original_text": "gasket is also 0.3 micrometer."
+  },
+  {
+    "index": 17,
+    "text": "This is the anode side membrane.",
+    "start_ts": 165.36,
+    "end_ts": 192.72,
+    "original_text": "This is the anode side membrane."
+  },
+  {
+    "index": 18,
+    "text": "Let us put the membrane first into the middle chamber and the gasket.",
+    "start_ts": 195.72,
+    "end_ts": 201.72,
+    "original_text": "Let us put the membrane first into the middle chamber and the gasket."
+  },
+  {
+    "index": 19,
+    "text": "At the anode side, the membrane is also Sustainion X37-50.",
+    "start_ts": 202.72,
+    "end_ts": 210.72,
+    "original_text": "At the anode side, the membrane is also sustained on X3750."
+  },
+  {
+    "index": 20,
+    "text": "Okay, under step 8, this is the anode electrode. The anode is also prepared by spray coating",
+    "start_ts": 211.08,
+    "end_ts": 224.08,
+    "original_text": "Okay, under step 8, this is the anode electrode. The anode is also prepared by spray coating"
+  },
+  {
+    "index": 21,
+    "text": "Pt-Ru-C catalyst onto H23C3 carbon paper The catalysis loading is 2 micrograms",
+    "start_ts": 224.08,
+    "end_ts": 233.08,
+    "original_text": "PT-Rosilium carbon catalysis onto L23-C3 carbon paper. The catalysis loading is 2 micrograms"
+  },
+  {
+    "index": 22,
+    "text": "per centimeter square. Step 9, this is the anode flow plate. It also has a 17 flow field.",
+    "start_ts": 233.44,
+    "end_ts": 243.44,
+    "original_text": "per centimeter square. Step 9, this is the anode flow plate. It also has a 17 flow field."
+  },
+  {
+    "index": 23,
+    "text": "Finally, after aligning all components, we assemble and tighten the reactor using a torque",
+    "start_ts": 243.44,
+    "end_ts": 250.44,
+    "original_text": "Finally, after aligning all components, we assemble and tighten the reactor using a torque"
+  },
+  {
+    "index": 24,
+    "text": "of 2 Newton meter.",
+    "start_ts": 250.44,
+    "end_ts": 253.44,
+    "original_text": "of 2 Newton meter."
+  },
+  {
+    "index": 25,
+    "text": "The reactor is tightened using 4 bolts in a diagonal sequence to ensure uniform compression.",
+    "start_ts": 263.08,
+    "end_ts": 282.44,
+    "original_text": "The reactor is tightened using 4 bolts in a diagonal sequence to ensure uniform compression."
+  },
+  {
+    "index": 26,
+    "text": "In summary, this reactor keeps the circulating 1 molar KOH liquid electrolytes in the middle",
+    "start_ts": 293.44,
+    "end_ts": 306.44,
+    "original_text": "In summary, this reactor keeps the circulating 1 molecule OH liquid electrolytes in the middle"
+  },
+  {
+    "index": 27,
+    "text": "chamber but reduces the chamber thickness to 3 millimeter. Mercury oxide reference electrode",
+    "start_ts": 306.44,
+    "end_ts": 316.44,
+    "original_text": "chamber but reduces the chamber thickness to 3 micrometer. Mercury oxide reference electrode"
+  },
+  {
+    "index": 28,
+    "text": "is also added to the middle chamber for more reliable potential monitoring.",
+    "start_ts": 316.8,
+    "end_ts": 323.8,
+    "original_text": "is also added to the middle chamber for more reliable potential monitoring."
+  },
+  {
+    "index": 29,
+    "text": "This design is intended to improve ionic transport, lower the cell resistance, and provide better",
+    "start_ts": 323.8,
+    "end_ts": 341.8,
+    "original_text": "This design is intended to improve ionic transport, lower the cell resistance, and provide better"
+  },
+  {
+    "index": 30,
+    "text": "electrochemical diagonal scattering operation.",
+    "start_ts": 341.8,
+    "end_ts": 344.16,
+    "original_text": "electrochemical diagonal scattering operation."
+  },
+  {
+    "index": 31,
+    "text": "The torque, using a torque of 2 Newton meter.",
+    "start_ts": 372.16,
+    "end_ts": 379.16,
+    "original_text": "The torque, using a torque of 2 Newton meter."
+  },
+  {
+    "index": 32,
+    "text": "Okay, finish this reactor.",
+    "start_ts": 388.16,
+    "end_ts": 390.16,
+    "original_text": "Okay, finish this reactor."
+  }
+]

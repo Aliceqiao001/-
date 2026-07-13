@@ -1,0 +1,30 @@
+[
+  {
+    "index": 0,
+    "text": "This is the anode gas. The anode gas is pure hydrogen. The cathode gas is pure CO. The",
+    "start_ts": 0.0,
+    "end_ts": 16.0,
+    "original_text": "This is the anode gas. The anode gas is pure hydrogen. The cathode gas is pure CO. The"
+  },
+  {
+    "index": 1,
+    "text": "hydrogen fluid is 20 ssm. The silica gas is 10 ssm. This is the cathode workstation.",
+    "start_ts": 16.0,
+    "end_ts": 31.0,
+    "original_text": "hydrogen fluid is 20 ssm. The silica gas is 10 ssm. This is the cathode workstation."
+  },
+  {
+    "index": 2,
+    "text": "It is also the working electrode. This is the anode or the counter electrode for the",
+    "start_ts": 31.0,
+    "end_ts": 38.0,
+    "original_text": "It is also the working electrode. This is the anode or the counter electrode for the"
+  },
+  {
+    "index": 3,
+    "text": "workstation. Okay, that's all for the cell symbol and the cell testing configuration.",
+    "start_ts": 38.0,
+    "end_ts": 49.0,
+    "original_text": "workstation. Okay, that's all for the cell symbol and the cell testing configuration."
+  }
+]

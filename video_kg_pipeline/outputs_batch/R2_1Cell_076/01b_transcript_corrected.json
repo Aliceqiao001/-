@@ -1,0 +1,72 @@
+[
+  {
+    "index": 0,
+    "text": "This is the anode electrode.",
+    "start_ts": 0.0,
+    "end_ts": 7.0,
+    "original_text": "This is the anode electrode."
+  },
+  {
+    "index": 1,
+    "text": "The anode is also provided by spray-coated Pt-Ru-C catalyst onto this H23C3 carbon paper",
+    "start_ts": 7.0,
+    "end_ts": 15.0,
+    "original_text": "The anode is also provided by spray-coated potassium carbon catalysis onto this 82363 carbon paper."
+  },
+  {
+    "index": 2,
+    "text": "The catalyst loading is also 2 mg cm2.",
+    "start_ts": 15.0,
+    "end_ts": 21.0,
+    "original_text": "The catalyst loading is also 2 mg cm2."
+  },
+  {
+    "index": 3,
+    "text": "Step 9, this is the anode flow plate.",
+    "start_ts": 21.0,
+    "end_ts": 28.0,
+    "original_text": "Step 9, this is the anode flow plate."
+  },
+  {
+    "index": 4,
+    "text": "This also has a flow field.",
+    "start_ts": 28.0,
+    "end_ts": 31.0,
+    "original_text": "This also has a flow field."
+  },
+  {
+    "index": 5,
+    "text": "Finally, we will align all components.",
+    "start_ts": 31.0,
+    "end_ts": 37.0,
+    "original_text": "Finally, we will align all components."
+  },
+  {
+    "index": 6,
+    "text": "We assemble and tighten the rector using this torque.",
+    "start_ts": 51.0,
+    "end_ts": 64.0,
+    "original_text": "We assemble and tighten the rector using this torque."
+  },
+  {
+    "index": 7,
+    "text": "Using a torque of 0.3 Nm.",
+    "start_ts": 81.0,
+    "end_ts": 109.0,
+    "original_text": "Using a torque of 0.3 Nm."
+  },
+  {
+    "index": 8,
+    "text": "The rector is tightened using 4 bolts in a diagonal sequence to ensure uniform compression.",
+    "start_ts": 109.0,
+    "end_ts": 138.0,
+    "original_text": "The rector is tightened using 4 bolts in a diagonal sequence to ensure uniform compression."
+  },
+  {
+    "index": 9,
+    "text": "The rector is tightened using 4 bolts in a diagonal sequence to ensure uniform compression.",
+    "start_ts": 138.0,
+    "end_ts": 145.0,
+    "original_text": "The rector is tightened using 4 bolts in a diagonal sequence to ensure uniform compression."
+  }
+]

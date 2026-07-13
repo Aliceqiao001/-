@@ -1,0 +1,170 @@
+[
+  {
+    "triple": [
+      "anode feed gas",
+      "is",
+      "hydrogen"
+    ],
+    "text_evidence": "The anode feed gas is hydrogen with a flow rate of 20 ccm.",
+    "timestamp": [
+      8.0,
+      15.0
+    ]
+  },
+  {
+    "triple": [
+      "anode feed gas",
+      "flow rate",
+      "20 ccm"
+    ],
+    "text_evidence": "The anode feed gas is hydrogen with a flow rate of 20 ccm.",
+    "timestamp": [
+      8.0,
+      15.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode feed gas",
+      "is",
+      "carbon monoxide"
+    ],
+    "text_evidence": "The cathode feed gas is carbon monoxide with a flow rate of 10 ccm.",
+    "timestamp": [
+      15.0,
+      21.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode feed gas",
+      "flow rate",
+      "10 ccm"
+    ],
+    "text_evidence": "The cathode feed gas is carbon monoxide with a flow rate of 10 ccm.",
+    "timestamp": [
+      15.0,
+      21.0
+    ]
+  },
+  {
+    "triple": [
+      "working electrode",
+      "connected to",
+      "cathode"
+    ],
+    "text_evidence": "In the electrochemical setup, the working electrode is connected to the cathode,",
+    "timestamp": [
+      21.0,
+      38.0
+    ]
+  },
+  {
+    "triple": [
+      "counter electrode",
+      "connected with",
+      "reference electrode"
+    ],
+    "text_evidence": "and both the counter electrode and the reference electrode are connected at the same time.",
+    "timestamp": [
+      38.0,
+      44.0
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "filled with",
+      "liquid electrolyte"
+    ],
+    "text_evidence": "During the test, the middle chamber is filled with a liquid electrolyte.",
+    "timestamp": [
+      44.0,
+      55.0
+    ]
+  },
+  {
+    "triple": [
+      "liquid electrolyte",
+      "concentration",
+      "1 molar KOH"
+    ],
+    "text_evidence": "The liquid electrolyte is 1 molar KOH.",
+    "timestamp": [
+      55.0,
+      58.0
+    ]
+  },
+  {
+    "triple": [
+      "previous reactor",
+      "requires",
+      "solid electrolyte in middle chamber"
+    ],
+    "text_evidence": "Different from the previous reactor, where the middle chamber needs solid electrolyte,",
+    "timestamp": [
+      58.0,
+      64.0
+    ]
+  },
+  {
+    "triple": [
+      "this reactor",
+      "uses",
+      "circulating liquid electrolyte in middle chamber"
+    ],
+    "text_evidence": "this reactor uses a circulating liquid electrolyte in the middle chamber.",
+    "timestamp": [
+      64.0,
+      69.0
+    ]
+  },
+  {
+    "triple": [
+      "liquid electrolyte circulation rate",
+      "is",
+      "30 ccm"
+    ],
+    "text_evidence": "The liquid electrolyte circulation rate is 30 ccm.",
+    "timestamp": [
+      81.0,
+      87.0
+    ]
+  },
+  {
+    "triple": [
+      "circulating electrolyte",
+      "concentration",
+      "1 molar KOH"
+    ],
+    "text_evidence": "For this test, we will monitor the cell voltage and evaluate whether the circulating 1 molar KOH electrolyte",
+    "timestamp": [
+      87.0,
+      95.0
+    ]
+  },
+  {
+    "triple": [
+      "test",
+      "monitor",
+      "cell voltage"
+    ],
+    "text_evidence": "For this test, we will monitor the cell voltage and evaluate whether the circulating 1 molar KOH electrolyte",
+    "timestamp": [
+      87.0,
+      95.0
+    ]
+  },
+  {
+    "triple": [
+      "test",
+      "evaluate",
+      "electrochemical performance and solubility of reactor"
+    ],
+    "text_evidence": "For this test, we will monitor the cell voltage and evaluate whether the circulating 1 molar KOH electrolyte can improve the electrochemical performance and solubility of this reactor.",
+    "timestamp": [
+      87.0,
+      100.0
+    ]
+  }
+]

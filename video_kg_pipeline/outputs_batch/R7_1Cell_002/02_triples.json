@@ -1,0 +1,386 @@
+[
+  {
+    "triple": [
+      "cathode flow plate",
+      "has",
+      "serpentine flow field"
+    ],
+    "text_evidence": "This is the cathode flow plate. It also has a serpentine flow field",
+    "timestamp": [
+      38.04,
+      62.6
+    ]
+  },
+  {
+    "triple": [
+      "cathode electrode",
+      "prepared by",
+      "spray coating copper oxide catalysis onto H23C3 carbon paper"
+    ],
+    "text_evidence": "Also, this is the cathode electrode. The cathode is also prepared by spray coating copper oxide catalysis onto H23C3 carbon paper.",
+    "timestamp": [
+      62.6,
+      87.44
+    ]
+  },
+  {
+    "triple": [
+      "catalyst loading",
+      "is",
+      "3 milligram per centimeter square"
+    ],
+    "text_evidence": "The catalyst loading is also 3 milligram per centimeter square.",
+    "timestamp": [
+      87.44,
+      98.76
+    ]
+  },
+  {
+    "triple": [
+      "cathode gasket",
+      "is",
+      "silicon gasket"
+    ],
+    "text_evidence": "The gasket is the silicon gasket.",
+    "timestamp": [
+      103.64,
+      107.56
+    ]
+  },
+  {
+    "triple": [
+      "cathode gasket",
+      "thickness",
+      "0.2 micrometer"
+    ],
+    "text_evidence": "The thickness is 0.2 micrometer.",
+    "timestamp": [
+      107.56,
+      117.2
+    ]
+  },
+  {
+    "triple": [
+      "inner window side",
+      "is",
+      "1 by 1 centimeter square"
+    ],
+    "text_evidence": "And the inner window side is 1 by 1 centimeter square.",
+    "timestamp": [
+      117.2,
+      132.32
+    ]
+  },
+  {
+    "triple": [
+      "active area",
+      "size",
+      "1 centimeter by 1 centimeter"
+    ],
+    "text_evidence": "So the active area is also 1 centimeter by 1 centimeter.",
+    "timestamp": [
+      132.32,
+      141.76
+    ]
+  },
+  {
+    "triple": [
+      "alkaline ion change membrane",
+      "placement",
+      "reactor"
+    ],
+    "text_evidence": "We place the alkaline ion change membrane.",
+    "timestamp": [
+      171.64,
+      182.92
+    ]
+  },
+  {
+    "triple": [
+      "membrane separator",
+      "quantity",
+      "only one"
+    ],
+    "text_evidence": "This is the only membrane separator in this reactor.",
+    "timestamp": [
+      182.92,
+      188.04
+    ]
+  },
+  {
+    "triple": [
+      "membrane",
+      "material spec",
+      "Sustainion X37-50"
+    ],
+    "text_evidence": "The membrane is a Sustainion X37-50.",
+    "timestamp": [
+      188.04,
+      192.48
+    ]
+  },
+  {
+    "triple": [
+      "membrane",
+      "is wetting using",
+      "1 molar KOH"
+    ],
+    "text_evidence": "But the membrane is wetting using the one 1 molar KOH",
+    "timestamp": [
+      200.08,
+      209.84
+    ]
+  },
+  {
+    "triple": [
+      "reactor structure",
+      "is simplified to",
+      "remove the liquid middle layer"
+    ],
+    "text_evidence": "The purpose is to simplify the reactor structure, remove the liquid middle layer, and avoid liquid-induced flooding or pressure imbalance.",
+    "timestamp": [
+      209.84,
+      223.48
+    ]
+  },
+  {
+    "triple": [
+      "reactor structure",
+      "is simplified to avoid",
+      "liquid-induced flooding or pressure imbalance"
+    ],
+    "text_evidence": "The purpose is to simplify the reactor structure, remove the liquid middle layer, and avoid liquid-induced flooding or pressure imbalance.",
+    "timestamp": [
+      209.84,
+      223.48
+    ]
+  },
+  {
+    "triple": [
+      "anode gasket",
+      "added",
+      "reactor"
+    ],
+    "text_evidence": "We add the anode gasket.",
+    "timestamp": [
+      226.0,
+      253.84
+    ]
+  },
+  {
+    "triple": [
+      "anode gasket",
+      "material",
+      "silicon"
+    ],
+    "text_evidence": "The anode gasket is also silicon materials and is also 0.2 millimeter.",
+    "timestamp": [
+      254.16,
+      266.6
+    ]
+  },
+  {
+    "triple": [
+      "anode gasket",
+      "thickness",
+      "0.2 millimeter"
+    ],
+    "text_evidence": "The anode gasket is also silicon materials and is also 0.2 millimeter.",
+    "timestamp": [
+      254.16,
+      266.6
+    ]
+  },
+  {
+    "triple": [
+      "anode electrode",
+      "prepared by",
+      "spray coating Pt-Ru-C catalyst onto H23C3 carbon"
+    ],
+    "text_evidence": "The anode is also prepared by spray coating Pt-Ru-C catalyst onto H23C3 carbon",
+    "timestamp": [
+      269.44,
+      275.92
+    ]
+  },
+  {
+    "triple": [
+      "catalyst loading",
+      "is",
+      "2 milligram per centimeter square"
+    ],
+    "text_evidence": "The catalyst loading is also 2 milligram per centimeter square.",
+    "timestamp": [
+      276.92,
+      281.56
+    ]
+  },
+  {
+    "triple": [
+      "window of the anode gasket",
+      "is",
+      "1 by 1 centimeter square"
+    ],
+    "text_evidence": "Because the window of the anode gasket is also 1 by 1, so the active area for anode",
+    "timestamp": [
+      282.28,
+      291.56
+    ]
+  },
+  {
+    "triple": [
+      "active area for anode",
+      "is",
+      "1 by 1 centimeter square"
+    ],
+    "text_evidence": "is also 1 by 1 centimeter square.",
+    "timestamp": [
+      291.56,
+      296.68
+    ]
+  },
+  {
+    "triple": [
+      "anode flow plate",
+      "is",
+      "this"
+    ],
+    "text_evidence": "This is the anode flow plate.",
+    "timestamp": [
+      296.68,
+      299.16
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "has",
+      "serpentine flow field"
+    ],
+    "text_evidence": "It also has a serpentine flow field",
+    "timestamp": [
+      299.16,
+      304.12
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "assembled and tightened using",
+      "torque"
+    ],
+    "text_evidence": "Finally, after aligning all components, we assemble and tighten the reactor using a torque",
+    "timestamp": [
+      304.68,
+      324.12
+    ]
+  },
+  {
+    "triple": [
+      "torque",
+      "set to",
+      "2 newton per meter"
+    ],
+    "text_evidence": "of 2 newton per newton by meter. Using a torque of 2.",
+    "timestamp": [
+      324.12,
+      348.2
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "tightened using",
+      "four bolts in a diagonal sequence"
+    ],
+    "text_evidence": "The reactor is also tightened using four bolts in a diagonal sequence for uniform compression.",
+    "timestamp": [
+      332.04,
+      343.48
+    ]
+  },
+  {
+    "triple": [
+      "torque",
+      "set to",
+      "0.3 newton meter"
+    ],
+    "text_evidence": "Okay, so using a torque of 0.3 newton meter.",
+    "timestamp": [
+      361.96,
+      388.2
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "keeps configuration of",
+      "same cathode and anode as industrial reactor"
+    ],
+    "text_evidence": "In summary, this reactor keeps the same cathode and anode configuration as this industrial",
+    "timestamp": [
+      388.44,
+      399.88
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "removes",
+      "middle electrolyte chamber"
+    ],
+    "text_evidence": "reactor, but it removes the middle electrolyte chamber and uses only one AM membrane.",
+    "timestamp": [
+      399.88,
+      406.28
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "uses",
+      "one AM membrane"
+    ],
+    "text_evidence": "reactor, but it removes the middle electrolyte chamber and uses only one AM membrane.",
+    "timestamp": [
+      399.88,
+      406.28
+    ]
+  },
+  {
+    "triple": [
+      "dual-dode gas CRAM H1 reactor",
+      "designed to",
+      "reduce flooding risk"
+    ],
+    "text_evidence": "This carries a compact dual-dode gas CRAM H1 reactor designed to reduce flooding risk",
+    "timestamp": [
+      406.28,
+      412.2
+    ]
+  },
+  {
+    "triple": [
+      "CO gas",
+      "input side",
+      "gas 2"
+    ],
+    "text_evidence": "So this side would be CO gas in, so gas 2, and hydrogen gas in, hydrogen gas 2 in here.",
+    "timestamp": [
+      417.4,
+      430.28
+    ]
+  },
+  {
+    "triple": [
+      "hydrogen gas",
+      "input side",
+      "hydrogen gas 2"
+    ],
+    "text_evidence": "So this side would be CO gas in, so gas 2, and hydrogen gas in, hydrogen gas 2 in here.",
+    "timestamp": [
+      417.4,
+      430.28
+    ]
+  }
+]

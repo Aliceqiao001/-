@@ -1,0 +1,278 @@
+[
+  {
+    "timestamp": 3.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "inspection type",
+      "post-test"
+    ],
+    "text_evidence": "This is a post-test inspection of this reactor.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 15.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "operation performed",
+      "disassembled"
+    ],
+    "text_evidence": "Now we disassemble the reactor and check the condition of each component after operation.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 24.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Now we disassemble the reactor and check the condition of each component after operation. || First, we will inspect the anode side.",
+    "matched_keywords": [],
+    "similarity": 0.49
+  },
+  {
+    "timestamp": 33.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode side",
+      "inspection performed",
+      "first"
+    ],
+    "text_evidence": "First, we will inspect the anode side.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 42.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "First, we will inspect the anode side. || Yeah, no stuck now.",
+    "matched_keywords": [],
+    "similarity": 0.137
+  },
+  {
+    "timestamp": 46.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Yeah, no stuck now. || You can find there is no obvious liquid accumulation or any flooding.",
+    "matched_keywords": [],
+    "similarity": 0.322
+  },
+  {
+    "timestamp": 51.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode side",
+      "observation",
+      "no obvious liquid accumulation"
+    ],
+    "text_evidence": "You can find there is no obvious liquid accumulation or any flooding.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 56.0,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "anode side",
+      "observation",
+      "no obvious liquid accumulation"
+    ],
+    "text_evidence": "And the surface appears very dry after the test. || You can find there is no obvious liquid accumulation or any flooding. || And the surface appears very dry after the test.",
+    "matched_keywords": [
+      "appears"
+    ]
+  },
+  {
+    "timestamp": 66.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "surface",
+      "appears",
+      "very dry"
+    ],
+    "text_evidence": "And the surface appears very dry after the test.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 77.0,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "anode side",
+      "appears",
+      "very dry"
+    ],
+    "text_evidence": "And the surface appears very dry after the test. || Oh, this is the anode side. This is the anode catalytic. Very, very dry.",
+    "matched_keywords": [],
+    "similarity": 0.457
+  },
+  {
+    "timestamp": 81.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Oh, this is the anode side. This is the anode catalytic. Very, very dry. || No stuck.",
+    "matched_keywords": [],
+    "similarity": 0.24
+  },
+  {
+    "timestamp": 88.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "No stuck. || Now let's inspect the membrane region.",
+    "matched_keywords": [],
+    "similarity": 0.172
+  },
+  {
+    "timestamp": 94.0,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "membrane",
+      "state",
+      "after test"
+    ],
+    "text_evidence": "Here we can see the membrane after test. || Here we can see the membrane after test. || Also, the membrane lost water.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 99.0,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "membrane",
+      "lost",
+      "water"
+    ],
+    "text_evidence": "Also, the membrane lost water. || Also, the membrane lost water. || Very dry after operation.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 104.5,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "membrane",
+      "state",
+      "very dry"
+    ],
+    "text_evidence": "Very dry after operation. || Very dry after operation. || This shows that the pre-added 1-molecule H droplet is not efficient to maintain the long-term hydration during the test.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 113.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "1 molar KOH droplet",
+      "inefficient for",
+      "maintaining long-term hydration during the test"
+    ],
+    "text_evidence": "This shows that the pre-added 1 molar KOH droplet is not efficient to maintain the long-term hydration during the test.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 120.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "This shows that the pre-added 1-molecule H droplet is not efficient to maintain the long-term hydration during the test. || Yeah, also the cathode side. The cathode side is also very dry.",
+    "matched_keywords": [],
+    "similarity": 0.282
+  },
+  {
+    "timestamp": 123.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode side",
+      "state",
+      "very dry"
+    ],
+    "text_evidence": "Yeah, also the cathode side. The cathode side is also very dry.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 127.0,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "main failure mode",
+      "dry out"
+    ],
+    "text_evidence": "Yeah, also the cathode side. The cathode side is also very dry. || So, the main failure mode of this reactor is still dry out. || So, the main failure mode of this reactor is still dry out. || Compared to the last one, pre-adding a fuel droplet molecule may improve the initial hydration,",
+    "matched_keywords": [],
+    "similarity": 0.481
+  },
+  {
+    "timestamp": 133.0,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "fuel droplet molecule",
+      "pre-added to improve",
+      "initial hydration"
+    ],
+    "text_evidence": "Compared to the last one, pre-adding a fuel droplet molecule may improve the initial hydration, || Compared to the last one, pre-adding a fuel droplet molecule may improve the initial hydration, || but this is only temporary water and ion supply during operation.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 140.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "but this is only temporary water and ion supply during operation. || The water can be absorbed, evaporated, or redistributed, but the membrane of PTFE can still lose hydration.",
+    "matched_keywords": [],
+    "similarity": 0.296
+  },
+  {
+    "timestamp": 145.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "water",
+      "state change",
+      "absorbed, evaporated, or redistributed"
+    ],
+    "text_evidence": "The water can be absorbed, evaporated, or redistributed, but the membrane of PTFE can still lose hydration.",
+    "matched_keywords": []
+  }
+]

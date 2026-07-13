@@ -19,7 +19,7 @@ from pathlib import Path
 import config
 from utils.io_utils import save_json
 from utils.llm_client import call_with_retries, get_asr_client
-from utils.video_utils import extract_audio, get_video_duration_seconds
+from utils.video_utils import extract_audio, get_video_duration_seconds, has_audio_stream
 
 logger = config.setup_logging("stage1_asr")
 
@@ -68,6 +68,11 @@ def run(video_path: Path | None = None, test_mode: bool | None = None) -> list[d
         "Video duration=%.1fs, transcribing %.1fs (%s)",
         total_duration, target_duration, "TEST MODE" if test_mode else "FULL RUN",
     )
+
+    if not has_audio_stream(video_path):
+        logger.warning("%s has no audio stream (silent b-roll); saving an empty transcript.", video_path.name)
+        save_json([], config.TRANSCRIPT_PATH)
+        return []
 
     client = get_asr_client()
     all_segments: list[dict] = []

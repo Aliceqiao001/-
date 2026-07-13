@@ -1,0 +1,58 @@
+[
+  {
+    "index": 0,
+    "text": "Okay, now I will describe the testing conditions for this reactor.",
+    "start_ts": 0.0,
+    "end_ts": 8.0,
+    "original_text": "Okay, now I will describe the testing conditions for this reactor."
+  },
+  {
+    "index": 1,
+    "text": "The anode feed gas is hydrogen with a flow rate of 20 sccm.",
+    "start_ts": 8.0,
+    "end_ts": 19.0,
+    "original_text": "The anode feed gas is hydrogen with a flow rate of 20 sccm."
+  },
+  {
+    "index": 2,
+    "text": "The cathode feed gas is carbon monoxide with a flow rate of 10 sccm.",
+    "start_ts": 19.0,
+    "end_ts": 25.0,
+    "original_text": "The cathode feed gas is carbon monoxide with a flow rate of 10 sccm."
+  },
+  {
+    "index": 3,
+    "text": "In this electrochemical setup, the working electrode is connected to the cathode.",
+    "start_ts": 25.0,
+    "end_ts": 33.0,
+    "original_text": "In this electrochemical setup, the working electrode is connected to the cathode."
+  },
+  {
+    "index": 4,
+    "text": "Both the counter electrode and the reference electrode are connected to the anode side.",
+    "start_ts": 33.0,
+    "end_ts": 43.0,
+    "original_text": "Both the counter electrode and the reference electrode are connected to the anode side."
+  },
+  {
+    "index": 5,
+    "text": "During this test, there is no flowing liquid electrolyte through the middle chamber.",
+    "start_ts": 43.0,
+    "end_ts": 55.0,
+    "original_text": "During this test, there is no flowing liquid electrolyte through the middle chamber."
+  },
+  {
+    "index": 6,
+    "text": "The middle chamber is filled with solid electrolyte, and the solid electrolyte is being pervaded before assembly.",
+    "start_ts": 55.0,
+    "end_ts": 63.0,
+    "original_text": "The middle chamber is filled with solid electrolyte, and the solid electrolyte is being pervaded before assembly."
+  },
+  {
+    "index": 7,
+    "text": "The purpose of pervading is to improve the ionic conductivity of the solid electrolyte and reduce the initial resistance of the middle layer.",
+    "start_ts": 63.0,
+    "end_ts": 75.0,
+    "original_text": "The purpose of pervading is to improve the ionic conductivity of the solid electrolyte and reduce the initial resistance of the middle layer."
+  }
+]

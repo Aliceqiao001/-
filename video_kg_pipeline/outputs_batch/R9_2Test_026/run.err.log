@@ -1,0 +1,57 @@
+06:04:45 [INFO] run_pipeline: ============================================================
+06:04:45 [INFO] run_pipeline: STAGE 1: ASR transcription
+06:04:45 [INFO] run_pipeline: ============================================================
+06:04:45 [INFO] stage1_asr: Video duration=23.3s, transcribing 23.3s (FULL RUN)
+06:04:45 [INFO] stage1_asr: Extracting audio chunk [0.0, 23.3)s -> chunk_000000.mp3
+06:04:46 [INFO] stage1_asr: Transcribing chunk chunk_000000.mp3 (182.9 KB)...
+06:05:47 [INFO] openai._base_client: Retrying request to /audio/transcriptions in 0.447710 seconds
+06:05:50 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 200 OK"
+06:05:50 [INFO] stage1_asr: Saved 1 transcript segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R9_2Test_026\01_transcript.json
+06:05:50 [INFO] stage1_asr: --- Sanity check: first 5 segments ---
+06:05:50 [INFO] stage1_asr: [  0.00 -  16.00] For this reactor, the cathode is the 150 sccm hydrogen with micro droplet system.
+06:05:50 [INFO] run_pipeline: ------------------------------------------------------------
+06:05:50 [INFO] run_pipeline: STAGE 1b: Terminology/unit correction
+06:05:50 [INFO] run_pipeline: ------------------------------------------------------------
+06:05:50 [INFO] stage1b_correct_terminology: Applied 0 correction(s) across 1 segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R9_2Test_026\01b_transcript_corrected.json
+06:05:50 [INFO] run_pipeline: ============================================================
+06:05:50 [INFO] run_pipeline: STAGE 2: Triple extraction
+06:05:50 [INFO] run_pipeline: ============================================================
+06:05:50 [INFO] stage2_extract: Reading transcript from 01b_transcript_corrected.json
+06:05:50 [INFO] stage2_extract: Extracting triples from segments 0-0...
+06:05:51 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:05:51 [INFO] stage2_extract: Saved 1 triples -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R9_2Test_026\02_triples.json
+06:05:51 [INFO] stage2_extract: --- Sample triples ---
+06:05:51 [INFO] stage2_extract: ['cathode', 'is', '150 sccm hydrogen with micro droplet system'] | [0.00-16.00] For this reactor, the cathode is the 150 sccm hydrogen with 
+06:05:51 [INFO] run_pipeline: ============================================================
+06:05:51 [INFO] run_pipeline: STAGE 3: Keyframe localization
+06:05:51 [INFO] run_pipeline: ============================================================
+06:05:51 [INFO] stage3_keyframes: Triple candidates + keyword candidates: 1
+06:05:51 [INFO] stage3_keyframes: Semantic-shift candidates: 0
+06:05:51 [INFO] stage3_keyframes: Merged into 1 keyframe timestamps (merge window=3.0s)
+06:05:51 [INFO] stage3_keyframes: Saved -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R9_2Test_026\03_keyframe_timestamps.json
+06:05:51 [INFO] stage3_keyframes: --- Sample keyframes ---
+06:05:51 [INFO] stage3_keyframes: [  8.00] sources=['triple'] triple=['cathode', 'is', '150 sccm hydrogen with micro droplet system']
+06:05:51 [INFO] run_pipeline: ============================================================
+06:05:51 [INFO] run_pipeline: STAGE 4: Visual analysis
+06:05:51 [INFO] run_pipeline: ============================================================
+06:05:51 [INFO] stage4_visual: Extracting frame at t=8.00s -> frame_0008.00.jpg
+06:05:52 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:05:57 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:05:57 [INFO] stage4_visual: Saved 1 visual evidence entries -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R9_2Test_026\04_visual_evidence.json
+06:05:57 [INFO] stage4_visual: --- Sample visual evidence ---
+06:05:57 [INFO] stage4_visual: [  8.00] ['cathode', 'is', '150 sccm hydrogen with micro droplet system'] | 1.  The image partially supports the claim by showing a component consistent wit
+06:05:57 [INFO] run_pipeline: ============================================================
+06:05:57 [INFO] run_pipeline: STAGE 5: Knowledge graph binding
+06:05:57 [INFO] run_pipeline: ============================================================
+06:05:57 [INFO] stage5_bind: Checking conflict for triple ['cathode', 'is', '150 sccm hydrogen with micro droplet system'] (match=exact)...
+06:06:27 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:06:27 [INFO] stage5_bind: Saved 1 knowledge-graph nodes -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R9_2Test_026\05_knowledge_graph.json
+06:06:27 [INFO] stage5_bind: --- Summary: 1 nodes, 0 conflicts flagged ---
+06:06:27 [INFO] stage5_bind: [ok] ['cathode', 'is', '150 sccm hydrogen with micro droplet system'] (confidence=0.90)
+06:06:27 [INFO] run_pipeline: ============================================================
+06:06:27 [INFO] run_pipeline: STAGE 6: Knowledge graph visualization (optional)
+06:06:27 [INFO] run_pipeline: ============================================================
+06:06:27 [INFO] stage6_visualize_kg: Graph built: 2 nodes, 1 edges
+06:06:28 [INFO] stage6_visualize_kg: Saved static PNG -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R9_2Test_026\knowledge_graph.png
+06:06:28 [INFO] stage6_visualize_kg: Saved interactive HTML -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R9_2Test_026\knowledge_graph.html
+06:06:28 [INFO] run_pipeline: Pipeline complete.

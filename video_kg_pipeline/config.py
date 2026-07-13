@@ -44,7 +44,7 @@ VIDEO_PATH = Path(os.getenv(
     str(REPO_ROOT / "LRV_20260628_182829_01_070 - 副本.mp4"),
 ))
 
-OUTPUT_DIR = PROJECT_ROOT / "outputs"
+OUTPUT_DIR = Path(os.getenv("OUTPUT_DIR", str(PROJECT_ROOT / "outputs")))
 FRAMES_DIR = OUTPUT_DIR / "frames"
 AUDIO_CACHE_DIR = OUTPUT_DIR / "audio"
 

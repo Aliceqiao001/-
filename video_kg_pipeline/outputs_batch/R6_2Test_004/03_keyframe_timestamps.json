@@ -1,0 +1,15 @@
+[
+  {
+    "timestamp": 8.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "gas",
+      "end flow rate",
+      "20 ccm hydrogen"
+    ],
+    "text_evidence": "For this reactor, the end of the gas is 20 ccm hydrogen, end of the gas is 10 ccm steel.",
+    "matched_keywords": []
+  }
+]

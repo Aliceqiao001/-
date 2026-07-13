@@ -1,0 +1,177 @@
+[
+  {
+    "timestamp": 3.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode electrode",
+      "is",
+      "anode"
+    ],
+    "text_evidence": "This is the anode electrode.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 11.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode",
+      "provided by",
+      "spray-coated Pt-Ru-C catalyst onto H23C3 carbon paper"
+    ],
+    "text_evidence": "The anode is also provided by spray-coated Pt-Ru-C catalyst onto this H23C3 carbon paper",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 15.0,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "catalyst loading",
+      "is",
+      "2 mg cm2"
+    ],
+    "text_evidence": "The anode is also provided by spray-coated potassium carbon catalysis onto this 82363 carbon paper. || The catalyst loading is also 2 mg cm2.",
+    "matched_keywords": [],
+    "similarity": 0.471
+  },
+  {
+    "timestamp": 21.0,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "catalyst loading",
+      "is",
+      "2 mg cm2"
+    ],
+    "text_evidence": "Step 9, this is the anode flow plate. || The catalyst loading is also 2 mg cm2. || Step 9, this is the anode flow plate.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 24.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode flow plate",
+      "is",
+      "Step 9"
+    ],
+    "text_evidence": "Step 9, this is the anode flow plate.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 28.0,
+    "sources": [
+      "keyword",
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "anode flow plate",
+      "is",
+      "Step 9"
+    ],
+    "text_evidence": "This also has a flow field. || Step 9, this is the anode flow plate. || This also has a flow field. || This also has a flow field. || Finally, we will align all components.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 34.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "assembly step",
+      "align all components"
+    ],
+    "text_evidence": "Finally, we will align all components.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 51.0,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "reactor",
+      "assembly step",
+      "tighten using torque"
+    ],
+    "text_evidence": "We assemble and tighten the rector using this torque. || Finally, we will align all components. || We assemble and tighten the rector using this torque.",
+    "matched_keywords": [
+      "assemble"
+    ]
+  },
+  {
+    "timestamp": 57.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "assembly step",
+      "tighten using torque"
+    ],
+    "text_evidence": "We assemble and tighten the rector using this torque.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 81.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "We assemble and tighten the rector using this torque. || Using a torque of 0.3 Nm.",
+    "matched_keywords": [],
+    "similarity": 0.514
+  },
+  {
+    "timestamp": 95.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "torque",
+      "parameter setting",
+      "0.3 Nm"
+    ],
+    "text_evidence": "Using a torque of 0.3 Nm.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 109.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Using a torque of 0.3 Nm. || The rector is tightened using 4 bolts in a diagonal sequence to ensure uniform compression.",
+    "matched_keywords": [],
+    "similarity": 0.365
+  },
+  {
+    "timestamp": 127.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "tightened using",
+      "4 bolts in a diagonal sequence"
+    ],
+    "text_evidence": "The rector is tightened using 4 bolts in a diagonal sequence to ensure uniform compression. The rector is tightened using 4 bolts in a diagonal sequence to ensure uniform compression.",
+    "matched_keywords": []
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "timestamp": 8.0,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "anode feed gas",
+      "is",
+      "hydrogen"
+    ],
+    "text_evidence": "The anode feed gas is hydrogen with a flow rate of 20 sccm. || Okay, now I will describe the testing conditions for this reactor. || The anode feed gas is hydrogen with a flow rate of 20 sccm.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 13.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode feed gas",
+      "is",
+      "hydrogen"
+    ],
+    "text_evidence": "The anode feed gas is hydrogen with a flow rate of 20 sccm.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 19.0,
+    "sources": [
+      "keyword",
+      "triple"
+    ],
+    "triple": [
+      "anode feed gas",
+      "is",
+      "hydrogen"
+    ],
+    "text_evidence": "The cathode feed gas is carbon monoxide with a flow rate of 10 sccm.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 25.0,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "cathode feed gas",
+      "is",
+      "carbon monoxide"
+    ],
+    "text_evidence": "In this electrochemical setup, the working electrode is connected to the cathode. || The cathode feed gas is carbon monoxide with a flow rate of 10 sccm. || In this electrochemical setup, the working electrode is connected to the cathode.",
+    "matched_keywords": [
+      "connected"
+    ]
+  },
+  {
+    "timestamp": 29.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "working electrode",
+      "is connected to",
+      "cathode"
+    ],
+    "text_evidence": "In this electrochemical setup, the working electrode is connected to the cathode.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 33.0,
+    "sources": [
+      "keyword"
+    ],
+    "triple": [
+      "working electrode",
+      "is connected to",
+      "cathode"
+    ],
+    "text_evidence": "Both the counter electrode and the reference electrode are connected to the anode side.",
+    "matched_keywords": [
+      "connected"
+    ]
+  },
+  {
+    "timestamp": 38.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "counter electrode",
+      "is connected to",
+      "anode side"
+    ],
+    "text_evidence": "Both the counter electrode and the reference electrode are connected to the anode side.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 43.0,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "counter electrode",
+      "is connected to",
+      "anode side"
+    ],
+    "text_evidence": "During this test, there is no flowing liquid electrolyte through the middle chamber. || Both the counter electrode and the reference electrode are connected to the anode side. || During this test, there is no flowing liquid electrolyte through the middle chamber.",
+    "matched_keywords": [
+      "flowing"
+    ]
+  },
+  {
+    "timestamp": 59.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "middle chamber",
+      "contains",
+      "solid electrolyte"
+    ],
+    "text_evidence": "The middle chamber is filled with solid electrolyte, and the solid electrolyte is being pervaded before assembly.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 69.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "pervading",
+      "purpose",
+      "improve ionic conductivity of solid electrolyte"
+    ],
+    "text_evidence": "The purpose of pervading is to improve the ionic conductivity of the solid electrolyte and reduce the initial resistance of the middle layer.",
+    "matched_keywords": []
+  }
+]

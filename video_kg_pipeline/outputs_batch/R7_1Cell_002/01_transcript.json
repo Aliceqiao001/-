@@ -1,0 +1,284 @@
+[
+  {
+    "index": 0,
+    "text": "This is a symbol of this reactor.",
+    "start_ts": 0.0,
+    "end_ts": 14.32
+  },
+  {
+    "index": 1,
+    "text": "Compared to the last reactor, the key change in this reactor would be we will remove the",
+    "start_ts": 14.32,
+    "end_ts": 22.48
+  },
+  {
+    "index": 2,
+    "text": "middle electrolyte chamber.",
+    "start_ts": 22.48,
+    "end_ts": 24.24
+  },
+  {
+    "index": 3,
+    "text": "There is no splitting of one molecule in the middle chamber in this design.",
+    "start_ts": 24.24,
+    "end_ts": 29.16
+  },
+  {
+    "index": 4,
+    "text": "The overall structure is dual gas configuration, step one.",
+    "start_ts": 29.16,
+    "end_ts": 38.04
+  },
+  {
+    "index": 5,
+    "text": "This is the cathode flow plate.",
+    "start_ts": 38.04,
+    "end_ts": 43.8
+  },
+  {
+    "index": 6,
+    "text": "It also has a splitting flow field.",
+    "start_ts": 43.8,
+    "end_ts": 62.6
+  },
+  {
+    "index": 7,
+    "text": "Also, this is the cathode electrode.",
+    "start_ts": 62.6,
+    "end_ts": 79.96
+  },
+  {
+    "index": 8,
+    "text": "The cathode is also prepared by spray coating copper oxide catalysis onto L2-3-6-3 carbon",
+    "start_ts": 79.96,
+    "end_ts": 86.44
+  },
+  {
+    "index": 9,
+    "text": "paper.",
+    "start_ts": 86.44,
+    "end_ts": 87.44
+  },
+  {
+    "index": 10,
+    "text": "The catalyst loading is also 3 milligram per centimeter square.",
+    "start_ts": 87.44,
+    "end_ts": 98.76
+  },
+  {
+    "index": 11,
+    "text": "Step three, we add this cathode gasket.",
+    "start_ts": 98.76,
+    "end_ts": 103.64
+  },
+  {
+    "index": 12,
+    "text": "The gasket is the silicon gasket.",
+    "start_ts": 103.64,
+    "end_ts": 107.56
+  },
+  {
+    "index": 13,
+    "text": "The thickness is 0.2 micrometer.",
+    "start_ts": 107.56,
+    "end_ts": 117.2
+  },
+  {
+    "index": 14,
+    "text": "And the inner window side is 1 by 1 centimeter square.",
+    "start_ts": 117.2,
+    "end_ts": 132.32
+  },
+  {
+    "index": 15,
+    "text": "So the active area is also 1 centimeter by 1 centimeter.",
+    "start_ts": 132.32,
+    "end_ts": 141.76
+  },
+  {
+    "index": 16,
+    "text": "Step four.",
+    "start_ts": 142.2,
+    "end_ts": 171.2
+  },
+  {
+    "index": 17,
+    "text": "We place the alkaline ion change membrane.",
+    "start_ts": 171.64,
+    "end_ts": 182.92
+  },
+  {
+    "index": 18,
+    "text": "This is the only membrane separator in this reactor.",
+    "start_ts": 182.92,
+    "end_ts": 188.04
+  },
+  {
+    "index": 19,
+    "text": "The membrane is a cell X3-750.",
+    "start_ts": 188.04,
+    "end_ts": 192.48
+  },
+  {
+    "index": 20,
+    "text": "In this design, there is no middle electrolyte chamber, no liquid coagulating, and no solid",
+    "start_ts": 192.48,
+    "end_ts": 198.32
+  },
+  {
+    "index": 21,
+    "text": "resin electrolyte layer.",
+    "start_ts": 198.32,
+    "end_ts": 199.84
+  },
+  {
+    "index": 22,
+    "text": "But the membrane is wetting using the one molecule H.",
+    "start_ts": 200.08,
+    "end_ts": 209.84
+  },
+  {
+    "index": 23,
+    "text": "The purpose is to simplify the reactor structure, remove the liquid middle layer, and avoid",
+    "start_ts": 209.84,
+    "end_ts": 215.52
+  },
+  {
+    "index": 24,
+    "text": "liquid-induced flooding or pressure imbalance.",
+    "start_ts": 215.52,
+    "end_ts": 223.48
+  },
+  {
+    "index": 25,
+    "text": "Step five.",
+    "start_ts": 223.48,
+    "end_ts": 226.0
+  },
+  {
+    "index": 26,
+    "text": "We add the anode gasket.",
+    "start_ts": 226.0,
+    "end_ts": 253.84
+  },
+  {
+    "index": 27,
+    "text": "The anode gasket is also silicon materials and is also 0.2 micrometer.",
+    "start_ts": 254.16,
+    "end_ts": 266.6
+  },
+  {
+    "index": 28,
+    "text": "This is the anode electrode.",
+    "start_ts": 266.6,
+    "end_ts": 269.44
+  },
+  {
+    "index": 29,
+    "text": "The anode is also prepared by spray coating PT-Rosinium carbon catalysis onto H2-3-3 carbon",
+    "start_ts": 269.44,
+    "end_ts": 275.92
+  },
+  {
+    "index": 30,
+    "text": "paper.",
+    "start_ts": 275.92,
+    "end_ts": 276.92
+  },
+  {
+    "index": 31,
+    "text": "The catalyst loading is also 2 milligram per centimeter square.",
+    "start_ts": 276.92,
+    "end_ts": 281.56
+  },
+  {
+    "index": 32,
+    "text": "Because the window of the anode gasket is also 1 by 1, so the active area for anode",
+    "start_ts": 282.28,
+    "end_ts": 291.56
+  },
+  {
+    "index": 33,
+    "text": "is also 1 by 1 centimeter square.",
+    "start_ts": 291.56,
+    "end_ts": 296.68
+  },
+  {
+    "index": 34,
+    "text": "This is the anode flow plate.",
+    "start_ts": 296.68,
+    "end_ts": 299.16
+  },
+  {
+    "index": 35,
+    "text": "It also has a sprinting flow field.",
+    "start_ts": 299.16,
+    "end_ts": 304.12
+  },
+  {
+    "index": 36,
+    "text": "Finally, after aligning all components, we assemble and tighten the reactor using a torque",
+    "start_ts": 304.68,
+    "end_ts": 324.12
+  },
+  {
+    "index": 37,
+    "text": "of 2 newton per newton by meter.",
+    "start_ts": 324.12,
+    "end_ts": 331.96
+  },
+  {
+    "index": 38,
+    "text": "The reactor is also tightened using four bolts in a diagonal sequence for uniform compression.",
+    "start_ts": 332.04,
+    "end_ts": 343.48
+  },
+  {
+    "index": 39,
+    "text": "Using a torque of 2.",
+    "start_ts": 343.48,
+    "end_ts": 348.2
+  },
+  {
+    "index": 40,
+    "text": "Using a torque of...",
+    "start_ts": 348.2,
+    "end_ts": 351.0
+  },
+  {
+    "index": 41,
+    "text": "Okay, so using a torque of 0.3 newton meter.",
+    "start_ts": 361.96,
+    "end_ts": 388.2
+  },
+  {
+    "index": 42,
+    "text": "In summary, this reactor keeps the same cathode and anode configuration as this industrial",
+    "start_ts": 388.44,
+    "end_ts": 399.88
+  },
+  {
+    "index": 43,
+    "text": "reactor, but it removes the middle electrolyte chamber and uses only one AM membrane.",
+    "start_ts": 399.88,
+    "end_ts": 406.28
+  },
+  {
+    "index": 44,
+    "text": "This carries a compact dual-dode gas CRAM H1 reactor designed to reduce flooding risk",
+    "start_ts": 406.28,
+    "end_ts": 412.2
+  },
+  {
+    "index": 45,
+    "text": "and simplify the ion-transparent pathway.",
+    "start_ts": 412.2,
+    "end_ts": 417.4
+  },
+  {
+    "index": 46,
+    "text": "So this side would be CO gas in, so gas 2, and hydrogen gas in, hydrogen gas 2 in here.",
+    "start_ts": 417.4,
+    "end_ts": 430.28
+  }
+]

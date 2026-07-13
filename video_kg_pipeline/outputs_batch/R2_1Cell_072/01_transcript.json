@@ -1,0 +1,56 @@
+[
+  {
+    "index": 0,
+    "text": "This is the symbol of this reactor, step 1, this is the cathode flow plate, it has a flow",
+    "start_ts": 0.0,
+    "end_ts": 20.96
+  },
+  {
+    "index": 1,
+    "text": "field, step 2, this is the cathode electrode, the cathode is prepared by spray coating",
+    "start_ts": 20.96,
+    "end_ts": 50.16
+  },
+  {
+    "index": 2,
+    "text": "copper oxide catalyst on H23C3 carbon paper, the catalyst loading is 3mg per cm2, the active",
+    "start_ts": 50.16,
+    "end_ts": 63.08
+  },
+  {
+    "index": 3,
+    "text": "step 3, this is the cathode gasket, the gasket thickness is 0.2mm, the gasket thickness is",
+    "start_ts": 80.16,
+    "end_ts": 106.04
+  },
+  {
+    "index": 4,
+    "text": "0.2mm, the inner window size is 1x1cm, step 4, we place the alkaline ion exchange membrane,",
+    "start_ts": 106.04,
+    "end_ts": 134.44
+  },
+  {
+    "index": 5,
+    "text": "this membrane is cysteine X3760, step 5, this is the middle chamber, the chamber thickness",
+    "start_ts": 134.44,
+    "end_ts": 149.8
+  },
+  {
+    "index": 6,
+    "text": "is 10mm and the window size is 1x1cm, this chamber is used to hold this solid electrolyte,",
+    "start_ts": 149.8,
+    "end_ts": 158.76
+  },
+  {
+    "index": 7,
+    "text": "this solid electrolyte is strong acid cation exchange resin base with a particle size of",
+    "start_ts": 158.76,
+    "end_ts": 165.2
+  },
+  {
+    "index": 8,
+    "text": "1600-80.",
+    "start_ts": 165.2,
+    "end_ts": 166.56
+  }
+]

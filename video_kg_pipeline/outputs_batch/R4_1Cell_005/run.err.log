@@ -1,0 +1,281 @@
+06:18:47 [INFO] run_pipeline: ============================================================
+06:18:47 [INFO] run_pipeline: STAGE 1: ASR transcription
+06:18:47 [INFO] run_pipeline: ============================================================
+06:18:47 [INFO] stage1_asr: Video duration=452.7s, transcribing 452.7s (FULL RUN)
+06:18:47 [INFO] stage1_asr: Extracting audio chunk [0.0, 452.7)s -> chunk_000000.mp3
+06:18:49 [INFO] stage1_asr: Transcribing chunk chunk_000000.mp3 (3537.7 KB)...
+06:19:05 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 200 OK"
+06:19:05 [INFO] stage1_asr: Saved 21 transcript segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_1Cell_005\01_transcript.json
+06:19:05 [INFO] stage1_asr: --- Sanity check: first 5 segments ---
+06:19:05 [INFO] stage1_asr: [  0.00 -  12.56] Ok, this reactor is R4 reactor. This is the assembly process of this reactor. Step 1.
+06:19:05 [INFO] stage1_asr: [ 12.56 -  40.48] This is the cathode flow plate. It has a splitting flow tube. Step 2. This is the cathode electrode.
+06:19:05 [INFO] stage1_asr: [ 40.48 -  49.40] The cathode is prepared by spray coating cobalt oxide catalysis onto the H2C3 carbon paper.
+06:19:05 [INFO] stage1_asr: [ 49.40 -  68.44] The catalytic loading is 3 mg per square. Step 3. This is the cathode gasket. The gasket
+06:19:05 [INFO] stage1_asr: [ 68.44 -  84.76] thickness is 0.3 mm and the ion window size is 1 by 1 cm. Step 4. We will place the alkaline
+06:19:05 [INFO] run_pipeline: ------------------------------------------------------------
+06:19:05 [INFO] run_pipeline: STAGE 1b: Terminology/unit correction
+06:19:05 [INFO] run_pipeline: ------------------------------------------------------------
+06:19:05 [INFO] stage1b_correct_terminology: Applied 6 correction(s) across 21 segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_1Cell_005\01b_transcript_corrected.json
+06:19:05 [INFO] stage1b_correct_terminology:   seg 2 [terminology/substrate]: 'H2C3 carbon paper' -> 'H23C3 carbon paper'
+06:19:05 [INFO] stage1b_correct_terminology:   seg 5 [terminology/membrane]: 'Stenol X3750' -> 'Sustainion X37-50'
+06:19:05 [INFO] stage1b_correct_terminology:   seg 8 [terminology/electrolyte]: 'QOH' -> 'KOH'
+06:19:05 [INFO] stage1b_correct_terminology:   seg 11 [terminology/membrane]: 'Stenol X3750' -> 'Sustainion X37-50'
+06:19:05 [INFO] stage1b_correct_terminology:   seg 13 [terminology/catalyst]: 'Pt-Rosilium' -> 'Pt-Ru-C'
+06:19:05 [INFO] stage1b_correct_terminology:   seg 13 [terminology/catalyst]: 'Pt-Ru-C carbon catalysis' -> 'Pt-Ru-C catalyst'
+06:19:05 [INFO] run_pipeline: ============================================================
+06:19:05 [INFO] run_pipeline: STAGE 2: Triple extraction
+06:19:05 [INFO] run_pipeline: ============================================================
+06:19:05 [INFO] stage2_extract: Reading transcript from 01b_transcript_corrected.json
+06:19:05 [INFO] stage2_extract: Extracting triples from segments 0-4...
+06:19:07 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:07 [INFO] stage2_extract: Extracting triples from segments 5-9...
+06:19:13 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:13 [INFO] stage2_extract: Extracting triples from segments 10-14...
+06:19:15 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:15 [INFO] stage2_extract: Extracting triples from segments 15-19...
+06:19:17 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:17 [INFO] stage2_extract: Extracting triples from segments 20-20...
+06:19:19 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:19 [INFO] stage2_extract: Saved 25 triples -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_1Cell_005\02_triples.json
+06:19:19 [INFO] stage2_extract: --- Sample triples ---
+06:19:19 [INFO] stage2_extract: ['reactor', 'is', 'R4 reactor'] | [0.00-12.56] Ok, this reactor is R4 reactor. This is the assembly process
+06:19:19 [INFO] stage2_extract: ['cathode flow plate', 'has', 'splitting flow tube'] | [12.56-40.48] This is the cathode flow plate. It has a splitting flow tube
+06:19:19 [INFO] stage2_extract: ['cathode', 'prepared by', 'spray coating cobalt oxide catalysis onto H23C3 carbon paper'] | [40.48-49.40] The cathode is prepared by spray coating cobalt oxide cataly
+06:19:19 [INFO] stage2_extract: ['catalytic loading', 'is', '3 mg per square'] | [49.40-68.44] The catalytic loading is 3 mg per square. Step 3. This is th
+06:19:19 [INFO] stage2_extract: ['cathode gasket', 'thickness', '0.3 mm'] | [68.44-84.76] thickness is 0.3 mm and the ion window size is 1 by 1 cm. St
+06:19:19 [INFO] stage2_extract: ['ion window size', 'is', '1 by 1 cm'] | [68.44-84.76] thickness is 0.3 mm and the ion window size is 1 by 1 cm. St
+06:19:19 [INFO] stage2_extract: ['ion exchange membrane', 'is', 'Sustainion X37-50'] | [84.76-91.76] ion exchange membrane. The membrane is Sustainion X37-50.
+06:19:19 [INFO] stage2_extract: ['middle chamber', 'thickness', '10 mm'] | [114.76-147.00] This is the AM, the membrane. Step 5. This is the middle cha
+06:19:19 [INFO] stage2_extract: ['middle chamber', 'window size', '1 by 1 cm'] | [138.52-147.00] is 10 mm and the window size is 1 by 1 cm. The chamber is us
+06:19:19 [INFO] stage2_extract: ['middle chamber', 'used to hold', 'liquid electrolyte'] | [138.52-147.00] is 10 mm and the window size is 1 by 1 cm. The chamber is us
+06:19:19 [INFO] run_pipeline: ============================================================
+06:19:19 [INFO] run_pipeline: STAGE 3: Keyframe localization
+06:19:19 [INFO] run_pipeline: ============================================================
+06:19:19 [INFO] stage3_keyframes: Triple candidates + keyword candidates: 32
+06:19:21 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/embeddings "HTTP/1.1 200 OK"
+06:19:21 [INFO] stage3_keyframes: Semantic-shift candidates: 20
+06:19:21 [INFO] stage3_keyframes: Merged into 38 keyframe timestamps (merge window=3.0s)
+06:19:21 [INFO] stage3_keyframes: Saved -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_1Cell_005\03_keyframe_timestamps.json
+06:19:21 [INFO] stage3_keyframes: --- Sample keyframes ---
+06:19:21 [INFO] stage3_keyframes: [  6.28] sources=['triple'] triple=['reactor', 'is', 'R4 reactor']
+06:19:21 [INFO] stage3_keyframes: [ 12.56] sources=['keyword', 'semantic_shift'] triple=['reactor', 'is', 'R4 reactor']
+06:19:21 [INFO] stage3_keyframes: [ 26.52] sources=['triple'] triple=['cathode flow plate', 'has', 'splitting flow tube']
+06:19:21 [INFO] stage3_keyframes: [ 40.48] sources=['semantic_shift'] triple=None
+06:19:21 [INFO] stage3_keyframes: [ 44.94] sources=['triple'] triple=['cathode', 'prepared by', 'spray coating cobalt oxide catalysis onto H23C3 carbon paper']
+06:19:21 [INFO] stage3_keyframes: [ 49.40] sources=['semantic_shift'] triple=None
+06:19:21 [INFO] stage3_keyframes: [ 58.92] sources=['triple'] triple=['catalytic loading', 'is', '3 mg per square']
+06:19:21 [INFO] stage3_keyframes: [ 68.44] sources=['keyword', 'semantic_shift'] triple=['catalytic loading', 'is', '3 mg per square']
+06:19:21 [INFO] stage3_keyframes: [ 76.60] sources=['triple'] triple=['cathode gasket', 'thickness', '0.3 mm']
+06:19:21 [INFO] stage3_keyframes: [ 84.76] sources=['semantic_shift'] triple=None
+06:19:21 [INFO] run_pipeline: ============================================================
+06:19:21 [INFO] run_pipeline: STAGE 4: Visual analysis
+06:19:21 [INFO] run_pipeline: ============================================================
+06:19:21 [INFO] stage4_visual: Extracting frame at t=6.28s -> frame_0006.28.jpg
+06:19:21 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:19:32 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:32 [INFO] stage4_visual: Extracting frame at t=12.56s -> frame_0012.56.jpg
+06:19:33 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:19:39 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:39 [INFO] stage4_visual: Extracting frame at t=26.52s -> frame_0026.52.jpg
+06:19:40 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:19:46 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:46 [INFO] stage4_visual: Extracting frame at t=40.48s -> frame_0040.48.jpg
+06:19:47 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:20:05 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:20:05 [INFO] stage4_visual: Extracting frame at t=44.94s -> frame_0044.94.jpg
+06:20:06 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:20:13 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:20:13 [INFO] stage4_visual: Extracting frame at t=49.40s -> frame_0049.40.jpg
+06:20:14 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:20:20 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:20:20 [INFO] stage4_visual: Extracting frame at t=58.92s -> frame_0058.92.jpg
+06:20:21 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:20:28 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:20:28 [INFO] stage4_visual: Extracting frame at t=68.44s -> frame_0068.44.jpg
+06:20:29 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:20:36 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:20:36 [INFO] stage4_visual: Extracting frame at t=76.60s -> frame_0076.60.jpg
+06:20:37 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:20:43 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:20:43 [INFO] stage4_visual: Extracting frame at t=84.76s -> frame_0084.76.jpg
+06:20:45 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:20:56 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:20:56 [INFO] stage4_visual: Extracting frame at t=88.26s -> frame_0088.26.jpg
+06:20:57 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:21:04 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:21:04 [INFO] stage4_visual: Extracting frame at t=114.76s -> frame_0114.76.jpg
+06:21:05 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:21:12 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:21:12 [INFO] stage4_visual: Extracting frame at t=130.88s -> frame_0130.88.jpg
+06:21:14 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:21:27 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:21:27 [INFO] stage4_visual: Extracting frame at t=138.52s -> frame_0138.52.jpg
+06:21:29 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:21:36 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:21:36 [INFO] stage4_visual: Extracting frame at t=142.76s -> frame_0142.76.jpg
+06:21:38 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:21:45 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:21:45 [INFO] stage4_visual: Extracting frame at t=147.00s -> frame_0147.00.jpg
+06:21:48 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:21:53 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:21:53 [INFO] stage4_visual: Extracting frame at t=152.56s -> frame_0152.56.jpg
+06:21:55 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:22:01 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:22:01 [INFO] stage4_visual: Extracting frame at t=155.70s -> frame_0155.70.jpg
+06:22:03 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:22:20 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:22:20 [INFO] stage4_visual: Extracting frame at t=164.40s -> frame_0164.40.jpg
+06:22:22 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:22:30 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:22:30 [INFO] stage4_visual: Extracting frame at t=174.88s -> frame_0174.88.jpg
+06:22:33 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:22:39 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:22:39 [INFO] stage4_visual: Extracting frame at t=245.36s -> frame_0245.36.jpg
+06:22:42 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:22:52 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:22:52 [INFO] stage4_visual: Extracting frame at t=259.86s -> frame_0259.86.jpg
+06:22:56 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:23:03 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:23:03 [INFO] stage4_visual: Extracting frame at t=274.36s -> frame_0274.36.jpg
+06:23:07 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:23:13 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:23:13 [INFO] stage4_visual: Extracting frame at t=289.12s -> frame_0289.12.jpg
+06:23:17 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:23:24 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:23:24 [INFO] stage4_visual: Extracting frame at t=303.88s -> frame_0303.88.jpg
+06:23:28 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:23:35 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:23:35 [INFO] stage4_visual: Extracting frame at t=309.04s -> frame_0309.04.jpg
+06:23:39 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:23:45 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:23:45 [INFO] stage4_visual: Extracting frame at t=314.20s -> frame_0314.20.jpg
+06:23:49 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:24:00 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:24:00 [INFO] stage4_visual: Extracting frame at t=323.82s -> frame_0323.82.jpg
+06:24:04 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:24:15 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:24:15 [INFO] stage4_visual: Extracting frame at t=333.44s -> frame_0333.44.jpg
+06:24:19 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:24:25 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:24:25 [INFO] stage4_visual: Extracting frame at t=340.38s -> frame_0340.38.jpg
+06:24:30 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:24:36 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:24:36 [INFO] stage4_visual: Extracting frame at t=393.44s -> frame_0393.44.jpg
+06:24:42 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:24:46 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:24:46 [INFO] stage4_visual: Extracting frame at t=408.42s -> frame_0408.42.jpg
+06:24:52 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:24:57 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:24:57 [INFO] stage4_visual: Extracting frame at t=423.40s -> frame_0423.40.jpg
+06:25:04 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:25:10 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:25:10 [INFO] stage4_visual: Extracting frame at t=429.32s -> frame_0429.32.jpg
+06:25:17 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:25:22 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:25:22 [INFO] stage4_visual: Extracting frame at t=435.24s -> frame_0435.24.jpg
+06:25:29 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:25:34 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:25:34 [INFO] stage4_visual: Extracting frame at t=441.28s -> frame_0441.28.jpg
+06:25:40 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:25:45 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:25:45 [INFO] stage4_visual: Extracting frame at t=444.68s -> frame_0444.68.jpg
+06:25:52 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:25:57 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:25:57 [INFO] stage4_visual: Extracting frame at t=448.08s -> frame_0448.08.jpg
+06:26:03 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:26:10 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:26:10 [INFO] stage4_visual: Saved 38 visual evidence entries -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_1Cell_005\04_visual_evidence.json
+06:26:10 [INFO] stage4_visual: --- Sample visual evidence ---
+06:26:10 [INFO] stage4_visual: [  6.28] ['reactor', 'is', 'R4 reactor'] | 1.  The image visually supports the claim that an assembly process is underway, 
+06:26:10 [INFO] stage4_visual: [ 12.56] ['reactor', 'is', 'R4 reactor'] | 1.  The image neither supports nor contradicts the specific claim that "this rea
+06:26:10 [INFO] stage4_visual: [ 26.52] ['cathode flow plate', 'has', 'splitting flow tube'] | 1.  The image supports the claim. The tan square component in the center of the 
+06:26:10 [INFO] stage4_visual: [ 40.48] None | 1.  The image partially supports the claim. It visually presents a component tha
+06:26:10 [INFO] stage4_visual: [ 44.94] ['cathode', 'prepared by', 'spray coating cobalt oxide catalysis onto H23C3 carbon paper'] | 1.  The image partially supports the claim. It shows a small, square, dark gray 
+06:26:10 [INFO] run_pipeline: ============================================================
+06:26:10 [INFO] run_pipeline: STAGE 5: Knowledge graph binding
+06:26:10 [INFO] run_pipeline: ============================================================
+06:26:11 [INFO] stage5_bind: Checking conflict for triple ['reactor', 'is', 'R4 reactor'] (match=exact)...
+06:27:11 [INFO] openai._base_client: Retrying request to /chat/completions in 0.455367 seconds
+06:27:43 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:27:43 [INFO] stage5_bind: Checking conflict for triple ['cathode flow plate', 'has', 'splitting flow tube'] (match=exact)...
+06:27:45 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:27:45 [INFO] stage5_bind: Checking conflict for triple ['cathode', 'prepared by', 'spray coating cobalt oxide catalysis onto H23C3 carbon paper'] (match=exact)...
+06:27:46 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:27:46 [INFO] stage5_bind: Checking conflict for triple ['catalytic loading', 'is', '3 mg per square'] (match=exact)...
+06:27:47 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:27:47 [INFO] stage5_bind: Checking conflict for triple ['cathode gasket', 'thickness', '0.3 mm'] (match=exact)...
+06:27:48 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:27:48 [INFO] stage5_bind: Checking conflict for triple ['ion window size', 'is', '1 by 1 cm'] (match=within_range)...
+06:27:49 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:27:49 [INFO] stage5_bind: Checking conflict for triple ['ion exchange membrane', 'is', 'Sustainion X37-50'] (match=exact)...
+06:27:50 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:27:50 [INFO] stage5_bind: Checking conflict for triple ['middle chamber', 'thickness', '10 mm'] (match=exact)...
+06:27:51 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:27:51 [INFO] stage5_bind: Checking conflict for triple ['middle chamber', 'window size', '1 by 1 cm'] (match=exact)...
+06:27:52 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:27:52 [INFO] stage5_bind: Checking conflict for triple ['middle chamber', 'used to hold', 'liquid electrolyte'] (match=within_range)...
+06:27:53 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:27:53 [INFO] stage5_bind: Checking conflict for triple ['liquid electrolyte', 'is', '1 molar KOH'] (match=exact)...
+06:27:54 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:27:54 [INFO] stage5_bind: Checking conflict for triple ['liquid electrolyte', 'will be continuously circulated through', 'middle chamber'] (match=exact)...
+06:27:55 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:27:55 [INFO] stage5_bind: Checking conflict for triple ['anode gasket', 'added', 'reactor'] (match=exact)...
+06:27:56 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:27:56 [INFO] stage5_bind: Checking conflict for triple ['anode gasket', 'thickness', '0.3 mm'] (match=within_range)...
+06:27:57 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:27:57 [INFO] stage5_bind: Checking conflict for triple ['membrane', 'material', 'Sustainion X37-50'] (match=exact)...
+06:27:59 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:27:59 [INFO] stage5_bind: Checking conflict for triple ['membrane', 'purchased from', 'Dioxide Materials'] (match=exact)...
+06:28:00 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:28:00 [INFO] stage5_bind: Checking conflict for triple ['anode electrode', 'prepared by', 'spray coating'] (match=exact)...
+06:28:01 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:28:01 [INFO] stage5_bind: Checking conflict for triple ['anode electrode', 'catalyst material', 'Pt-Ru-C'] (match=within_range)...
+06:28:02 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:28:02 [INFO] stage5_bind: Checking conflict for triple ['anode electrode', 'substrate material', 'H23C3 carbon paper'] (match=exact)...
+06:28:03 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:28:03 [INFO] stage5_bind: Checking conflict for triple ['anode electrode', 'catalytic loading', '2 mg per cm2'] (match=within_range)...
+06:28:04 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:28:04 [INFO] stage5_bind: Checking conflict for triple ['reactor', 'assembly step', 'aligned components assembled'] (match=exact)...
+06:28:05 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:28:05 [INFO] stage5_bind: Checking conflict for triple ['reactor', 'tightened using torque', '0.3 Nm'] (match=exact)...
+06:28:06 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:28:06 [INFO] stage5_bind: Checking conflict for triple ['reactor', 'tightened using bolts', '4 bolts in diagonal sequence'] (match=exact)...
+06:28:07 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:28:07 [INFO] stage5_bind: Checking conflict for triple ['solid electrolyte layer', 'replaced by', 'circulating 1 molecule H liquid electrolyte'] (match=exact)...
+06:28:08 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:28:08 [INFO] stage5_bind: Checking conflict for triple ['circulating 1 molecule H liquid electrolyte', 'purpose', 'improve ionic activity in middle chamber and reduce'] (match=exact)...
+06:28:09 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:28:09 [INFO] stage5_bind: Saved 25 knowledge-graph nodes -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_1Cell_005\05_knowledge_graph.json
+06:28:09 [INFO] stage5_bind: --- Summary: 25 nodes, 0 conflicts flagged ---
+06:28:09 [INFO] stage5_bind: [ok] ['reactor', 'is', 'R4 reactor'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['cathode flow plate', 'has', 'splitting flow tube'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['cathode', 'prepared by', 'spray coating cobalt oxide catalysis onto H23C3 carbon paper'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['catalytic loading', 'is', '3 mg per square'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['cathode gasket', 'thickness', '0.3 mm'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['ion window size', 'is', '1 by 1 cm'] (confidence=0.75)
+06:28:09 [INFO] stage5_bind: [ok] ['ion exchange membrane', 'is', 'Sustainion X37-50'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['middle chamber', 'thickness', '10 mm'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['middle chamber', 'window size', '1 by 1 cm'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['middle chamber', 'used to hold', 'liquid electrolyte'] (confidence=0.75)
+06:28:09 [INFO] stage5_bind: [ok] ['liquid electrolyte', 'is', '1 molar KOH'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['liquid electrolyte', 'will be continuously circulated through', 'middle chamber'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['anode gasket', 'added', 'reactor'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['anode gasket', 'thickness', '0.3 mm'] (confidence=0.75)
+06:28:09 [INFO] stage5_bind: [ok] ['membrane', 'material', 'Sustainion X37-50'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['membrane', 'purchased from', 'Dioxide Materials'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['anode electrode', 'prepared by', 'spray coating'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['anode electrode', 'catalyst material', 'Pt-Ru-C'] (confidence=0.75)
+06:28:09 [INFO] stage5_bind: [ok] ['anode electrode', 'substrate material', 'H23C3 carbon paper'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['anode electrode', 'catalytic loading', '2 mg per cm2'] (confidence=0.75)
+06:28:09 [INFO] stage5_bind: [ok] ['reactor', 'assembly step', 'aligned components assembled'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['reactor', 'tightened using torque', '0.3 Nm'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['reactor', 'tightened using bolts', '4 bolts in diagonal sequence'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['solid electrolyte layer', 'replaced by', 'circulating 1 molecule H liquid electrolyte'] (confidence=0.90)
+06:28:09 [INFO] stage5_bind: [ok] ['circulating 1 molecule H liquid electrolyte', 'purpose', 'improve ionic activity in middle chamber and reduce'] (confidence=0.90)
+06:28:09 [INFO] run_pipeline: ============================================================
+06:28:09 [INFO] run_pipeline: STAGE 6: Knowledge graph visualization (optional)
+06:28:09 [INFO] run_pipeline: ============================================================
+06:28:09 [INFO] stage6_visualize_kg: Graph built: 32 nodes, 25 edges
+06:28:11 [INFO] stage6_visualize_kg: Saved static PNG -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_1Cell_005\knowledge_graph.png
+06:28:11 [INFO] stage6_visualize_kg: Saved interactive HTML -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_1Cell_005\knowledge_graph.html
+06:28:11 [INFO] run_pipeline: Pipeline complete.

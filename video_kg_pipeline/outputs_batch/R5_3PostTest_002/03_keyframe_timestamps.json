@@ -1,0 +1,549 @@
+[
+  {
+    "timestamp": 3.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "operation",
+      "post-test disassemble process"
+    ],
+    "text_evidence": "This is the post-test disassemble process of this reactor.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 7.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "This is the post-test disassemble process of this reactor. || The reactor was operated with a 3-micrometer metal chamber containing circulating 1-molecule",
+    "matched_keywords": [],
+    "similarity": 0.434
+  },
+  {
+    "timestamp": 11.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "operated with",
+      "3-micrometer metal chamber"
+    ],
+    "text_evidence": "The reactor was operated with a 3-micrometer metal chamber containing circulating 1-molecule || The reactor was operated with a 3-micrometer metal chamber containing circulating 1-molecule H-electrolytes.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 15.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The reactor was operated with a 3-micrometer metal chamber containing circulating 1-molecule || H-electrolytes. || H-electrolytes. || After the electrochemical test, we will disassemble the cell and record the conditions of each",
+    "matched_keywords": [],
+    "similarity": 0.227
+  },
+  {
+    "timestamp": 20.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cell",
+      "disassemble",
+      "after electrochemical test"
+    ],
+    "text_evidence": "After the electrochemical test, we will disassemble the cell and record the conditions of each",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 24.0,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "conditions of each component",
+      "record",
+      "for failure diagonal"
+    ],
+    "text_evidence": "After the electrochemical test, we will disassemble the cell and record the conditions of each component for failure diagonal. || After the electrochemical test, we will disassemble the cell and record the conditions of each || component for failure diagonal.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 32.0,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "conditions of each component",
+      "record",
+      "for failure diagonal"
+    ],
+    "text_evidence": "Now we load the 4 balls in a diagonal sequence to release the compressions regularly to avoid || component for failure diagonal. || Now we load the 4 balls in a diagonal sequence to release the compressions regularly to avoid",
+    "matched_keywords": [
+      "release"
+    ]
+  },
+  {
+    "timestamp": 36.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "4 bolts",
+      "loaded in sequence",
+      "diagonal"
+    ],
+    "text_evidence": "Now we load the 4 bolts in a diagonal sequence to release the compressions regularly to avoid",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 40.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Now we load the 4 balls in a diagonal sequence to release the compressions regularly to avoid || damaging the membrane or electrodes.",
+    "matched_keywords": [],
+    "similarity": 0.215
+  },
+  {
+    "timestamp": 43.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "diagonal sequence",
+      "avoids",
+      "damaging the membrane or electrodes"
+    ],
+    "text_evidence": "damaging the membrane or electrodes.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 70.0,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "reactor",
+      "opened",
+      "first inspect the anode flow plate"
+    ],
+    "text_evidence": "After opening the reactor, we first inspect the anode flow plate. || damaging the membrane or electrodes. || After opening the reactor, we first inspect the anode flow plate.",
+    "matched_keywords": [
+      "flow",
+      "opening"
+    ]
+  },
+  {
+    "timestamp": 83.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "opened",
+      "first inspect the anode flow plate"
+    ],
+    "text_evidence": "After opening the reactor, we first inspect the anode flow plate.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 96.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "After opening the reactor, we first inspect the anode flow plate. || We check whether there is liquid accumulation, salt precipitation, gas channel blockage,",
+    "matched_keywords": [],
+    "similarity": 0.39
+  },
+  {
+    "timestamp": 101.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode flow plate",
+      "checked for",
+      "liquid accumulation"
+    ],
+    "text_evidence": "We check whether there is liquid accumulation, salt precipitation, gas channel blockage,",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 106.0,
+    "sources": [
+      "keyword",
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "anode flow plate",
+      "checked for",
+      "liquid accumulation"
+    ],
+    "text_evidence": "or any color change on the flow field. || We check whether there is liquid accumulation, salt precipitation, gas channel blockage, || or any color change on the flow field. || or any color change on the flow field. || Next, we inspect the anode electrode.",
+    "matched_keywords": [
+      "change",
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 114.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Next, we inspect the anode electrode. || The anode is Pt-RuCM-CubSpR-CoT on a GATO 3-axis recombinant paper.",
+    "matched_keywords": [],
+    "similarity": 0.502
+  },
+  {
+    "timestamp": 118.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode",
+      "composition",
+      "Pt-RuCM-CubSpR-CoT on H23C3 carbon paper"
+    ],
+    "text_evidence": "The anode is Pt-RuCM-CubSpR-CoT on a H23C3 carbon paper.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 124.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The anode is Pt-RuCM-CubSpR-CoT on a GATO 3-axis recombinant paper. || We check whether the catalyst layer remains intact, whether the surface is flooded, whether",
+    "matched_keywords": [],
+    "similarity": 0.306
+  },
+  {
+    "timestamp": 128.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "catalyst layer",
+      "checked for",
+      "intactness"
+    ],
+    "text_evidence": "We check whether the catalyst layer remains intact, whether the surface is flooded, whether",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 142.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "catalyst",
+      "checked for",
+      "peeling or diminution"
+    ],
+    "text_evidence": "there is electrolyte residue, and whether any catalyst peeling or diminution is observed.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 152.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "there is electrolyte residue, and whether any catalyst peeling or diminution is observed. || Then we inspect the anode side steel membrane.",
+    "matched_keywords": [],
+    "similarity": 0.423
+  },
+  {
+    "timestamp": 156.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Then we inspect the anode side steel membrane. || We check whether the membrane space is clean and uniformly wetted, whether there is any",
+    "matched_keywords": [],
+    "similarity": 0.456
+  },
+  {
+    "timestamp": 162.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "membrane space",
+      "checked for",
+      "cleanliness and uniform wetting"
+    ],
+    "text_evidence": "We check whether the membrane space is clean and uniformly wetted, whether there is any",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 168.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "We check whether the membrane space is clean and uniformly wetted, whether there is any || electrolyte crossover, salt precipitation, mechanical damage, or uneven contact.",
+    "matched_keywords": [],
+    "similarity": 0.341
+  },
+  {
+    "timestamp": 172.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "membrane space",
+      "checked for",
+      "electrolyte crossover"
+    ],
+    "text_evidence": "electrolyte crossover, salt precipitation, mechanical damage, or uneven contact.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 181.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "electrolyte crossover, salt precipitation, mechanical damage, or uneven contact. || Next, we inspect the middle chamber.",
+    "matched_keywords": [],
+    "similarity": 0.096
+  },
+  {
+    "timestamp": 198.5,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "middle chamber",
+      "inspected",
+      "uniform filling"
+    ],
+    "text_evidence": "We check whether the chamber is uniformly filled, whether there is any trapped gas bubble, || We check whether the chamber is uniformly filled, whether there is any trapped gas bubble, || or liquid stage gradation, salt carburization, or blockage near the inlet and outlet.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 206.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "middle chamber",
+      "checked for",
+      "liquid stage gradation"
+    ],
+    "text_evidence": "or liquid stage gradation, salt carburization, or blockage near the inlet and outlet.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 212.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "or liquid stage gradation, salt carburization, or blockage near the inlet and outlet. || Then we inspect the cathode side membrane.",
+    "matched_keywords": [],
+    "similarity": 0.234
+  },
+  {
+    "timestamp": 216.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode side membrane",
+      "inspected",
+      "condition"
+    ],
+    "text_evidence": "Then we inspect the cathode side membrane.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 220.0,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "membrane space",
+      "checked for",
+      "cleanliness and uniform wetting"
+    ],
+    "text_evidence": "Then we inspect the cathode side membrane. || We check whether the membrane space is clean and uniformly wetted, and whether there is",
+    "matched_keywords": [],
+    "similarity": 0.512
+  },
+  {
+    "timestamp": 226.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "We check whether the membrane space is clean and uniformly wetted, and whether there is || electrolyte crossover, salt deposition, mechanical damage, or uneven contact.",
+    "matched_keywords": [],
+    "similarity": 0.326
+  },
+  {
+    "timestamp": 229.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "membrane space",
+      "checked for",
+      "electrolyte crossover"
+    ],
+    "text_evidence": "electrolyte crossover, salt deposition, mechanical damage, or uneven contact.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 233.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "electrolyte crossover, salt deposition, mechanical damage, or uneven contact. || Next, we inspect the cathode side electrode.",
+    "matched_keywords": [],
+    "similarity": 0.285
+  },
+  {
+    "timestamp": 237.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode side electrode",
+      "inspected",
+      "condition"
+    ],
+    "text_evidence": "Next, we inspect the cathode side electrode.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 241.0,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "cathode",
+      "composition",
+      "CuSpR-CoT on H23C3 carbon paper"
+    ],
+    "text_evidence": "Next, we inspect the cathode side electrode. || The cathode is CuSpR-CoT on a GATO 3-axis recombinant paper. || The cathode is CuSpR-CoT on a H23C3 carbon paper.",
+    "matched_keywords": [],
+    "similarity": 0.513
+  },
+  {
+    "timestamp": 245.0,
+    "sources": [
+      "keyword",
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "cathode",
+      "composition",
+      "CuSpR-CoT on H23C3 carbon paper"
+    ],
+    "text_evidence": "We check whether the catalyst layer remains attached, whether the cathode is flooded or || The cathode is CuSpR-CoT on a GATO 3-axis recombinant paper. || We check whether the catalyst layer remains attached, whether the cathode is flooded or",
+    "matched_keywords": [
+      "attached"
+    ]
+  },
+  {
+    "timestamp": 250.0,
+    "sources": [
+      "keyword",
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "cathode",
+      "flooded or dried out",
+      "checked"
+    ],
+    "text_evidence": "We check whether the catalyst layer remains attached, whether the cathode is flooded or dried out, whether there is any color change after reaction, and whether the active area || We check whether the catalyst layer remains attached, whether the cathode is flooded or || dried out, whether there is any color change after reaction, and whether the active area",
+    "matched_keywords": [
+      "change"
+    ]
+  },
+  {
+    "timestamp": 255.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "dried out, whether there is any color change after reaction, and whether the active area || remains uniform.",
+    "matched_keywords": [],
+    "similarity": 0.298
+  },
+  {
+    "timestamp": 259.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "active area",
+      "remains uniform",
+      "checked"
+    ],
+    "text_evidence": "dried out, whether there is any color change after reaction, and whether the active area remains uniform.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 268.0,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "active area",
+      "remains uniform",
+      "checked"
+    ],
+    "text_evidence": "Last one, we inspect the cathode flow plate. || remains uniform. || Last one, we inspect the cathode flow plate.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 273.0,
+    "sources": [
+      "keyword",
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "separating flow channel",
+      "liquid accumulation",
+      "checked"
+    ],
+    "text_evidence": "We check whether there is liquid accumulation in the separating flow channel, whether the || Last one, we inspect the cathode flow plate. || We check whether there is liquid accumulation in the separating flow channel, whether the",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 278.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "We check whether there is liquid accumulation in the separating flow channel, whether the || gas test is blocked, and whether there is any wasable deposit.",
+    "matched_keywords": [],
+    "similarity": 0.389
+  }
+]

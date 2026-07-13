@@ -1,0 +1,174 @@
+06:10:26 [INFO] run_pipeline: ============================================================
+06:10:26 [INFO] run_pipeline: STAGE 1: ASR transcription
+06:10:26 [INFO] run_pipeline: ============================================================
+06:10:26 [INFO] stage1_asr: Video duration=196.4s, transcribing 196.4s (FULL RUN)
+06:10:26 [INFO] stage1_asr: Extracting audio chunk [0.0, 196.4)s -> chunk_000000.mp3
+06:10:27 [INFO] stage1_asr: Transcribing chunk chunk_000000.mp3 (1535.5 KB)...
+06:10:36 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 200 OK"
+06:10:36 [INFO] stage1_asr: Saved 11 transcript segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R2_1Cell_075\01_transcript.json
+06:10:36 [INFO] stage1_asr: --- Sanity check: first 5 segments ---
+06:10:36 [INFO] stage1_asr: [  0.00 -  11.08] Step 5. This is the middle chamber. The chamber thickness is 10 micrometers and the window
+06:10:36 [INFO] stage1_asr: [ 11.08 -  16.88] size is 1 by 1 centimeter. This chamber is used to hold the solid electrolytes. The solid
+06:10:36 [INFO] stage1_asr: [ 16.88 -  24.52] electrolytes are strong acid cation exchange resin beads with a particle size of 600 to
+06:10:36 [INFO] stage1_asr: [ 24.52 -  38.36] 800 micrometers. The resin beads are filled to fully occupy the middle chamber. In this
+06:10:36 [INFO] stage1_asr: [ 38.36 -  46.00] reactor, we will use the air-water to increase the ionic conductivity of the solid electrolytes
+06:10:36 [INFO] run_pipeline: ------------------------------------------------------------
+06:10:36 [INFO] run_pipeline: STAGE 1b: Terminology/unit correction
+06:10:36 [INFO] run_pipeline: ------------------------------------------------------------
+06:10:37 [INFO] stage1b_correct_terminology: Applied 4 correction(s) across 11 segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R2_1Cell_075\01b_transcript_corrected.json
+06:10:37 [INFO] stage1b_correct_terminology:   seg 9 [terminology/substrate]: 'H2O3C3 carbon paper.' -> 'H23C3 carbon paper'
+06:10:37 [INFO] stage1b_correct_terminology:   seg 9 [terminology/catalyst]: 'PTO3C3 carbon catalysis' -> 'Pt-Ru-C catalyst'
+06:10:37 [INFO] stage1b_correct_terminology:   seg 0 [unit/chamber thickness]: 'micrometers' -> 'millimeters'
+06:10:37 [INFO] stage1b_correct_terminology:   seg 10 [unit/catalyst loading]: 'microgram' -> 'milligram'
+06:10:37 [INFO] run_pipeline: ============================================================
+06:10:37 [INFO] run_pipeline: STAGE 2: Triple extraction
+06:10:37 [INFO] run_pipeline: ============================================================
+06:10:37 [INFO] stage2_extract: Reading transcript from 01b_transcript_corrected.json
+06:10:37 [INFO] stage2_extract: Extracting triples from segments 0-4...
+06:10:41 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:10:41 [INFO] stage2_extract: Extracting triples from segments 5-9...
+06:10:44 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:10:44 [WARNING] stage2_extract: Skipping malformed triple: {'subject': 'catalyst loading', 'relation': 'is mentioned', 'object': '', 'segment_indices': [9]}
+06:10:44 [INFO] stage2_extract: Extracting triples from segments 10-10...
+06:10:46 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:10:46 [INFO] stage2_extract: Saved 12 triples -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R2_1Cell_075\02_triples.json
+06:10:46 [INFO] stage2_extract: --- Sample triples ---
+06:10:46 [INFO] stage2_extract: ['middle chamber', 'thickness', '10 millimeters'] | [0.00-11.08] Step 5. This is the middle chamber. The chamber thickness is
+06:10:46 [INFO] stage2_extract: ['window', 'size', '1 by 1 centimeter'] | [11.08-16.88] size is 1 by 1 centimeter. This chamber is used to hold the 
+06:10:46 [INFO] stage2_extract: ['middle chamber', 'purpose', 'hold the solid electrolytes'] | [11.08-16.88] size is 1 by 1 centimeter. This chamber is used to hold the 
+06:10:46 [INFO] stage2_extract: ['solid electrolytes', 'material specification', 'strong acid cation exchange resin beads'] | [16.88-24.52] electrolytes are strong acid cation exchange resin beads wit
+06:10:46 [INFO] stage2_extract: ['resin beads', 'particle size', '600 to 800 micrometers'] | [16.88-38.36] electrolytes are strong acid cation exchange resin beads wit
+06:10:46 [INFO] stage2_extract: ['resin beads', 'state', 'filled to fully occupy the middle chamber'] | [24.52-38.36] 800 micrometers. The resin beads are filled to fully occupy 
+06:10:46 [INFO] stage2_extract: ['reactor', 'operation', 'use air-water to increase ionic conductivity of solid electrolytes'] | [38.36-46.00] reactor, we will use the air-water to increase the ionic con
+06:10:46 [INFO] stage2_extract: ['middle chamber', 'contains', 'air-water inlet'] | [46.00-57.00] inside the middle chamber. This is the air-water inlet and t
+06:10:46 [INFO] stage2_extract: ['middle chamber', 'contains', 'air-water outlet'] | [46.00-57.00] inside the middle chamber. This is the air-water inlet and t
+06:10:46 [INFO] stage2_extract: ['anode side membrane', 'is', 'cation exchange membrane (CEM)'] | [106.00-115.12] 6. This is the anode side membrane. This is the cation excha
+06:10:46 [INFO] run_pipeline: ============================================================
+06:10:46 [INFO] run_pipeline: STAGE 3: Keyframe localization
+06:10:46 [INFO] run_pipeline: ============================================================
+06:10:46 [INFO] stage3_keyframes: Triple candidates + keyword candidates: 12
+06:10:48 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/embeddings "HTTP/1.1 200 OK"
+06:10:48 [INFO] stage3_keyframes: Semantic-shift candidates: 8
+06:10:48 [INFO] stage3_keyframes: Merged into 17 keyframe timestamps (merge window=3.0s)
+06:10:48 [INFO] stage3_keyframes: Saved -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R2_1Cell_075\03_keyframe_timestamps.json
+06:10:48 [INFO] stage3_keyframes: --- Sample keyframes ---
+06:10:48 [INFO] stage3_keyframes: [  5.54] sources=['triple'] triple=['middle chamber', 'thickness', '10 millimeters']
+06:10:48 [INFO] stage3_keyframes: [ 11.08] sources=['semantic_shift', 'triple'] triple=['window', 'size', '1 by 1 centimeter']
+06:10:48 [INFO] stage3_keyframes: [ 16.88] sources=['semantic_shift'] triple=None
+06:10:48 [INFO] stage3_keyframes: [ 20.70] sources=['triple'] triple=['solid electrolytes', 'material specification', 'strong acid cation exchange resin beads']
+06:10:48 [INFO] stage3_keyframes: [ 24.52] sources=['semantic_shift'] triple=None
+06:10:48 [INFO] stage3_keyframes: [ 27.62] sources=['triple'] triple=['resin beads', 'particle size', '600 to 800 micrometers']
+06:10:48 [INFO] stage3_keyframes: [ 31.44] sources=['triple'] triple=['resin beads', 'state', 'filled to fully occupy the middle chamber']
+06:10:48 [INFO] stage3_keyframes: [ 38.36] sources=['semantic_shift'] triple=None
+06:10:49 [INFO] stage3_keyframes: [ 42.18] sources=['triple'] triple=['reactor', 'operation', 'use air-water to increase ionic conductivity of solid electrolytes']
+06:10:49 [INFO] stage3_keyframes: [ 46.00] sources=['semantic_shift'] triple=None
+06:10:49 [INFO] run_pipeline: ============================================================
+06:10:49 [INFO] run_pipeline: STAGE 4: Visual analysis
+06:10:49 [INFO] run_pipeline: ============================================================
+06:10:49 [INFO] stage4_visual: Extracting frame at t=5.54s -> frame_0005.54.jpg
+06:10:49 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:10:57 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:10:57 [INFO] stage4_visual: Extracting frame at t=11.08s -> frame_0011.08.jpg
+06:10:58 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:11:03 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:11:03 [INFO] stage4_visual: Extracting frame at t=16.88s -> frame_0016.88.jpg
+06:11:04 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:11:10 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:11:10 [INFO] stage4_visual: Extracting frame at t=20.70s -> frame_0020.70.jpg
+06:11:10 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:11:18 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:11:18 [INFO] stage4_visual: Extracting frame at t=24.52s -> frame_0024.52.jpg
+06:11:19 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:11:31 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:11:31 [INFO] stage4_visual: Extracting frame at t=27.62s -> frame_0027.62.jpg
+06:11:31 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:11:37 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:11:37 [INFO] stage4_visual: Extracting frame at t=31.44s -> frame_0031.44.jpg
+06:11:38 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:11:44 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:11:44 [INFO] stage4_visual: Extracting frame at t=38.36s -> frame_0038.36.jpg
+06:11:45 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:11:55 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:11:55 [INFO] stage4_visual: Extracting frame at t=42.18s -> frame_0042.18.jpg
+06:11:56 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:12:14 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:12:14 [INFO] stage4_visual: Extracting frame at t=46.00s -> frame_0046.00.jpg
+06:12:15 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:12:34 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:12:34 [INFO] stage4_visual: Extracting frame at t=51.50s -> frame_0051.50.jpg
+06:12:35 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:12:43 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:12:43 [INFO] stage4_visual: Extracting frame at t=106.00s -> frame_0106.00.jpg
+06:12:45 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:12:53 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:12:53 [INFO] stage4_visual: Extracting frame at t=110.56s -> frame_0110.56.jpg
+06:12:55 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:13:05 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:13:05 [INFO] stage4_visual: Extracting frame at t=169.68s -> frame_0169.68.jpg
+06:13:07 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:13:13 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:13:13 [INFO] stage4_visual: Extracting frame at t=173.40s -> frame_0173.40.jpg
+06:13:16 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:13:28 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:13:28 [INFO] stage4_visual: Extracting frame at t=176.84s -> frame_0176.84.jpg
+06:13:30 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:13:44 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:13:44 [INFO] stage4_visual: Extracting frame at t=180.28s -> frame_0180.28.jpg
+06:13:47 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:14:00 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:00 [INFO] stage4_visual: Saved 17 visual evidence entries -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R2_1Cell_075\04_visual_evidence.json
+06:14:00 [INFO] stage4_visual: --- Sample visual evidence ---
+06:14:00 [INFO] stage4_visual: [  5.54] ['middle chamber', 'thickness', '10 millimeters'] | 1.  No, the image cannot definitively support or refute the specific claim that 
+06:14:00 [INFO] stage4_visual: [ 11.08] ['window', 'size', '1 by 1 centimeter'] | 1.  The image neither supports nor refutes the claim of the "window size" being 
+06:14:00 [INFO] stage4_visual: [ 16.88] None | 1.  The image supports the claims that there is a chamber, and that it holds sol
+06:14:00 [INFO] stage4_visual: [ 20.70] ['solid electrolytes', 'material specification', 'strong acid cation exchange resin beads'] | 1.  The image partially supports the claim by showing a granular material consis
+06:14:00 [INFO] stage4_visual: [ 24.52] None | 1.  The image supports the claim that the resin beads are filled to fully occupy
+06:14:00 [INFO] run_pipeline: ============================================================
+06:14:00 [INFO] run_pipeline: STAGE 5: Knowledge graph binding
+06:14:00 [INFO] run_pipeline: ============================================================
+06:14:00 [INFO] stage5_bind: Checking conflict for triple ['middle chamber', 'thickness', '10 millimeters'] (match=exact)...
+06:14:03 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:03 [INFO] stage5_bind: Checking conflict for triple ['window', 'size', '1 by 1 centimeter'] (match=exact)...
+06:14:24 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:24 [INFO] stage5_bind: Checking conflict for triple ['middle chamber', 'purpose', 'hold the solid electrolytes'] (match=within_range)...
+06:14:27 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:27 [INFO] stage5_bind: Checking conflict for triple ['solid electrolytes', 'material specification', 'strong acid cation exchange resin beads'] (match=exact)...
+06:14:29 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:29 [INFO] stage5_bind: Checking conflict for triple ['resin beads', 'particle size', '600 to 800 micrometers'] (match=exact)...
+06:14:31 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:31 [INFO] stage5_bind: Checking conflict for triple ['resin beads', 'state', 'filled to fully occupy the middle chamber'] (match=exact)...
+06:14:33 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:33 [INFO] stage5_bind: Checking conflict for triple ['reactor', 'operation', 'use air-water to increase ionic conductivity of solid electrolytes'] (match=exact)...
+06:14:36 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:36 [INFO] stage5_bind: Checking conflict for triple ['middle chamber', 'contains', 'air-water inlet'] (match=exact)...
+06:14:38 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:38 [INFO] stage5_bind: Checking conflict for triple ['middle chamber', 'contains', 'air-water outlet'] (match=within_range)...
+06:14:40 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:40 [INFO] stage5_bind: Checking conflict for triple ['anode side membrane', 'is', 'cation exchange membrane (CEM)'] (match=exact)...
+06:14:48 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:48 [INFO] stage5_bind: Checking conflict for triple ['anode', 'is provided by', 'orthobasic'] (match=exact)...
+06:14:50 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:50 [WARNING] stage5_bind: CONFLICT for ['anode', 'is provided by', 'orthobasic']: The visual description does not provide evidence that the anode is provided by 'orthobasic', contradicting the text claim.
+06:14:50 [INFO] stage5_bind: Checking conflict for triple ['Pt-Ru-C catalyst', 'recoated onto', 'H23C3 carbon paper'] (match=exact)...
+06:14:52 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:52 [INFO] stage5_bind: Saved 12 knowledge-graph nodes -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R2_1Cell_075\05_knowledge_graph.json
+06:14:52 [INFO] stage5_bind: --- Summary: 12 nodes, 1 conflicts flagged ---
+06:14:52 [INFO] stage5_bind: [ok] ['middle chamber', 'thickness', '10 millimeters'] (confidence=0.90)
+06:14:52 [INFO] stage5_bind: [ok] ['window', 'size', '1 by 1 centimeter'] (confidence=0.90)
+06:14:52 [INFO] stage5_bind: [ok] ['middle chamber', 'purpose', 'hold the solid electrolytes'] (confidence=0.75)
+06:14:52 [INFO] stage5_bind: [ok] ['solid electrolytes', 'material specification', 'strong acid cation exchange resin beads'] (confidence=0.90)
+06:14:52 [INFO] stage5_bind: [ok] ['resin beads', 'particle size', '600 to 800 micrometers'] (confidence=0.90)
+06:14:52 [INFO] stage5_bind: [ok] ['resin beads', 'state', 'filled to fully occupy the middle chamber'] (confidence=0.90)
+06:14:52 [INFO] stage5_bind: [ok] ['reactor', 'operation', 'use air-water to increase ionic conductivity of solid electrolytes'] (confidence=0.90)
+06:14:52 [INFO] stage5_bind: [ok] ['middle chamber', 'contains', 'air-water inlet'] (confidence=0.90)
+06:14:52 [INFO] stage5_bind: [ok] ['middle chamber', 'contains', 'air-water outlet'] (confidence=0.75)
+06:14:52 [INFO] stage5_bind: [ok] ['anode side membrane', 'is', 'cation exchange membrane (CEM)'] (confidence=0.90)
+06:14:52 [INFO] stage5_bind: [CONFLICT] ['anode', 'is provided by', 'orthobasic'] (confidence=0.30)
+06:14:52 [INFO] stage5_bind: [ok] ['Pt-Ru-C catalyst', 'recoated onto', 'H23C3 carbon paper'] (confidence=0.90)
+06:14:52 [INFO] run_pipeline: ============================================================
+06:14:52 [INFO] run_pipeline: STAGE 6: Knowledge graph visualization (optional)
+06:14:52 [INFO] run_pipeline: ============================================================
+06:14:52 [INFO] stage6_visualize_kg: Graph built: 20 nodes, 12 edges
+06:14:54 [INFO] stage6_visualize_kg: Saved static PNG -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R2_1Cell_075\knowledge_graph.png
+06:14:54 [INFO] stage6_visualize_kg: Saved interactive HTML -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R2_1Cell_075\knowledge_graph.html
+06:14:54 [INFO] run_pipeline: Pipeline complete.

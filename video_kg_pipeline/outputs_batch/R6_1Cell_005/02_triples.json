@@ -1,0 +1,398 @@
+[
+  {
+    "triple": [
+      "cathode flow plate",
+      "has",
+      "serpentine flow field"
+    ],
+    "text_evidence": "Okay, this is very simple, this reactor. Step 1, still this is the cathode flow plate. It also has a serpentine flow field",
+    "timestamp": [
+      0.0,
+      16.0
+    ]
+  },
+  {
+    "triple": [
+      "catalyst",
+      "prepared by",
+      "spray-coated oxide catalysis onto L2-3-6-3 carbon paper"
+    ],
+    "text_evidence": "The catalyst is still prepared by spray-coated oxide catalysis onto L2-3-6-3 carbon paper.",
+    "timestamp": [
+      27.0,
+      36.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode gasket",
+      "thickness",
+      "0.3 mm"
+    ],
+    "text_evidence": "The gasket thickness is 0.3 mm, and the inner window size is 1x1 cm.",
+    "timestamp": [
+      76.0,
+      89.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode gasket",
+      "inner window size",
+      "1x1 cm"
+    ],
+    "text_evidence": "The gasket thickness is 0.3 mm, and the inner window size is 1x1 cm.",
+    "timestamp": [
+      76.0,
+      89.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode side membrane",
+      "placement",
+      "cathode side"
+    ],
+    "text_evidence": "Step 4, we place the cathode side membrane.",
+    "timestamp": [
+      89.0,
+      105.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode side membrane",
+      "material",
+      "X3-750"
+    ],
+    "text_evidence": "The cathode side membrane is still X3-750.",
+    "timestamp": [
+      105.0,
+      128.0
+    ]
+  },
+  {
+    "triple": [
+      "chamber thickness",
+      "is",
+      "3 mm"
+    ],
+    "text_evidence": "The chamber thickness is 3 mm, but the window size is increased to 3x3 cm.",
+    "timestamp": [
+      135.0,
+      143.0
+    ]
+  },
+  {
+    "triple": [
+      "window size",
+      "is increased to",
+      "3x3 cm"
+    ],
+    "text_evidence": "The chamber thickness is 3 mm, but the window size is increased to 3x3 cm.",
+    "timestamp": [
+      135.0,
+      143.0
+    ]
+  },
+  {
+    "triple": [
+      "flow channel",
+      "is added to",
+      "middle chamber"
+    ],
+    "text_evidence": "And a flow channel is also added inside the middle chamber.",
+    "timestamp": [
+      143.0,
+      151.0
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "is used to hold and circulate",
+      "liquid electrolyte"
+    ],
+    "text_evidence": "This chamber is used to hold and circulate the liquid electrolyte.",
+    "timestamp": [
+      151.0,
+      158.0
+    ]
+  },
+  {
+    "triple": [
+      "electrolyte",
+      "is",
+      "1 molar KOH"
+    ],
+    "text_evidence": "The electrolyte is 1 molar KOH, and it will be continuously circulated through the middle chamber during operation.",
+    "timestamp": [
+      158.0,
+      164.0
+    ]
+  },
+  {
+    "triple": [
+      "electrolyte",
+      "will be continuously circulated through",
+      "middle chamber"
+    ],
+    "text_evidence": "The electrolyte is 1 molar KOH, and it will be continuously circulated through the middle chamber during operation.",
+    "timestamp": [
+      158.0,
+      164.0
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber thickness",
+      "remains",
+      "3 mm"
+    ],
+    "text_evidence": "Compared to the previous design, the key change in this reactor is that the middle chamber thickness remains 3 mm,",
+    "timestamp": [
+      164.0,
+      172.0
+    ]
+  },
+  {
+    "triple": [
+      "chamber window",
+      "enlarged to",
+      "3 cm by 3 cm"
+    ],
+    "text_evidence": "while the chamber window is enlarged to 3 cm by 3 cm.",
+    "timestamp": [
+      172.0,
+      177.0
+    ]
+  },
+  {
+    "triple": [
+      "electrolyte volume",
+      "increased in",
+      "middle chamber"
+    ],
+    "text_evidence": "This increases the electrolyte volume in the middle chamber and improves electrolyte distribution through the added flow channel.",
+    "timestamp": [
+      177.0,
+      185.0
+    ]
+  },
+  {
+    "triple": [
+      "electrolyte distribution",
+      "improved through",
+      "added flow channel"
+    ],
+    "text_evidence": "This increases the electrolyte volume in the middle chamber and improves electrolyte distribution through the added flow channel.",
+    "timestamp": [
+      177.0,
+      185.0
+    ]
+  },
+  {
+    "triple": [
+      "anode side membrane",
+      "added",
+      "reactor"
+    ],
+    "text_evidence": "Step 6, we will add the anode side membrane. Step 7, we will add the anode side membrane.",
+    "timestamp": [
+      185.0,
+      234.0
+    ]
+  },
+  {
+    "triple": [
+      "bigger membrane",
+      "added",
+      "another side"
+    ],
+    "text_evidence": "Step 8, we will add a bigger membrane in another side.",
+    "timestamp": [
+      234.0,
+      244.0
+    ]
+  },
+  {
+    "triple": [
+      "anode side gasket",
+      "thickness",
+      "0.3 mm"
+    ],
+    "text_evidence": "The anode side gasket is still 0.3 mm.",
+    "timestamp": [
+      250.0,
+      259.0
+    ]
+  },
+  {
+    "triple": [
+      "anode electrode",
+      "step",
+      "8"
+    ],
+    "text_evidence": "Step 8 is the anode electrode.",
+    "timestamp": [
+      259.0,
+      264.0
+    ]
+  },
+  {
+    "triple": [
+      "anode",
+      "prepared by",
+      "spray-coating"
+    ],
+    "text_evidence": "The anode is prepared by spray-coating.",
+    "timestamp": [
+      264.0,
+      269.0
+    ]
+  },
+  {
+    "triple": [
+      "anode electrode",
+      "pre-spray-coated with",
+      "PT ruthenium carbon catalysis on H23C3 carbon paper"
+    ],
+    "text_evidence": "The anode electrode is pre-spray-coated with PT ruthenium carbon catalysis on the H23C3 carbon paper",
+    "timestamp": [
+      269.0,
+      278.0
+    ]
+  },
+  {
+    "triple": [
+      "catalyst loading",
+      "is",
+      "2 µg%²"
+    ],
+    "text_evidence": "The catalyst loading is 2 µg%².",
+    "timestamp": [
+      278.0,
+      290.0
+    ]
+  },
+  {
+    "triple": [
+      "anode flow plate",
+      "has",
+      "serpentine flow field"
+    ],
+    "text_evidence": "Step 9, this is the anode flow plate. It also has a serpentine flow field",
+    "timestamp": [
+      290.0,
+      301.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "assembled and tightened using",
+      "torque of 2 Nm"
+    ],
+    "text_evidence": "Finally, after aligning all components, we will assemble and tighten the reactor using a torque of 2 Nm.",
+    "timestamp": [
+      301.0,
+      314.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "tightened using",
+      "4 bolts in a diagonal sequence"
+    ],
+    "text_evidence": "This reactor is tightened using 4 bolts in a diagonal sequence.",
+    "timestamp": [
+      342.0,
+      371.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "tightened using",
+      "4 bolts in a diagonal sequence"
+    ],
+    "text_evidence": "This reactor is tightened using 4 bolts in a diagonal sequence. This reactor is tightened using 4 bolts in a diagonal sequence. This reactor is tightened using 4 bolts in a diagonal sequence.",
+    "timestamp": [
+      371.0,
+      429.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "keeps",
+      "3 µm splitting 1 molar KOH middle chamber"
+    ],
+    "text_evidence": "In summary, this reactor keeps the 3 µm splitting 1 molar KOH middle chamber, but increases the chamber window to 3 by 3 cm and adds an internal flow channel.",
+    "timestamp": [
+      429.0,
+      440.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor chamber window",
+      "increased to",
+      "3 by 3 cm"
+    ],
+    "text_evidence": "In summary, this reactor keeps the 3 µm splitting 1 molar KOH middle chamber, but increases the chamber window to 3 by 3 cm and adds an internal flow channel.",
+    "timestamp": [
+      429.0,
+      440.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "adds",
+      "internal flow channel"
+    ],
+    "text_evidence": "In summary, this reactor keeps the 3 µm splitting 1 molar KOH middle chamber, but increases the chamber window to 3 by 3 cm and adds an internal flow channel.",
+    "timestamp": [
+      429.0,
+      440.0
+    ]
+  },
+  {
+    "triple": [
+      "design",
+      "intended to",
+      "increase electrolyte volume"
+    ],
+    "text_evidence": "This design is intended to increase the electrolyte volume, improve electrolyte distribution, and maintain a shorter ion transport distance.",
+    "timestamp": [
+      440.0,
+      452.0
+    ]
+  },
+  {
+    "triple": [
+      "design",
+      "intended to",
+      "improve electrolyte distribution"
+    ],
+    "text_evidence": "This design is intended to increase the electrolyte volume, improve electrolyte distribution, and maintain a shorter ion transport distance.",
+    "timestamp": [
+      440.0,
+      452.0
+    ]
+  },
+  {
+    "triple": [
+      "design",
+      "intended to",
+      "maintain shorter ion transport distance"
+    ],
+    "text_evidence": "This design is intended to increase the electrolyte volume, improve electrolyte distribution, and maintain a shorter ion transport distance.",
+    "timestamp": [
+      440.0,
+      452.0
+    ]
+  }
+]

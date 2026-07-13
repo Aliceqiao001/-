@@ -1,0 +1,23 @@
+[
+  {
+    "timestamp": 27.48,
+    "frame_path": "outputs_batch/R4_3AfterTest_001/frames/frame_0027.48.jpg",
+    "text_context": "This is the illustrizer after test. || This is the end of the part.",
+    "vlm_description": "1.  The image supports the claim by showing what appears to be a disassembled experimental setup or device, held in two gloved hands. The state of being partially disassembled and handled suggests it is being examined \"after test\" or marking \"the end of the part\" of the experiment/assembly process.\n2.  The \"illustrizer\" appears to be comprised of",
+    "triple": null
+  },
+  {
+    "timestamp": 42.84,
+    "frame_path": "outputs_batch/R4_3AfterTest_001/frames/frame_0042.84.jpg",
+    "text_context": "This is the end of the part. || End of the electrode.",
+    "vlm_description": "1.  The image supports the claim. A purple-gloved hand is holding up a black, flexible sheet, revealing a small, bright purple square component that is likely the \"end of the electrode\" being referred to. This action suggests the component is being presented as the final or key part.\n\n2.  The \"end of the electrode\" is a small, intensely bright purple, square-shaped component, approximately 1-2 cm in width. It appears to be solid with a slightly irregular or textured surface, embedded within a square opening of a larger black, flexible material which resembles a gasket or a top plate being held by a gloved hand.",
+    "triple": null
+  },
+  {
+    "timestamp": 85.8,
+    "frame_path": "outputs_batch/R4_3AfterTest_001/frames/frame_0085.80.jpg",
+    "text_context": "Case of the electrode. || Thank you for watching.",
+    "vlm_description": "1.  The image generally supports the claim as it displays multiple disassembled and partially assembled flow cells, which serve as \"cases\" or housings for electrodes in electrochemical setups. The narrator's second phrase is a closing remark, not a descriptive claim.\n\n2.  The \"cases of the electrode\" are represented by three main square-shaped bodies, two metallic (silver/gray) and one beige plastic, arranged horizontally. Each body features a central square opening and ports for clear tubing on its sides. Visible within these cases are a dark, square-shaped electrode in the leftmost metallic case, a translucent membrane in the central beige case, and a black square insert in the rightmost metallic case. Additionally, two black square gaskets with central cutouts are laid out separately below the central and right cases, indicating they are components of these electrode housings.",
+    "triple": null
+  }
+]

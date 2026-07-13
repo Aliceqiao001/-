@@ -1,0 +1,182 @@
+[
+  {
+    "triple": [
+      "4 bolts",
+      "loosened in sequence",
+      "diagonal sequence"
+    ],
+    "text_evidence": "Now we loosen the 4 bolts in a diagonal sequence to gradually release the compression.",
+    "timestamp": [
+      11.0,
+      20.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "opened",
+      "after loosening bolts"
+    ],
+    "text_evidence": "After opening the reactor, we first inspect that this is the anode and the cathode side.",
+    "timestamp": [
+      41.0,
+      63.0
+    ]
+  },
+  {
+    "triple": [
+      "anode side flow plate",
+      "has no liquid accumulation",
+      "flow field"
+    ],
+    "text_evidence": "For the anode flow plate and the anode side flow plate, there are no liquid accumulation in the flow field, indicating that the liquid flow issue is addressed in this design.",
+    "timestamp": [
+      64.0,
+      80.0
+    ]
+  },
+  {
+    "triple": [
+      "anode flow plate",
+      "has no liquid accumulation",
+      "flow field"
+    ],
+    "text_evidence": "For the anode flow plate and the anode side flow plate, there are no liquid accumulation in the flow field, indicating that the liquid flow issue is addressed in this design.",
+    "timestamp": [
+      64.0,
+      80.0
+    ]
+  },
+  {
+    "triple": [
+      "liquid flow issue",
+      "addressed",
+      "this design"
+    ],
+    "text_evidence": "For the anode flow plate and the anode side flow plate, there are no liquid accumulation in the flow field, indicating that the liquid flow issue is addressed in this design.",
+    "timestamp": [
+      64.0,
+      80.0
+    ]
+  },
+  {
+    "triple": [
+      "anode",
+      "composition",
+      "Pt-Ru-C spray-coating on H23C3 carbon paper"
+    ],
+    "text_evidence": "The anode is Pt-Ru-C spray-coating on H23C3 carbon paper. The anode is Pt-Ru-C spray-coating on H23C3 carbon paper. The anode is Pt-Ru-C spray-coating on H23C3 carbon paper. The anode is Pt-Ru-C spray-coating on H23C3 carbon paper.",
+    "timestamp": [
+      94.0,
+      183.0
+    ]
+  },
+  {
+    "triple": [
+      "anode side",
+      "appearance",
+      "relatively dry"
+    ],
+    "text_evidence": "After testing, we can find that the anode side appears relatively dry, suggesting that there was not enough water supply to maintain stable ionic conduction.",
+    "timestamp": [
+      101.0,
+      119.0
+    ]
+  },
+  {
+    "triple": [
+      "water supply",
+      "insufficient for",
+      "stable ionic conduction"
+    ],
+    "text_evidence": "After testing, we can find that the anode side appears relatively dry, suggesting that there was not enough water supply to maintain stable ionic conduction.",
+    "timestamp": [
+      101.0,
+      119.0
+    ]
+  },
+  {
+    "triple": [
+      "anode",
+      "is",
+      "Pt-Ru-C spray-coating on H23C3 carbon paper"
+    ],
+    "text_evidence": "The anode is Pt-Ru-C spray-coating on H23C3 carbon paper. The anode is Pt-Ru-C spray-coating on H23C3 carbon paper. The anode is Pt-Ru-C spray-coating on H23C3 carbon paper. The anode is Pt-Ru-C spray-coating on H23C3 carbon paper. The anode is Pt-Ru-C spray-coating on H23C3 carbon paper.",
+    "timestamp": [
+      203.0,
+      253.0
+    ]
+  },
+  {
+    "triple": [
+      "anode",
+      "is",
+      "Pt-Ru-C spray-coating on H23C3 carbon paper"
+    ],
+    "text_evidence": "The anode is Pt-Ru-C spray-coating on H23C3 carbon paper. The anode is Pt-Ru-C spray-coating on H23C3 carbon paper. The anode is Pt-Ru-C spray-coating on H23C3 carbon paper.",
+    "timestamp": [
+      253.0,
+      283.0
+    ]
+  },
+  {
+    "triple": [
+      "membrane",
+      "state change",
+      "PR-dry after operation"
+    ],
+    "text_evidence": "The membrane also PR-dry after operation. The membrane also PR-dry after operation.",
+    "timestamp": [
+      283.0,
+      303.0
+    ]
+  },
+  {
+    "triple": [
+      "catalyst",
+      "state",
+      "detached"
+    ],
+    "text_evidence": "The catalyst is also detached and stuck to the membrane. The catalyst is also detached and stuck to the membrane. The catalyst is also detached and stuck to the membrane. The catalyst is also detached and stuck to the membrane. The catalyst is also detached and stuck to the membrane.",
+    "timestamp": [
+      303.0,
+      353.0
+    ]
+  },
+  {
+    "triple": [
+      "catalyst",
+      "state",
+      "stuck to the membrane"
+    ],
+    "text_evidence": "The catalyst is also detached and stuck to the membrane. The catalyst is also detached and stuck to the membrane. The catalyst is also detached and stuck to the membrane. The catalyst is also detached and stuck to the membrane. The catalyst is also detached and stuck to the membrane.",
+    "timestamp": [
+      303.0,
+      353.0
+    ]
+  },
+  {
+    "triple": [
+      "catalyst",
+      "state",
+      "detached"
+    ],
+    "text_evidence": "The catalyst is also detached and stuck to the membrane. The catalyst is also detached and stuck to the membrane.",
+    "timestamp": [
+      353.0,
+      373.0
+    ]
+  },
+  {
+    "triple": [
+      "catalyst",
+      "state",
+      "stuck to the membrane"
+    ],
+    "text_evidence": "The catalyst is also detached and stuck to the membrane. The catalyst is also detached and stuck to the membrane.",
+    "timestamp": [
+      353.0,
+      373.0
+    ]
+  }
+]

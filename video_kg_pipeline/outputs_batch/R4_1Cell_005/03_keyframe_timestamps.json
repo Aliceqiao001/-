@@ -1,0 +1,489 @@
+[
+  {
+    "timestamp": 6.28,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "is",
+      "R4 reactor"
+    ],
+    "text_evidence": "Ok, this reactor is R4 reactor. This is the assembly process of this reactor. Step 1.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 12.56,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "reactor",
+      "is",
+      "R4 reactor"
+    ],
+    "text_evidence": "This is the cathode flow plate. It has a splitting flow tube. Step 2. This is the cathode electrode. || Ok, this reactor is R4 reactor. This is the assembly process of this reactor. Step 1. || This is the cathode flow plate. It has a splitting flow tube. Step 2. This is the cathode electrode.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 26.52,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode flow plate",
+      "has",
+      "splitting flow tube"
+    ],
+    "text_evidence": "This is the cathode flow plate. It has a splitting flow tube. Step 2. This is the cathode electrode.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 40.48,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "This is the cathode flow plate. It has a splitting flow tube. Step 2. This is the cathode electrode. || The cathode is prepared by spray coating cobalt oxide catalysis onto the H2C3 carbon paper.",
+    "matched_keywords": [],
+    "similarity": 0.481
+  },
+  {
+    "timestamp": 44.94,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode",
+      "prepared by",
+      "spray coating cobalt oxide catalysis onto H23C3 carbon paper"
+    ],
+    "text_evidence": "The cathode is prepared by spray coating cobalt oxide catalysis onto the H23C3 carbon paper.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 49.4,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The cathode is prepared by spray coating cobalt oxide catalysis onto the H2C3 carbon paper. || The catalytic loading is 3 mg per square. Step 3. This is the cathode gasket. The gasket",
+    "matched_keywords": [],
+    "similarity": 0.539
+  },
+  {
+    "timestamp": 58.92,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "catalytic loading",
+      "is",
+      "3 mg per square"
+    ],
+    "text_evidence": "The catalytic loading is 3 mg per square. Step 3. This is the cathode gasket. The gasket",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 68.44,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "catalytic loading",
+      "is",
+      "3 mg per square"
+    ],
+    "text_evidence": "thickness is 0.3 mm and the ion window size is 1 by 1 cm. Step 4. We will place the alkaline || The catalytic loading is 3 mg per square. Step 3. This is the cathode gasket. The gasket || thickness is 0.3 mm and the ion window size is 1 by 1 cm. Step 4. We will place the alkaline",
+    "matched_keywords": [
+      "place"
+    ]
+  },
+  {
+    "timestamp": 76.6,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode gasket",
+      "thickness",
+      "0.3 mm"
+    ],
+    "text_evidence": "thickness is 0.3 mm and the ion window size is 1 by 1 cm. Step 4. We will place the alkaline",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 84.76,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "thickness is 0.3 mm and the ion window size is 1 by 1 cm. Step 4. We will place the alkaline || ion exchange membrane. The membrane is Stenol X3750.",
+    "matched_keywords": [],
+    "similarity": 0.413
+  },
+  {
+    "timestamp": 88.26,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "ion exchange membrane",
+      "is",
+      "Sustainion X37-50"
+    ],
+    "text_evidence": "ion exchange membrane. The membrane is Sustainion X37-50.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 114.76,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "ion exchange membrane. The membrane is Stenol X3750. || This is the AM, the membrane. Step 5. This is the middle chamber. The chamber thickness",
+    "matched_keywords": [],
+    "similarity": 0.403
+  },
+  {
+    "timestamp": 130.88,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "middle chamber",
+      "thickness",
+      "10 mm"
+    ],
+    "text_evidence": "This is the AM, the membrane. Step 5. This is the middle chamber. The chamber thickness is 10 mm and the window size is 1 by 1 cm. The chamber is used to hold the liquid electrolyte.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 138.52,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "This is the AM, the membrane. Step 5. This is the middle chamber. The chamber thickness || is 10 mm and the window size is 1 by 1 cm. The chamber is used to hold the liquid electrolyte.",
+    "matched_keywords": [],
+    "similarity": 0.504
+  },
+  {
+    "timestamp": 142.76,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "middle chamber",
+      "window size",
+      "1 by 1 cm"
+    ],
+    "text_evidence": "is 10 mm and the window size is 1 by 1 cm. The chamber is used to hold the liquid electrolyte.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 147.0,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "liquid electrolyte",
+      "is",
+      "1 molar KOH"
+    ],
+    "text_evidence": "is 10 mm and the window size is 1 by 1 cm. The chamber is used to hold the liquid electrolyte. || The liquid electrolyte is 1 molar QOH and it will be continuously circulated through || The liquid electrolyte is 1 molar KOH and it will be continuously circulated through",
+    "matched_keywords": [],
+    "similarity": 0.471
+  },
+  {
+    "timestamp": 152.56,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The liquid electrolyte is 1 molar QOH and it will be continuously circulated through || the middle chamber during operation. This is the inlet and this is the outlet. Step",
+    "matched_keywords": [],
+    "similarity": 0.304
+  },
+  {
+    "timestamp": 155.7,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "liquid electrolyte",
+      "will be continuously circulated through",
+      "middle chamber"
+    ],
+    "text_evidence": "The liquid electrolyte is 1 molar KOH and it will be continuously circulated through the middle chamber during operation. This is the inlet and this is the outlet. Step",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 164.4,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "liquid electrolyte",
+      "will be continuously circulated through",
+      "middle chamber"
+    ],
+    "text_evidence": "6. We add the anode gasket. The anode gasket is also 0.3 mm. Step 7. We also place the || the middle chamber during operation. This is the inlet and this is the outlet. Step || 6. We add the anode gasket. The anode gasket is also 0.3 mm. Step 7. We also place the",
+    "matched_keywords": [
+      "place"
+    ]
+  },
+  {
+    "timestamp": 174.88,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode gasket",
+      "added",
+      "reactor"
+    ],
+    "text_evidence": "6. We add the anode gasket. The anode gasket is also 0.3 mm. Step 7. We also place the",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 245.36,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "6. We add the anode gasket. The anode gasket is also 0.3 mm. Step 7. We also place the || This membrane is also Stenol X3750.",
+    "matched_keywords": [],
+    "similarity": 0.311
+  },
+  {
+    "timestamp": 259.86,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "membrane",
+      "material",
+      "Sustainion X37-50"
+    ],
+    "text_evidence": "This membrane is also Sustainion X37-50.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 274.36,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "This membrane is also Stenol X3750. || Purchased from Dioxide Materials. Step 8. This is the anode electrode. The anode is",
+    "matched_keywords": [],
+    "similarity": 0.284
+  },
+  {
+    "timestamp": 289.12,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "membrane",
+      "purchased from",
+      "Dioxide Materials"
+    ],
+    "text_evidence": "Purchased from Dioxide Materials. Step 8. This is the anode electrode. The anode is",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 303.88,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Purchased from Dioxide Materials. Step 8. This is the anode electrode. The anode is || also prepared by spray coating but using Pt-Rosilium carbon catalysis onto H23C3 carbon",
+    "matched_keywords": [],
+    "similarity": 0.364
+  },
+  {
+    "timestamp": 309.04,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode electrode",
+      "prepared by",
+      "spray coating"
+    ],
+    "text_evidence": "also prepared by spray coating but using Pt-Ru-C catalyst onto H23C3 carbon",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 314.2,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "anode electrode",
+      "prepared by",
+      "spray coating"
+    ],
+    "text_evidence": "paper. The catalytic loading is 2 mg per cm2. Step 9. This is the anode flow plate. It also || also prepared by spray coating but using Pt-Rosilium carbon catalysis onto H23C3 carbon || paper. The catalytic loading is 2 mg per cm2. Step 9. This is the anode flow plate. It also",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 323.82,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode electrode",
+      "substrate material",
+      "H23C3 carbon paper"
+    ],
+    "text_evidence": "paper. The catalytic loading is 2 mg per cm2. Step 9. This is the anode flow plate. It also",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 333.44,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "anode electrode",
+      "substrate material",
+      "H23C3 carbon paper"
+    ],
+    "text_evidence": "has a flow field. Finally, after aligning all components, we will assemble this reactor. || paper. The catalytic loading is 2 mg per cm2. Step 9. This is the anode flow plate. It also || has a flow field. Finally, after aligning all components, we will assemble this reactor.",
+    "matched_keywords": [
+      "assemble",
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 340.38,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "assembly step",
+      "aligned components assembled"
+    ],
+    "text_evidence": "has a flow field. Finally, after aligning all components, we will assemble this reactor.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 393.44,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "reactor",
+      "tightened using torque",
+      "0.3 Nm"
+    ],
+    "text_evidence": "We assemble on the tightened reactor using a torque of 0.3 Nm. The reactor is tightened || has a flow field. Finally, after aligning all components, we will assemble this reactor. || We assemble on the tightened reactor using a torque of 0.3 Nm. The reactor is tightened",
+    "matched_keywords": [
+      "assemble"
+    ]
+  },
+  {
+    "timestamp": 408.42,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "tightened using torque",
+      "0.3 Nm"
+    ],
+    "text_evidence": "We assemble on the tightened reactor using a torque of 0.3 Nm. The reactor is tightened",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 423.4,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "reactor",
+      "tightened using torque",
+      "0.3 Nm"
+    ],
+    "text_evidence": "using 4 bolts in a diagonal sequence to ensure uniform compression. The key change in this || We assemble on the tightened reactor using a torque of 0.3 Nm. The reactor is tightened || using 4 bolts in a diagonal sequence to ensure uniform compression. The key change in this",
+    "matched_keywords": [
+      "change"
+    ]
+  },
+  {
+    "timestamp": 429.32,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "tightened using bolts",
+      "4 bolts in diagonal sequence"
+    ],
+    "text_evidence": "using 4 bolts in a diagonal sequence to ensure uniform compression. The key change in this",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 435.24,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "using 4 bolts in a diagonal sequence to ensure uniform compression. The key change in this || reactor is that the middle solid electrolyte layer is replaced by a circulating 1 molecule",
+    "matched_keywords": [],
+    "similarity": 0.196
+  },
+  {
+    "timestamp": 441.28,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "solid electrolyte layer",
+      "replaced by",
+      "circulating 1 molecule H liquid electrolyte"
+    ],
+    "text_evidence": "reactor is that the middle solid electrolyte layer is replaced by a circulating 1 molecule || H liquid electrolyte. The purpose is to improve ionic activity in the middle chamber and reduce || reactor is that the middle solid electrolyte layer is replaced by a circulating 1 molecule H liquid electrolyte. The purpose is to improve ionic activity in the middle chamber and reduce",
+    "matched_keywords": [],
+    "similarity": 0.469
+  },
+  {
+    "timestamp": 444.68,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "circulating 1 molecule H liquid electrolyte",
+      "purpose",
+      "improve ionic activity in middle chamber and reduce"
+    ],
+    "text_evidence": "H liquid electrolyte. The purpose is to improve ionic activity in the middle chamber and reduce",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 448.08,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "H liquid electrolyte. The purpose is to improve ionic activity in the middle chamber and reduce || the self-resistance during operation.",
+    "matched_keywords": [],
+    "similarity": 0.217
+  }
+]

@@ -1,0 +1,476 @@
+[
+  {
+    "timestamp": 5.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "支撑SELL的架子",
+      "designed for",
+      "组装SELL"
+    ],
+    "text_evidence": "OK,这个是我们设计的这种支撑SELL的架子,用来组装SELL的",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 11.0,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "阳极",
+      "装上",
+      "支撑SELL的架子"
+    ],
+    "text_evidence": "OK,这个是我们设计的这种支撑SELL的架子,用来组装SELL的 || OK,这个首先把这个先装羊脊 || OK,这个首先把这个先装阳极",
+    "matched_keywords": [],
+    "similarity": 0.461
+  },
+  {
+    "timestamp": 17.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "OK,这个首先把这个先装羊脊 || 把四个螺丝带这个绝缘圈的放上",
+    "matched_keywords": [],
+    "similarity": 0.443
+  },
+  {
+    "timestamp": 20.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "螺丝带绝缘圈",
+      "放上",
+      "支撑SELL的架子"
+    ],
+    "text_evidence": "把四个螺丝带这个绝缘圈的放上",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 24.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "把四个螺丝带这个绝缘圈的放上 || 然后这样,这样就可以固定的装SELL",
+    "matched_keywords": [],
+    "similarity": 0.349
+  },
+  {
+    "timestamp": 33.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "SELL",
+      "固定装",
+      "支撑SELL的架子"
+    ],
+    "text_evidence": "然后这样,这样就可以固定的装SELL",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 54.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "然后这样,这样就可以固定的装SELL || 然后这是我的羊脊的垫片,是这种硅胶材质的,很薄的这种,很软的这种,然后装上去",
+    "matched_keywords": [],
+    "similarity": 0.42
+  },
+  {
+    "timestamp": 62.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "阳极垫片",
+      "材质",
+      "硅胶"
+    ],
+    "text_evidence": "然后这是我的阳极的垫片,是这种硅胶材质的,很薄的这种,很软的这种,然后装上去",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 70.0,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "阳极口",
+      "size",
+      "二乘二"
+    ],
+    "text_evidence": "然后这是我的羊脊的垫片,是这种硅胶材质的,很薄的这种,很软的这种,然后装上去 || 羊脊的这个口可以大一点,我这里是放的是二乘二的 || 阳极的这个口可以大一点,我这里是放的是二乘二的",
+    "matched_keywords": [],
+    "similarity": 0.541
+  },
+  {
+    "timestamp": 76.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "羊脊的这个口可以大一点,我这里是放的是二乘二的 || 对,我给你们录音是为了解释你们拍的时候不用说话,就可以直接装就行",
+    "matched_keywords": [],
+    "similarity": 0.269
+  },
+  {
+    "timestamp": 83.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "对,我给你们录音是为了解释你们拍的时候不用说话,就可以直接装就行 || OK,然后放上一片SPPTL,刚好放在这中间",
+    "matched_keywords": [],
+    "similarity": 0.384
+  },
+  {
+    "timestamp": 91.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "SPPTL",
+      "operation",
+      "放在中间"
+    ],
+    "text_evidence": "OK,然后放上一片SPPTL,刚好放在这中间",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 100.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "OK,然后放上一片SPPTL,刚好放在这中间 || 电极片是二乘二,然后这个GASKET垫片的距离应该是2.5X2.5的",
+    "matched_keywords": [],
+    "similarity": 0.397
+  },
+  {
+    "timestamp": 103.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "电极片",
+      "size",
+      "二乘二"
+    ],
+    "text_evidence": "电极片是二乘二,然后这个GASKET垫片的距离应该是2.5X2.5的",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 107.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "电极片是二乘二,然后这个GASKET垫片的距离应该是2.5X2.5的 || 这里就取一个10mm的PTFE的膜",
+    "matched_keywords": [],
+    "similarity": 0.465
+  },
+  {
+    "timestamp": 115.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "PTFE膜",
+      "size",
+      "10mm"
+    ],
+    "text_evidence": "这里就取一个10mm的PTFE的膜",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 123.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "这里就取一个10mm的PTFE的膜 || 这个膜认识的时候比较好,你可以这样认识,你把单面认识",
+    "matched_keywords": [],
+    "similarity": 0.354
+  },
+  {
+    "timestamp": 142.0,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "膜",
+      "orientation",
+      "干的这一面朝向下面"
+    ],
+    "text_evidence": "单面认识我把它提起来,把干的这一面朝向下面 || 单面认识我把它提起来,把干的这一面朝向下面 || 对,然后稍微按一下,让它湿一点,把中间湿一下就行",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 149.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "膜",
+      "action",
+      "稍微按一下"
+    ],
+    "text_evidence": "对,然后稍微按一下,让它湿一点,把中间湿一下就行",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 154.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "对,然后稍微按一下,让它湿一点,把中间湿一下就行 || 然后再装音极的垫片",
+    "matched_keywords": [],
+    "similarity": 0.404
+  },
+  {
+    "timestamp": 164.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "阴极的电极",
+      "裁成",
+      "0.5X0.5 或者 0.4X0.5"
+    ],
+    "text_evidence": "我阴极的垫片小,因为我为了省电极,音极的电极裁成了0.5X0.5,或者0.4X0.5",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 184.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "我音极的垫片小,因为我为了省电极,音极的电极裁成了0.5X0.5,或者0.4X0.5 || 我现在去找一下我当时的音极,音极这没有了",
+    "matched_keywords": [],
+    "similarity": 0.488
+  },
+  {
+    "timestamp": 214.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "我现在去找一下我当时的音极,音极这没有了 || 音极",
+    "matched_keywords": [],
+    "similarity": 0.526
+  },
+  {
+    "timestamp": 244.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "音极 || 对,扬机器这儿裁成这种小的,刚好是0.5X0.5,就可以把它放到这上面",
+    "matched_keywords": [],
+    "similarity": 0.221
+  },
+  {
+    "timestamp": 254.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "阴极的电极",
+      "裁成",
+      "0.5X0.5"
+    ],
+    "text_evidence": "对,扬机器这儿裁成这种小的,刚好是0.5X0.5,就可以把它放到这上面",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 274.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "对,扬机器这儿裁成这种小的,刚好是0.5X0.5,就可以把它放到这上面 || 最好是能够刚好放到这个孔里面去,大一点也没关系,你们抬的时候刚好放里面就行",
+    "matched_keywords": [],
+    "similarity": 0.531
+  },
+  {
+    "timestamp": 279.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "孔",
+      "condition",
+      "刚好放进去"
+    ],
+    "text_evidence": "最好是能够刚好放到这个孔里面去,大一点也没关系,你们抬的时候刚好放里面就行",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 284.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "最好是能够刚好放到这个孔里面去,大一点也没关系,你们抬的时候刚好放里面就行 || 比如说1X1的话,你裁成1X1的刚放进去,或者是0.5X0.5也可以刚放进去",
+    "matched_keywords": [],
+    "similarity": 0.456
+  },
+  {
+    "timestamp": 287.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "材料",
+      "size",
+      "1X1 或 0.5X0.5"
+    ],
+    "text_evidence": "比如说1X1的话,你裁成1X1的刚放进去,或者是0.5X0.5也可以刚放进去",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 291.0,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "阴极夹具",
+      "operation",
+      "放置"
+    ],
+    "text_evidence": "比如说1X1的话,你裁成1X1的刚放进去,或者是0.5X0.5也可以刚放进去 || 然后再放音极的这个夹具 || 然后再放阴极的这个夹具",
+    "matched_keywords": [],
+    "similarity": 0.265
+  },
+  {
+    "timestamp": 296.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "然后再放音极的这个夹具 || 然后就是这样",
+    "matched_keywords": [],
+    "similarity": 0.474
+  },
+  {
+    "timestamp": 311.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "然后就是这样 || 这个是装的过程,先给它旋紧,不用旋得很死",
+    "matched_keywords": [],
+    "similarity": 0.382
+  },
+  {
+    "timestamp": 317.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "装的过程",
+      "operation",
+      "旋紧"
+    ],
+    "text_evidence": "这个是装的过程,先给它旋紧,不用旋得很死",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 324.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "这个是装的过程,先给它旋紧,不用旋得很死 || 这个扭矩扳手一般力调成0.3扭就可以了",
+    "matched_keywords": [],
+    "similarity": 0.454
+  },
+  {
+    "timestamp": 330.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "扭矩扳手",
+      "力调成",
+      "0.3扭"
+    ],
+    "text_evidence": "这个扭矩扳手一般力调成0.3扭就可以了",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 336.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "这个扭矩扳手一般力调成0.3扭就可以了 || 对角线拧紧",
+    "matched_keywords": [],
+    "similarity": 0.391
+  },
+  {
+    "timestamp": 340.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "装配",
+      "拧紧方式",
+      "对角线"
+    ],
+    "text_evidence": "对角线拧紧",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 344.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "对角线拧紧 || 对,就装成功了 || 对,就装成功了 || 你们在装的时候,拍视频的时候要多展示一下",
+    "matched_keywords": [],
+    "similarity": 0.285
+  },
+  {
+    "timestamp": 349.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "你们在装的时候,拍视频的时候要多展示一下 || 比如说你要装这个SP点,你就把正极正负面都拿出来,让它好好看一下",
+    "matched_keywords": [],
+    "similarity": 0.397
+  },
+  {
+    "timestamp": 356.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "比如说你要装这个SP点,你就把正极正负面都拿出来,让它好好看一下 || 然后你们再拍,得可以慢一点拍 || 然后你们再拍,得可以慢一点拍 || 大概十分钟吧,装一个Cell就装出来了",
+    "matched_keywords": [],
+    "similarity": 0.336
+  },
+  {
+    "timestamp": 362.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "大概十分钟吧,装一个Cell就装出来了 || 然后这个到时候接喷雾,这个到时候接烟花炭 || 然后这个到时候接喷雾,这个到时候接烟花炭 || 对,然后这个接电话工作站的这个几个接耳就可以了",
+    "matched_keywords": [],
+    "similarity": 0.277
+  }
+]

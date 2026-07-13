@@ -1,0 +1,410 @@
+[
+  {
+    "triple": [
+      "cathode flow plate",
+      "has",
+      "laser-painting flow field"
+    ],
+    "text_evidence": "This is the assembly of this reactor. Step 1, this is the cathode flow plate. It has laser-painting flow field. Step 2, this is the cathode electrode. The cathode is also",
+    "timestamp": [
+      0.0,
+      20.16
+    ]
+  },
+  {
+    "triple": [
+      "cathode electrode",
+      "prepared by",
+      "spray coating carbon dioxide catalysis onto H23C3 carbon paper"
+    ],
+    "text_evidence": "prepared by spray coating carbon dioxide catalysis onto H23C3 carbon paper The catalyst loading",
+    "timestamp": [
+      20.16,
+      27.56
+    ]
+  },
+  {
+    "triple": [
+      "catalyst loading",
+      "is",
+      "3 mg per centimeter square"
+    ],
+    "text_evidence": "is 3 mg per centimeter square and the active area is 1 by 1. Step 3, this is the cathode",
+    "timestamp": [
+      27.56,
+      40.44
+    ]
+  },
+  {
+    "triple": [
+      "active area",
+      "is",
+      "1 by 1"
+    ],
+    "text_evidence": "is 3 mg per centimeter square and the active area is 1 by 1. Step 3, this is the cathode",
+    "timestamp": [
+      27.56,
+      40.44
+    ]
+  },
+  {
+    "triple": [
+      "cathode gasket",
+      "thickness",
+      "0.3 millimeter"
+    ],
+    "text_evidence": "gasket. The gasket thickness is 0.3 millimeter and the ionizer window size is 1 by 1 centimeter.",
+    "timestamp": [
+      40.44,
+      51.72
+    ]
+  },
+  {
+    "triple": [
+      "ionizer window size",
+      "is",
+      "1 by 1 centimeter"
+    ],
+    "text_evidence": "gasket. The gasket thickness is 0.3 millimeter and the ionizer window size is 1 by 1 centimeter.",
+    "timestamp": [
+      40.44,
+      51.72
+    ]
+  },
+  {
+    "triple": [
+      "cathode-side membrane",
+      "placement",
+      "Step 4"
+    ],
+    "text_evidence": "Step 4, we will place the cathode-side membrane. This is the cathode-side alkaline ion-chloride",
+    "timestamp": [
+      51.72,
+      65.6
+    ]
+  },
+  {
+    "triple": [
+      "cathode-side membrane",
+      "material specification",
+      "Sustainion X37-50"
+    ],
+    "text_evidence": "membrane. The membrane is Sustainion X37-50. Step 5, this is the middle air-flight chamber.",
+    "timestamp": [
+      65.6,
+      81.04
+    ]
+  },
+  {
+    "triple": [
+      "middle air-flight chamber",
+      "thickness",
+      "3 millimeter"
+    ],
+    "text_evidence": "The chamber thickness is 3 millimeter and the window size is 1 by 1. The chamber is",
+    "timestamp": [
+      81.04,
+      86.24
+    ]
+  },
+  {
+    "triple": [
+      "middle air-flight chamber",
+      "window size",
+      "1 by 1"
+    ],
+    "text_evidence": "The chamber thickness is 3 millimeter and the window size is 1 by 1. The chamber is",
+    "timestamp": [
+      81.04,
+      86.24
+    ]
+  },
+  {
+    "triple": [
+      "middle air-flight chamber",
+      "function",
+      "hold and circulate liquid electrolytes"
+    ],
+    "text_evidence": "used to hold and circulate the liquid electrolytes. The electrolyte is 1 molar KOH and it",
+    "timestamp": [
+      86.24,
+      91.88
+    ]
+  },
+  {
+    "triple": [
+      "electrolyte",
+      "composition",
+      "1 molar KOH"
+    ],
+    "text_evidence": "used to hold and circulate the liquid electrolytes. The electrolyte is 1 molar KOH and it",
+    "timestamp": [
+      86.24,
+      91.88
+    ]
+  },
+  {
+    "triple": [
+      "electrolyte",
+      "circulation",
+      "middle chamber during operation"
+    ],
+    "text_evidence": "will be continuously circulated through the middle chamber during operation. Compared",
+    "timestamp": [
+      91.88,
+      97.56
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber thickness",
+      "is reduced to",
+      "3 millimeter"
+    ],
+    "text_evidence": "is reduced to 3 millimeter. The purpose is to shorten the ion transparent distance, reduce",
+    "timestamp": [
+      103.0,
+      109.32
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber thickness reduction",
+      "purpose",
+      "shorten ion transparent distance"
+    ],
+    "text_evidence": "is reduced to 3 millimeter. The purpose is to shorten the ion transparent distance, reduce",
+    "timestamp": [
+      103.0,
+      109.32
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber thickness reduction",
+      "purpose",
+      "reduce organic resistance from liquid electro-layer"
+    ],
+    "text_evidence": "the organic resistance from the liquid electro-layer and improve the overall and to decrease the",
+    "timestamp": [
+      109.36,
+      118.36
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber thickness reduction",
+      "purpose",
+      "decrease cell voltage"
+    ],
+    "text_evidence": "cell voltage. In addition, we induce this reference electrode into the middle layer.",
+    "timestamp": [
+      118.36,
+      135.36
+    ]
+  },
+  {
+    "triple": [
+      "reference electrode",
+      "is induced into",
+      "middle layer"
+    ],
+    "text_evidence": "cell voltage. In addition, we induce this reference electrode into the middle layer.",
+    "timestamp": [
+      118.36,
+      135.36
+    ]
+  },
+  {
+    "triple": [
+      "reference electrode",
+      "is",
+      "mercury oxide electrode"
+    ],
+    "text_evidence": "The reference electrode is a mercury oxide electrode which allows us to monitor the electrode",
+    "timestamp": [
+      135.4,
+      143.28
+    ]
+  },
+  {
+    "triple": [
+      "mercury oxide electrode",
+      "allows monitoring of",
+      "electrode"
+    ],
+    "text_evidence": "The reference electrode is a mercury oxide electrode which allows us to monitor the electrode",
+    "timestamp": [
+      135.4,
+      143.28
+    ]
+  },
+  {
+    "triple": [
+      "anode gasket",
+      "added",
+      "reactor"
+    ],
+    "text_evidence": "potentials more accurately during operation. Step 6, we add the anode gasket. The anode",
+    "timestamp": [
+      143.28,
+      151.72
+    ]
+  },
+  {
+    "triple": [
+      "anode gasket",
+      "thickness",
+      "0.3 millimeter"
+    ],
+    "text_evidence": "gasket is also 0.3 millimeter.",
+    "timestamp": [
+      151.72,
+      154.72
+    ]
+  },
+  {
+    "triple": [
+      "anode side membrane",
+      "placed",
+      "middle chamber"
+    ],
+    "text_evidence": "Let us put the membrane first into the middle chamber and the gasket.",
+    "timestamp": [
+      195.72,
+      201.72
+    ]
+  },
+  {
+    "triple": [
+      "anode side membrane",
+      "material",
+      "Sustainion X37-50"
+    ],
+    "text_evidence": "At the anode side, the membrane is also Sustainion X37-50.",
+    "timestamp": [
+      202.72,
+      210.72
+    ]
+  },
+  {
+    "triple": [
+      "anode electrode",
+      "prepared by",
+      "spray coating"
+    ],
+    "text_evidence": "Okay, under step 8, this is the anode electrode. The anode is also prepared by spray coating",
+    "timestamp": [
+      211.08,
+      224.08
+    ]
+  },
+  {
+    "triple": [
+      "Pt-Ru-C catalyst",
+      "spray coated onto",
+      "H23C3 carbon paper"
+    ],
+    "text_evidence": "Pt-Ru-C catalyst onto H23C3 carbon paper The catalysis loading is 2 micrograms",
+    "timestamp": [
+      224.08,
+      233.08
+    ]
+  },
+  {
+    "triple": [
+      "catalysis loading",
+      "set to",
+      "2 micrograms per centimeter square"
+    ],
+    "text_evidence": "Pt-Ru-C catalyst onto H23C3 carbon paper The catalysis loading is 2 micrograms per centimeter square. Step 9, this is the anode flow plate. It also has a 17 flow field.",
+    "timestamp": [
+      224.08,
+      243.44
+    ]
+  },
+  {
+    "triple": [
+      "anode flow plate",
+      "has",
+      "17 flow field"
+    ],
+    "text_evidence": "per centimeter square. Step 9, this is the anode flow plate. It also has a 17 flow field.",
+    "timestamp": [
+      233.44,
+      243.44
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "assembled and tightened using",
+      "torque of 2 Newton meter"
+    ],
+    "text_evidence": "Finally, after aligning all components, we assemble and tighten the reactor using a torque of 2 Newton meter.",
+    "timestamp": [
+      243.44,
+      253.44
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "tightened using",
+      "4 bolts in a diagonal sequence"
+    ],
+    "text_evidence": "The reactor is tightened using 4 bolts in a diagonal sequence to ensure uniform compression.",
+    "timestamp": [
+      263.08,
+      282.44
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "keeps",
+      "1 molar KOH liquid electrolytes in the middle chamber"
+    ],
+    "text_evidence": "In summary, this reactor keeps the circulating 1 molar KOH liquid electrolytes in the middle",
+    "timestamp": [
+      293.44,
+      306.44
+    ]
+  },
+  {
+    "triple": [
+      "chamber thickness",
+      "reduced to",
+      "3 millimeter"
+    ],
+    "text_evidence": "chamber but reduces the chamber thickness to 3 millimeter. Mercury oxide reference electrode",
+    "timestamp": [
+      306.44,
+      316.44
+    ]
+  },
+  {
+    "triple": [
+      "mercury oxide reference electrode",
+      "added to",
+      "middle chamber"
+    ],
+    "text_evidence": "is also added to the middle chamber for more reliable potential monitoring.",
+    "timestamp": [
+      316.8,
+      323.8
+    ]
+  },
+  {
+    "triple": [
+      "torque",
+      "set to",
+      "2 Newton meter"
+    ],
+    "text_evidence": "The torque, using a torque of 2 Newton meter.",
+    "timestamp": [
+      372.16,
+      379.16
+    ]
+  }
+]

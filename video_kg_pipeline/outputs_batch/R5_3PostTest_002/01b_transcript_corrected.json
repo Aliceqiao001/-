@@ -1,0 +1,219 @@
+[
+  {
+    "index": 0,
+    "text": "This is the post-test disassemble process of this reactor.",
+    "start_ts": 0.0,
+    "end_ts": 7.0,
+    "original_text": "This is the post-test disassemble process of this reactor."
+  },
+  {
+    "index": 1,
+    "text": "The reactor was operated with a 3-micrometer metal chamber containing circulating 1-molecule",
+    "start_ts": 7.0,
+    "end_ts": 15.0,
+    "original_text": "The reactor was operated with a 3-micrometer metal chamber containing circulating 1-molecule"
+  },
+  {
+    "index": 2,
+    "text": "H-electrolytes.",
+    "start_ts": 15.0,
+    "end_ts": 16.0,
+    "original_text": "H-electrolytes."
+  },
+  {
+    "index": 3,
+    "text": "After the electrochemical test, we will disassemble the cell and record the conditions of each",
+    "start_ts": 16.0,
+    "end_ts": 24.0,
+    "original_text": "After the electrochemical test, we will disassemble the cell and record the conditions of each"
+  },
+  {
+    "index": 4,
+    "text": "component for failure diagonal.",
+    "start_ts": 24.0,
+    "end_ts": 32.0,
+    "original_text": "component for failure diagonal."
+  },
+  {
+    "index": 5,
+    "text": "Now we load the 4 bolts in a diagonal sequence to release the compressions regularly to avoid",
+    "start_ts": 32.0,
+    "end_ts": 40.0,
+    "original_text": "Now we load the 4 balls in a diagonal sequence to release the compressions regularly to avoid"
+  },
+  {
+    "index": 6,
+    "text": "damaging the membrane or electrodes.",
+    "start_ts": 40.0,
+    "end_ts": 47.0,
+    "original_text": "damaging the membrane or electrodes."
+  },
+  {
+    "index": 7,
+    "text": "After opening the reactor, we first inspect the anode flow plate.",
+    "start_ts": 70.0,
+    "end_ts": 96.0,
+    "original_text": "After opening the reactor, we first inspect the anode flow plate."
+  },
+  {
+    "index": 8,
+    "text": "We check whether there is liquid accumulation, salt precipitation, gas channel blockage,",
+    "start_ts": 96.0,
+    "end_ts": 106.0,
+    "original_text": "We check whether there is liquid accumulation, salt precipitation, gas channel blockage,"
+  },
+  {
+    "index": 9,
+    "text": "or any color change on the flow field.",
+    "start_ts": 106.0,
+    "end_ts": 109.0,
+    "original_text": "or any color change on the flow field."
+  },
+  {
+    "index": 10,
+    "text": "Next, we inspect the anode electrode.",
+    "start_ts": 109.0,
+    "end_ts": 114.0,
+    "original_text": "Next, we inspect the anode electrode."
+  },
+  {
+    "index": 11,
+    "text": "The anode is Pt-RuCM-CubSpR-CoT on a H23C3 carbon paper.",
+    "start_ts": 114.0,
+    "end_ts": 123.0,
+    "original_text": "The anode is Pt-RuCM-CubSpR-CoT on a GATO 3-axis recombinant paper."
+  },
+  {
+    "index": 12,
+    "text": "We check whether the catalyst layer remains intact, whether the surface is flooded, whether",
+    "start_ts": 124.0,
+    "end_ts": 133.0,
+    "original_text": "We check whether the catalyst layer remains intact, whether the surface is flooded, whether"
+  },
+  {
+    "index": 13,
+    "text": "there is electrolyte residue, and whether any catalyst peeling or diminution is observed.",
+    "start_ts": 133.0,
+    "end_ts": 151.0,
+    "original_text": "there is electrolyte residue, and whether any catalyst peeling or diminution is observed."
+  },
+  {
+    "index": 14,
+    "text": "Then we inspect the anode side steel membrane.",
+    "start_ts": 152.0,
+    "end_ts": 156.0,
+    "original_text": "Then we inspect the anode side steel membrane."
+  },
+  {
+    "index": 15,
+    "text": "We check whether the membrane space is clean and uniformly wetted, whether there is any",
+    "start_ts": 156.0,
+    "end_ts": 168.0,
+    "original_text": "We check whether the membrane space is clean and uniformly wetted, whether there is any"
+  },
+  {
+    "index": 16,
+    "text": "electrolyte crossover, salt precipitation, mechanical damage, or uneven contact.",
+    "start_ts": 168.0,
+    "end_ts": 176.0,
+    "original_text": "electrolyte crossover, salt precipitation, mechanical damage, or uneven contact."
+  },
+  {
+    "index": 17,
+    "text": "Next, we inspect the middle chamber.",
+    "start_ts": 181.0,
+    "end_ts": 196.0,
+    "original_text": "Next, we inspect the middle chamber."
+  },
+  {
+    "index": 18,
+    "text": "We check whether the chamber is uniformly filled, whether there is any trapped gas bubble,",
+    "start_ts": 196.0,
+    "end_ts": 201.0,
+    "original_text": "We check whether the chamber is uniformly filled, whether there is any trapped gas bubble,"
+  },
+  {
+    "index": 19,
+    "text": "or liquid stage gradation, salt carburization, or blockage near the inlet and outlet.",
+    "start_ts": 201.0,
+    "end_ts": 212.0,
+    "original_text": "or liquid stage gradation, salt carburization, or blockage near the inlet and outlet."
+  },
+  {
+    "index": 20,
+    "text": "Then we inspect the cathode side membrane.",
+    "start_ts": 212.0,
+    "end_ts": 220.0,
+    "original_text": "Then we inspect the cathode side membrane."
+  },
+  {
+    "index": 21,
+    "text": "We check whether the membrane space is clean and uniformly wetted, and whether there is",
+    "start_ts": 220.0,
+    "end_ts": 225.0,
+    "original_text": "We check whether the membrane space is clean and uniformly wetted, and whether there is"
+  },
+  {
+    "index": 22,
+    "text": "electrolyte crossover, salt deposition, mechanical damage, or uneven contact.",
+    "start_ts": 226.0,
+    "end_ts": 233.0,
+    "original_text": "electrolyte crossover, salt deposition, mechanical damage, or uneven contact."
+  },
+  {
+    "index": 23,
+    "text": "Next, we inspect the cathode side electrode.",
+    "start_ts": 233.0,
+    "end_ts": 241.0,
+    "original_text": "Next, we inspect the cathode side electrode."
+  },
+  {
+    "index": 24,
+    "text": "The cathode is CuSpR-CoT on a H23C3 carbon paper.",
+    "start_ts": 241.0,
+    "end_ts": 245.0,
+    "original_text": "The cathode is CuSpR-CoT on a GATO 3-axis recombinant paper."
+  },
+  {
+    "index": 25,
+    "text": "We check whether the catalyst layer remains attached, whether the cathode is flooded or",
+    "start_ts": 245.0,
+    "end_ts": 250.0,
+    "original_text": "We check whether the catalyst layer remains attached, whether the cathode is flooded or"
+  },
+  {
+    "index": 26,
+    "text": "dried out, whether there is any color change after reaction, and whether the active area",
+    "start_ts": 250.0,
+    "end_ts": 255.0,
+    "original_text": "dried out, whether there is any color change after reaction, and whether the active area"
+  },
+  {
+    "index": 27,
+    "text": "remains uniform.",
+    "start_ts": 255.0,
+    "end_ts": 268.0,
+    "original_text": "remains uniform."
+  },
+  {
+    "index": 28,
+    "text": "Last one, we inspect the cathode flow plate.",
+    "start_ts": 268.0,
+    "end_ts": 273.0,
+    "original_text": "Last one, we inspect the cathode flow plate."
+  },
+  {
+    "index": 29,
+    "text": "We check whether there is liquid accumulation in the separating flow channel, whether the",
+    "start_ts": 273.0,
+    "end_ts": 278.0,
+    "original_text": "We check whether there is liquid accumulation in the separating flow channel, whether the"
+  },
+  {
+    "index": 30,
+    "text": "gas test is blocked, and whether there is any wasable deposit.",
+    "start_ts": 278.0,
+    "end_ts": 283.0,
+    "original_text": "gas test is blocked, and whether there is any wasable deposit."
+  }
+]

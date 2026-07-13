@@ -1,0 +1,50 @@
+[
+  {
+    "index": 0,
+    "text": "Okay, now I will describe the testing conditions for this reactor.",
+    "start_ts": 0.0,
+    "end_ts": 9.08
+  },
+  {
+    "index": 1,
+    "text": "The anode feed gas is hydrogen, which is a flow rate of 20 ssm.",
+    "start_ts": 9.08,
+    "end_ts": 16.0
+  },
+  {
+    "index": 2,
+    "text": "The cathode flow feed gas is carbon monoxide with a flow rate of 10 ssm.",
+    "start_ts": 16.0,
+    "end_ts": 21.4
+  },
+  {
+    "index": 3,
+    "text": "In this electrochemical setup, the working electrode is also connected to the cathode.",
+    "start_ts": 21.4,
+    "end_ts": 27.4
+  },
+  {
+    "index": 4,
+    "text": "And the counter electrodes are connected to the anode side.",
+    "start_ts": 27.4,
+    "end_ts": 33.4
+  },
+  {
+    "index": 5,
+    "text": "During the test, there is a flowing, the middle chamber is filled with solid electrolytes",
+    "start_ts": 33.4,
+    "end_ts": 43.4
+  },
+  {
+    "index": 6,
+    "text": "and there is a water, air water through the middle chamber.",
+    "start_ts": 43.4,
+    "end_ts": 52.4
+  },
+  {
+    "index": 7,
+    "text": "There is about 23 ssm water flowing to the middle chamber.",
+    "start_ts": 52.4,
+    "end_ts": 59.4
+  }
+]

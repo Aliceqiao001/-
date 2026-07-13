@@ -1,0 +1,473 @@
+[
+  {
+    "timestamp": 42.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "30g sugar || 1 egg",
+    "matched_keywords": [],
+    "similarity": 0.39
+  },
+  {
+    "timestamp": 51.44,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "1 egg || 1 can of tomatoes",
+    "matched_keywords": [],
+    "similarity": 0.47
+  },
+  {
+    "timestamp": 81.44,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "1 can of tomatoes || 1 egg",
+    "matched_keywords": [],
+    "similarity": 0.47
+  },
+  {
+    "timestamp": 90.34,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "1 egg || 1 tbspcenter of exit and different vegetables",
+    "matched_keywords": [],
+    "similarity": 0.369
+  },
+  {
+    "timestamp": 97.34,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "1 tbspcenter of exit and different vegetables || salt",
+    "matched_keywords": [],
+    "similarity": 0.262
+  },
+  {
+    "timestamp": 101.9,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "salt || Yes. After we loosen the four bolts in a diagonal sequence",
+    "matched_keywords": [],
+    "similarity": 0.139
+  },
+  {
+    "timestamp": 105.42,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "four bolts",
+      "loosened in sequence",
+      "diagonal"
+    ],
+    "text_evidence": "Yes. After we loosen the four bolts in a diagonal sequence",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 108.94,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "four bolts",
+      "loosened in sequence",
+      "diagonal"
+    ],
+    "text_evidence": "to gradually release the composition. After open the reactor, this is the anode || Yes. After we loosen the four bolts in a diagonal sequence || to gradually release the composition. After open the reactor, this is the anode",
+    "matched_keywords": [
+      "open",
+      "release"
+    ]
+  },
+  {
+    "timestamp": 114.44,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "composition",
+      "released",
+      "gradually"
+    ],
+    "text_evidence": "to gradually release the composition. After open the reactor, this is the anode",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 119.94,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "composition",
+      "released",
+      "gradually"
+    ],
+    "text_evidence": "totally flooding. This is the anode flow plate. || to gradually release the composition. After open the reactor, this is the anode || totally flooding. This is the anode flow plate.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 124.44,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode",
+      "state",
+      "totally flooding"
+    ],
+    "text_evidence": "totally flooding. This is the anode flow plate.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 128.94,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "totally flooding. This is the anode flow plate. || There are many liquid accumulation.",
+    "matched_keywords": [],
+    "similarity": 0.336
+  },
+  {
+    "timestamp": 132.94,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "experiment",
+      "observation",
+      "liquid accumulation"
+    ],
+    "text_evidence": "There are many liquid accumulation.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 137.94,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "There are many liquid accumulation. || This is the anode electrode. The anode is PT-Rosilium-Carbon-Super-Recorded on A2-C3-C3-Carbon paper.",
+    "matched_keywords": [],
+    "similarity": 0.122
+  },
+  {
+    "timestamp": 141.94,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode electrode",
+      "material spec",
+      "Pt-Ru-C-Carbon-Super-Recorded on A2-C3-C3-Carbon paper"
+    ],
+    "text_evidence": "This is the anode electrode. The anode is Pt-Ru-C-Carbon-Super-Recorded on A2-C3-C3-Carbon paper.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 145.94,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "This is the anode electrode. The anode is PT-Rosilium-Carbon-Super-Recorded on A2-C3-C3-Carbon paper. || We check the cancer layer remains. There is a severe flooding.",
+    "matched_keywords": [],
+    "similarity": 0.137
+  },
+  {
+    "timestamp": 149.94,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "experiment",
+      "observation",
+      "severe flooding"
+    ],
+    "text_evidence": "We check the cancer layer remains. There is a severe flooding.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 153.94,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "We check the cancer layer remains. There is a severe flooding. || This is the anode side, sustained on X3-7-50 membrane.",
+    "matched_keywords": [],
+    "similarity": 0.226
+  },
+  {
+    "timestamp": 160.44,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode side",
+      "material spec",
+      "Sustainion X37-50 membrane"
+    ],
+    "text_evidence": "This is the anode side, Sustainion X37-50 membrane.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 166.94,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "This is the anode side, sustained on X3-7-50 membrane. || There is damage on the membrane.",
+    "matched_keywords": [],
+    "similarity": 0.467
+  },
+  {
+    "timestamp": 170.44,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "membrane",
+      "observation",
+      "damage"
+    ],
+    "text_evidence": "There is damage on the membrane.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 173.94,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "There is damage on the membrane. || This is the middle chamber.",
+    "matched_keywords": [],
+    "similarity": 0.205
+  },
+  {
+    "timestamp": 177.44,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "middle chamber",
+      "is",
+      "this"
+    ],
+    "text_evidence": "This is the middle chamber.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 183.94,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "This is the middle chamber. || This is the cathode side, sustained on X3-7-50 membrane.",
+    "matched_keywords": [],
+    "similarity": 0.327
+  },
+  {
+    "timestamp": 191.44,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode side",
+      "is",
+      "Sustainion X37-50 membrane"
+    ],
+    "text_evidence": "This is the cathode side, Sustainion X37-50 membrane.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 198.94,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "Sustainion X37-50 membrane",
+      "has",
+      "mechanical damage"
+    ],
+    "text_evidence": "This is the cathode side, sustained on X3-7-50 membrane. || There is a mechanical damage on this membrane.",
+    "matched_keywords": [],
+    "similarity": 0.499
+  },
+  {
+    "timestamp": 205.94,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "There is a mechanical damage on this membrane. || This is the anode electrode. The cathode is Cu-3-Coated on A2-C3-C3-Carbon paper.",
+    "matched_keywords": [],
+    "similarity": 0.266
+  },
+  {
+    "timestamp": 210.44,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode electrode",
+      "is",
+      "this"
+    ],
+    "text_evidence": "This is the anode electrode. The cathode is Cu-3-Coated on A2-C3-C3-Carbon paper.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 214.94,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "cathode side",
+      "is",
+      "flooding"
+    ],
+    "text_evidence": "This is the anode electrode. The cathode is Cu-3-Coated on A2-C3-C3-Carbon paper. || The cathode side is also flooding.",
+    "matched_keywords": [],
+    "similarity": 0.447
+  },
+  {
+    "timestamp": 219.94,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The cathode side is also flooding. || There are some blue composition deposits in there.",
+    "matched_keywords": [],
+    "similarity": 0.26
+  },
+  {
+    "timestamp": 224.44,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "composition deposits",
+      "appearance",
+      "blue"
+    ],
+    "text_evidence": "There are some blue composition deposits in there.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 229.94,
+    "sources": [
+      "keyword",
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "color",
+      "state change",
+      "changed"
+    ],
+    "text_evidence": "The color is changed. || There are some blue composition deposits in there. || The color is changed.",
+    "matched_keywords": [
+      "changed"
+    ]
+  },
+  {
+    "timestamp": 234.94,
+    "sources": [
+      "keyword",
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "color",
+      "state change",
+      "changed"
+    ],
+    "text_evidence": "This is the cathode flow plate without PT-Rosilium-C3-Carbon paper. || The color is changed. || This is the cathode flow plate without PT-Rosilium-C3-Carbon paper. || This is the cathode flow plate without Pt-Ru-C-C3-Carbon paper.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 239.94,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "This is the cathode flow plate without PT-Rosilium-C3-Carbon paper. || We check whether there is any liquid accumulation.",
+    "matched_keywords": [],
+    "similarity": 0.253
+  },
+  {
+    "timestamp": 243.44,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "liquid accumulation",
+      "observation",
+      "checked"
+    ],
+    "text_evidence": "We check whether there is any liquid accumulation.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 247.94,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "We check whether there is any liquid accumulation. || There are visible deposits on the cathode.",
+    "matched_keywords": [],
+    "similarity": 0.349
+  },
+  {
+    "timestamp": 253.44,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "deposits",
+      "appearance",
+      "visible on the cathode"
+    ],
+    "text_evidence": "There are visible deposits on the cathode.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 258.94,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "There are visible deposits on the cathode. || This is the post-test observation.",
+    "matched_keywords": [],
+    "similarity": 0.283
+  },
+  {
+    "timestamp": 262.94,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "This is the cathode flow plate, cathode gasket, cathode membrane, middle chamber, anode membrane, anode electrode and anode flow plate. || This is the post-test observation. || This is the cathode flow plate, cathode gasket, cathode membrane, middle chamber, anode membrane, anode electrode and anode flow plate.",
+    "matched_keywords": [
+      "flow"
+    ]
+  }
+]

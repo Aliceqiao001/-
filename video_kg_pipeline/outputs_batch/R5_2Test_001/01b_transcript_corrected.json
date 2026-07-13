@@ -1,0 +1,114 @@
+[
+  {
+    "index": 0,
+    "text": "This is the testing process for this reactor.",
+    "start_ts": 0.0,
+    "end_ts": 5.0,
+    "original_text": "This is the testing process for this reactor."
+  },
+  {
+    "index": 1,
+    "text": "First, I will describe the gas feed conditions.",
+    "start_ts": 5.0,
+    "end_ts": 9.0,
+    "original_text": "First, I will describe the gas feed conditions."
+  },
+  {
+    "index": 2,
+    "text": "The anode feed gas is hydrogen with a flow rate of 20 fcl.",
+    "start_ts": 9.0,
+    "end_ts": 18.0,
+    "original_text": "The anode feed gas is hydrogen with a flow rate of 20 fcl."
+  },
+  {
+    "index": 3,
+    "text": "The cathode feed gas is carbon monoxide with a flow rate of 10 fcl.",
+    "start_ts": 18.0,
+    "end_ts": 26.0,
+    "original_text": "The cathode feed gas is carbon monoxide with a flow rate of 10 fcl."
+  },
+  {
+    "index": 4,
+    "text": "The working electrode is connected to the cathode.",
+    "start_ts": 26.0,
+    "end_ts": 34.0,
+    "original_text": "The working electrode is connected to the cathode."
+  },
+  {
+    "index": 5,
+    "text": "The counter electrode is connected to the anode.",
+    "start_ts": 34.0,
+    "end_ts": 37.0,
+    "original_text": "The counter electrode is connected to the anode."
+  },
+  {
+    "index": 6,
+    "text": "The reference electrode is placed in the middle electrolyte chamber.",
+    "start_ts": 37.0,
+    "end_ts": 45.0,
+    "original_text": "The reference electrode is placed in the middle electrolyte chamber."
+  },
+  {
+    "index": 7,
+    "text": "The reference electrode is a mercury oxide electrode.",
+    "start_ts": 45.0,
+    "end_ts": 52.0,
+    "original_text": "The reference electrode is a mercury oxide electrode."
+  },
+  {
+    "index": 8,
+    "text": "During the test, the middle chamber is filled with a circulating 1-molecule H liquid electrolyte.",
+    "start_ts": 52.0,
+    "end_ts": 69.0,
+    "original_text": "During the test, the middle chamber is filled with a circulating 1-molecule H liquid electrolyte."
+  },
+  {
+    "index": 9,
+    "text": "The middle chamber thickness is 3 millimeter.",
+    "start_ts": 69.0,
+    "end_ts": 77.0,
+    "original_text": "The middle chamber thickness is 3 micrometer."
+  },
+  {
+    "index": 10,
+    "text": "The circulating 1-molecule H provides a continuous ionic PSV between the cathode side am and anode side am.",
+    "start_ts": 77.0,
+    "end_ts": 88.0,
+    "original_text": "The circulating 1-molecule H provides a continuous ionic PSV between the cathode side am and anode side am."
+  },
+  {
+    "index": 11,
+    "text": "The electrolyte flow rate is 30 fcl.",
+    "start_ts": 88.0,
+    "end_ts": 99.0,
+    "original_text": "The electrolyte flow rate is 30 fcl."
+  },
+  {
+    "index": 12,
+    "text": "The purpose of reducing the chamber thickness is to shorten the ion transparent distance, reduce the ionic resistance and improve the overall cell and reduce the cell voltage.",
+    "start_ts": 99.0,
+    "end_ts": 117.0,
+    "original_text": "The purpose of reducing the chamber thickness is to shorten the ion transparent distance, reduce the ionic resistance and improve the overall cell and reduce the cell voltage."
+  },
+  {
+    "index": 13,
+    "text": "At the same time, the reference electrode allows to monitor the electrode potentials microdifferentially and on-off operation.",
+    "start_ts": 117.0,
+    "end_ts": 129.0,
+    "original_text": "At the same time, the reference electrode allows to monitor the electrode potentials microdifferentially and on-off operation."
+  },
+  {
+    "index": 14,
+    "text": "For this test, we will first perform a constant current operation to monitor the cell voltage stability during electrolysis.",
+    "start_ts": 129.0,
+    "end_ts": 139.0,
+    "original_text": "For this test, we will first perform a constant current operation to monitor the cell voltage stability during electrolysis."
+  },
+  {
+    "index": 15,
+    "text": "After the test, we will perform the electrochemical impedance spectropase or PEIS to evaluate the resistance of the electrode after generation.",
+    "start_ts": 139.0,
+    "end_ts": 155.0,
+    "original_text": "After the test, we will perform the electrochemical impedance spectropase or PEIS to evaluate the resistance of the electrode after generation."
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "index": 0,
+    "text": "30g butter",
+    "start_ts": 0.0,
+    "end_ts": 10.0,
+    "original_text": "30g butter"
+  },
+  {
+    "index": 1,
+    "text": "30g sugar",
+    "start_ts": 30.0,
+    "end_ts": 40.0,
+    "original_text": "30g sugar"
+  },
+  {
+    "index": 2,
+    "text": "1 egg",
+    "start_ts": 42.0,
+    "end_ts": 51.44,
+    "original_text": "1 egg"
+  },
+  {
+    "index": 3,
+    "text": "1 can of tomatoes",
+    "start_ts": 51.44,
+    "end_ts": 61.84,
+    "original_text": "1 can of tomatoes"
+  },
+  {
+    "index": 4,
+    "text": "1 egg",
+    "start_ts": 81.44,
+    "end_ts": 85.14,
+    "original_text": "1 egg"
+  },
+  {
+    "index": 5,
+    "text": "1 tbspcenter of exit and different vegetables",
+    "start_ts": 90.34,
+    "end_ts": 96.74,
+    "original_text": "1 tbspcenter of exit and different vegetables"
+  },
+  {
+    "index": 6,
+    "text": "salt",
+    "start_ts": 97.34,
+    "end_ts": 99.02,
+    "original_text": "salt"
+  },
+  {
+    "index": 7,
+    "text": "Yes. After we loosen the four bolts in a diagonal sequence",
+    "start_ts": 101.9,
+    "end_ts": 108.94,
+    "original_text": "Yes. After we loosen the four bolts in a diagonal sequence"
+  },
+  {
+    "index": 8,
+    "text": "to gradually release the composition. After open the reactor, this is the anode",
+    "start_ts": 108.94,
+    "end_ts": 119.94,
+    "original_text": "to gradually release the composition. After open the reactor, this is the anode"
+  },
+  {
+    "index": 9,
+    "text": "totally flooding. This is the anode flow plate.",
+    "start_ts": 119.94,
+    "end_ts": 128.94,
+    "original_text": "totally flooding. This is the anode flow plate."
+  },
+  {
+    "index": 10,
+    "text": "There are many liquid accumulation.",
+    "start_ts": 128.94,
+    "end_ts": 136.94,
+    "original_text": "There are many liquid accumulation."
+  },
+  {
+    "index": 11,
+    "text": "This is the anode electrode. The anode is Pt-Ru-C-Carbon-Super-Recorded on A2-C3-C3-Carbon paper.",
+    "start_ts": 137.94,
+    "end_ts": 145.94,
+    "original_text": "This is the anode electrode. The anode is PT-Rosilium-Carbon-Super-Recorded on A2-C3-C3-Carbon paper."
+  },
+  {
+    "index": 12,
+    "text": "We check the cancer layer remains. There is a severe flooding.",
+    "start_ts": 145.94,
+    "end_ts": 153.94,
+    "original_text": "We check the cancer layer remains. There is a severe flooding."
+  },
+  {
+    "index": 13,
+    "text": "This is the anode side, Sustainion X37-50 membrane.",
+    "start_ts": 153.94,
+    "end_ts": 166.94,
+    "original_text": "This is the anode side, sustained on X3-7-50 membrane."
+  },
+  {
+    "index": 14,
+    "text": "There is damage on the membrane.",
+    "start_ts": 166.94,
+    "end_ts": 173.94,
+    "original_text": "There is damage on the membrane."
+  },
+  {
+    "index": 15,
+    "text": "This is the middle chamber.",
+    "start_ts": 173.94,
+    "end_ts": 180.94,
+    "original_text": "This is the middle chamber."
+  },
+  {
+    "index": 16,
+    "text": "This is the cathode side, Sustainion X37-50 membrane.",
+    "start_ts": 183.94,
+    "end_ts": 198.94,
+    "original_text": "This is the cathode side, sustained on X3-7-50 membrane."
+  },
+  {
+    "index": 17,
+    "text": "There is a mechanical damage on this membrane.",
+    "start_ts": 198.94,
+    "end_ts": 204.94,
+    "original_text": "There is a mechanical damage on this membrane."
+  },
+  {
+    "index": 18,
+    "text": "This is the anode electrode. The cathode is Cu-3-Coated on A2-C3-C3-Carbon paper.",
+    "start_ts": 205.94,
+    "end_ts": 214.94,
+    "original_text": "This is the anode electrode. The cathode is Cu-3-Coated on A2-C3-C3-Carbon paper."
+  },
+  {
+    "index": 19,
+    "text": "The cathode side is also flooding.",
+    "start_ts": 214.94,
+    "end_ts": 219.94,
+    "original_text": "The cathode side is also flooding."
+  },
+  {
+    "index": 20,
+    "text": "There are some blue composition deposits in there.",
+    "start_ts": 219.94,
+    "end_ts": 228.94,
+    "original_text": "There are some blue composition deposits in there."
+  },
+  {
+    "index": 21,
+    "text": "The color is changed.",
+    "start_ts": 229.94,
+    "end_ts": 234.94,
+    "original_text": "The color is changed."
+  },
+  {
+    "index": 22,
+    "text": "This is the cathode flow plate without Pt-Ru-C-C3-Carbon paper.",
+    "start_ts": 234.94,
+    "end_ts": 239.94,
+    "original_text": "This is the cathode flow plate without PT-Rosilium-C3-Carbon paper."
+  },
+  {
+    "index": 23,
+    "text": "We check whether there is any liquid accumulation.",
+    "start_ts": 239.94,
+    "end_ts": 246.94,
+    "original_text": "We check whether there is any liquid accumulation."
+  },
+  {
+    "index": 24,
+    "text": "There are visible deposits on the cathode.",
+    "start_ts": 247.94,
+    "end_ts": 258.94,
+    "original_text": "There are visible deposits on the cathode."
+  },
+  {
+    "index": 25,
+    "text": "This is the post-test observation.",
+    "start_ts": 258.94,
+    "end_ts": 262.94,
+    "original_text": "This is the post-test observation."
+  },
+  {
+    "index": 26,
+    "text": "This is the cathode flow plate, cathode gasket, cathode membrane, middle chamber, anode membrane, anode electrode and anode flow plate.",
+    "start_ts": 262.94,
+    "end_ts": 284.94,
+    "original_text": "This is the cathode flow plate, cathode gasket, cathode membrane, middle chamber, anode membrane, anode electrode and anode flow plate."
+  }
+]

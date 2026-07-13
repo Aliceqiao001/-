@@ -1,0 +1,275 @@
+08:07:09 [INFO] run_pipeline: ============================================================
+08:07:09 [INFO] run_pipeline: STAGE 1: ASR transcription
+08:07:09 [INFO] run_pipeline: ============================================================
+08:07:09 [INFO] stage1_asr: Video duration=285.9s, transcribing 285.9s (FULL RUN)
+08:07:09 [INFO] stage1_asr: Extracting audio chunk [0.0, 285.9)s -> chunk_000000.mp3
+08:07:10 [INFO] stage1_asr: Transcribing chunk chunk_000000.mp3 (2234.7 KB)...
+08:07:28 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 200 OK"
+08:07:28 [INFO] stage1_asr: Saved 27 transcript segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R6_3PostTest_001\01_transcript.json
+08:07:28 [INFO] stage1_asr: --- Sanity check: first 5 segments ---
+08:07:28 [INFO] stage1_asr: [  0.00 -  10.00] 30g butter
+08:07:28 [INFO] stage1_asr: [ 30.00 -  40.00] 30g sugar
+08:07:28 [INFO] stage1_asr: [ 42.00 -  51.44] 1 egg
+08:07:28 [INFO] stage1_asr: [ 51.44 -  61.84] 1 can of tomatoes
+08:07:28 [INFO] stage1_asr: [ 81.44 -  85.14] 1 egg
+08:07:28 [INFO] run_pipeline: ------------------------------------------------------------
+08:07:28 [INFO] run_pipeline: STAGE 1b: Terminology/unit correction
+08:07:28 [INFO] run_pipeline: ------------------------------------------------------------
+08:07:29 [INFO] stage1b_correct_terminology: Applied 4 correction(s) across 27 segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R6_3PostTest_001\01b_transcript_corrected.json
+08:07:29 [INFO] stage1b_correct_terminology:   seg 11 [terminology/catalyst]: 'PT-Rosilium' -> 'Pt-Ru-C'
+08:07:29 [INFO] stage1b_correct_terminology:   seg 13 [terminology/membrane]: 'sustained on X3-7-50' -> 'Sustainion X37-50'
+08:07:29 [INFO] stage1b_correct_terminology:   seg 16 [terminology/membrane]: 'sustained on X3-7-50' -> 'Sustainion X37-50'
+08:07:29 [INFO] stage1b_correct_terminology:   seg 22 [terminology/catalyst]: 'PT-Rosilium' -> 'Pt-Ru-C'
+08:07:29 [INFO] run_pipeline: ============================================================
+08:07:29 [INFO] run_pipeline: STAGE 2: Triple extraction
+08:07:29 [INFO] run_pipeline: ============================================================
+08:07:29 [INFO] stage2_extract: Reading transcript from 01b_transcript_corrected.json
+08:07:29 [INFO] stage2_extract: Extracting triples from segments 0-4...
+08:07:30 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:07:30 [INFO] stage2_extract: Extracting triples from segments 5-9...
+08:07:32 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:07:32 [INFO] stage2_extract: Extracting triples from segments 10-14...
+08:07:34 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:07:34 [INFO] stage2_extract: Extracting triples from segments 15-19...
+08:07:36 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:07:36 [INFO] stage2_extract: Extracting triples from segments 20-24...
+08:07:38 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:07:38 [INFO] stage2_extract: Extracting triples from segments 25-26...
+08:07:39 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:07:39 [INFO] stage2_extract: Saved 21 triples -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R6_3PostTest_001\02_triples.json
+08:07:39 [INFO] stage2_extract: --- Sample triples ---
+08:07:39 [INFO] stage2_extract: ['four bolts', 'loosened in sequence', 'diagonal'] | [101.90-108.94] Yes. After we loosen the four bolts in a diagonal sequence
+08:07:39 [INFO] stage2_extract: ['composition', 'released', 'gradually'] | [108.94-119.94] to gradually release the composition. After open the reactor
+08:07:39 [INFO] stage2_extract: ['reactor', 'opened', 'anode revealed'] | [108.94-119.94] to gradually release the composition. After open the reactor
+08:07:39 [INFO] stage2_extract: ['anode', 'state', 'totally flooding'] | [119.94-128.94] totally flooding. This is the anode flow plate.
+08:07:39 [INFO] stage2_extract: ['anode flow plate', 'identified', 'present'] | [119.94-128.94] totally flooding. This is the anode flow plate.
+08:07:39 [INFO] stage2_extract: ['anode electrode', 'material spec', 'Pt-Ru-C-Carbon-Super-Recorded on A2-C3-C3-Carbon paper'] | [137.94-145.94] This is the anode electrode. The anode is Pt-Ru-C-Carbon-Sup
+08:07:39 [INFO] stage2_extract: ['anode side', 'material spec', 'Sustainion X37-50 membrane'] | [153.94-166.94] This is the anode side, Sustainion X37-50 membrane.
+08:07:39 [INFO] stage2_extract: ['membrane', 'observation', 'damage'] | [166.94-173.94] There is damage on the membrane.
+08:07:39 [INFO] stage2_extract: ['experiment', 'observation', 'severe flooding'] | [145.94-153.94] We check the cancer layer remains. There is a severe floodin
+08:07:39 [INFO] stage2_extract: ['experiment', 'observation', 'liquid accumulation'] | [128.94-136.94] There are many liquid accumulation.
+08:07:39 [INFO] run_pipeline: ============================================================
+08:07:39 [INFO] run_pipeline: STAGE 3: Keyframe localization
+08:07:39 [INFO] run_pipeline: ============================================================
+08:07:39 [INFO] stage3_keyframes: Triple candidates + keyword candidates: 26
+08:07:40 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/embeddings "HTTP/1.1 200 OK"
+08:07:41 [INFO] stage3_keyframes: Semantic-shift candidates: 25
+08:07:41 [INFO] stage3_keyframes: Merged into 39 keyframe timestamps (merge window=3.0s)
+08:07:41 [INFO] stage3_keyframes: Saved -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R6_3PostTest_001\03_keyframe_timestamps.json
+08:07:41 [INFO] stage3_keyframes: --- Sample keyframes ---
+08:07:41 [INFO] stage3_keyframes: [ 42.00] sources=['semantic_shift'] triple=None
+08:07:41 [INFO] stage3_keyframes: [ 51.44] sources=['semantic_shift'] triple=None
+08:07:41 [INFO] stage3_keyframes: [ 81.44] sources=['semantic_shift'] triple=None
+08:07:41 [INFO] stage3_keyframes: [ 90.34] sources=['semantic_shift'] triple=None
+08:07:41 [INFO] stage3_keyframes: [ 97.34] sources=['semantic_shift'] triple=None
+08:07:41 [INFO] stage3_keyframes: [101.90] sources=['semantic_shift'] triple=None
+08:07:41 [INFO] stage3_keyframes: [105.42] sources=['triple'] triple=['four bolts', 'loosened in sequence', 'diagonal']
+08:07:41 [INFO] stage3_keyframes: [108.94] sources=['keyword', 'semantic_shift'] triple=['four bolts', 'loosened in sequence', 'diagonal']
+08:07:41 [INFO] stage3_keyframes: [114.44] sources=['triple'] triple=['composition', 'released', 'gradually']
+08:07:41 [INFO] stage3_keyframes: [119.94] sources=['keyword', 'semantic_shift'] triple=['composition', 'released', 'gradually']
+08:07:41 [INFO] run_pipeline: ============================================================
+08:07:41 [INFO] run_pipeline: STAGE 4: Visual analysis
+08:07:41 [INFO] run_pipeline: ============================================================
+08:07:41 [INFO] stage4_visual: Extracting frame at t=42.00s -> frame_0042.00.jpg
+08:07:42 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:07:44 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:07:44 [INFO] stage4_visual: Extracting frame at t=51.44s -> frame_0051.44.jpg
+08:07:45 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:07:48 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:07:48 [INFO] stage4_visual: Extracting frame at t=81.44s -> frame_0081.44.jpg
+08:07:50 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:07:53 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:07:53 [INFO] stage4_visual: Extracting frame at t=90.34s -> frame_0090.34.jpg
+08:07:55 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:07:57 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:07:57 [INFO] stage4_visual: Extracting frame at t=97.34s -> frame_0097.34.jpg
+08:07:59 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:08:10 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:08:10 [INFO] stage4_visual: Extracting frame at t=101.90s -> frame_0101.90.jpg
+08:08:12 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:08:18 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:08:18 [INFO] stage4_visual: Extracting frame at t=105.42s -> frame_0105.42.jpg
+08:08:20 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:08:24 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:08:24 [INFO] stage4_visual: Extracting frame at t=108.94s -> frame_0108.94.jpg
+08:08:26 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:08:33 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:08:33 [INFO] stage4_visual: Extracting frame at t=114.44s -> frame_0114.44.jpg
+08:08:35 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:08:39 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:08:39 [INFO] stage4_visual: Extracting frame at t=119.94s -> frame_0119.94.jpg
+08:08:41 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:08:45 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:08:45 [INFO] stage4_visual: Extracting frame at t=124.44s -> frame_0124.44.jpg
+08:08:46 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:08:52 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:08:52 [INFO] stage4_visual: Extracting frame at t=128.94s -> frame_0128.94.jpg
+08:08:54 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:08:58 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:08:58 [INFO] stage4_visual: Extracting frame at t=132.94s -> frame_0132.94.jpg
+08:09:00 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:09:08 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:09:08 [INFO] stage4_visual: Extracting frame at t=137.94s -> frame_0137.94.jpg
+08:09:10 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:09:14 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:09:14 [INFO] stage4_visual: Extracting frame at t=141.94s -> frame_0141.94.jpg
+08:09:16 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:09:24 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:09:24 [INFO] stage4_visual: Extracting frame at t=145.94s -> frame_0145.94.jpg
+08:09:26 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:09:32 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:09:32 [INFO] stage4_visual: Extracting frame at t=149.94s -> frame_0149.94.jpg
+08:09:34 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:09:38 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:09:38 [INFO] stage4_visual: Extracting frame at t=153.94s -> frame_0153.94.jpg
+08:09:40 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:09:44 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:09:44 [INFO] stage4_visual: Extracting frame at t=160.44s -> frame_0160.44.jpg
+08:09:46 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:09:50 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:09:50 [INFO] stage4_visual: Extracting frame at t=166.94s -> frame_0166.94.jpg
+08:09:52 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:10:02 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:10:02 [INFO] stage4_visual: Extracting frame at t=170.44s -> frame_0170.44.jpg
+08:10:04 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:10:08 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:10:08 [INFO] stage4_visual: Extracting frame at t=173.94s -> frame_0173.94.jpg
+08:10:11 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:10:20 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:10:20 [INFO] stage4_visual: Extracting frame at t=177.44s -> frame_0177.44.jpg
+08:10:23 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:10:27 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:10:27 [INFO] stage4_visual: Extracting frame at t=183.94s -> frame_0183.94.jpg
+08:10:30 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:10:34 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:10:34 [INFO] stage4_visual: Extracting frame at t=191.44s -> frame_0191.44.jpg
+08:10:37 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:10:42 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:10:42 [INFO] stage4_visual: Extracting frame at t=198.94s -> frame_0198.94.jpg
+08:10:44 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:10:49 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:10:49 [INFO] stage4_visual: Extracting frame at t=205.94s -> frame_0205.94.jpg
+08:10:51 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:11:01 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:11:01 [INFO] stage4_visual: Extracting frame at t=210.44s -> frame_0210.44.jpg
+08:11:04 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:11:09 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:11:09 [INFO] stage4_visual: Extracting frame at t=214.94s -> frame_0214.94.jpg
+08:11:12 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:11:16 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:11:16 [INFO] stage4_visual: Extracting frame at t=219.94s -> frame_0219.94.jpg
+08:11:19 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:11:24 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:11:24 [INFO] stage4_visual: Extracting frame at t=224.44s -> frame_0224.44.jpg
+08:11:28 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:11:31 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:11:31 [INFO] stage4_visual: Extracting frame at t=229.94s -> frame_0229.94.jpg
+08:11:34 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:11:38 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:11:38 [INFO] stage4_visual: Extracting frame at t=234.94s -> frame_0234.94.jpg
+08:11:41 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:11:49 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:11:49 [INFO] stage4_visual: Extracting frame at t=239.94s -> frame_0239.94.jpg
+08:11:52 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:11:56 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:11:56 [INFO] stage4_visual: Extracting frame at t=243.44s -> frame_0243.44.jpg
+08:11:59 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:12:03 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:12:03 [INFO] stage4_visual: Extracting frame at t=247.94s -> frame_0247.94.jpg
+08:12:06 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:12:11 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:12:11 [INFO] stage4_visual: Extracting frame at t=253.44s -> frame_0253.44.jpg
+08:12:14 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:12:18 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:12:18 [INFO] stage4_visual: Extracting frame at t=258.94s -> frame_0258.94.jpg
+08:12:21 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:12:25 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:12:25 [INFO] stage4_visual: Extracting frame at t=262.94s -> frame_0262.94.jpg
+08:12:29 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:12:33 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:12:33 [INFO] stage4_visual: Saved 39 visual evidence entries -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R6_3PostTest_001\04_visual_evidence.json
+08:12:33 [INFO] stage4_visual: --- Sample visual evidence ---
+08:12:33 [INFO] stage4_visual: [ 42.00] None | 1.  The image does not support the specific claim. There is no visual evidence o
+08:12:33 [INFO] stage4_visual: [ 51.44] None | 1.  The image does not support the claim "1 egg || 1 can of tomatoes". There are
+08:12:33 [INFO] stage4_visual: [ 81.44] None | 1.  **Does the image support this specific claim?** No, the image does not suppo
+08:12:33 [INFO] stage4_visual: [ 90.34] None | 1.  **Does the image support this specific claim?**
+    The image does not suppo
+08:12:33 [INFO] stage4_visual: [ 97.34] None | 1.  **Does the image support this specific claim?** The image does not support t
+08:12:33 [INFO] run_pipeline: ============================================================
+08:12:33 [INFO] run_pipeline: STAGE 5: Knowledge graph binding
+08:12:33 [INFO] run_pipeline: ============================================================
+08:12:33 [INFO] stage5_bind: Checking conflict for triple ['four bolts', 'loosened in sequence', 'diagonal'] (match=exact)...
+08:13:31 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:31 [WARNING] stage5_bind: CONFLICT for ['four bolts', 'loosened in sequence', 'diagonal']: The visual description does not confirm the diagonal sequence of loosening.
+08:13:31 [INFO] stage5_bind: Checking conflict for triple ['composition', 'released', 'gradually'] (match=exact)...
+08:13:32 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:32 [INFO] stage5_bind: Checking conflict for triple ['reactor', 'opened', 'anode revealed'] (match=within_range)...
+08:13:33 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:33 [INFO] stage5_bind: Checking conflict for triple ['anode', 'state', 'totally flooding'] (match=exact)...
+08:13:35 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:35 [WARNING] stage5_bind: CONFLICT for ['anode', 'state', 'totally flooding']: The visual description does not strongly support the claim of 'totally flooding'.
+08:13:35 [INFO] stage5_bind: Checking conflict for triple ['anode flow plate', 'identified', 'present'] (match=within_range)...
+08:13:36 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:36 [INFO] stage5_bind: Checking conflict for triple ['anode electrode', 'material spec', 'Pt-Ru-C-Carbon-Super-Recorded on A2-C3-C3-Carbon paper'] (match=exact)...
+08:13:37 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:37 [INFO] stage5_bind: Checking conflict for triple ['anode side', 'material spec', 'Sustainion X37-50 membrane'] (match=exact)...
+08:13:38 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:38 [INFO] stage5_bind: Checking conflict for triple ['membrane', 'observation', 'damage'] (match=exact)...
+08:13:39 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:39 [INFO] stage5_bind: Checking conflict for triple ['experiment', 'observation', 'severe flooding'] (match=exact)...
+08:13:40 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:40 [INFO] stage5_bind: Checking conflict for triple ['experiment', 'observation', 'liquid accumulation'] (match=exact)...
+08:13:41 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:41 [INFO] stage5_bind: Checking conflict for triple ['middle chamber', 'is', 'this'] (match=exact)...
+08:13:42 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:42 [INFO] stage5_bind: Checking conflict for triple ['cathode side', 'is', 'Sustainion X37-50 membrane'] (match=exact)...
+08:13:43 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:43 [INFO] stage5_bind: Checking conflict for triple ['Sustainion X37-50 membrane', 'has', 'mechanical damage'] (match=exact)...
+08:13:44 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:44 [INFO] stage5_bind: Checking conflict for triple ['anode electrode', 'is', 'this'] (match=exact)...
+08:13:46 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:46 [INFO] stage5_bind: Checking conflict for triple ['cathode', 'is', 'Cu-3-Coated on A2-C3-C3-Carbon paper'] (match=within_range)...
+08:13:47 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:47 [WARNING] stage5_bind: CONFLICT for ['cathode', 'is', 'Cu-3-Coated on A2-C3-C3-Carbon paper']: The visual description does not confirm the cathode as Cu-3-Coated on A2-C3-C3-Carbon paper.
+08:13:47 [INFO] stage5_bind: Checking conflict for triple ['cathode side', 'is', 'flooding'] (match=exact)...
+08:13:48 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:48 [INFO] stage5_bind: Checking conflict for triple ['composition deposits', 'appearance', 'blue'] (match=exact)...
+08:13:49 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:49 [INFO] stage5_bind: Checking conflict for triple ['color', 'state change', 'changed'] (match=exact)...
+08:13:49 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:49 [INFO] stage5_bind: Checking conflict for triple ['cathode flow plate', 'specification', 'without Pt-Ru-C-C3-Carbon paper'] (match=within_range)...
+08:13:51 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:51 [INFO] stage5_bind: Checking conflict for triple ['liquid accumulation', 'observation', 'checked'] (match=exact)...
+08:13:52 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:52 [INFO] stage5_bind: Checking conflict for triple ['deposits', 'appearance', 'visible on the cathode'] (match=exact)...
+08:13:53 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:13:53 [INFO] stage5_bind: Saved 21 knowledge-graph nodes -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R6_3PostTest_001\05_knowledge_graph.json
+08:13:53 [INFO] stage5_bind: --- Summary: 21 nodes, 3 conflicts flagged ---
+08:13:53 [INFO] stage5_bind: [CONFLICT] ['four bolts', 'loosened in sequence', 'diagonal'] (confidence=0.30)
+08:13:53 [INFO] stage5_bind: [ok] ['composition', 'released', 'gradually'] (confidence=0.90)
+08:13:53 [INFO] stage5_bind: [ok] ['reactor', 'opened', 'anode revealed'] (confidence=0.75)
+08:13:53 [INFO] stage5_bind: [CONFLICT] ['anode', 'state', 'totally flooding'] (confidence=0.30)
+08:13:53 [INFO] stage5_bind: [ok] ['anode flow plate', 'identified', 'present'] (confidence=0.75)
+08:13:53 [INFO] stage5_bind: [ok] ['anode electrode', 'material spec', 'Pt-Ru-C-Carbon-Super-Recorded on A2-C3-C3-Carbon paper'] (confidence=0.90)
+08:13:53 [INFO] stage5_bind: [ok] ['anode side', 'material spec', 'Sustainion X37-50 membrane'] (confidence=0.90)
+08:13:53 [INFO] stage5_bind: [ok] ['membrane', 'observation', 'damage'] (confidence=0.90)
+08:13:53 [INFO] stage5_bind: [ok] ['experiment', 'observation', 'severe flooding'] (confidence=0.90)
+08:13:53 [INFO] stage5_bind: [ok] ['experiment', 'observation', 'liquid accumulation'] (confidence=0.90)
+08:13:53 [INFO] stage5_bind: [ok] ['middle chamber', 'is', 'this'] (confidence=0.90)
+08:13:53 [INFO] stage5_bind: [ok] ['cathode side', 'is', 'Sustainion X37-50 membrane'] (confidence=0.90)
+08:13:53 [INFO] stage5_bind: [ok] ['Sustainion X37-50 membrane', 'has', 'mechanical damage'] (confidence=0.90)
+08:13:53 [INFO] stage5_bind: [ok] ['anode electrode', 'is', 'this'] (confidence=0.90)
+08:13:53 [INFO] stage5_bind: [CONFLICT] ['cathode', 'is', 'Cu-3-Coated on A2-C3-C3-Carbon paper'] (confidence=0.30)
+08:13:53 [INFO] stage5_bind: [ok] ['cathode side', 'is', 'flooding'] (confidence=0.90)
+08:13:53 [INFO] stage5_bind: [ok] ['composition deposits', 'appearance', 'blue'] (confidence=0.90)
+08:13:53 [INFO] stage5_bind: [ok] ['color', 'state change', 'changed'] (confidence=0.90)
+08:13:53 [INFO] stage5_bind: [ok] ['cathode flow plate', 'specification', 'without Pt-Ru-C-C3-Carbon paper'] (confidence=0.75)
+08:13:53 [INFO] stage5_bind: [ok] ['liquid accumulation', 'observation', 'checked'] (confidence=0.90)
+08:13:53 [INFO] stage5_bind: [ok] ['deposits', 'appearance', 'visible on the cathode'] (confidence=0.90)
+08:13:53 [INFO] run_pipeline: ============================================================
+08:13:53 [INFO] run_pipeline: STAGE 6: Knowledge graph visualization (optional)
+08:13:53 [INFO] run_pipeline: ============================================================
+08:13:53 [INFO] stage6_visualize_kg: Graph built: 35 nodes, 21 edges
+08:13:55 [INFO] stage6_visualize_kg: Saved static PNG -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R6_3PostTest_001\knowledge_graph.png
+08:13:55 [INFO] stage6_visualize_kg: Saved interactive HTML -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R6_3PostTest_001\knowledge_graph.html
+08:13:55 [INFO] run_pipeline: Pipeline complete.

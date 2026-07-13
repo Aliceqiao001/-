@@ -1,0 +1,32 @@
+[
+  {
+    "timestamp": 27.48,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "This is the illustrizer after test. || This is the end of the part.",
+    "matched_keywords": [],
+    "similarity": 0.332
+  },
+  {
+    "timestamp": 42.84,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "This is the end of the part. || End of the electrode.",
+    "matched_keywords": [],
+    "similarity": 0.498
+  },
+  {
+    "timestamp": 85.8,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Case of the electrode. || Thank you for watching.",
+    "matched_keywords": [],
+    "similarity": 0.175
+  }
+]

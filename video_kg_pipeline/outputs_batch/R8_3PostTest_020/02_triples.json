@@ -1,0 +1,218 @@
+[
+  {
+    "triple": [
+      "reactor",
+      "inspection type",
+      "post-test"
+    ],
+    "text_evidence": "This is a post-test inspection of this reactor.",
+    "timestamp": [
+      0.0,
+      7.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "operation performed",
+      "disassembled"
+    ],
+    "text_evidence": "Now we disassemble the reactor and check the condition of each component after operation.",
+    "timestamp": [
+      7.0,
+      24.0
+    ]
+  },
+  {
+    "triple": [
+      "components",
+      "condition checked",
+      "after operation"
+    ],
+    "text_evidence": "Now we disassemble the reactor and check the condition of each component after operation.",
+    "timestamp": [
+      7.0,
+      24.0
+    ]
+  },
+  {
+    "triple": [
+      "anode side",
+      "inspection performed",
+      "first"
+    ],
+    "text_evidence": "First, we will inspect the anode side.",
+    "timestamp": [
+      24.0,
+      42.0
+    ]
+  },
+  {
+    "triple": [
+      "anode side",
+      "observation",
+      "no obvious liquid accumulation"
+    ],
+    "text_evidence": "You can find there is no obvious liquid accumulation or any flooding.",
+    "timestamp": [
+      46.0,
+      56.0
+    ]
+  },
+  {
+    "triple": [
+      "anode side",
+      "observation",
+      "no flooding"
+    ],
+    "text_evidence": "You can find there is no obvious liquid accumulation or any flooding.",
+    "timestamp": [
+      46.0,
+      56.0
+    ]
+  },
+  {
+    "triple": [
+      "surface",
+      "appears",
+      "very dry"
+    ],
+    "text_evidence": "And the surface appears very dry after the test.",
+    "timestamp": [
+      56.0,
+      77.0
+    ]
+  },
+  {
+    "triple": [
+      "anode side",
+      "appears",
+      "very dry"
+    ],
+    "text_evidence": "Oh, this is the anode side. This is the anode catalytic. Very, very dry.",
+    "timestamp": [
+      77.0,
+      81.0
+    ]
+  },
+  {
+    "triple": [
+      "anode catalytic",
+      "appears",
+      "very dry"
+    ],
+    "text_evidence": "Oh, this is the anode side. This is the anode catalytic. Very, very dry.",
+    "timestamp": [
+      77.0,
+      81.0
+    ]
+  },
+  {
+    "triple": [
+      "membrane",
+      "state",
+      "after test"
+    ],
+    "text_evidence": "Here we can see the membrane after test.",
+    "timestamp": [
+      92.0,
+      96.0
+    ]
+  },
+  {
+    "triple": [
+      "membrane",
+      "lost",
+      "water"
+    ],
+    "text_evidence": "Also, the membrane lost water.",
+    "timestamp": [
+      96.0,
+      102.0
+    ]
+  },
+  {
+    "triple": [
+      "membrane",
+      "state",
+      "very dry"
+    ],
+    "text_evidence": "Very dry after operation.",
+    "timestamp": [
+      102.0,
+      107.0
+    ]
+  },
+  {
+    "triple": [
+      "1 molar KOH droplet",
+      "inefficient for",
+      "maintaining long-term hydration during the test"
+    ],
+    "text_evidence": "This shows that the pre-added 1 molar KOH droplet is not efficient to maintain the long-term hydration during the test.",
+    "timestamp": [
+      107.0,
+      120.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode side",
+      "state",
+      "very dry"
+    ],
+    "text_evidence": "Yeah, also the cathode side. The cathode side is also very dry.",
+    "timestamp": [
+      120.0,
+      127.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "main failure mode",
+      "dry out"
+    ],
+    "text_evidence": "So, the main failure mode of this reactor is still dry out.",
+    "timestamp": [
+      127.0,
+      130.0
+    ]
+  },
+  {
+    "triple": [
+      "fuel droplet molecule",
+      "pre-added to improve",
+      "initial hydration"
+    ],
+    "text_evidence": "Compared to the last one, pre-adding a fuel droplet molecule may improve the initial hydration,",
+    "timestamp": [
+      130.0,
+      136.0
+    ]
+  },
+  {
+    "triple": [
+      "water",
+      "state change",
+      "absorbed, evaporated, or redistributed"
+    ],
+    "text_evidence": "The water can be absorbed, evaporated, or redistributed, but the membrane of PTFE can still lose hydration.",
+    "timestamp": [
+      140.0,
+      151.0
+    ]
+  },
+  {
+    "triple": [
+      "membrane of PTFE",
+      "can lose",
+      "hydration"
+    ],
+    "text_evidence": "The water can be absorbed, evaporated, or redistributed, but the membrane of PTFE can still lose hydration.",
+    "timestamp": [
+      140.0,
+      151.0
+    ]
+  }
+]

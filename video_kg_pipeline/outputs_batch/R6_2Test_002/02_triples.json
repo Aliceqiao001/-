@@ -1,0 +1,230 @@
+[
+  {
+    "triple": [
+      "reactor",
+      "has operating condition",
+      "during the test"
+    ],
+    "text_evidence": "This is the operating condition of this reactor during the test.",
+    "timestamp": [
+      0.0,
+      5.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "has middle chamber thickness",
+      "three micrometer"
+    ],
+    "text_evidence": "This reactor using a three micrometer middle chamber with a three by three centimeter window and an internal flow channel.",
+    "timestamp": [
+      5.0,
+      16.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "has window size",
+      "three by three centimeter"
+    ],
+    "text_evidence": "This reactor using a three micrometer middle chamber with a three by three centimeter window and an internal flow channel.",
+    "timestamp": [
+      5.0,
+      16.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "has internal flow channel",
+      "present"
+    ],
+    "text_evidence": "This reactor using a three micrometer middle chamber with a three by three centimeter window and an internal flow channel.",
+    "timestamp": [
+      5.0,
+      16.0
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "is filled with",
+      "circulating 1 molar KOH"
+    ],
+    "text_evidence": "And the middle chamber is filled with circulating 1 molar KOH using 10ccm circulating one molecule each electrolytes.",
+    "timestamp": [
+      16.0,
+      31.0
+    ]
+  },
+  {
+    "triple": [
+      "circulating electrolytes",
+      "has flow rate",
+      "10ccm"
+    ],
+    "text_evidence": "And the middle chamber is filled with circulating 1 molar KOH using 10ccm circulating one molecule each electrolytes.",
+    "timestamp": [
+      16.0,
+      31.0
+    ]
+  },
+  {
+    "triple": [
+      "operation",
+      "duration",
+      "10 minutes"
+    ],
+    "text_evidence": "After only 10 minutes of operation, we absorb liquid droplets and the cathode alkalis.",
+    "timestamp": [
+      31.0,
+      44.0
+    ]
+  },
+  {
+    "triple": [
+      "operation",
+      "observation",
+      "liquid droplets and cathode alkalis"
+    ],
+    "text_evidence": "After only 10 minutes of operation, we absorb liquid droplets and the cathode alkalis.",
+    "timestamp": [
+      31.0,
+      44.0
+    ]
+  },
+  {
+    "triple": [
+      "liquid electrolyte or water",
+      "has corroded into",
+      "cathode gas site"
+    ],
+    "text_evidence": "This indicates that the liquid electrolyte or water has corroded into the cathode gas site.",
+    "timestamp": [
+      44.0,
+      52.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode flooding",
+      "evidence",
+      "direct evidence"
+    ],
+    "text_evidence": "This is the direct evidence of cathode flooding.",
+    "timestamp": [
+      52.0,
+      63.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode gas",
+      "state",
+      "no longer fully dry and open"
+    ],
+    "text_evidence": "The cathode gas is no longer fully dry and open.",
+    "timestamp": [
+      63.0,
+      67.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode outlet",
+      "observation",
+      "recurring liquid electrolytes"
+    ],
+    "text_evidence": "At the front of the cathode outlet is recurring liquid electrolytes.",
+    "timestamp": [
+      67.0,
+      72.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode flooding",
+      "effect",
+      "block CO transport"
+    ],
+    "text_evidence": "Cathode flooding can block CO transport and reduce gas gas access to the carboxylate catalyst layer.",
+    "timestamp": [
+      72.0,
+      80.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode flooding",
+      "effect",
+      "reduce gas access to carboxylate catalyst layer"
+    ],
+    "text_evidence": "Cathode flooding can block CO transport and reduce gas gas access to the carboxylate catalyst layer.",
+    "timestamp": [
+      72.0,
+      80.0
+    ]
+  },
+  {
+    "triple": [
+      "cell voltage",
+      "state",
+      "relatively stable"
+    ],
+    "text_evidence": "Although the cell voltage is still relatively stable at this stage, the flooding has already started to suppress the soil eruption by limiting CO delivery to the cathode alkalis.",
+    "timestamp": [
+      80.0,
+      90.0
+    ]
+  },
+  {
+    "triple": [
+      "flooding",
+      "effect",
+      "suppress soil eruption by limiting CO delivery to cathode alkalis"
+    ],
+    "text_evidence": "Although the cell voltage is still relatively stable at this stage, the flooding has already started to suppress the soil eruption by limiting CO delivery to the cathode alkalis.",
+    "timestamp": [
+      80.0,
+      90.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "failure mode",
+      "cathode flooding"
+    ],
+    "text_evidence": "Therefore, based on this observation, the main failure mode of this reactor is cathode flooding, likely caused by liquid accumulation or pressure imbalance in the enlarged middle chamber.",
+    "timestamp": [
+      90.0,
+      107.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode flooding",
+      "cause",
+      "liquid accumulation"
+    ],
+    "text_evidence": "Therefore, based on this observation, the main failure mode of this reactor is cathode flooding, likely caused by liquid accumulation or pressure imbalance in the enlarged middle chamber.",
+    "timestamp": [
+      90.0,
+      107.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode flooding",
+      "cause",
+      "pressure imbalance in the enlarged middle chamber"
+    ],
+    "text_evidence": "Therefore, based on this observation, the main failure mode of this reactor is cathode flooding, likely caused by liquid accumulation or pressure imbalance in the enlarged middle chamber.",
+    "timestamp": [
+      90.0,
+      107.0
+    ]
+  }
+]

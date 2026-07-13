@@ -1,0 +1,50 @@
+05:45:36 [INFO] run_pipeline: ============================================================
+05:45:36 [INFO] run_pipeline: STAGE 1: ASR transcription
+05:45:36 [INFO] run_pipeline: ============================================================
+05:45:36 [INFO] stage1_asr: Video duration=50.4s, transcribing 50.4s (FULL RUN)
+05:45:36 [INFO] stage1_asr: Extracting audio chunk [0.0, 50.4)s -> chunk_000000.mp3
+05:45:36 [INFO] stage1_asr: Transcribing chunk chunk_000000.mp3 (394.5 KB)...
+05:45:41 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 200 OK"
+05:45:41 [INFO] stage1_asr: Saved 3 transcript segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R3_3AfterTest_001\01_transcript.json
+05:45:41 [INFO] stage1_asr: --- Sanity check: first 5 segments ---
+05:45:41 [INFO] stage1_asr: [  0.00 -  17.28] This is the reactor after reaction, yeah, this is the cathode part, solid state, and
+05:45:41 [INFO] stage1_asr: [ 17.28 -  24.28] another part, yeah, this is the cathode part, solid state, and another part, yeah, this is
+05:45:41 [INFO] stage1_asr: [ 47.28 -  54.28] the cathode part, solid state, and another part, yeah, this is the cathode part, solid
+05:45:41 [INFO] run_pipeline: ------------------------------------------------------------
+05:45:41 [INFO] run_pipeline: STAGE 1b: Terminology/unit correction
+05:45:41 [INFO] run_pipeline: ------------------------------------------------------------
+05:45:41 [INFO] stage1b_correct_terminology: Applied 0 correction(s) across 3 segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R3_3AfterTest_001\01b_transcript_corrected.json
+05:45:41 [INFO] run_pipeline: ============================================================
+05:45:41 [INFO] run_pipeline: STAGE 2: Triple extraction
+05:45:41 [INFO] run_pipeline: ============================================================
+05:45:41 [INFO] stage2_extract: Reading transcript from 01b_transcript_corrected.json
+05:45:41 [INFO] stage2_extract: Extracting triples from segments 0-2...
+05:45:42 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+05:45:42 [INFO] stage2_extract: Saved 0 triples -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R3_3AfterTest_001\02_triples.json
+05:45:42 [INFO] stage2_extract: --- Sample triples ---
+05:45:42 [INFO] run_pipeline: ============================================================
+05:45:42 [INFO] run_pipeline: STAGE 3: Keyframe localization
+05:45:42 [INFO] run_pipeline: ============================================================
+05:45:42 [INFO] stage3_keyframes: Triple candidates + keyword candidates: 0
+05:45:43 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/embeddings "HTTP/1.1 200 OK"
+05:45:43 [INFO] stage3_keyframes: Semantic-shift candidates: 0
+05:45:43 [INFO] stage3_keyframes: Merged into 0 keyframe timestamps (merge window=3.0s)
+05:45:43 [INFO] stage3_keyframes: Saved -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R3_3AfterTest_001\03_keyframe_timestamps.json
+05:45:43 [INFO] stage3_keyframes: --- Sample keyframes ---
+05:45:43 [INFO] run_pipeline: ============================================================
+05:45:43 [INFO] run_pipeline: STAGE 4: Visual analysis
+05:45:43 [INFO] run_pipeline: ============================================================
+05:45:43 [INFO] stage4_visual: Saved 0 visual evidence entries -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R3_3AfterTest_001\04_visual_evidence.json
+05:45:43 [INFO] stage4_visual: --- Sample visual evidence ---
+05:45:43 [INFO] run_pipeline: ============================================================
+05:45:43 [INFO] run_pipeline: STAGE 5: Knowledge graph binding
+05:45:43 [INFO] run_pipeline: ============================================================
+05:45:43 [INFO] stage5_bind: Saved 0 knowledge-graph nodes -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R3_3AfterTest_001\05_knowledge_graph.json
+05:45:43 [INFO] stage5_bind: --- Summary: 0 nodes, 0 conflicts flagged ---
+05:45:43 [INFO] run_pipeline: ============================================================
+05:45:43 [INFO] run_pipeline: STAGE 6: Knowledge graph visualization (optional)
+05:45:43 [INFO] run_pipeline: ============================================================
+05:45:43 [INFO] stage6_visualize_kg: Graph built: 0 nodes, 0 edges
+05:45:44 [INFO] stage6_visualize_kg: Saved static PNG -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R3_3AfterTest_001\knowledge_graph.png
+05:45:44 [INFO] stage6_visualize_kg: Saved interactive HTML -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R3_3AfterTest_001\knowledge_graph.html
+05:45:44 [INFO] run_pipeline: Pipeline complete.

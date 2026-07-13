@@ -1,0 +1,191 @@
+[
+  {
+    "index": 0,
+    "text": "This is the post-test disassembled processor with this reactor.",
+    "start_ts": 0.0,
+    "end_ts": 11.0,
+    "original_text": "This is the post-test disassembled processor with this reactor."
+  },
+  {
+    "index": 1,
+    "text": "Now we loosen the 4 bolts in a diagonal sequence to gradually release the compression.",
+    "start_ts": 11.0,
+    "end_ts": 20.0,
+    "original_text": "Now we loosen the 4 bolts in a diagonal sequence to gradually release the compression."
+  },
+  {
+    "index": 2,
+    "text": "After opening the reactor, we first inspect that this is the anode and the cathode side.",
+    "start_ts": 41.0,
+    "end_ts": 63.0,
+    "original_text": "After opening the reactor, we first inspect that this is the anode and the cathode side."
+  },
+  {
+    "index": 3,
+    "text": "For the anode flow plate and the anode side flow plate, there are no liquid accumulation in the flow field, indicating that the liquid flow issue is addressed in this design.",
+    "start_ts": 64.0,
+    "end_ts": 80.0,
+    "original_text": "For the anode flow plate and the anode side flow plate, there are no liquid accumulation in the flow field, indicating that the liquid flow issue is addressed in this design."
+  },
+  {
+    "index": 4,
+    "text": "Next, we inspect the anode side.",
+    "start_ts": 84.0,
+    "end_ts": 89.0,
+    "original_text": "Next, we inspect the anode side."
+  },
+  {
+    "index": 5,
+    "text": "The anode is Pt-Ru-C spray-coating on H23C3 carbon paper.",
+    "start_ts": 94.0,
+    "end_ts": 101.0,
+    "original_text": "The anode is PT-resilient spray-coating on H2S6-recommended paper."
+  },
+  {
+    "index": 6,
+    "text": "After testing, we can find that the anode side appears relatively dry, suggesting that there was not enough water supply to maintain stable ionic conduction.",
+    "start_ts": 101.0,
+    "end_ts": 119.0,
+    "original_text": "After testing, we can find that the anode side appears relatively dry, suggesting that there was not enough water supply to maintain stable ionic conduction."
+  },
+  {
+    "index": 7,
+    "text": "The anode is Pt-Ru-C spray-coating on H23C3 carbon paper.",
+    "start_ts": 124.0,
+    "end_ts": 143.0,
+    "original_text": "The anode is PTFE-resilient spray-coating on H2S6-recommended paper."
+  },
+  {
+    "index": 8,
+    "text": "The anode is Pt-Ru-C spray-coating on H23C3 carbon paper.",
+    "start_ts": 143.0,
+    "end_ts": 153.0,
+    "original_text": "The anode is PTFE-resilient spray-coating on H2S6-recommended paper."
+  },
+  {
+    "index": 9,
+    "text": "The anode is Pt-Ru-C spray-coating on H23C3 carbon paper.",
+    "start_ts": 173.0,
+    "end_ts": 183.0,
+    "original_text": "The anode is PTFE-resilient spray-coating on H2S6-recommended paper."
+  },
+  {
+    "index": 10,
+    "text": "The anode is Pt-Ru-C spray-coating on H23C3 carbon paper.",
+    "start_ts": 203.0,
+    "end_ts": 213.0,
+    "original_text": "The anode is PTFE-resilient spray-coating on H2S6-recommended paper."
+  },
+  {
+    "index": 11,
+    "text": "The anode is Pt-Ru-C spray-coating on H23C3 carbon paper.",
+    "start_ts": 213.0,
+    "end_ts": 223.0,
+    "original_text": "The anode is PTFE-resilient spray-coating on H2S6-recommended paper."
+  },
+  {
+    "index": 12,
+    "text": "The anode is Pt-Ru-C spray-coating on H23C3 carbon paper.",
+    "start_ts": 223.0,
+    "end_ts": 233.0,
+    "original_text": "The anode is PTFE-resilient spray-coating on H2S6-recommended paper."
+  },
+  {
+    "index": 13,
+    "text": "The anode is Pt-Ru-C spray-coating on H23C3 carbon paper.",
+    "start_ts": 233.0,
+    "end_ts": 243.0,
+    "original_text": "The anode is PTFE-resilient spray-coating on H2S6-recommended paper."
+  },
+  {
+    "index": 14,
+    "text": "The anode is Pt-Ru-C spray-coating on H23C3 carbon paper.",
+    "start_ts": 243.0,
+    "end_ts": 253.0,
+    "original_text": "The anode is PTFE-resilient spray-coating on H2S6-recommended paper."
+  },
+  {
+    "index": 15,
+    "text": "The anode is Pt-Ru-C spray-coating on H23C3 carbon paper.",
+    "start_ts": 253.0,
+    "end_ts": 263.0,
+    "original_text": "The anode is PTFE-resilient spray-coating on H2S6-recommended paper."
+  },
+  {
+    "index": 16,
+    "text": "The anode is Pt-Ru-C spray-coating on H23C3 carbon paper.",
+    "start_ts": 263.0,
+    "end_ts": 273.0,
+    "original_text": "The anode is PTFE-resilient spray-coating on H2S6-recommended paper."
+  },
+  {
+    "index": 17,
+    "text": "The anode is Pt-Ru-C spray-coating on H23C3 carbon paper.",
+    "start_ts": 273.0,
+    "end_ts": 283.0,
+    "original_text": "The anode is PTFE-resilient spray-coating on H2S6-recommended paper."
+  },
+  {
+    "index": 18,
+    "text": "The membrane also PR-dry after operation.",
+    "start_ts": 283.0,
+    "end_ts": 293.0,
+    "original_text": "The membrane also PR-dry after operation."
+  },
+  {
+    "index": 19,
+    "text": "The membrane also PR-dry after operation.",
+    "start_ts": 293.0,
+    "end_ts": 303.0,
+    "original_text": "The membrane also PR-dry after operation."
+  },
+  {
+    "index": 20,
+    "text": "The catalyst is also detached and stuck to the membrane.",
+    "start_ts": 303.0,
+    "end_ts": 313.0,
+    "original_text": "The catalyst is also detached and stuck to the membrane."
+  },
+  {
+    "index": 21,
+    "text": "The catalyst is also detached and stuck to the membrane.",
+    "start_ts": 313.0,
+    "end_ts": 323.0,
+    "original_text": "The catalyst is also detached and stuck to the membrane."
+  },
+  {
+    "index": 22,
+    "text": "The catalyst is also detached and stuck to the membrane.",
+    "start_ts": 323.0,
+    "end_ts": 333.0,
+    "original_text": "The catalyst is also detached and stuck to the membrane."
+  },
+  {
+    "index": 23,
+    "text": "The catalyst is also detached and stuck to the membrane.",
+    "start_ts": 333.0,
+    "end_ts": 343.0,
+    "original_text": "The catalyst is also detached and stuck to the membrane."
+  },
+  {
+    "index": 24,
+    "text": "The catalyst is also detached and stuck to the membrane.",
+    "start_ts": 343.0,
+    "end_ts": 353.0,
+    "original_text": "The catalyst is also detached and stuck to the membrane."
+  },
+  {
+    "index": 25,
+    "text": "The catalyst is also detached and stuck to the membrane.",
+    "start_ts": 353.0,
+    "end_ts": 363.0,
+    "original_text": "The catalyst is also detached and stuck to the membrane."
+  },
+  {
+    "index": 26,
+    "text": "The catalyst is also detached and stuck to the membrane.",
+    "start_ts": 363.0,
+    "end_ts": 373.0,
+    "original_text": "The catalyst is also detached and stuck to the membrane."
+  }
+]

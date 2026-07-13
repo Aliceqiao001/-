@@ -1,0 +1,247 @@
+[
+  {
+    "index": 0,
+    "text": "Okay, this is very simple, this reactor. Step 1, still this is the cathode flow plate.",
+    "start_ts": 0.0,
+    "end_ts": 11.0,
+    "original_text": "Okay, this is very simple, this reactor. Step 1, still this is the cathode flow plate."
+  },
+  {
+    "index": 1,
+    "text": "It also has a serpentine flow field",
+    "start_ts": 11.0,
+    "end_ts": 16.0,
+    "original_text": "It also has a spinning flow field."
+  },
+  {
+    "index": 2,
+    "text": "Step 2, this is a cathode electrode.",
+    "start_ts": 16.0,
+    "end_ts": 26.0,
+    "original_text": "Step 2, this is a cathode electrode."
+  },
+  {
+    "index": 3,
+    "text": "The catalyst is still prepared by spray-coated oxide catalysis onto L2-3-6-3 carbon paper.",
+    "start_ts": 27.0,
+    "end_ts": 36.0,
+    "original_text": "The catalyst is still prepared by spray-coated oxide catalysis onto L2-3-6-3 carbon paper."
+  },
+  {
+    "index": 4,
+    "text": "Step 3.",
+    "start_ts": 36.0,
+    "end_ts": 39.0,
+    "original_text": "Step 3."
+  },
+  {
+    "index": 5,
+    "text": "Step 3, this is a cathode gasket.",
+    "start_ts": 56.0,
+    "end_ts": 76.0,
+    "original_text": "Step 3, this is a cathode gasket."
+  },
+  {
+    "index": 6,
+    "text": "The gasket thickness is 0.3 mm, and the inner window size is 1x1 cm.",
+    "start_ts": 76.0,
+    "end_ts": 89.0,
+    "original_text": "The gas thickness is 0.3 µm, and the INR window size is 1x1 cm."
+  },
+  {
+    "index": 7,
+    "text": "Step 4, we place the cathode side membrane.",
+    "start_ts": 89.0,
+    "end_ts": 105.0,
+    "original_text": "Step 4, we place the cathode side membrane."
+  },
+  {
+    "index": 8,
+    "text": "The cathode side membrane is still X3-750.",
+    "start_ts": 105.0,
+    "end_ts": 128.0,
+    "original_text": "The cathode side membrane is still X3-750."
+  },
+  {
+    "index": 9,
+    "text": "Step 5, this is the middle electrolyte chamber.",
+    "start_ts": 129.0,
+    "end_ts": 135.0,
+    "original_text": "Step 5, this is the middle electrolyte chamber."
+  },
+  {
+    "index": 10,
+    "text": "The chamber thickness is 3 mm, but the window size is increased to 3x3 cm.",
+    "start_ts": 135.0,
+    "end_ts": 143.0,
+    "original_text": "The chamber thickness is 3 µm, but the window size is increased to 3x3 cm."
+  },
+  {
+    "index": 11,
+    "text": "And a flow channel is also added inside the middle chamber.",
+    "start_ts": 143.0,
+    "end_ts": 151.0,
+    "original_text": "And a flow channel is also added inside the middle chamber."
+  },
+  {
+    "index": 12,
+    "text": "This chamber is used to hold and circulate the liquid electrolyte.",
+    "start_ts": 151.0,
+    "end_ts": 158.0,
+    "original_text": "This chamber is used to hold and circulate the liquid electrolyte."
+  },
+  {
+    "index": 13,
+    "text": "The electrolyte is 1 molar KOH, and it will be continuously circulated through the middle chamber during operation.",
+    "start_ts": 158.0,
+    "end_ts": 164.0,
+    "original_text": "The electrolyte is one molecule each, and it will be continuously circulated through the middle chamber during operation."
+  },
+  {
+    "index": 14,
+    "text": "Compared to the previous design, the key change in this reactor is that the middle chamber thickness remains 3 mm,",
+    "start_ts": 164.0,
+    "end_ts": 172.0,
+    "original_text": "Compared to the previous design, the key change in this reactor is that the middle chamber thickness remains 3 µm,"
+  },
+  {
+    "index": 15,
+    "text": "while the chamber window is enlarged to 3 cm by 3 cm.",
+    "start_ts": 172.0,
+    "end_ts": 177.0,
+    "original_text": "while the chamber window is enlarged to 3 cm by 3 cm."
+  },
+  {
+    "index": 16,
+    "text": "This increases the electrolyte volume in the middle chamber and improves electrolyte distribution through the added flow channel.",
+    "start_ts": 177.0,
+    "end_ts": 185.0,
+    "original_text": "This increases the electrolyte volume in the middle chamber and improves electrolyte distribution through the added flow channel."
+  },
+  {
+    "index": 17,
+    "text": "Step 6, we will add the anode side membrane.",
+    "start_ts": 185.0,
+    "end_ts": 201.0,
+    "original_text": "Step 6, we will add the anode side membrane."
+  },
+  {
+    "index": 18,
+    "text": "Step 7, we will add the anode side membrane.",
+    "start_ts": 207.0,
+    "end_ts": 234.0,
+    "original_text": "Step 7, we will add the anode side membrane."
+  },
+  {
+    "index": 19,
+    "text": "Step 8, we will add a bigger membrane in another side.",
+    "start_ts": 234.0,
+    "end_ts": 244.0,
+    "original_text": "Step 8, we will add a bigger membrane in another side."
+  },
+  {
+    "index": 20,
+    "text": "Then we place the anode gasket.",
+    "start_ts": 244.0,
+    "end_ts": 250.0,
+    "original_text": "Then we place the anode gasket."
+  },
+  {
+    "index": 21,
+    "text": "The anode side gasket is still 0.3 mm.",
+    "start_ts": 250.0,
+    "end_ts": 259.0,
+    "original_text": "The anode side gasket is still 0.3 µm."
+  },
+  {
+    "index": 22,
+    "text": "Step 8 is the anode electrode.",
+    "start_ts": 259.0,
+    "end_ts": 264.0,
+    "original_text": "Step 8 is the anode electrode."
+  },
+  {
+    "index": 23,
+    "text": "The anode is prepared by spray-coating.",
+    "start_ts": 264.0,
+    "end_ts": 269.0,
+    "original_text": "The anode is prepared by spray-coating."
+  },
+  {
+    "index": 24,
+    "text": "The anode electrode is pre-spray-coated with PT ruthenium carbon catalysis on the H23C3 carbon paper",
+    "start_ts": 269.0,
+    "end_ts": 278.0,
+    "original_text": "The anode electrode is pre-spray-coated with PT ruthenium carbon catalysis on the L2-3-C3 carbon paper."
+  },
+  {
+    "index": 25,
+    "text": "The catalyst loading is 2 µg%².",
+    "start_ts": 278.0,
+    "end_ts": 290.0,
+    "original_text": "The catalyst loading is 2 µg%²."
+  },
+  {
+    "index": 26,
+    "text": "Step 9, this is the anode flow plate. It also has a serpentine flow field",
+    "start_ts": 290.0,
+    "end_ts": 301.0,
+    "original_text": "Step 9, this is the anode flow plate. It also has a spinting flow field."
+  },
+  {
+    "index": 27,
+    "text": "Finally, after aligning all components, we will assemble and tighten the reactor using a torque of 2 Nm.",
+    "start_ts": 301.0,
+    "end_ts": 314.0,
+    "original_text": "Finally, after aligning all components, we will assemble and tighten the reactor using a toggle 2 Nm."
+  },
+  {
+    "index": 28,
+    "text": "Step 10, this is the anode side membrane.",
+    "start_ts": 332.0,
+    "end_ts": 342.0,
+    "original_text": "Step 10, this is the anode side membrane."
+  },
+  {
+    "index": 29,
+    "text": "This reactor is tightened using 4 bolts in a diagonal sequence.",
+    "start_ts": 342.0,
+    "end_ts": 371.0,
+    "original_text": "This reactor is tightened using 4 bolts in a diagonal sequence."
+  },
+  {
+    "index": 30,
+    "text": "This reactor is tightened using 4 bolts in a diagonal sequence.",
+    "start_ts": 371.0,
+    "end_ts": 376.0,
+    "original_text": "This reactor is tightened using 4 bolts in a diagonal sequence."
+  },
+  {
+    "index": 31,
+    "text": "This reactor is tightened using 4 bolts in a diagonal sequence.",
+    "start_ts": 401.0,
+    "end_ts": 416.0,
+    "original_text": "This reactor is tightened using 4 bolts in a diagonal sequence."
+  },
+  {
+    "index": 32,
+    "text": "This reactor is tightened using 4 bolts in a diagonal sequence.",
+    "start_ts": 416.0,
+    "end_ts": 429.0,
+    "original_text": "This reactor is tightened using 4 bolts in a diagonal sequence."
+  },
+  {
+    "index": 33,
+    "text": "In summary, this reactor keeps the 3 µm splitting 1 molar KOH middle chamber, but increases the chamber window to 3 by 3 cm and adds an internal flow channel.",
+    "start_ts": 429.0,
+    "end_ts": 440.0,
+    "original_text": "In summary, this reactor keeps the 3 µm splitting one molecule each middle chamber, but increases the chamber window to 3 by 3 cm and adds an internal flow channel."
+  },
+  {
+    "index": 34,
+    "text": "This design is intended to increase the electrolyte volume, improve electrolyte distribution, and maintain a shorter ion transport distance.",
+    "start_ts": 440.0,
+    "end_ts": 452.0,
+    "original_text": "This design is intended to increase the electrolyte volume, improve electrolyte distribution, and maintain a shorter ion transport distance."
+  }
+]

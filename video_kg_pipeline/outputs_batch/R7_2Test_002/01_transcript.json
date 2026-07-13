@@ -1,0 +1,92 @@
+[
+  {
+    "index": 0,
+    "text": "Okay, this is the operating process of this reactor.",
+    "start_ts": 0.0,
+    "end_ts": 7.0
+  },
+  {
+    "index": 1,
+    "text": "This reactor uses dual gas configuration with no middle electrolyte chamber",
+    "start_ts": 7.0,
+    "end_ts": 15.0
+  },
+  {
+    "index": 2,
+    "text": "and only one EM membrane between the cathode and the anode.",
+    "start_ts": 15.0,
+    "end_ts": 21.0
+  },
+  {
+    "index": 3,
+    "text": "First, I will describe the gas bed configuration.",
+    "start_ts": 21.0,
+    "end_ts": 25.0
+  },
+  {
+    "index": 4,
+    "text": "The anode gas is hydrogen with a flow rate of 20 SACM.",
+    "start_ts": 25.0,
+    "end_ts": 32.0
+  },
+  {
+    "index": 5,
+    "text": "The cathode feed gas is carbon monoxide with a flow rate of 10 SACM.",
+    "start_ts": 32.0,
+    "end_ts": 41.0
+  },
+  {
+    "index": 6,
+    "text": "In the electrolyte chemical setup, the working electrode is connected to the cathode.",
+    "start_ts": 41.0,
+    "end_ts": 62.0
+  },
+  {
+    "index": 7,
+    "text": "Also, the counter electrode and the reference electrode are connected to the anode side.",
+    "start_ts": 62.0,
+    "end_ts": 67.0
+  },
+  {
+    "index": 8,
+    "text": "During the operation, we did not observe any cathode flooding or anode flooding.",
+    "start_ts": 67.0,
+    "end_ts": 78.0
+  },
+  {
+    "index": 9,
+    "text": "There is no visible liquid droplets at the cathode or anode gas gap.",
+    "start_ts": 78.0,
+    "end_ts": 84.0
+  },
+  {
+    "index": 10,
+    "text": "It indicates that the cathode and anode gas passivate remains open and a little dry.",
+    "start_ts": 84.0,
+    "end_ts": 93.0
+  },
+  {
+    "index": 11,
+    "text": "This is an important difference from the previous liquid middle chamber design",
+    "start_ts": 93.0,
+    "end_ts": 98.0
+  },
+  {
+    "index": 12,
+    "text": "where liquid conservation and cathode flooding were observed.",
+    "start_ts": 98.0,
+    "end_ts": 102.0
+  },
+  {
+    "index": 13,
+    "text": "By removing the middle electrolyte chamber, this reactor reduces the risk of liquid accumulation and pressure imbalance.",
+    "start_ts": 102.0,
+    "end_ts": 111.0
+  },
+  {
+    "index": 14,
+    "text": "The main goal of this test is to evaluate whether this compact dual gas CRAM HVAC configuration can maintain stable operation without cathode flooding.",
+    "start_ts": 111.0,
+    "end_ts": 121.0
+  }
+]

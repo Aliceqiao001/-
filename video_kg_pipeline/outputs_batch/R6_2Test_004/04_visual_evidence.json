@@ -1,0 +1,13 @@
+[
+  {
+    "timestamp": 8.5,
+    "frame_path": "outputs_batch/R6_2Test_004/frames/frame_0008.50.jpg",
+    "text_context": "For this reactor, the end of the gas is 20 ccm hydrogen, end of the gas is 10 ccm steel.",
+    "vlm_description": "1.  Yes, the image strongly supports the claim that the end gas flow rate is",
+    "triple": [
+      "gas",
+      "end flow rate",
+      "20 ccm hydrogen"
+    ]
+  }
+]

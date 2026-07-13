@@ -1,0 +1,225 @@
+[
+  {
+    "timestamp": 4.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "This is a test process for this reactor. || First, I will describe the gas feed conditions.",
+    "matched_keywords": [],
+    "similarity": 0.359
+  },
+  {
+    "timestamp": 8.0,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "anode feed gas",
+      "is",
+      "hydrogen"
+    ],
+    "text_evidence": "The anode feed gas is hydrogen with a flow rate of 20 ccm. || First, I will describe the gas feed conditions. || The anode feed gas is hydrogen with a flow rate of 20 ccm.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 11.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode feed gas",
+      "is",
+      "hydrogen"
+    ],
+    "text_evidence": "The anode feed gas is hydrogen with a flow rate of 20 ccm.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 15.0,
+    "sources": [
+      "keyword",
+      "triple"
+    ],
+    "triple": [
+      "anode feed gas",
+      "is",
+      "hydrogen"
+    ],
+    "text_evidence": "The cathode feed gas is carbon monoxide with a flow rate of 10 ccm.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 21.0,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "cathode feed gas",
+      "is",
+      "carbon monoxide"
+    ],
+    "text_evidence": "In the electrochemical setup, the working electrode is connected to the cathode, || The cathode feed gas is carbon monoxide with a flow rate of 10 ccm. || In the electrochemical setup, the working electrode is connected to the cathode,",
+    "matched_keywords": [
+      "connected"
+    ]
+  },
+  {
+    "timestamp": 29.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "working electrode",
+      "connected to",
+      "cathode"
+    ],
+    "text_evidence": "In the electrochemical setup, the working electrode is connected to the cathode,",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 38.0,
+    "sources": [
+      "keyword",
+      "triple"
+    ],
+    "triple": [
+      "working electrode",
+      "connected to",
+      "cathode"
+    ],
+    "text_evidence": "and both the counter electrode and the reference electrode are connected at the same time.",
+    "matched_keywords": [
+      "connected"
+    ]
+  },
+  {
+    "timestamp": 44.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "and both the counter electrode and the reference electrode are connected at the same time. || During the test, the middle chamber is filled with a liquid electrolyte.",
+    "matched_keywords": [],
+    "similarity": 0.421
+  },
+  {
+    "timestamp": 49.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "middle chamber",
+      "filled with",
+      "liquid electrolyte"
+    ],
+    "text_evidence": "During the test, the middle chamber is filled with a liquid electrolyte.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 55.0,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "liquid electrolyte",
+      "concentration",
+      "1 molar KOH"
+    ],
+    "text_evidence": "During the test, the middle chamber is filled with a liquid electrolyte. || The liquid electrolyte is 1 molar KOH. || The liquid electrolyte is 1 molar KOH. || Different from the previous reactor, where the middle chamber needs solid electrolyte,",
+    "matched_keywords": [],
+    "similarity": 0.539
+  },
+  {
+    "timestamp": 61.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "previous reactor",
+      "requires",
+      "solid electrolyte in middle chamber"
+    ],
+    "text_evidence": "Different from the previous reactor, where the middle chamber needs solid electrolyte,",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 66.5,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "this reactor",
+      "uses",
+      "circulating liquid electrolyte in middle chamber"
+    ],
+    "text_evidence": "this reactor uses a circulating liquid electrolyte in the middle chamber. || this reactor uses a circulating liquid electrolyte in the middle chamber. || The purpose of this design is to improve ionic conductivity, reduce the resistance of the middle chamber,",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 77.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The purpose of this design is to improve ionic conductivity, reduce the resistance of the middle chamber, || and lower the overall cell voltage during operation.",
+    "matched_keywords": [],
+    "similarity": 0.456
+  },
+  {
+    "timestamp": 81.0,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "liquid electrolyte circulation rate",
+      "is",
+      "30 ccm"
+    ],
+    "text_evidence": "and lower the overall cell voltage during operation. || The liquid electrolyte circulation rate is 30 ccm.",
+    "matched_keywords": [],
+    "similarity": 0.259
+  },
+  {
+    "timestamp": 87.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The liquid electrolyte circulation rate is 30 ccm. || For this test, we will monitor the cell voltage and evaluate whether the circulating 1 molar KOH electrolyte",
+    "matched_keywords": [],
+    "similarity": 0.444
+  },
+  {
+    "timestamp": 91.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "circulating electrolyte",
+      "concentration",
+      "1 molar KOH"
+    ],
+    "text_evidence": "For this test, we will monitor the cell voltage and evaluate whether the circulating 1 molar KOH electrolyte || For this test, we will monitor the cell voltage and evaluate whether the circulating 1 molar KOH electrolyte can improve the electrochemical performance and solubility of this reactor.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 95.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "For this test, we will monitor the cell voltage and evaluate whether the circulating 1 molar KOH electrolyte || can improve the electrochemical performance and solubility of this reactor.",
+    "matched_keywords": [],
+    "similarity": 0.393
+  }
+]

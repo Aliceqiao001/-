@@ -1,0 +1,15 @@
+[
+  {
+    "timestamp": 8.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode",
+      "is",
+      "150 sccm hydrogen with micro droplet system"
+    ],
+    "text_evidence": "For this reactor, the cathode is the 150 sccm hydrogen with micro droplet system.",
+    "matched_keywords": []
+  }
+]

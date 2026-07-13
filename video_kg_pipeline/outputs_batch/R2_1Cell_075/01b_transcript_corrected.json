@@ -1,0 +1,79 @@
+[
+  {
+    "index": 0,
+    "text": "Step 5. This is the middle chamber. The chamber thickness is 10 millimeters and the window",
+    "start_ts": 0.0,
+    "end_ts": 11.08,
+    "original_text": "Step 5. This is the middle chamber. The chamber thickness is 10 micrometers and the window"
+  },
+  {
+    "index": 1,
+    "text": "size is 1 by 1 centimeter. This chamber is used to hold the solid electrolytes. The solid",
+    "start_ts": 11.08,
+    "end_ts": 16.88,
+    "original_text": "size is 1 by 1 centimeter. This chamber is used to hold the solid electrolytes. The solid"
+  },
+  {
+    "index": 2,
+    "text": "electrolytes are strong acid cation exchange resin beads with a particle size of 600 to",
+    "start_ts": 16.88,
+    "end_ts": 24.52,
+    "original_text": "electrolytes are strong acid cation exchange resin beads with a particle size of 600 to"
+  },
+  {
+    "index": 3,
+    "text": "800 micrometers. The resin beads are filled to fully occupy the middle chamber. In this",
+    "start_ts": 24.52,
+    "end_ts": 38.36,
+    "original_text": "800 micrometers. The resin beads are filled to fully occupy the middle chamber. In this"
+  },
+  {
+    "index": 4,
+    "text": "reactor, we will use the air-water to increase the ionic conductivity of the solid electrolytes",
+    "start_ts": 38.36,
+    "end_ts": 46.0,
+    "original_text": "reactor, we will use the air-water to increase the ionic conductivity of the solid electrolytes"
+  },
+  {
+    "index": 5,
+    "text": "inside the middle chamber. This is the air-water inlet and this is the air-water outlet. Step",
+    "start_ts": 46.0,
+    "end_ts": 57.0,
+    "original_text": "inside the middle chamber. This is the air-water inlet and this is the air-water outlet. Step"
+  },
+  {
+    "index": 6,
+    "text": "6. This is the anode side membrane. This is the cation exchange membrane or CEM. The membrane",
+    "start_ts": 106.0,
+    "end_ts": 115.12,
+    "original_text": "6. This is the anode side membrane. This is the cation exchange membrane or CEM. The membrane"
+  },
+  {
+    "index": 7,
+    "text": "Step 7. This is the anode side membrane. This is the anode side membrane. This is the anode",
+    "start_ts": 136.0,
+    "end_ts": 165.96,
+    "original_text": "Step 7. This is the anode side membrane. This is the anode side membrane. This is the anode"
+  },
+  {
+    "index": 8,
+    "text": "Step 8. This is the anode. This is the anode electrode. The anode is provided by orthobasic",
+    "start_ts": 165.96,
+    "end_ts": 173.4,
+    "original_text": "Step 8. This is the anode. This is the anode electrode. The anode is provided by orthobasic"
+  },
+  {
+    "index": 9,
+    "text": "recoating Pt-Ru-C catalyst onto this H23C3 carbon paper The catalyst loading",
+    "start_ts": 173.4,
+    "end_ts": 180.28,
+    "original_text": "recoating PTO3C3 carbon catalysis onto this H2O3C3 carbon paper. The catalyst loading"
+  },
+  {
+    "index": 10,
+    "text": "is 2 milligram centimeter square.",
+    "start_ts": 180.28,
+    "end_ts": 183.0,
+    "original_text": "is 2 microgram centimeter square."
+  }
+]

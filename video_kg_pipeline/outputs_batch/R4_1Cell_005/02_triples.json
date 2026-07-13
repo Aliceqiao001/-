@@ -1,0 +1,302 @@
+[
+  {
+    "triple": [
+      "reactor",
+      "is",
+      "R4 reactor"
+    ],
+    "text_evidence": "Ok, this reactor is R4 reactor. This is the assembly process of this reactor. Step 1.",
+    "timestamp": [
+      0.0,
+      12.56
+    ]
+  },
+  {
+    "triple": [
+      "cathode flow plate",
+      "has",
+      "splitting flow tube"
+    ],
+    "text_evidence": "This is the cathode flow plate. It has a splitting flow tube. Step 2. This is the cathode electrode.",
+    "timestamp": [
+      12.56,
+      40.48
+    ]
+  },
+  {
+    "triple": [
+      "cathode",
+      "prepared by",
+      "spray coating cobalt oxide catalysis onto H23C3 carbon paper"
+    ],
+    "text_evidence": "The cathode is prepared by spray coating cobalt oxide catalysis onto the H23C3 carbon paper.",
+    "timestamp": [
+      40.48,
+      49.4
+    ]
+  },
+  {
+    "triple": [
+      "catalytic loading",
+      "is",
+      "3 mg per square"
+    ],
+    "text_evidence": "The catalytic loading is 3 mg per square. Step 3. This is the cathode gasket. The gasket",
+    "timestamp": [
+      49.4,
+      68.44
+    ]
+  },
+  {
+    "triple": [
+      "cathode gasket",
+      "thickness",
+      "0.3 mm"
+    ],
+    "text_evidence": "thickness is 0.3 mm and the ion window size is 1 by 1 cm. Step 4. We will place the alkaline",
+    "timestamp": [
+      68.44,
+      84.76
+    ]
+  },
+  {
+    "triple": [
+      "ion window size",
+      "is",
+      "1 by 1 cm"
+    ],
+    "text_evidence": "thickness is 0.3 mm and the ion window size is 1 by 1 cm. Step 4. We will place the alkaline",
+    "timestamp": [
+      68.44,
+      84.76
+    ]
+  },
+  {
+    "triple": [
+      "ion exchange membrane",
+      "is",
+      "Sustainion X37-50"
+    ],
+    "text_evidence": "ion exchange membrane. The membrane is Sustainion X37-50.",
+    "timestamp": [
+      84.76,
+      91.76
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "thickness",
+      "10 mm"
+    ],
+    "text_evidence": "This is the AM, the membrane. Step 5. This is the middle chamber. The chamber thickness is 10 mm and the window size is 1 by 1 cm. The chamber is used to hold the liquid electrolyte.",
+    "timestamp": [
+      114.76,
+      147.0
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "window size",
+      "1 by 1 cm"
+    ],
+    "text_evidence": "is 10 mm and the window size is 1 by 1 cm. The chamber is used to hold the liquid electrolyte.",
+    "timestamp": [
+      138.52,
+      147.0
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "used to hold",
+      "liquid electrolyte"
+    ],
+    "text_evidence": "is 10 mm and the window size is 1 by 1 cm. The chamber is used to hold the liquid electrolyte.",
+    "timestamp": [
+      138.52,
+      147.0
+    ]
+  },
+  {
+    "triple": [
+      "liquid electrolyte",
+      "is",
+      "1 molar KOH"
+    ],
+    "text_evidence": "The liquid electrolyte is 1 molar KOH and it will be continuously circulated through",
+    "timestamp": [
+      147.0,
+      152.56
+    ]
+  },
+  {
+    "triple": [
+      "liquid electrolyte",
+      "will be continuously circulated through",
+      "middle chamber"
+    ],
+    "text_evidence": "The liquid electrolyte is 1 molar KOH and it will be continuously circulated through the middle chamber during operation. This is the inlet and this is the outlet. Step",
+    "timestamp": [
+      147.0,
+      164.4
+    ]
+  },
+  {
+    "triple": [
+      "anode gasket",
+      "added",
+      "reactor"
+    ],
+    "text_evidence": "6. We add the anode gasket. The anode gasket is also 0.3 mm. Step 7. We also place the",
+    "timestamp": [
+      164.4,
+      185.36
+    ]
+  },
+  {
+    "triple": [
+      "anode gasket",
+      "thickness",
+      "0.3 mm"
+    ],
+    "text_evidence": "6. We add the anode gasket. The anode gasket is also 0.3 mm. Step 7. We also place the",
+    "timestamp": [
+      164.4,
+      185.36
+    ]
+  },
+  {
+    "triple": [
+      "membrane",
+      "material",
+      "Sustainion X37-50"
+    ],
+    "text_evidence": "This membrane is also Sustainion X37-50.",
+    "timestamp": [
+      245.36,
+      274.36
+    ]
+  },
+  {
+    "triple": [
+      "membrane",
+      "purchased from",
+      "Dioxide Materials"
+    ],
+    "text_evidence": "Purchased from Dioxide Materials. Step 8. This is the anode electrode. The anode is",
+    "timestamp": [
+      274.36,
+      303.88
+    ]
+  },
+  {
+    "triple": [
+      "anode electrode",
+      "prepared by",
+      "spray coating"
+    ],
+    "text_evidence": "also prepared by spray coating but using Pt-Ru-C catalyst onto H23C3 carbon",
+    "timestamp": [
+      303.88,
+      314.2
+    ]
+  },
+  {
+    "triple": [
+      "anode electrode",
+      "catalyst material",
+      "Pt-Ru-C"
+    ],
+    "text_evidence": "also prepared by spray coating but using Pt-Ru-C catalyst onto H23C3 carbon",
+    "timestamp": [
+      303.88,
+      314.2
+    ]
+  },
+  {
+    "triple": [
+      "anode electrode",
+      "substrate material",
+      "H23C3 carbon paper"
+    ],
+    "text_evidence": "paper. The catalytic loading is 2 mg per cm2. Step 9. This is the anode flow plate. It also",
+    "timestamp": [
+      314.2,
+      333.44
+    ]
+  },
+  {
+    "triple": [
+      "anode electrode",
+      "catalytic loading",
+      "2 mg per cm2"
+    ],
+    "text_evidence": "paper. The catalytic loading is 2 mg per cm2. Step 9. This is the anode flow plate. It also",
+    "timestamp": [
+      314.2,
+      333.44
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "assembly step",
+      "aligned components assembled"
+    ],
+    "text_evidence": "has a flow field. Finally, after aligning all components, we will assemble this reactor.",
+    "timestamp": [
+      333.44,
+      347.32
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "tightened using torque",
+      "0.3 Nm"
+    ],
+    "text_evidence": "We assemble on the tightened reactor using a torque of 0.3 Nm. The reactor is tightened",
+    "timestamp": [
+      393.44,
+      423.4
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "tightened using bolts",
+      "4 bolts in diagonal sequence"
+    ],
+    "text_evidence": "using 4 bolts in a diagonal sequence to ensure uniform compression. The key change in this",
+    "timestamp": [
+      423.4,
+      435.24
+    ]
+  },
+  {
+    "triple": [
+      "solid electrolyte layer",
+      "replaced by",
+      "circulating 1 molecule H liquid electrolyte"
+    ],
+    "text_evidence": "reactor is that the middle solid electrolyte layer is replaced by a circulating 1 molecule H liquid electrolyte. The purpose is to improve ionic activity in the middle chamber and reduce",
+    "timestamp": [
+      435.24,
+      448.08
+    ]
+  },
+  {
+    "triple": [
+      "circulating 1 molecule H liquid electrolyte",
+      "purpose",
+      "improve ionic activity in middle chamber and reduce"
+    ],
+    "text_evidence": "H liquid electrolyte. The purpose is to improve ionic activity in the middle chamber and reduce",
+    "timestamp": [
+      441.28,
+      448.08
+    ]
+  }
+]

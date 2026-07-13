@@ -1,0 +1,482 @@
+[
+  {
+    "triple": [
+      "reactor",
+      "operation",
+      "post-test disassemble process"
+    ],
+    "text_evidence": "This is the post-test disassemble process of this reactor.",
+    "timestamp": [
+      0.0,
+      7.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "operated with",
+      "3-micrometer metal chamber"
+    ],
+    "text_evidence": "The reactor was operated with a 3-micrometer metal chamber containing circulating 1-molecule",
+    "timestamp": [
+      7.0,
+      15.0
+    ]
+  },
+  {
+    "triple": [
+      "metal chamber",
+      "containing",
+      "circulating 1-molecule H-electrolytes"
+    ],
+    "text_evidence": "The reactor was operated with a 3-micrometer metal chamber containing circulating 1-molecule H-electrolytes.",
+    "timestamp": [
+      7.0,
+      16.0
+    ]
+  },
+  {
+    "triple": [
+      "cell",
+      "disassemble",
+      "after electrochemical test"
+    ],
+    "text_evidence": "After the electrochemical test, we will disassemble the cell and record the conditions of each",
+    "timestamp": [
+      16.0,
+      24.0
+    ]
+  },
+  {
+    "triple": [
+      "conditions of each component",
+      "record",
+      "for failure diagonal"
+    ],
+    "text_evidence": "After the electrochemical test, we will disassemble the cell and record the conditions of each component for failure diagonal.",
+    "timestamp": [
+      16.0,
+      32.0
+    ]
+  },
+  {
+    "triple": [
+      "4 bolts",
+      "loaded in sequence",
+      "diagonal"
+    ],
+    "text_evidence": "Now we load the 4 bolts in a diagonal sequence to release the compressions regularly to avoid",
+    "timestamp": [
+      32.0,
+      40.0
+    ]
+  },
+  {
+    "triple": [
+      "diagonal sequence",
+      "purpose",
+      "release compressions regularly"
+    ],
+    "text_evidence": "Now we load the 4 bolts in a diagonal sequence to release the compressions regularly to avoid",
+    "timestamp": [
+      32.0,
+      40.0
+    ]
+  },
+  {
+    "triple": [
+      "diagonal sequence",
+      "avoids",
+      "damaging the membrane or electrodes"
+    ],
+    "text_evidence": "damaging the membrane or electrodes.",
+    "timestamp": [
+      40.0,
+      47.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "opened",
+      "first inspect the anode flow plate"
+    ],
+    "text_evidence": "After opening the reactor, we first inspect the anode flow plate.",
+    "timestamp": [
+      70.0,
+      96.0
+    ]
+  },
+  {
+    "triple": [
+      "anode flow plate",
+      "checked for",
+      "liquid accumulation"
+    ],
+    "text_evidence": "We check whether there is liquid accumulation, salt precipitation, gas channel blockage,",
+    "timestamp": [
+      96.0,
+      106.0
+    ]
+  },
+  {
+    "triple": [
+      "anode flow plate",
+      "checked for",
+      "salt precipitation"
+    ],
+    "text_evidence": "We check whether there is liquid accumulation, salt precipitation, gas channel blockage,",
+    "timestamp": [
+      96.0,
+      106.0
+    ]
+  },
+  {
+    "triple": [
+      "anode flow plate",
+      "checked for",
+      "gas channel blockage"
+    ],
+    "text_evidence": "We check whether there is liquid accumulation, salt precipitation, gas channel blockage,",
+    "timestamp": [
+      96.0,
+      106.0
+    ]
+  },
+  {
+    "triple": [
+      "flow field",
+      "checked for",
+      "color change"
+    ],
+    "text_evidence": "or any color change on the flow field.",
+    "timestamp": [
+      106.0,
+      109.0
+    ]
+  },
+  {
+    "triple": [
+      "anode",
+      "composition",
+      "Pt-RuCM-CubSpR-CoT on H23C3 carbon paper"
+    ],
+    "text_evidence": "The anode is Pt-RuCM-CubSpR-CoT on a H23C3 carbon paper.",
+    "timestamp": [
+      114.0,
+      123.0
+    ]
+  },
+  {
+    "triple": [
+      "catalyst layer",
+      "checked for",
+      "intactness"
+    ],
+    "text_evidence": "We check whether the catalyst layer remains intact, whether the surface is flooded, whether",
+    "timestamp": [
+      124.0,
+      133.0
+    ]
+  },
+  {
+    "triple": [
+      "surface",
+      "checked for",
+      "flooding"
+    ],
+    "text_evidence": "We check whether the catalyst layer remains intact, whether the surface is flooded, whether",
+    "timestamp": [
+      124.0,
+      133.0
+    ]
+  },
+  {
+    "triple": [
+      "catalyst",
+      "checked for",
+      "peeling or diminution"
+    ],
+    "text_evidence": "there is electrolyte residue, and whether any catalyst peeling or diminution is observed.",
+    "timestamp": [
+      133.0,
+      151.0
+    ]
+  },
+  {
+    "triple": [
+      "membrane space",
+      "checked for",
+      "cleanliness and uniform wetting"
+    ],
+    "text_evidence": "We check whether the membrane space is clean and uniformly wetted, whether there is any",
+    "timestamp": [
+      156.0,
+      168.0
+    ]
+  },
+  {
+    "triple": [
+      "membrane space",
+      "checked for",
+      "electrolyte crossover"
+    ],
+    "text_evidence": "electrolyte crossover, salt precipitation, mechanical damage, or uneven contact.",
+    "timestamp": [
+      168.0,
+      176.0
+    ]
+  },
+  {
+    "triple": [
+      "membrane space",
+      "checked for",
+      "salt precipitation"
+    ],
+    "text_evidence": "electrolyte crossover, salt precipitation, mechanical damage, or uneven contact.",
+    "timestamp": [
+      168.0,
+      176.0
+    ]
+  },
+  {
+    "triple": [
+      "membrane space",
+      "checked for",
+      "mechanical damage"
+    ],
+    "text_evidence": "electrolyte crossover, salt precipitation, mechanical damage, or uneven contact.",
+    "timestamp": [
+      168.0,
+      176.0
+    ]
+  },
+  {
+    "triple": [
+      "membrane space",
+      "checked for",
+      "uneven contact"
+    ],
+    "text_evidence": "electrolyte crossover, salt precipitation, mechanical damage, or uneven contact.",
+    "timestamp": [
+      168.0,
+      176.0
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "inspected",
+      "uniform filling"
+    ],
+    "text_evidence": "We check whether the chamber is uniformly filled, whether there is any trapped gas bubble,",
+    "timestamp": [
+      196.0,
+      201.0
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "checked for",
+      "trapped gas bubble"
+    ],
+    "text_evidence": "We check whether the chamber is uniformly filled, whether there is any trapped gas bubble,",
+    "timestamp": [
+      196.0,
+      201.0
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "checked for",
+      "liquid stage gradation"
+    ],
+    "text_evidence": "or liquid stage gradation, salt carburization, or blockage near the inlet and outlet.",
+    "timestamp": [
+      201.0,
+      212.0
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "checked for",
+      "salt carburization"
+    ],
+    "text_evidence": "or liquid stage gradation, salt carburization, or blockage near the inlet and outlet.",
+    "timestamp": [
+      201.0,
+      212.0
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "checked for",
+      "blockage near inlet and outlet"
+    ],
+    "text_evidence": "or liquid stage gradation, salt carburization, or blockage near the inlet and outlet.",
+    "timestamp": [
+      201.0,
+      212.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode side membrane",
+      "inspected",
+      "condition"
+    ],
+    "text_evidence": "Then we inspect the cathode side membrane.",
+    "timestamp": [
+      212.0,
+      220.0
+    ]
+  },
+  {
+    "triple": [
+      "membrane space",
+      "checked for",
+      "cleanliness and uniform wetting"
+    ],
+    "text_evidence": "We check whether the membrane space is clean and uniformly wetted, and whether there is",
+    "timestamp": [
+      220.0,
+      225.0
+    ]
+  },
+  {
+    "triple": [
+      "membrane space",
+      "checked for",
+      "electrolyte crossover"
+    ],
+    "text_evidence": "electrolyte crossover, salt deposition, mechanical damage, or uneven contact.",
+    "timestamp": [
+      226.0,
+      233.0
+    ]
+  },
+  {
+    "triple": [
+      "membrane space",
+      "checked for",
+      "salt deposition"
+    ],
+    "text_evidence": "electrolyte crossover, salt deposition, mechanical damage, or uneven contact.",
+    "timestamp": [
+      226.0,
+      233.0
+    ]
+  },
+  {
+    "triple": [
+      "membrane space",
+      "checked for",
+      "mechanical damage"
+    ],
+    "text_evidence": "electrolyte crossover, salt deposition, mechanical damage, or uneven contact.",
+    "timestamp": [
+      226.0,
+      233.0
+    ]
+  },
+  {
+    "triple": [
+      "membrane space",
+      "checked for",
+      "uneven contact"
+    ],
+    "text_evidence": "electrolyte crossover, salt deposition, mechanical damage, or uneven contact.",
+    "timestamp": [
+      226.0,
+      233.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode side electrode",
+      "inspected",
+      "condition"
+    ],
+    "text_evidence": "Next, we inspect the cathode side electrode.",
+    "timestamp": [
+      233.0,
+      241.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode",
+      "composition",
+      "CuSpR-CoT on H23C3 carbon paper"
+    ],
+    "text_evidence": "The cathode is CuSpR-CoT on a H23C3 carbon paper.",
+    "timestamp": [
+      241.0,
+      245.0
+    ]
+  },
+  {
+    "triple": [
+      "catalyst layer",
+      "remains attached",
+      "checked"
+    ],
+    "text_evidence": "We check whether the catalyst layer remains attached, whether the cathode is flooded or",
+    "timestamp": [
+      245.0,
+      250.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode",
+      "flooded or dried out",
+      "checked"
+    ],
+    "text_evidence": "We check whether the catalyst layer remains attached, whether the cathode is flooded or dried out, whether there is any color change after reaction, and whether the active area",
+    "timestamp": [
+      245.0,
+      255.0
+    ]
+  },
+  {
+    "triple": [
+      "reaction",
+      "color change",
+      "checked"
+    ],
+    "text_evidence": "dried out, whether there is any color change after reaction, and whether the active area",
+    "timestamp": [
+      250.0,
+      255.0
+    ]
+  },
+  {
+    "triple": [
+      "active area",
+      "remains uniform",
+      "checked"
+    ],
+    "text_evidence": "dried out, whether there is any color change after reaction, and whether the active area remains uniform.",
+    "timestamp": [
+      250.0,
+      268.0
+    ]
+  },
+  {
+    "triple": [
+      "separating flow channel",
+      "liquid accumulation",
+      "checked"
+    ],
+    "text_evidence": "We check whether there is liquid accumulation in the separating flow channel, whether the",
+    "timestamp": [
+      273.0,
+      278.0
+    ]
+  }
+]

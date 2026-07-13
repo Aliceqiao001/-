@@ -1,0 +1,282 @@
+[
+  {
+    "index": 0,
+    "text": "Okay, for this reactor, compared to the last reactor, the key change in this reactor is",
+    "start_ts": 0.0,
+    "end_ts": 13.52,
+    "original_text": "Okay, for this reactor, compared to the last reactor, the key change in this reactor is"
+  },
+  {
+    "index": 1,
+    "text": "that we replaced the AEM membrane with a PTFE separator, we will replace it.",
+    "start_ts": 13.52,
+    "end_ts": 22.64,
+    "original_text": "that we replaced the AEM membrane with a PTFE separator, we will replace it."
+  },
+  {
+    "index": 2,
+    "text": "Because in the last reactor after the test, the AEM membrane was broken and also stuck",
+    "start_ts": 22.64,
+    "end_ts": 27.96,
+    "original_text": "Because in the last reactor after the test, the AEM membrane was broken and also stuck"
+  },
+  {
+    "index": 3,
+    "text": "to the catalyst layer during disassembly, this suggests that the AEM membrane will not",
+    "start_ts": 27.96,
+    "end_ts": 35.84,
+    "original_text": "to the catalyst layer during disassembly, this suggests that the AEM membrane will not"
+  },
+  {
+    "index": 4,
+    "text": "be mechanically stable enough under this dual gas configuration.",
+    "start_ts": 35.84,
+    "end_ts": 39.4,
+    "original_text": "be mechanically stable enough under this dual gas configuration."
+  },
+  {
+    "index": 5,
+    "text": "Therefore, in this reactor, we will use a PTFE membrane as the separator.",
+    "start_ts": 39.4,
+    "end_ts": 53.48,
+    "original_text": "Therefore, in this reactor, we will use a PTFE membrane as the separator."
+  },
+  {
+    "index": 6,
+    "text": "The purpose is to improve mechanical stability, reduce membrane damage, and avoid strong adhesion",
+    "start_ts": 53.48,
+    "end_ts": 64.28,
+    "original_text": "The purpose is to improve mechanical stability, reduce membrane damage, and avoid strong adhesion"
+  },
+  {
+    "index": 7,
+    "text": "between the membrane and the catalyst layer.",
+    "start_ts": 64.28,
+    "end_ts": 68.04,
+    "original_text": "between the membrane and the catalyst layer."
+  },
+  {
+    "index": 8,
+    "text": "The overall structure of this reactor is also dual gas configuration, so our cathode, PTFE",
+    "start_ts": 68.04,
+    "end_ts": 73.8,
+    "original_text": "The overall structure of this reactor is also dual gas configuration, so our cathode, PTFE"
+  },
+  {
+    "index": 9,
+    "text": "separator, and HOR anode.",
+    "start_ts": 73.8,
+    "end_ts": 76.8,
+    "original_text": "separator, and HOR anode."
+  },
+  {
+    "index": 10,
+    "text": "There is also no middle electrolyte chamber in this design.",
+    "start_ts": 76.8,
+    "end_ts": 80.8,
+    "original_text": "There is also no middle electrolyte chamber in this design."
+  },
+  {
+    "index": 11,
+    "text": "Step one, this is the cathode flow plate, it is head of the serpentine flow field",
+    "start_ts": 80.8,
+    "end_ts": 88.4,
+    "original_text": "Step one, this is the cathode flow plate, it is head of the printing flow field."
+  },
+  {
+    "index": 12,
+    "text": "This is the cathode electrode, this is the cathode electrode.",
+    "start_ts": 88.4,
+    "end_ts": 105.84,
+    "original_text": "This is the cathode electrode, this is the cathode electrode."
+  },
+  {
+    "index": 13,
+    "text": "The cathode is prepared by spray-coating a cobalt-salt catalyst on the H23C3 carbon",
+    "start_ts": 105.84,
+    "end_ts": 110.88,
+    "original_text": "The cathode is prepared by spray-coating a cobalt-salt catalyst on the A233 carbon"
+  },
+  {
+    "index": 14,
+    "text": "paper.",
+    "start_ts": 110.88,
+    "end_ts": 111.88,
+    "original_text": "paper."
+  },
+  {
+    "index": 15,
+    "text": "The catalyst loading is 3 milligrams per square meter, exercise area is also 1 by 1 centimeter.",
+    "start_ts": 111.88,
+    "end_ts": 124.2,
+    "original_text": "The catalyst loading is 3 milligrams per square meter, exercise area is also 1 by 1 centimeter."
+  },
+  {
+    "index": 16,
+    "text": "We added the cathode gasket, the gasket thickness is 0.2 millimeter, the silicon membrane,",
+    "start_ts": 124.2,
+    "end_ts": 131.08,
+    "original_text": "We added the cathode gasket, the gasket thickness is 0.2 micrometer, the silicon membrane,"
+  },
+  {
+    "index": 17,
+    "text": "and the silicon gasket.",
+    "start_ts": 131.08,
+    "end_ts": 133.24,
+    "original_text": "and the silicon gasket."
+  },
+  {
+    "index": 18,
+    "text": "So, the gasket thickness is also 0.2 millimeter, but also the anode window size is 1 by 1 centimeter.",
+    "start_ts": 161.08,
+    "end_ts": 191.04,
+    "original_text": "So, the gasket thickness is also 0.2 micrometer, but also the anode window size is 1 by 1 centimeter."
+  },
+  {
+    "index": 19,
+    "text": "Then, we will place the PTFE separator, yeah, this is the PTFE materials.",
+    "start_ts": 192.0,
+    "end_ts": 205.92,
+    "original_text": "Then, we will place the PTFE separator, yeah, this is the PTFE materials."
+  },
+  {
+    "index": 20,
+    "text": "This PTFE separator replaces the sustained EM membrane of the last reactor.",
+    "start_ts": 205.92,
+    "end_ts": 211.88,
+    "original_text": "This PTFE separator replaces the sustained EM membrane of the last reactor."
+  },
+  {
+    "index": 21,
+    "text": "In the design, this PTFE layer acts as a physical separator between the cathode and the anode.",
+    "start_ts": 211.88,
+    "end_ts": 219.28,
+    "original_text": "In the design, this PTFE layer acts as a physical separator between the cathode and the anode."
+  },
+  {
+    "index": 22,
+    "text": "It is not an ion-chase membrane, the goal is to reduce membrane breakage and avoid catalyst",
+    "start_ts": 219.28,
+    "end_ts": 224.12,
+    "original_text": "It is not an ion-chase membrane, the goal is to reduce membrane breakage and avoid catalyst"
+  },
+  {
+    "index": 23,
+    "text": "sticking during operation and disassembly.",
+    "start_ts": 224.12,
+    "end_ts": 231.44,
+    "original_text": "sticking during operation and disassembly."
+  },
+  {
+    "index": 24,
+    "text": "Before putting it into the cell, the PTFE separator will be, we will, like, it has been",
+    "start_ts": 231.44,
+    "end_ts": 245.48,
+    "original_text": "Before putting it into the cell, the PTFE separator will be, we will, like, it has been"
+  },
+  {
+    "index": 25,
+    "text": "per-weighted in 1 molar KOH, like this.",
+    "start_ts": 245.48,
+    "end_ts": 250.32,
+    "original_text": "per-weighted in one molecule each, like this."
+  },
+  {
+    "index": 26,
+    "text": "The purpose is to per-weighting step is to improve the ion-connect, so the per-weight",
+    "start_ts": 250.32,
+    "end_ts": 255.08,
+    "original_text": "The purpose is to per-weighting step is to improve the ion-connect, so the per-weight"
+  },
+  {
+    "index": 27,
+    "text": "separator and reduce the initial resistance.",
+    "start_ts": 255.08,
+    "end_ts": 258.12,
+    "original_text": "separator and reduce the initial resistance."
+  },
+  {
+    "index": 28,
+    "text": "At the same time, PTFE, yeah, in here is used to replace the EM, yeah, okay, then we place",
+    "start_ts": 258.12,
+    "end_ts": 266.52,
+    "original_text": "At the same time, PTFE, yeah, in here is used to replace the EM, yeah, okay, then we place"
+  },
+  {
+    "index": 29,
+    "text": "the weighted separator in here, between the anode and the cathode, yeah, okay, then we",
+    "start_ts": 266.52,
+    "end_ts": 284.04,
+    "original_text": "the weighted separator in here, between the anode and the cathode, yeah, okay, then we"
+  },
+  {
+    "index": 30,
+    "text": "will add the anode gasket, yeah, the anode gasket is totally similar with the cathode",
+    "start_ts": 284.04,
+    "end_ts": 291.16,
+    "original_text": "will add the anode gasket, yeah, the anode gasket is totally similar with the cathode"
+  },
+  {
+    "index": 31,
+    "text": "side gasket, with the same material and the same ion-window and the same thickness, okay.",
+    "start_ts": 291.16,
+    "end_ts": 311.4,
+    "original_text": "side gasket, with the same material and the same ion-window and the same thickness, okay."
+  },
+  {
+    "index": 32,
+    "text": "Then we will, this is the anode side electrode, the anode electrode is also spray-coating",
+    "start_ts": 311.4,
+    "end_ts": 317.4,
+    "original_text": "Then we will, this is the anode side electrode, the anode electrode is also spray-coating"
+  },
+  {
+    "index": 33,
+    "text": "the PTFE catalytic onto H23C3 carbon paper the same loading and the same thickness, okay.",
+    "start_ts": 317.4,
+    "end_ts": 331.88,
+    "original_text": "the PTFE catalytic onto H2O3 carbon paper, the same loading and the same thickness, okay."
+  },
+  {
+    "index": 34,
+    "text": "Then this is the anode side electrode, okay, after aligning all components, we will assemble",
+    "start_ts": 331.88,
+    "end_ts": 344.28,
+    "original_text": "Then this is the anode side electrode, okay, after aligning all components, we will assemble"
+  },
+  {
+    "index": 35,
+    "text": "and tighten the reactor using a torque, torque of 0.3 newton meter, this reactor is tightened",
+    "start_ts": 344.28,
+    "end_ts": 353.48,
+    "original_text": "and tighten the reactor using a torque, torque of 0.3 newton meter, this reactor is tightened"
+  },
+  {
+    "index": 36,
+    "text": "using four bolts in a diagonal sequence to ensure uniform compression.",
+    "start_ts": 353.48,
+    "end_ts": 372.68,
+    "original_text": "using four bolts in a diagonal sequence to ensure uniform compression."
+  },
+  {
+    "index": 37,
+    "text": "In summary, this reactor keeps the same cathodic anode with the last reactor, but it replaces",
+    "start_ts": 383.96,
+    "end_ts": 390.92,
+    "original_text": "In summary, this reactor keeps the same cathodic anode with the last reactor, but it replaces"
+  },
+  {
+    "index": 38,
+    "text": "the EM with a PTFE separator, this design is intended to improve the mechanical robustness",
+    "start_ts": 390.92,
+    "end_ts": 399.24,
+    "original_text": "the EM with a PTFE separator, this design is intended to improve the mechanical robustness"
+  },
+  {
+    "index": 39,
+    "text": "of the EM fracture catalyst addition and further, we will further test it.",
+    "start_ts": 399.24,
+    "end_ts": 408.68,
+    "original_text": "of the EM fracture catalyst addition and further, we will further test it."
+  }
+]

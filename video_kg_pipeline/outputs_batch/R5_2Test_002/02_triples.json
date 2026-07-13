@@ -1,0 +1,74 @@
+[
+  {
+    "triple": [
+      "reference electrode",
+      "connected to",
+      "middle electrolyte chamber"
+    ],
+    "text_evidence": "When the reference electrode is connected to the middle electrolyte chamber, the measured impedance mainly reflects the resistance from the cathode to middle chamber, which we defined as R1.",
+    "timestamp": [
+      0.0,
+      14.0
+    ]
+  },
+  {
+    "triple": [
+      "measured impedance",
+      "reflects",
+      "resistance from cathode to middle chamber"
+    ],
+    "text_evidence": "When the reference electrode is connected to the middle electrolyte chamber, the measured impedance mainly reflects the resistance from the cathode to middle chamber, which we defined as R1.",
+    "timestamp": [
+      0.0,
+      14.0
+    ]
+  },
+  {
+    "triple": [
+      "resistance from cathode to middle chamber",
+      "defined as",
+      "R1"
+    ],
+    "text_evidence": "When the reference electrode is connected to the middle electrolyte chamber, the measured impedance mainly reflects the resistance from the cathode to middle chamber, which we defined as R1.",
+    "timestamp": [
+      0.0,
+      14.0
+    ]
+  },
+  {
+    "triple": [
+      "reference electrode",
+      "connected to",
+      "anode side"
+    ],
+    "text_evidence": "When the reference electrode is connected to the anode side, the measured impedance reflects the resistance of the 4-cell, which we defined as R3.",
+    "timestamp": [
+      14.0,
+      26.0
+    ]
+  },
+  {
+    "triple": [
+      "measured impedance",
+      "reflects",
+      "resistance of the 4-cell"
+    ],
+    "text_evidence": "When the reference electrode is connected to the anode side, the measured impedance reflects the resistance of the 4-cell, which we defined as R3.",
+    "timestamp": [
+      14.0,
+      26.0
+    ]
+  },
+  {
+    "triple": [
+      "resistance of the 4-cell",
+      "defined as",
+      "R3"
+    ],
+    "text_evidence": "When the reference electrode is connected to the anode side, the measured impedance reflects the resistance of the 4-cell, which we defined as R3.",
+    "timestamp": [
+      14.0,
+      26.0
+    ]
+  }
+]

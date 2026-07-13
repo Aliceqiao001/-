@@ -1,0 +1,26 @@
+[
+  {
+    "triple": [
+      "gas",
+      "end flow rate",
+      "20 ccm hydrogen"
+    ],
+    "text_evidence": "For this reactor, the end of the gas is 20 ccm hydrogen, end of the gas is 10 ccm steel.",
+    "timestamp": [
+      0.0,
+      17.0
+    ]
+  },
+  {
+    "triple": [
+      "gas",
+      "end flow rate",
+      "10 ccm steel"
+    ],
+    "text_evidence": "For this reactor, the end of the gas is 20 ccm hydrogen, end of the gas is 10 ccm steel.",
+    "timestamp": [
+      0.0,
+      17.0
+    ]
+  }
+]

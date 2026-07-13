@@ -1,0 +1,170 @@
+[
+  {
+    "index": 0,
+    "text": "This is the assembly process of this reactor.",
+    "start_ts": 0.0,
+    "end_ts": 7.0,
+    "original_text": "This is the assembly process of this reactor."
+  },
+  {
+    "index": 1,
+    "text": "Step 1, this is the cathode flow plate.",
+    "start_ts": 7.0,
+    "end_ts": 13.0,
+    "original_text": "Step 1, this is the cathode flow plate."
+  },
+  {
+    "index": 2,
+    "text": "It has a serpentine flow field.",
+    "start_ts": 13.0,
+    "end_ts": 17.0,
+    "original_text": "It has a serpentine flow field."
+  },
+  {
+    "index": 3,
+    "text": "Step 2, this is the cathode electrode.",
+    "start_ts": 17.0,
+    "end_ts": 35.0,
+    "original_text": "Step 2, this is the cathode electrode."
+  },
+  {
+    "index": 4,
+    "text": "The cathode is prepared by spray coating copper oxide catalysis onto H23C3 carbon paper",
+    "start_ts": 35.0,
+    "end_ts": 47.0,
+    "original_text": "The cathode is prepared by spray coating copper oxide catalysis onto H23C3 carbon paper."
+  },
+  {
+    "index": 5,
+    "text": "The catalysis loading is 3 mg per centimeter square.",
+    "start_ts": 47.0,
+    "end_ts": 59.0,
+    "original_text": "The catalysis loading is 3 mg per centimeter square."
+  },
+  {
+    "index": 6,
+    "text": "Step 3, this is the cathode gasket. The gasket thickness is 0.3 millimeter and the inner window size is 1 by 1 centimeter.",
+    "start_ts": 59.0,
+    "end_ts": 83.0,
+    "original_text": "Step 3, this is the cathode gasket. The gasket thickness is 0.3 micrometer and the inner window size is 1 by 1 centimeter."
+  },
+  {
+    "index": 7,
+    "text": "Step 4, we place the cathode side membrane.",
+    "start_ts": 84.0,
+    "end_ts": 101.0,
+    "original_text": "Step 4, we place the cathode side membrane."
+  },
+  {
+    "index": 8,
+    "text": "The cathode side membrane is the alkaline ion exchange membrane.",
+    "start_ts": 101.0,
+    "end_ts": 108.0,
+    "original_text": "The cathode side membrane is the alkaline ion exchange membrane."
+  },
+  {
+    "index": 9,
+    "text": "The cathode side membrane is the alkaline ion exchange membrane.",
+    "start_ts": 131.0,
+    "end_ts": 146.0,
+    "original_text": "The cathode side membrane is the alkaline ion exchange membrane."
+  },
+  {
+    "index": 10,
+    "text": "And this is the middle electrolyte chamber.",
+    "start_ts": 146.0,
+    "end_ts": 168.0,
+    "original_text": "And this is the middle electrolyte chamber."
+  },
+  {
+    "index": 11,
+    "text": "The chamber thickness is 3 millimeter and the window size is 1 by 1 centimeter.",
+    "start_ts": 168.0,
+    "end_ts": 175.0,
+    "original_text": "The chamber thickness is 3 micrometer and the window size is 1 by 1 centimeter."
+  },
+  {
+    "index": 12,
+    "text": "The chamber is used to hold and circulate the liquid electrolytes.",
+    "start_ts": 175.0,
+    "end_ts": 179.0,
+    "original_text": "The chamber is used to hold and circulate the liquid electrolytes."
+  },
+  {
+    "index": 13,
+    "text": "The electrolyte is 1 molar KOH and it will be continuously circulated through the middle chamber during operation.",
+    "start_ts": 179.0,
+    "end_ts": 187.0,
+    "original_text": "The electrolyte is 1 molecule each and it will be continuously circulated through the middle chamber during operation."
+  },
+  {
+    "index": 14,
+    "text": "During a compare with the previous design, the key change is this reactor is the middle chamber thickness is reduced to 3 millimeter.",
+    "start_ts": 187.0,
+    "end_ts": 197.0,
+    "original_text": "During a compare with the previous design, the key change is this reactor is the middle chamber thickness is reduced to 3 micrometer."
+  },
+  {
+    "index": 15,
+    "text": "The purpose is to shorten the ion transparent distance, reduce the aluminum resistance from the liquid electrolyte layer and improve the overall cell voltage.",
+    "start_ts": 197.0,
+    "end_ts": 208.0,
+    "original_text": "The purpose is to shorten the ion transparent distance, reduce the aluminum resistance from the liquid electrolyte layer and improve the overall cell voltage."
+  },
+  {
+    "index": 16,
+    "text": "In addition, we place a reference electrode in the middle chamber.",
+    "start_ts": 209.0,
+    "end_ts": 217.0,
+    "original_text": "In addition, we place a reference electrode in the middle chamber."
+  },
+  {
+    "index": 17,
+    "text": "The reference electrode is a mercury oxide electrode which allows us to monitor the electrode potentials more accurately during operation.",
+    "start_ts": 217.0,
+    "end_ts": 229.0,
+    "original_text": "The reference electrode is a mercury oxide electrode which allows us to monitor the electrode potentials more accurately during operation."
+  },
+  {
+    "index": 18,
+    "text": "Step 6, we add the anode gasket. The anode gasket is also 0.3 millimeter.",
+    "start_ts": 229.0,
+    "end_ts": 246.0,
+    "original_text": "Step 6, we add the anode gasket. The anode gasket is also 0.3 micrometer."
+  },
+  {
+    "index": 19,
+    "text": "Step 7, we will replace the anode gasket.",
+    "start_ts": 246.0,
+    "end_ts": 275.0,
+    "original_text": "Step 7, we will replace the anode gasket."
+  },
+  {
+    "index": 20,
+    "text": "Step 8, we will replace the anode gasket.",
+    "start_ts": 276.0,
+    "end_ts": 291.0,
+    "original_text": "Step 8, we will replace the anode gasket."
+  },
+  {
+    "index": 21,
+    "text": "Step 9, we will replace the anode gasket.",
+    "start_ts": 291.0,
+    "end_ts": 320.0,
+    "original_text": "Step 9, we will replace the anode gasket."
+  },
+  {
+    "index": 22,
+    "text": "For the anode side, we also place this alkaline membrane. This membrane is also stainless steel S3750.",
+    "start_ts": 321.0,
+    "end_ts": 331.0,
+    "original_text": "For the anode side, we also place this alkaline membrane. This membrane is also stainless steel S3750."
+  },
+  {
+    "index": 23,
+    "text": "Ok, let us change the membrane and gasket position.",
+    "start_ts": 351.0,
+    "end_ts": 357.0,
+    "original_text": "Ok, let us change the membrane and gasket position."
+  }
+]

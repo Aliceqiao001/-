@@ -49,6 +49,22 @@ def get_video_duration_seconds(video_path: Path) -> float:
     return int(h) * 3600 + int(m) * 60 + float(s)
 
 
+def has_audio_stream(video_path: Path) -> bool:
+    """Some source clips (e.g. secondary silent b-roll cameras) carry no
+    audio track at all; ffmpeg's own audio-extraction error message for that
+    case ("Output file does not contain any stream") is easy to confuse with
+    a real encoding failure, so callers should check this first."""
+    proc = subprocess.run(
+        [_FFMPEG_EXE, "-i", str(video_path)],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+    )
+    return "Audio:" in (proc.stdout or "")
+
+
 def extract_audio(
     video_path: Path,
     output_path: Path,

@@ -1,0 +1,20 @@
+[
+  {
+    "index": 0,
+    "text": "This is the reactor after reaction, yeah, this is the cathode part, solid state, and",
+    "start_ts": 0.0,
+    "end_ts": 17.28
+  },
+  {
+    "index": 1,
+    "text": "another part, yeah, this is the cathode part, solid state, and another part, yeah, this is",
+    "start_ts": 17.28,
+    "end_ts": 24.28
+  },
+  {
+    "index": 2,
+    "text": "the cathode part, solid state, and another part, yeah, this is the cathode part, solid",
+    "start_ts": 47.28,
+    "end_ts": 54.28
+  }
+]

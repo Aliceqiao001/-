@@ -1,0 +1,122 @@
+[
+  {
+    "triple": [
+      "anode electrode",
+      "is",
+      "anode"
+    ],
+    "text_evidence": "This is the anode electrode.",
+    "timestamp": [
+      0.0,
+      7.0
+    ]
+  },
+  {
+    "triple": [
+      "anode",
+      "provided by",
+      "spray-coated Pt-Ru-C catalyst onto H23C3 carbon paper"
+    ],
+    "text_evidence": "The anode is also provided by spray-coated Pt-Ru-C catalyst onto this H23C3 carbon paper",
+    "timestamp": [
+      7.0,
+      15.0
+    ]
+  },
+  {
+    "triple": [
+      "catalyst loading",
+      "is",
+      "2 mg cm2"
+    ],
+    "text_evidence": "The catalyst loading is also 2 mg cm2.",
+    "timestamp": [
+      15.0,
+      21.0
+    ]
+  },
+  {
+    "triple": [
+      "anode flow plate",
+      "is",
+      "Step 9"
+    ],
+    "text_evidence": "Step 9, this is the anode flow plate.",
+    "timestamp": [
+      21.0,
+      28.0
+    ]
+  },
+  {
+    "triple": [
+      "anode flow plate",
+      "has",
+      "flow field"
+    ],
+    "text_evidence": "This also has a flow field.",
+    "timestamp": [
+      28.0,
+      31.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "assembly step",
+      "align all components"
+    ],
+    "text_evidence": "Finally, we will align all components.",
+    "timestamp": [
+      31.0,
+      37.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "assembly step",
+      "tighten using torque"
+    ],
+    "text_evidence": "We assemble and tighten the rector using this torque.",
+    "timestamp": [
+      51.0,
+      64.0
+    ]
+  },
+  {
+    "triple": [
+      "torque",
+      "parameter setting",
+      "0.3 Nm"
+    ],
+    "text_evidence": "Using a torque of 0.3 Nm.",
+    "timestamp": [
+      81.0,
+      109.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "tightened using",
+      "4 bolts in a diagonal sequence"
+    ],
+    "text_evidence": "The rector is tightened using 4 bolts in a diagonal sequence to ensure uniform compression. The rector is tightened using 4 bolts in a diagonal sequence to ensure uniform compression.",
+    "timestamp": [
+      109.0,
+      145.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "purpose of tightening",
+      "ensure uniform compression"
+    ],
+    "text_evidence": "The rector is tightened using 4 bolts in a diagonal sequence to ensure uniform compression. The rector is tightened using 4 bolts in a diagonal sequence to ensure uniform compression.",
+    "timestamp": [
+      109.0,
+      145.0
+    ]
+  }
+]

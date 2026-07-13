@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>设计逻辑文档 × 视频知识图谱 交叉对比报告</title>
+<style>
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e7ebee;
+      --ink-soft: #aab2b9;
+      --ink-faint: #7a828a;
+      --paper: #14181b;
+      --panel: #1b2023;
+      --panel-soft: #20262a;
+      --line: #2c3337;
+      --line-soft: #262c30;
+      --accent: #56c8cd;
+      --accent-ink: #d9f3f4;
+      --accent-soft: #17302f;
+      --confirmed: #5fcf92;
+      --confirmed-soft: #15281d;
+      --partial: #e3ac52;
+      --partial-soft: #332508;
+      --notcovered: #9aa1a8;
+      --notcovered-soft: #23272b;
+      --discrepancy: #e5776a;
+      --discrepancy-soft: #3a1c17;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+  :root {
+    --ink: #1c2226;
+    --ink-soft: #4c545b;
+    --ink-faint: #7c848b;
+    --paper: #eef1f2;
+    --panel: #ffffff;
+    --panel-soft: #f4f7f8;
+    --line: #dbe1e4;
+    --line-soft: #e7ebed;
+    --accent: #0e7c86;
+    --accent-ink: #075b63;
+    --accent-soft: #e2f1f1;
+    --confirmed: #2f8f5b;
+    --confirmed-soft: #e7f4ec;
+    --partial: #9c6a0a;
+    --partial-soft: #faf1de;
+    --notcovered: #6b7280;
+    --notcovered-soft: #eceef0;
+    --discrepancy: #b8402a;
+    --discrepancy-soft: #fbe9e5;
+    --shadow: 0 1px 2px rgba(20,30,35,.06), 0 10px 30px -16px rgba(20,30,35,.25);
+  }
+  :root[data-theme="dark"] {
+    --ink: #e7ebee; --ink-soft: #aab2b9; --ink-faint: #7a828a;
+    --paper: #14181b; --panel: #1b2023; --panel-soft: #20262a;
+    --line: #2c3337; --line-soft: #262c30;
+    --accent: #56c8cd; --accent-ink: #d9f3f4; --accent-soft: #17302f;
+    --confirmed: #5fcf92; --confirmed-soft: #15281d;
+    --partial: #e3ac52; --partial-soft: #332508;
+    --notcovered: #9aa1a8; --notcovered-soft: #23272b;
+    --discrepancy: #e5776a; --discrepancy-soft: #3a1c17;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+  :root[data-theme="light"] {
+    --ink: #1c2226; --ink-soft: #4c545b; --ink-faint: #7c848b;
+    --paper: #eef1f2; --panel: #ffffff; --panel-soft: #f4f7f8;
+    --line: #dbe1e4; --line-soft: #e7ebed;
+    --accent: #0e7c86; --accent-ink: #075b63; --accent-soft: #e2f1f1;
+    --confirmed: #2f8f5b; --confirmed-soft: #e7f4ec;
+    --partial: #9c6a0a; --partial-soft: #faf1de;
+    --notcovered: #6b7280; --notcovered-soft: #eceef0;
+    --discrepancy: #b8402a; --discrepancy-soft: #fbe9e5;
+    --shadow: 0 1px 2px rgba(20,30,35,.06), 0 10px 30px -16px rgba(20,30,35,.25);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background:
+      repeating-linear-gradient(0deg, color-mix(in srgb, var(--ink) 3%, transparent) 0px, transparent 1px 28px),
+      var(--paper);
+    color: var(--ink);
+    font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15.5px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--accent-soft); color: var(--accent-ink); }
+
+  .font-display { font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "Georgia", serif; }
+  .font-mono { font-family: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace; }
+
+  a { color: var(--accent-ink); }
+  code {
+    font-family: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace;
+    font-size: 0.86em;
+    background: var(--panel-soft);
+    border: 1px solid var(--line-soft);
+    border-radius: 4px;
+    padding: 0.05em 0.4em;
+    color: var(--ink-soft);
+    white-space: normal;
+  }
+
+  /* ---------- shell ---------- */
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px 96px;
+  }
+
+  /* ---------- nav ---------- */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    padding: 12px 24px;
+    margin: 0 -24px 0;
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav a {
+    flex: none;
+    font-family: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace;
+    font-size: 12.5px;
+    letter-spacing: .02em;
+    text-decoration: none;
+    color: var(--ink-soft);
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    transition: border-color .15s ease, color .15s ease, background .15s ease;
+  }
+  .nav a:hover { border-color: var(--line); color: var(--ink); background: var(--panel); }
+  .nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* ---------- header ---------- */
+  header.hero { padding: 56px 0 32px; }
+  .eyebrow {
+    font-family: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace;
+    font-size: 12.5px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 22px; height: 1px;
+    background: var(--accent);
+  }
+  h1 {
+    font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "Georgia", serif;
+    font-weight: 700;
+    font-size: clamp(26px, 4vw, 34px);
+    line-height: 1.35;
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+  .hero p.lede {
+    color: var(--ink-soft);
+    font-size: 16px;
+    max-width: 62ch;
+    margin: 0;
+  }
+
+  /* ---------- stat bar ---------- */
+  .statbar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 28px 0 8px;
+  }
+  .stat {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 14px 14px 12px;
+    box-shadow: var(--shadow);
+  }
+  .stat .num {
+    font-family: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace;
+    font-size: 26px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+  .stat .lbl {
+    margin-top: 6px;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+  }
+  .stat.ok .num { color: var(--confirmed); }
+  .stat.partial .num { color: var(--partial); }
+  .stat.none .num { color: var(--notcovered); }
+  .stat.conflict .num { color: var(--discrepancy); }
+  .stat-note { font-size: 12px; color: var(--ink-faint); margin: 6px 2px 0; }
+
+  /* ---------- method / note panel ---------- */
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin: 28px 0;
+    box-shadow: var(--shadow);
+  }
+  .panel h2 { margin-top: 0; }
+  .panel ul { margin: 0; padding-left: 1.2em; }
+  .panel li + li { margin-top: 10px; }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin: 16px 0 0;
+    padding-top: 16px;
+    border-top: 1px dashed var(--line);
+  }
+  .legend .chip { font-size: 12.5px; }
+
+  /* ---------- sections ---------- */
+  section.gen {
+    margin-top: 64px;
+    scroll-margin-top: 64px;
+  }
+  .gen-head {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--ink);
+  }
+  .gen-num {
+    font-family: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace;
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    letter-spacing: .08em;
+  }
+  .gen-badge {
+    font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    font-weight: 700;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .gen-badge .arrow { color: var(--accent); font-family: ui-monospace, monospace; font-weight: 400; }
+  .gen-sub { color: var(--ink-soft); font-size: 13.5px; margin-left: auto; }
+
+  h2.sub {
+    font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+    font-size: 19px;
+    font-weight: 700;
+    margin: 40px 0 6px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  h2.sub .tag {
+    font-family: ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: .06em;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 1px 6px;
+    text-transform: uppercase;
+  }
+  section.gen > p.hint {
+    color: var(--ink-soft);
+    font-size: 13.5px;
+    margin: 0 0 14px;
+    font-style: italic;
+  }
+
+  /* ---------- tables ---------- */
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin: 14px 0 22px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 640px;
+    background: var(--panel);
+  }
+  thead th {
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    background: var(--panel-soft);
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+    font-family: ui-monospace, monospace;
+    font-weight: 500;
+  }
+  tbody td {
+    padding: 13px 14px;
+    border-bottom: 1px solid var(--line-soft);
+    vertical-align: top;
+    font-size: 14px;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover td { background: var(--panel-soft); }
+  td.col-verdict { width: 1%; white-space: nowrap; }
+  td.col-doc { width: 30%; color: var(--ink); }
+  td.col-doc .q { color: var(--ink); }
+  td.col-evidence { color: var(--ink-soft); }
+  td.col-evidence code { display: inline-block; margin: 2px 0; }
+
+  /* ---------- chips ---------- */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12.5px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+  .chip--ok       { background: var(--confirmed-soft); color: var(--confirmed); }
+  .chip--partial  { background: var(--partial-soft);   color: var(--partial); }
+  .chip--none     { background: var(--notcovered-soft);color: var(--notcovered); }
+  .chip--conflict { background: var(--discrepancy-soft);color: var(--discrepancy); }
+
+  /* ---------- notes / callouts ---------- */
+  .note {
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--ink-faint);
+    background: var(--panel);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin: 16px 0 24px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    box-shadow: var(--shadow);
+  }
+  .note strong { color: var(--ink); }
+  .note .note-title {
+    display: block;
+    font-family: ui-monospace, monospace;
+    font-size: 11.5px;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .note--info    { border-left-color: var(--accent); }
+  .note--info .note-title { color: var(--accent-ink); }
+  .note--warning { border-left-color: var(--partial); }
+  .note--warning .note-title { color: var(--partial); }
+  .note--danger  { border-left-color: var(--discrepancy); }
+  .note--danger .note-title { color: var(--discrepancy); }
+  .note--neutral { border-left-color: var(--notcovered); }
+  .note--neutral .note-title { color: var(--notcovered); }
+  .note p { margin: 0 0 10px; }
+  .note p:last-child { margin-bottom: 0; }
+
+  blockquote.callout {
+    margin: 20px 0;
+    padding: 18px 20px;
+    background: var(--discrepancy-soft);
+    border: 1px solid color-mix(in srgb, var(--discrepancy) 35%, var(--line));
+    border-radius: 10px;
+    color: var(--ink);
+    font-size: 14.5px;
+  }
+  blockquote.callout p { margin: 0 0 10px; }
+  blockquote.callout p:last-child { margin-bottom: 0; }
+
+  /* ---------- summary ---------- */
+  section#summary {
+    margin-top: 72px;
+    padding: 32px 28px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+  }
+  section#summary h2.sub:first-child { margin-top: 0; }
+
+  footer.colophon {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 620px) {
+    .statbar { grid-template-columns: repeat(2, 1fr); }
+    .gen-badge { font-size: 22px; }
+    .gen-sub { margin-left: 0; width: 100%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <nav class="nav" aria-label="章节导航">
+    <a href="#note">说明</a>
+    <a href="#r1r2">R1 → R2</a>
+    <a href="#r2r3">R2 → R3</a>
+    <a href="#r3r4">R3 → R4</a>
+    <a href="#r4r5">R4 → R5</a>
+    <a href="#summary">总体总结</a>
+  </nav>
+
+  <header class="hero">
+    <div class="eyebrow">交叉核验报告 · Video KG Pipeline</div>
+    <h1>设计逻辑文档 × 视频知识图谱<br>交叉对比报告</h1>
+    <p class="lede">对照 R1–R5 五代反应器的设计逻辑文档(Claim Ledger / Evidence Chain)与实验视频知识图谱,逐条核验结构描述、失效诊断、设计动作三个维度是否一致。</p>
+
+    <div class="statbar">
+      <div class="stat ok"><div class="num">20</div><div class="lbl">✅ Confirmed 一致</div></div>
+      <div class="stat partial"><div class="num">2</div><div class="lbl">🟡 Partially Confirmed 部分一致</div></div>
+      <div class="stat none"><div class="num">11</div><div class="lbl">⬜ Not Covered 视频未覆盖</div></div>
+      <div class="stat conflict"><div class="num">2</div><div class="lbl">🔴 Discrepancy 有出入</div></div>
+    </div>
+    <p class="stat-note">🔴 的 2 处条目对应同一个技术点(R2 是否已通水),在两份文档中各出现一次,详见「总体总结」第 3 条。</p>
+  </header>
+
+  <section id="note">
+    <div class="panel">
+      <h2 class="font-display" style="margin-top:0;font-size:19px;">说明</h2>
+      <ul>
+        <li><strong>对比材料</strong> — 文档:<code>R1-R2.docx</code>、<code>R2-R3_Claim_Ledger.docx</code> + <code>R2-R3_Evidence_Chain.docx</code>(R2-R3 阶段有两份文件,内容互补,合并作为一份"R2-R3 文档"处理)、<code>R3-R4_Evidence_Chain.docx</code>、<code>R4-R5_Evidence_Chain.docx</code>。四份文档路径均在 <code>1.Reactor_Agent/Claim Ledger/&lt;Rx-Ry&gt;/</code> 下,已逐一读取确认。视频知识:<code>outputs_batch/MASTER_KNOWLEDGE_LOG.md</code> 的逐视频叙述 + 对应实验文件夹的 <code>05_knowledge_graph.json</code> 原始三元组(文档中引用的三元组均标注来源视频文件夹)。</li>
+        <li><strong>四档标注</strong> — <span class="chip chip--ok">✅ Confirmed</span> 一致 / <span class="chip chip--partial">🟡 Partially Confirmed</span> 部分一致 / <span class="chip chip--none">⬜ Not Covered</span> 视频未覆盖 / <span class="chip chip--conflict">🔴 Discrepancy</span> 有出入。</li>
+      </ul>
+      <div class="note note--info" style="margin-top:18px;">
+        <span class="note-title">贯穿全篇的边界条件</span>
+        <p>video_kg_pipeline 只提取视频里 narrator 的口头讲解(装配步骤、测试配置、拆解观察),<strong>不处理 Echem 电化学原始数据(.mpr / CP / PEIS 数值)</strong>。因此凡是文档里依赖"电压 / 阻抗数值下降"这类量化电化学证据的诊断,天然不可能在视频知识图谱里找到对应三元组 —— 这不是流程缺陷,而是两种材料本身覆盖范围不同。下面每一处"失效诊断"维度的 Not Covered,基本都属于这类情况,会在各部分单独说明,并在末尾总结里统一点出。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ R1 -> R2 ============ -->
+  <section class="gen" id="r1r2">
+    <div class="gen-head">
+      <span class="gen-num">一</span>
+      <span class="gen-badge">R1 <span class="arrow">→</span> R2</span>
+      <span class="gen-sub">对照 <code>R1_1Cell_070</code>、<code>R1_2Test_071</code>、<code>R2_1Cell_072/075/076</code>、<code>R2_2Test_005</code></span>
+    </div>
+
+    <h2 class="sub"><span class="tag">1</span>结构描述比对<span style="font-weight:400;color:var(--ink-faint);font-size:13px;">— R1 结构,对照 <code>R1_1Cell_070</code></span></h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>文档描述</th><th>视频知识图谱</th><th>结论</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="col-doc">"CuO/H23C3 cathode"</td>
+            <td class="col-evidence"><code>['cathode electrode', 'prepared by', 'spray coating copper oxide catalysis onto H23C3 carbon paper']</code>(conf 0.9)</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">"Sustainion X37-60 AEM"</td>
+            <td class="col-evidence"><code>['alkaline ion exchange membrane', 'material spec', 'Sustainion X37-60 bioform dioxide materials']</code>(conf 0.9)</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">"10 mm strong-acid cation-exchange resin beads"</td>
+            <td class="col-evidence"><code>['middle chamber','thickness','10 millimeter']</code> + <code>['solid electrolyte','material spec','strong acid cation exchange resin beads']</code>,粒径 600–800 μm(均 conf 0.9)</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">"Nafion 117 CEM"</td>
+            <td class="col-evidence"><code>['anode side membrane', 'material', 'Nafion 117']</code>,同段确认为 "cation exchange membrane (CAM)"(conf 0.9)</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">"PtRu/C-H23C3 anode"</td>
+            <td class="col-evidence"><code>['anode electrode', 'preparation method', 'spray coating Pt-Ru-C catalysis onto H23C3 carbon paper']</code>(conf 0.9)</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>小结</strong>:文档给出的 R1 结构五要素(阴极催化剂 / 膜 / 中间层 / CEM / 阳极催化剂)在 <code>R1_1Cell_070</code> 里逐条都能找到对应三元组,数值和型号完全吻合,是全篇里匹配度最高的结构比对之一。</p>
+
+    <h2 class="sub"><span class="tag">2</span>失效诊断比对<span style="font-weight:400;color:var(--ink-faint);font-size:13px;">— R1 失效诊断</span></h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>文档诊断(confidence)</th><th>视频 / 知识图谱依据</th><th>结论</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="col-doc">诊断 1:"中间固态树脂层欧姆阻抗过大"(high)</td>
+            <td class="col-evidence"><code>R1_1Cell_070</code> / <code>R1_2Test_071</code> 均只描述装配步骤和进气配置,无任何电压 / 阻抗相关表述</td>
+            <td class="col-verdict"><span class="chip chip--none">⬜ Not Covered</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">诊断 2:"树脂层水合不足,未形成连续离子通道"(high)</td>
+            <td class="col-evidence">同上,R1 视频没有 narrator 对水合状态的评价</td>
+            <td class="col-verdict"><span class="chip chip--none">⬜ Not Covered</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">诊断 3:"树脂颗粒床接触不连续"(medium-high)</td>
+            <td class="col-evidence">同上</td>
+            <td class="col-verdict"><span class="chip chip--none">⬜ Not Covered</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note note--neutral">
+      <span class="note-title">间接支持</span>
+      <p>三条诊断本身在 R1 视频里没有直接证据,但 R2 测试视频(<code>R2_2Test_005</code>)明确说 "The purpose of pervading is to improve the ionic conductivity of the solid electrolyte and reduce the initial resistance of the middle layer"(conf 0.9)—— 这句话从侧面印证了文档诊断的核心假设(R1 中间层导电性 / 阻抗确实是被认定的问题),但属于"下一代设计目的的转述",不是"针对 R1 的直接诊断陈述",因此仍按 Not Covered 记录,不升级为 Partially Confirmed。</p>
+    </div>
+
+    <h2 class="sub"><span class="tag">3</span>设计动作 / 假设比对<span style="font-weight:400;color:var(--ink-faint);font-size:13px;">— R2 设计动作,对照 <code>R2_1Cell_072/075/076</code>、<code>R2_2Test_005</code></span></h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>文档设计动作</th><th>视频知识图谱</th><th>结论</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="col-doc">"R2 = pre-wetted hydrated resin solid electrolyte,最小干预:只改变水合状态"</td>
+            <td class="col-evidence"><code>R2_2Test_005</code>:<code>['middle chamber','contains','solid electrolyte']</code> + <code>['solid electrolyte','is being pervaded','before assembly']</code>(conf 0.3,VLM 无法从静态帧确认"组装前"这个时间点,非真实矛盾)</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">假设:"预润湿是否能降低固态树脂层阻抗"</td>
+            <td class="col-evidence"><code>R2_2Test_005</code>:<code>['pervading','purpose','improve ionic conductivity of solid electrolyte']</code> + <code>['pervading','purpose','reduce initial resistance of middle layer']</code>(均 conf 0.75 / 0.9)</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">文档结构表隐含"R2 尚无持续水流,是纯粹的一次性预润湿"</td>
+            <td class="col-evidence"><code>R2_1Cell_075</code>:<code>['middle chamber','contains','air-water inlet']</code> + <code>['middle chamber','contains','air-water outlet']</code>,narrator 原话 "we will use the air-water to increase the ionic conductivity"(conf 0.9)</td>
+            <td class="col-verdict"><span class="chip chip--conflict">🔴 Discrepancy</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <blockquote class="callout">
+      <p><strong>🔴 需要重点核实的一处出入</strong></p>
+      <p>R1-R2 文档把 R2 定义为纯粹的"静态预润湿"(pre-wetted,一次性动作),但 <code>R2_1Cell_075</code> 组装视频明确讲到中间腔室已经装有 "air-water inlet" 和 "air-water outlet" 两个接口,且 narrator 的表述("we will use the air-water to increase the ionic conductivity of the solid electrolytes")并未限定为一次性动作,读起来更像是主动引入水路而非单纯浸泡。<code>MASTER_KNOWLEDGE_LOG.md</code> 的 #4 条也独立观察到这一点,并把它记录为"R2 相对 R1 在设计上新增了'树脂腔室 + 去离子水流'这一步优化"。而 R2 测试视频(<code>R2_2Test_005</code>)里明确说的又是 "pervaded before assembly"(强调组装前的一次性动作),两段视频对"R2 到底是一次性预润湿还是已经具备水流能力"存在一定张力。</p>
+      <p><strong>建议人工核实</strong>:R2 硬件上的 inlet / outlet 是否在 R2 阶段就已经通水(哪怕只是低速 / 间歇),还是确实只作为硬件预留、直到 R3 才第一次真正启用连续流动 —— 这会影响"R2→R3"这一步改动到底是"从无到有"还是"从静态到持续"。</p>
+    </blockquote>
+  </section>
+
+  <!-- ============ R2 -> R3 ============ -->
+  <section class="gen" id="r2r3">
+    <div class="gen-head">
+      <span class="gen-num">二</span>
+      <span class="gen-badge">R2 <span class="arrow">→</span> R3</span>
+      <span class="gen-sub">对照 <code>R2-R3</code> 文档、<code>R3_2Test_006</code></span>
+    </div>
+
+    <h2 class="sub"><span class="tag">1</span>结构描述比对<span style="font-weight:400;color:var(--ink-faint);font-size:13px;">— R2 结构,对照"结构摘要"表</span></h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>文档描述(R2 列)</th><th>视频知识图谱</th><th>结论</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="col-doc">"10 mm pre-wetted strong-acid cation-exchange resin beads"</td>
+            <td class="col-evidence"><code>R2_1Cell_072/075</code>:chamber thickness 10mm / 10 millimeters,resin beads "strong acid cation exchange resin base / beads",粒径 600–800 micrometer(s)</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">"水合模式:Static pre-wetting before assembly"</td>
+            <td class="col-evidence"><code>R2_2Test_005</code>:"solid electrolyte is being pervaded before assembly"</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">"流动条件:No continuous middle-chamber flow"</td>
+            <td class="col-evidence">同上一节的 🔴,<code>R2_1Cell_075</code> 显示已有 air-water inlet / outlet</td>
+            <td class="col-verdict"><span class="chip chip--conflict">🔴 Discrepancy</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color:var(--ink-faint);font-size:13.5px;">（与上节同一处出入,不重复展开）</p>
+
+    <h2 class="sub"><span class="tag">2</span>失效诊断比对<span style="font-weight:400;color:var(--ink-faint);font-size:13px;">— R2 失效诊断</span></h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>文档诊断</th><th>视频依据</th><th>结论</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="col-doc">"R2 的预润湿只能改善初始水合状态,不能保证运行过程中持续保持连续水合离子通路"(C3/C1)</td>
+            <td class="col-evidence"><code>R2_1Cell_072/075/076</code>、<code>R2_2Test_005</code> 均无任何关于 R2 测试后表现、阻抗或失败的评述 —— R2 唯二的测试 / 拆解相关内容只有 <code>R2_2Test_005</code>,且只讲配置和预润湿目的,不含结果评价</td>
+            <td class="col-verdict"><span class="chip chip--none">⬜ Not Covered</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">"R2 高阻可能来自 bead-bead contact 和 membrane-resin contact"(C5)</td>
+            <td class="col-evidence">无对应内容;R2 没有拆解视频(拆解阶段素材缺失)</td>
+            <td class="col-verdict"><span class="chip chip--none">⬜ Not Covered</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note note--neutral">
+      <span class="note-title">间接支持</span>
+      <p>R3 测试视频的核心动作(持续通水)本身即隐含"R2 的一次性预润湿不够"这一判断,但同上,视频没有一句话直接评价"R2 表现不好",故仍记 Not Covered,不做升级。</p>
+    </div>
+
+    <h2 class="sub"><span class="tag">3</span>设计动作 / 假设比对<span style="font-weight:400;color:var(--ink-faint);font-size:13px;">— R3 设计动作,对照 <code>R3_2Test_006</code></span></h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>文档设计动作</th><th>视频知识图谱</th><th>结论</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="col-doc">"R3 = 保持树脂体系不变,中间腔引入连续 DI water flow"</td>
+            <td class="col-evidence"><code>R3_2Test_006</code>:<code>['middle chamber','filled with','solid electrolytes']</code> + <code>['water','flowing to','middle chamber']</code>,"There is about 23 sccm water flowing to the middle chamber"(conf 0.9 / 0.75)</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">"DI water 是 hydration medium,不是高导电电解质"(这是文档给 Agent 的措辞限定,不是对视频内容的预期)</td>
+            <td class="col-evidence">视频中 narrator 只说 "water" / "air water",没有出现 "hydration medium" 或 "conductivity" 这类框架性措辞</td>
+            <td class="col-verdict"><span class="chip chip--none">⬜ Not Covered</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">文档强调"R3 是最小因果干预,不直接跳到 1M KOH"</td>
+            <td class="col-evidence">视频中没有出现对比 / 展望性表述(R3 视频只描述当前配置)</td>
+            <td class="col-verdict"><span class="chip chip--none">⬜ Not Covered</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color:var(--ink-faint);font-size:13.5px;margin-top:-8px;">第二行标记为 Not Covered,是因为该条本身是文档对 Agent 的表述指导,不属于会被 narrator 说出口的内容,而非视频存在缺陷。</p>
+    <div class="note note--warning">
+      <span class="note-title">数值层面的小出入(非文档-视频出入,记录备查)</span>
+      <p><code>R3_2Test_006</code> 中 narrator 说的是 "about 23 sccm water",但对应 Echem 文件名里标注的是 <code>DIwaterFlow10sccm</code>。这是文件名与视频口播之间的数字不一致(<code>MASTER_KNOWLEDGE_LOG.md</code> #7 已记录),与本次"文档 vs 视频"的比对维度无关,但会影响未来如果要把具体流速写入设计文档时的取值来源判断,一并列出供人工复核。</p>
+    </div>
+  </section>
+
+  <!-- ============ R3 -> R4 ============ -->
+  <section class="gen" id="r3r4">
+    <div class="gen-head">
+      <span class="gen-num">三</span>
+      <span class="gen-badge">R3 <span class="arrow">→</span> R4</span>
+      <span class="gen-sub">对照 <code>R3-R4</code> 文档、<code>R4_1Cell_005</code>、<code>R4_2Test_006</code></span>
+    </div>
+
+    <h2 class="sub"><span class="tag">1</span>结构描述比对<span style="font-weight:400;color:var(--ink-faint);font-size:13px;">— R3 结构,对照"R3 vs R4 design snapshot"</span></h2>
+    <p class="hint">R3 没有独立的 1.Cell 视频(<code>R3/1.Cell_same as R2</code> 文件夹为空,沿用 R2 硬件),因此 R3 的结构需要"R2 装配视频(腔室本体)+ R3 测试视频(新增的连续通水)"两段拼起来验证。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>文档描述(R3 列)</th><th>视频知识图谱</th><th>结论</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="col-doc">"10 mm resin bead chamber with continuous DI water flow"</td>
+            <td class="col-evidence">腔室本体 10mm 来自 <code>R2_1Cell_072/075</code>;连续通水来自 <code>R3_2Test_006</code>("23 sccm water flowing to the middle chamber")</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color:var(--ink-faint);font-size:13.5px;margin-top:-8px;">需跨两代视频拼接确认,已在文档层面属合理引用。</p>
+
+    <h2 class="sub"><span class="tag">2</span>失效诊断比对<span style="font-weight:400;color:var(--ink-faint);font-size:13px;">— R3 失效诊断</span></h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>文档诊断</th><th>视频依据</th><th>结论</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="col-doc">"DI water hydration maintains wetting but does not provide a sufficiently conductive and continuous ionic pathway through the thick resin packed bed"(C2)</td>
+            <td class="col-evidence"><code>R3_3AfterTest_001</code> 是 R3 唯一的测试后素材,但因 ASR 复读故障(重复"this is the cathode part, solid state..."),三元组抽取阶段返回 0 条,没有任何可用于诊断比对的内容(见 <code>MASTER_KNOWLEDGE_LOG.md</code> #8)</td>
+            <td class="col-verdict"><span class="chip chip--none">⬜ Not Covered</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">"The resin bed in R3 can remain tortuous and contact-limited even with flow"(C10)</td>
+            <td class="col-evidence">同上,无内容</td>
+            <td class="col-verdict"><span class="chip chip--none">⬜ Not Covered</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note note--neutral">
+      <span class="note-title">特别说明</span>
+      <p>R3→R4 是四份文档里"诊断维度"证据最薄弱的一段 —— 不仅缺少电化学数据(这是全篇通病),连拆解视频本身都因 ASR 故障没能提取出任何文本内容。如果未来要为这一步补强证据链,<code>R3_3AfterTest_001</code> 原始视频画面(而非 ASR 转录)是唯一可能还原信息的来源。</p>
+    </div>
+
+    <h2 class="sub"><span class="tag">3</span>设计动作 / 假设比对<span style="font-weight:400;color:var(--ink-faint);font-size:13px;">— R4 设计动作,对照 <code>R4_1Cell_005</code>、<code>R4_2Test_006</code></span></h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>文档设计动作</th><th>视频知识图谱</th><th>结论</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="col-doc">"Replace the solid-resin/DI-water-flow middle layer with a circulating 1 M KOH liquid electrolyte"</td>
+            <td class="col-evidence"><code>R4_1Cell_005</code>:<code>['solid electrolyte layer','replaced by','circulating 1 molecule H liquid electrolyte']</code>(conf 0.9,"1 molecule H" 经词典已知是"1 molar KOH"的 ASR 误听)</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">"创造连续、高离子强度的离子通路,降低欧姆损耗"(设计目的)</td>
+            <td class="col-evidence"><code>R4_1Cell_005</code>:"The purpose is to improve ionic activity in the middle chamber and reduce [resistance]"(conf 0.9,VLM 截断但方向明确);<code>R4_2Test_006</code>:"evaluate whether the circulating 1 molar KOH electrolyte can improve the electrochemical performance and solubility of this reactor"(conf 0.75)</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">"R4 应被当作 resistance-reduction 诊断性设计,同时监测 flooding/crossover 风险"</td>
+            <td class="col-evidence"><code>R4_2Test_006</code> 只描述了测试配置和评估目的,没有提到风险监测的具体表述;R4 的拆解视频(<code>R4_3AfterTest_001/009</code>)均 0 节点,没有关于水淹 / 串流风险的观察记录</td>
+            <td class="col-verdict"><span class="chip chip--partial">🟡 Partially Confirmed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color:var(--ink-faint);font-size:13.5px;margin-top:-8px;">第三行:设计动作本身确认,但"风险监测"这部分文档要求在视频里找不到对应的执行痕迹。</p>
+    <div class="note note--warning">
+      <span class="note-title">措辞层面的细节差异</span>
+      <p>文档把 R4 明确定位为"取代 R3 的 DI-water-flow 树脂层"(强调 R3 已经尝试过水合强化仍不够),但 <code>R4_1Cell_005</code> 视频 narrator 的原话是 "the middle <strong>solid electrolyte layer</strong> is replaced by..." —— 只笼统提到"固态电解质层",并没有专门点出"R3 已经引入过持续通水但仍不足"这一层递进关系,读起来更像是把 R1-R3 当作同一类"固态方案"整体替换,而不是针对 R3 具体失败点的精准回应。</p>
+      <p>判定为 🟡 Partially Confirmed:核心的材料替换动作和设计目的完全一致,但文档强调的"针对 R3 特定不足"这一叙事细节在视频措辞里没有被显性区分出来。</p>
+    </div>
+  </section>
+
+  <!-- ============ R4 -> R5 ============ -->
+  <section class="gen" id="r4r5">
+    <div class="gen-head">
+      <span class="gen-num">四</span>
+      <span class="gen-badge">R4 <span class="arrow">→</span> R5</span>
+      <span class="gen-sub">对照 <code>R4-R5</code> 文档、<code>R5_1Cell_016</code>、<code>R5_2Test_001/002</code>、<code>R5_RecordingFailed_012</code></span>
+    </div>
+
+    <h2 class="sub"><span class="tag">1</span>结构描述比对<span style="font-weight:400;color:var(--ink-faint);font-size:13px;">— R4 结构,对照"R4 vs R5 design transition"</span></h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>文档描述(R4 列)</th><th>视频知识图谱</th><th>结论</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="col-doc">"Middle chamber:10 mm, 1cm×1cm window"</td>
+            <td class="col-evidence"><code>R4_1Cell_005</code>:<code>['middle chamber','thickness','10 mm']</code> + window "1 by 1 cm"</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">"Middle electrolyte:Circulating 1 M KOH"</td>
+            <td class="col-evidence"><code>R4_1Cell_005</code>:<code>['liquid electrolyte','is','1 molar KOH']</code> + "will be continuously circulated through the middle chamber"</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">"Membrane architecture:AEM Sustainion X37-50 | 1M KOH | AEM Sustainion X37-50"(阴阳极两侧对称同型号)</td>
+            <td class="col-evidence"><code>R4_1Cell_005</code>:Step4 膜"ion exchange membrane is Sustainion X37-50";Step7 阳极侧膜"membrane material Sustainion X37-50, purchased from Dioxide Materials"</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color:var(--ink-faint);font-size:13.5px;margin-top:-8px;">两侧型号一致,与文档对称结构描述吻合。</p>
+
+    <h2 class="sub"><span class="tag">2</span>失效诊断比对<span style="font-weight:400;color:var(--ink-faint);font-size:13px;">— R4 失效诊断</span></h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>文档诊断</th><th>视频依据</th><th>结论</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="col-doc">"R4 虽已是连续液态电解质,但 10mm 液层仍可能带来残余欧姆阻抗"(C1/C2)</td>
+            <td class="col-evidence"><code>R4_2Test_006</code> 只表达测试目的是"评估循环 1M KOH 电解质能否提升性能",属前瞻性表述,不含任何"确实存在残余阻抗"的结果性陈述;R4 拆解视频均 0 节点</td>
+            <td class="col-verdict"><span class="chip chip--none">⬜ Not Covered</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">"R4 may improve voltage but can introduce flooding/crossover risks"</td>
+            <td class="col-evidence">无对应内容</td>
+            <td class="col-verdict"><span class="chip chip--none">⬜ Not Covered</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="sub"><span class="tag">3</span>设计动作 / 假设比对<span style="font-weight:400;color:var(--ink-faint);font-size:13px;">— R5 设计动作</span></h2>
+    <p class="hint">这是全篇四份文档里<strong>匹配度最高、证据最密集</strong>的一段设计动作比对。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>文档设计动作</th><th>视频知识图谱</th><th>结论</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="col-doc">"Reduce middle chamber thickness 10mm → 3mm"</td>
+            <td class="col-evidence"><code>R5_1Cell_016</code>:<code>['middle chamber thickness','is reduced to','3 millimeter']</code>;<code>R5_RecordingFailed_012</code>(R5 正式版之前的失败尝试)同样显示 3mm</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">假设:"缩短传输距离应降低 PEIS 阻抗、改善 CP 电压"</td>
+            <td class="col-evidence"><code>R5_1Cell_016</code>:"The purpose is to shorten the ion transparent distance, reduce the organic[ohmic] resistance from the liquid electro-layer... and to decrease the cell voltage"(conf 0.9);<code>R5_2Test_001</code> 几乎逐字重复同一句表述(conf 0.9)</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">"Add Hg/HgO reference electrode in the middle chamber, for diagnostic separation of partial-cell vs full-cell resistance"</td>
+            <td class="col-evidence"><code>R5_1Cell_016</code>:"we induce this reference electrode into the middle layer. The reference electrode is a mercury oxide electrode"(conf 0.9);<code>R5_2Test_002</code> 更进一步操作化了这个设计目的:参比电极接中间腔室时测得 "R1"(阴极到中间层电阻),接阳极侧时测得 "R3"(全电池电阻)</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">"Same AEM/AEM architecture, keep circulating 1M KOH"(最小干预原则)</td>
+            <td class="col-evidence"><code>R5_1Cell_016</code>:阴极侧膜 "Sustainion X37-50",阳极侧膜 "also Sustainion X37-50";总结句 "this reactor keeps the circulating 1 molar KOH liquid electrolytes in the middle chamber but reduces the chamber thickness to 3 millimeter"</td>
+            <td class="col-verdict"><span class="chip chip--ok">✅ Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="col-doc">"Keep CuO cathode, PtRu/C anode 不变"</td>
+            <td class="col-evidence"><code>R5_1Cell_016</code> 阴极三元组写的是 "spray coating <strong>carbon dioxide</strong> catalysis onto H23C3 carbon paper"</td>
+            <td class="col-verdict"><span class="chip chip--partial">🟡 Partially Confirmed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color:var(--ink-faint);font-size:13.5px;margin-top:-8px;">第 3 行:<code>R5_2Test_002</code> 提供的 R1/R3 定义比文档描述得还要具体。</p>
+    <div class="note note--info">
+      <span class="note-title">关于 "carbon dioxide catalysis" 的说明(非真实矛盾)</span>
+      <p><code>R5_1Cell_016</code> 的三元组把阴极催化剂记录为 "carbon dioxide catalysis",字面意思讲不通(二氧化碳是气体,不可能被喷涂在碳纸上做催化剂涂层),而 R1-R4 全部视频里阴极催化剂一致描述为 "copper oxide(CuO)catalysis"。结合 "copper oxide" 和 "carbon dioxide" 发音相近,这几乎可以确定是本次 ASR 转录的又一个误听变体(类似已记录在 <code>terminology_dict.json</code> 里的其他 CuO/Pt-Ru-C 误听案例),而不是 R5 真的更换了催化剂化学成分。</p>
+      <p>判定为 Partially Confirmed 而非 Discrepancy:文档的"催化剂不变"结论大概率是对的,只是这一处视频转录文本本身需要人工核对原始音频、并考虑补充一条词典规则(<code>carbon dioxide catalysis</code> → <code>copper oxide catalysis</code>)。</p>
+    </div>
+  </section>
+
+  <!-- ============ SUMMARY ============ -->
+  <section id="summary">
+    <div class="eyebrow" style="margin-bottom:8px;">Overall Findings</div>
+    <h2 class="sub" style="margin-top:0;">总体总结</h2>
+
+    <h2 class="sub"><span class="tag">1</span>整体吻合程度</h2>
+    <p>四份设计逻辑文档与视频知识图谱的<strong>结构描述</strong>和<strong>设计动作 / 假设</strong>这两个维度吻合度非常高 —— 绝大多数条目是 <span class="chip chip--ok">✅ Confirmed</span>,且不少地方 narrator 的原话在用词上与文档几乎逐字对应(尤其 R4→R5 一段:"shorten the ion transparent distance, reduce...resistance...decrease the cell voltage" 这句话在两段不同视频里被独立重复,和文档假设的措辞高度一致)。这说明设计文档所记录的工程决策链条,和实际装配 / 测试视频里 narrator 讲述的改动理由,是同一套叙事,没有出现"文档说的是一套、实际做的是另一套"的情况。</p>
+
+    <h2 class="sub"><span class="tag">2</span>跨代反复出现的 Not Covered 类型</h2>
+    <p><strong>"失效诊断"这一个维度,在全部四份文档里都是系统性 <span class="chip chip--none">⬜ Not Covered</span></strong>,原因高度一致,不是某一代视频质量问题:</p>
+    <ul style="padding-left:1.2em;">
+      <li style="margin-bottom:10px;">四份文档的诊断部分本质上都是<strong>基于电化学原理和文献的推理</strong>(欧姆阻抗、水合-电导关系、离子路径长度等),其验证证据链设计上依赖的是 <strong>CP 电压曲线和 PEIS 阻抗谱这类量化电化学数据</strong>—— 这些数据存放在 <code>1.Reactor_Agent/Echem/*.mpr</code> 里,完全不在 video_kg_pipeline 的处理范围内。</li>
+      <li style="margin-bottom:10px;">而且直到 R6 视频里,narrator 才第一次在视频里主动说出完整的失效诊断句子("主要失效模式是阴极水淹");R1-R5 阶段的视频里,narrator 只描述"做了什么"(装配步骤、测试配置、拆解检查项),几乎不评价"为什么上一代表现不好"。</li>
+      <li>因此如果以后想让"诊断维度"也能在视频知识图谱里被直接验证,需要额外把 Echem 电化学数据接入到某个新的处理阶段(目前 stage1-7 都不读取 .mpr 文件),或者在录制装配 / 拆解视频时明确要求 narrator 口头总结上一代的失效结论(像 R6 那样)。</li>
+    </ul>
+
+    <h2 class="sub"><span class="tag">3</span>需要重点核实的 Discrepancy</h2>
+    <p>只有<strong>一处</strong>够得上 <span class="chip chip--conflict">🔴 Discrepancy</span> 标准,集中出现在 R1→R2 和 R2→R3 两份文档里(其实是同一个技术点在两份文档里各出现一次):</p>
+    <blockquote class="callout">
+      <p><strong>文档说 R2 是"纯静态预润湿,无持续水流",但 <code>R2_1Cell_075</code> 装配视频显示中间腔室已经装有 air-water inlet 和 outlet,narrator 明确说要用它"来提升离子电导率"。</strong> <code>MASTER_KNOWLEDGE_LOG.md</code> 独立分析也提到了同一处观察。这不影响"R2→R3 只是把水合方式升级为持续流动"这个大方向的判断,但具体到"R2 阶段这套 inlet/outlet 是否已经在通水、只是流速 / 时长不够,还是完全没启用、留到 R3 才第一次真正用上"—— 这一点文档和视频各执一词,建议直接查看 <code>R2_1Cell_075</code> 原始视频画面(而不只是转录文本)或询问实验记录人,确认 R2 测试阶段中间腔室的实际通水状态。</p>
+    </blockquote>
+    <p>其余标记为 <span class="chip chip--partial">🟡 Partially Confirmed</span> 的条目(R4 设计动作里"R3 已尝试水合仍不足"这一层叙事未被 R4 视频显性区分、R5 阴极催化剂被转录成 "carbon dioxide" 疑似 ASR 误听)都不构成真正的内容矛盾,已在各自小节里注明具体原因,不需要作为 Discrepancy 重点复核。</p>
+  </section>
+
+  <footer class="colophon">
+    <span>设计逻辑文档 × 视频知识图谱交叉对比报告</span>
+    <span>outputs_batch / design_logic_comparison</span>
+  </footer>
+
+</div>
+</body>
+</html>

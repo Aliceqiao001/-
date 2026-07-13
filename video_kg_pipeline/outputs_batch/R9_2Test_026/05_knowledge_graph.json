@@ -1,0 +1,21 @@
+[
+  {
+    "triple": [
+      "cathode",
+      "is",
+      "150 sccm hydrogen with micro droplet system"
+    ],
+    "text_evidence": "For this reactor, the cathode is the 150 sccm hydrogen with micro droplet system.",
+    "image_evidence": {
+      "frame_path": "outputs_batch/R9_2Test_026/frames/frame_0008.00.jpg",
+      "vlm_description": "1.  The image partially supports the claim by showing a component consistent with the \"1"
+    },
+    "timestamp": [
+      0.0,
+      16.0
+    ],
+    "confidence": 0.9,
+    "conflict": false,
+    "conflict_explanation": ""
+  }
+]

@@ -1,0 +1,62 @@
+08:05:56 [INFO] run_pipeline: ============================================================
+08:05:56 [INFO] run_pipeline: STAGE 1: ASR transcription
+08:05:56 [INFO] run_pipeline: ============================================================
+08:05:56 [INFO] stage1_asr: Video duration=17.0s, transcribing 17.0s (FULL RUN)
+08:05:56 [INFO] stage1_asr: Extracting audio chunk [0.0, 17.0)s -> chunk_000000.mp3
+08:05:56 [INFO] stage1_asr: Transcribing chunk chunk_000000.mp3 (134.0 KB)...
+08:05:59 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 200 OK"
+08:05:59 [INFO] stage1_asr: Saved 1 transcript segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R6_2Test_004\01_transcript.json
+08:05:59 [INFO] stage1_asr: --- Sanity check: first 5 segments ---
+08:05:59 [INFO] stage1_asr: [  0.00 -  17.00] For this reactor, the end of the gas is 20 ccm hydrogen, end of the gas is 10 ccm steel.
+08:05:59 [INFO] run_pipeline: ------------------------------------------------------------
+08:05:59 [INFO] run_pipeline: STAGE 1b: Terminology/unit correction
+08:05:59 [INFO] run_pipeline: ------------------------------------------------------------
+08:05:59 [INFO] stage1b_correct_terminology: Applied 0 correction(s) across 1 segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R6_2Test_004\01b_transcript_corrected.json
+08:05:59 [INFO] run_pipeline: ============================================================
+08:05:59 [INFO] run_pipeline: STAGE 2: Triple extraction
+08:05:59 [INFO] run_pipeline: ============================================================
+08:05:59 [INFO] stage2_extract: Reading transcript from 01b_transcript_corrected.json
+08:05:59 [INFO] stage2_extract: Extracting triples from segments 0-0...
+08:06:00 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:06:00 [INFO] stage2_extract: Saved 2 triples -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R6_2Test_004\02_triples.json
+08:06:00 [INFO] stage2_extract: --- Sample triples ---
+08:06:00 [INFO] stage2_extract: ['gas', 'end flow rate', '20 ccm hydrogen'] | [0.00-17.00] For this reactor, the end of the gas is 20 ccm hydrogen, end
+08:06:00 [INFO] stage2_extract: ['gas', 'end flow rate', '10 ccm steel'] | [0.00-17.00] For this reactor, the end of the gas is 20 ccm hydrogen, end
+08:06:00 [INFO] run_pipeline: ============================================================
+08:06:00 [INFO] run_pipeline: STAGE 3: Keyframe localization
+08:06:00 [INFO] run_pipeline: ============================================================
+08:06:00 [INFO] stage3_keyframes: Triple candidates + keyword candidates: 2
+08:06:00 [INFO] stage3_keyframes: Semantic-shift candidates: 0
+08:06:00 [INFO] stage3_keyframes: Merged into 1 keyframe timestamps (merge window=3.0s)
+08:06:00 [INFO] stage3_keyframes: Saved -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R6_2Test_004\03_keyframe_timestamps.json
+08:06:00 [INFO] stage3_keyframes: --- Sample keyframes ---
+08:06:01 [INFO] stage3_keyframes: [  8.50] sources=['triple'] triple=['gas', 'end flow rate', '20 ccm hydrogen']
+08:06:01 [INFO] run_pipeline: ============================================================
+08:06:01 [INFO] run_pipeline: STAGE 4: Visual analysis
+08:06:01 [INFO] run_pipeline: ============================================================
+08:06:01 [INFO] stage4_visual: Extracting frame at t=8.50s -> frame_0008.50.jpg
+08:06:01 [INFO] stage4_visual: Analyzing frame with Gemini...
+08:06:08 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:06:08 [INFO] stage4_visual: Saved 1 visual evidence entries -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R6_2Test_004\04_visual_evidence.json
+08:06:08 [INFO] stage4_visual: --- Sample visual evidence ---
+08:06:08 [INFO] stage4_visual: [  8.50] ['gas', 'end flow rate', '20 ccm hydrogen'] | 1.  Yes, the image strongly supports the claim that the end gas flow rate is
+08:06:08 [INFO] run_pipeline: ============================================================
+08:06:08 [INFO] run_pipeline: STAGE 5: Knowledge graph binding
+08:06:08 [INFO] run_pipeline: ============================================================
+08:06:08 [INFO] stage5_bind: Checking conflict for triple ['gas', 'end flow rate', '20 ccm hydrogen'] (match=exact)...
+08:06:09 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:06:09 [WARNING] stage5_bind: CONFLICT for ['gas', 'end flow rate', '20 ccm hydrogen']: The text evidence mentions '10 ccm steel,' which contradicts the claim of '20 ccm hydrogen.'
+08:06:09 [INFO] stage5_bind: Checking conflict for triple ['gas', 'end flow rate', '10 ccm steel'] (match=within_range)...
+08:06:13 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+08:06:13 [WARNING] stage5_bind: CONFLICT for ['gas', 'end flow rate', '10 ccm steel']: The text claim states the end gas flow rate is 10 ccm steel, but the visual description does not confirm this and appears incomplete.
+08:06:13 [INFO] stage5_bind: Saved 2 knowledge-graph nodes -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R6_2Test_004\05_knowledge_graph.json
+08:06:13 [INFO] stage5_bind: --- Summary: 2 nodes, 2 conflicts flagged ---
+08:06:13 [INFO] stage5_bind: [CONFLICT] ['gas', 'end flow rate', '20 ccm hydrogen'] (confidence=0.30)
+08:06:13 [INFO] stage5_bind: [CONFLICT] ['gas', 'end flow rate', '10 ccm steel'] (confidence=0.30)
+08:06:13 [INFO] run_pipeline: ============================================================
+08:06:13 [INFO] run_pipeline: STAGE 6: Knowledge graph visualization (optional)
+08:06:13 [INFO] run_pipeline: ============================================================
+08:06:13 [INFO] stage6_visualize_kg: Graph built: 3 nodes, 2 edges
+08:06:14 [INFO] stage6_visualize_kg: Saved static PNG -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R6_2Test_004\knowledge_graph.png
+08:06:14 [INFO] stage6_visualize_kg: Saved interactive HTML -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R6_2Test_004\knowledge_graph.html
+08:06:14 [INFO] run_pipeline: Pipeline complete.

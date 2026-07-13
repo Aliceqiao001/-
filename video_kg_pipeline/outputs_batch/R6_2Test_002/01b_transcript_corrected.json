@@ -1,0 +1,79 @@
+[
+  {
+    "index": 0,
+    "text": "This is the operating condition of this reactor during the test.",
+    "start_ts": 0.0,
+    "end_ts": 5.0,
+    "original_text": "This is the operating condition of this reactor during the test."
+  },
+  {
+    "index": 1,
+    "text": "This reactor using a three micrometer middle chamber with a three by three centimeter window and an internal flow channel.",
+    "start_ts": 5.0,
+    "end_ts": 16.0,
+    "original_text": "This reactor using a three micrometer middle chamber with a three by three centimeter window and an internal flow channel."
+  },
+  {
+    "index": 2,
+    "text": "And the middle chamber is filled with circulating 1 molar KOH using 10ccm circulating one molecule each electrolytes.",
+    "start_ts": 16.0,
+    "end_ts": 31.0,
+    "original_text": "And the middle chamber is filled with circulating one molecule each using 10ccm circulating one molecule each electrolytes."
+  },
+  {
+    "index": 3,
+    "text": "After only 10 minutes of operation, we absorb liquid droplets and the cathode alkalis.",
+    "start_ts": 31.0,
+    "end_ts": 44.0,
+    "original_text": "After only 10 minutes of operation, we absorb liquid droplets and the cathode alkalis."
+  },
+  {
+    "index": 4,
+    "text": "This indicates that the liquid electrolyte or water has corroded into the cathode gas site.",
+    "start_ts": 44.0,
+    "end_ts": 52.0,
+    "original_text": "This indicates that the liquid electrolyte or water has corroded into the cathode gas site."
+  },
+  {
+    "index": 5,
+    "text": "This is the direct evidence of cathode flooding.",
+    "start_ts": 52.0,
+    "end_ts": 63.0,
+    "original_text": "This is the direct evidence of cathode flooding."
+  },
+  {
+    "index": 6,
+    "text": "The cathode gas is no longer fully dry and open.",
+    "start_ts": 63.0,
+    "end_ts": 67.0,
+    "original_text": "The cathode gas is no longer fully dry and open."
+  },
+  {
+    "index": 7,
+    "text": "At the front of the cathode outlet is recurring liquid electrolytes.",
+    "start_ts": 67.0,
+    "end_ts": 72.0,
+    "original_text": "At the front of the cathode outlet is recurring liquid electrolytes."
+  },
+  {
+    "index": 8,
+    "text": "Cathode flooding can block CO transport and reduce gas gas access to the carboxylate catalyst layer.",
+    "start_ts": 72.0,
+    "end_ts": 80.0,
+    "original_text": "Cathode flooding can block CO transport and reduce gas gas access to the carboxylate catalyst layer."
+  },
+  {
+    "index": 9,
+    "text": "Although the cell voltage is still relatively stable at this stage, the flooding has already started to suppress the soil eruption by limiting CO delivery to the cathode alkalis.",
+    "start_ts": 80.0,
+    "end_ts": 90.0,
+    "original_text": "Although the cell voltage is still relatively stable at this stage, the flooding has already started to suppress the soil eruption by limiting CO delivery to the cathode alkalis."
+  },
+  {
+    "index": 10,
+    "text": "Therefore, based on this observation, the main failure mode of this reactor is cathode flooding, likely caused by liquid accumulation or pressure imbalance in the enlarged middle chamber.",
+    "start_ts": 90.0,
+    "end_ts": 107.0,
+    "original_text": "Therefore, based on this observation, the main failure mode of this reactor is cathode flooding, likely caused by liquid accumulation or pressure imbalance in the enlarged middle chamber."
+  }
+]

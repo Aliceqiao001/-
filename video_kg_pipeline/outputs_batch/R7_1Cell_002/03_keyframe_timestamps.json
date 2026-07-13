@@ -1,0 +1,668 @@
+[
+  {
+    "timestamp": 14.32,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Compared to the last reactor, the key change in this reactor would be we will remove the || This is a symbol of this reactor. || Compared to the last reactor, the key change in this reactor would be we will remove the",
+    "matched_keywords": [
+      "change",
+      "remove"
+    ]
+  },
+  {
+    "timestamp": 22.48,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Compared to the last reactor, the key change in this reactor would be we will remove the || middle electrolyte chamber. || middle electrolyte chamber. || There is no splitting of one molecule in the middle chamber in this design.",
+    "matched_keywords": [],
+    "similarity": 0.275
+  },
+  {
+    "timestamp": 29.16,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "There is no splitting of one molecule in the middle chamber in this design. || The overall structure is dual gas configuration, step one.",
+    "matched_keywords": [],
+    "similarity": 0.472
+  },
+  {
+    "timestamp": 38.04,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "cathode flow plate",
+      "has",
+      "serpentine flow field"
+    ],
+    "text_evidence": "This is the cathode flow plate. || The overall structure is dual gas configuration, step one. || This is the cathode flow plate.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 43.8,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "cathode flow plate",
+      "has",
+      "serpentine flow field"
+    ],
+    "text_evidence": "It also has a splitting flow field. || This is the cathode flow plate. || It also has a splitting flow field.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 50.32,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode flow plate",
+      "has",
+      "serpentine flow field"
+    ],
+    "text_evidence": "This is the cathode flow plate. It also has a serpentine flow field",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 62.6,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "It also has a splitting flow field. || Also, this is the cathode electrode.",
+    "matched_keywords": [],
+    "similarity": 0.32
+  },
+  {
+    "timestamp": 75.02,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode electrode",
+      "prepared by",
+      "spray coating copper oxide catalysis onto H23C3 carbon paper"
+    ],
+    "text_evidence": "Also, this is the cathode electrode. The cathode is also prepared by spray coating copper oxide catalysis onto H23C3 carbon paper.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 86.44,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The cathode is also prepared by spray coating copper oxide catalysis onto L2-3-6-3 carbon || paper. || paper. || The catalyst loading is also 3 milligram per centimeter square.",
+    "matched_keywords": [],
+    "similarity": 0.139
+  },
+  {
+    "timestamp": 93.1,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "catalyst loading",
+      "is",
+      "3 milligram per centimeter square"
+    ],
+    "text_evidence": "The catalyst loading is also 3 milligram per centimeter square.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 98.76,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The catalyst loading is also 3 milligram per centimeter square. || Step three, we add this cathode gasket.",
+    "matched_keywords": [],
+    "similarity": 0.351
+  },
+  {
+    "timestamp": 103.64,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "cathode gasket",
+      "is",
+      "silicon gasket"
+    ],
+    "text_evidence": "Step three, we add this cathode gasket. || The gasket is the silicon gasket.",
+    "matched_keywords": [],
+    "similarity": 0.513
+  },
+  {
+    "timestamp": 107.56,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The gasket is the silicon gasket. || The thickness is 0.2 micrometer.",
+    "matched_keywords": [],
+    "similarity": 0.251
+  },
+  {
+    "timestamp": 112.38,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode gasket",
+      "thickness",
+      "0.2 micrometer"
+    ],
+    "text_evidence": "The thickness is 0.2 micrometer.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 117.2,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The thickness is 0.2 micrometer. || And the inner window side is 1 by 1 centimeter square.",
+    "matched_keywords": [],
+    "similarity": 0.366
+  },
+  {
+    "timestamp": 124.76,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "inner window side",
+      "is",
+      "1 by 1 centimeter square"
+    ],
+    "text_evidence": "And the inner window side is 1 by 1 centimeter square.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 137.04,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "active area",
+      "size",
+      "1 centimeter by 1 centimeter"
+    ],
+    "text_evidence": "So the active area is also 1 centimeter by 1 centimeter.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 142.2,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "So the active area is also 1 centimeter by 1 centimeter. || Step four.",
+    "matched_keywords": [],
+    "similarity": 0.136
+  },
+  {
+    "timestamp": 171.64,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "alkaline ion change membrane",
+      "placement",
+      "reactor"
+    ],
+    "text_evidence": "We place the alkaline ion change membrane. || Step four. || We place the alkaline ion change membrane.",
+    "matched_keywords": [
+      "change",
+      "place"
+    ]
+  },
+  {
+    "timestamp": 177.28,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "alkaline ion change membrane",
+      "placement",
+      "reactor"
+    ],
+    "text_evidence": "We place the alkaline ion change membrane.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 182.92,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "membrane separator",
+      "quantity",
+      "only one"
+    ],
+    "text_evidence": "We place the alkaline ion change membrane. || This is the only membrane separator in this reactor.",
+    "matched_keywords": [],
+    "similarity": 0.509
+  },
+  {
+    "timestamp": 190.26,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "membrane",
+      "material spec",
+      "Sustainion X37-50"
+    ],
+    "text_evidence": "The membrane is a Sustainion X37-50. || The membrane is a cell X3-750. || In this design, there is no middle electrolyte chamber, no liquid coagulating, and no solid",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 198.32,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "In this design, there is no middle electrolyte chamber, no liquid coagulating, and no solid || resin electrolyte layer. || resin electrolyte layer. || But the membrane is wetting using the one molecule H.",
+    "matched_keywords": [],
+    "similarity": 0.459
+  },
+  {
+    "timestamp": 204.96,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "membrane",
+      "is wetting using",
+      "1 molar KOH"
+    ],
+    "text_evidence": "But the membrane is wetting using the one 1 molar KOH",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 209.84,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "membrane",
+      "is wetting using",
+      "1 molar KOH"
+    ],
+    "text_evidence": "The purpose is to simplify the reactor structure, remove the liquid middle layer, and avoid || But the membrane is wetting using the one molecule H. || The purpose is to simplify the reactor structure, remove the liquid middle layer, and avoid",
+    "matched_keywords": [
+      "remove"
+    ]
+  },
+  {
+    "timestamp": 215.52,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "reactor structure",
+      "is simplified to",
+      "remove the liquid middle layer"
+    ],
+    "text_evidence": "The purpose is to simplify the reactor structure, remove the liquid middle layer, and avoid || liquid-induced flooding or pressure imbalance. || The purpose is to simplify the reactor structure, remove the liquid middle layer, and avoid liquid-induced flooding or pressure imbalance.",
+    "matched_keywords": [],
+    "similarity": 0.238
+  },
+  {
+    "timestamp": 223.48,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "liquid-induced flooding or pressure imbalance. || Step five. || Step five. || We add the anode gasket.",
+    "matched_keywords": [],
+    "similarity": 0.147
+  },
+  {
+    "timestamp": 239.92,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode gasket",
+      "added",
+      "reactor"
+    ],
+    "text_evidence": "We add the anode gasket.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 260.38,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode gasket",
+      "material",
+      "silicon"
+    ],
+    "text_evidence": "The anode gasket is also silicon materials and is also 0.2 millimeter.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 266.6,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The anode gasket is also silicon materials and is also 0.2 micrometer. || This is the anode electrode.",
+    "matched_keywords": [],
+    "similarity": 0.522
+  },
+  {
+    "timestamp": 272.68,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode electrode",
+      "prepared by",
+      "spray coating Pt-Ru-C catalyst onto H23C3 carbon"
+    ],
+    "text_evidence": "The anode is also prepared by spray coating Pt-Ru-C catalyst onto H23C3 carbon",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 275.92,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The anode is also prepared by spray coating PT-Rosinium carbon catalysis onto H2-3-3 carbon || paper. || paper. || The catalyst loading is also 2 milligram per centimeter square.",
+    "matched_keywords": [],
+    "similarity": 0.155
+  },
+  {
+    "timestamp": 279.24,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "catalyst loading",
+      "is",
+      "2 milligram per centimeter square"
+    ],
+    "text_evidence": "The catalyst loading is also 2 milligram per centimeter square.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 282.28,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The catalyst loading is also 2 milligram per centimeter square. || Because the window of the anode gasket is also 1 by 1, so the active area for anode",
+    "matched_keywords": [],
+    "similarity": 0.347
+  },
+  {
+    "timestamp": 286.92,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "window of the anode gasket",
+      "is",
+      "1 by 1 centimeter square"
+    ],
+    "text_evidence": "Because the window of the anode gasket is also 1 by 1, so the active area for anode",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 291.56,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "active area for anode",
+      "is",
+      "1 by 1 centimeter square"
+    ],
+    "text_evidence": "Because the window of the anode gasket is also 1 by 1, so the active area for anode || is also 1 by 1 centimeter square.",
+    "matched_keywords": [],
+    "similarity": 0.487
+  },
+  {
+    "timestamp": 296.68,
+    "sources": [
+      "keyword",
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "active area for anode",
+      "is",
+      "1 by 1 centimeter square"
+    ],
+    "text_evidence": "This is the anode flow plate. || is also 1 by 1 centimeter square. || This is the anode flow plate. || It also has a sprinting flow field.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 301.64,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "has",
+      "serpentine flow field"
+    ],
+    "text_evidence": "It also has a serpentine flow field",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 304.68,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "reactor",
+      "assembled and tightened using",
+      "torque"
+    ],
+    "text_evidence": "Finally, after aligning all components, we assemble and tighten the reactor using a torque || It also has a sprinting flow field. || Finally, after aligning all components, we assemble and tighten the reactor using a torque",
+    "matched_keywords": [
+      "assemble"
+    ]
+  },
+  {
+    "timestamp": 314.4,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "assembled and tightened using",
+      "torque"
+    ],
+    "text_evidence": "Finally, after aligning all components, we assemble and tighten the reactor using a torque",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 324.12,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Finally, after aligning all components, we assemble and tighten the reactor using a torque || of 2 newton per newton by meter.",
+    "matched_keywords": [],
+    "similarity": 0.214
+  },
+  {
+    "timestamp": 332.04,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "of 2 newton per newton by meter. || The reactor is also tightened using four bolts in a diagonal sequence for uniform compression.",
+    "matched_keywords": [],
+    "similarity": 0.224
+  },
+  {
+    "timestamp": 336.16,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "torque",
+      "set to",
+      "2 newton per meter"
+    ],
+    "text_evidence": "of 2 newton per newton by meter. Using a torque of 2. || The reactor is also tightened using four bolts in a diagonal sequence for uniform compression.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 343.48,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The reactor is also tightened using four bolts in a diagonal sequence for uniform compression. || Using a torque of 2.",
+    "matched_keywords": [],
+    "similarity": 0.367
+  },
+  {
+    "timestamp": 375.08,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "torque",
+      "set to",
+      "0.3 newton meter"
+    ],
+    "text_evidence": "Okay, so using a torque of 0.3 newton meter.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 388.44,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Okay, so using a torque of 0.3 newton meter. || In summary, this reactor keeps the same cathode and anode configuration as this industrial",
+    "matched_keywords": [],
+    "similarity": 0.155
+  },
+  {
+    "timestamp": 394.16,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "keeps configuration of",
+      "same cathode and anode as industrial reactor"
+    ],
+    "text_evidence": "In summary, this reactor keeps the same cathode and anode configuration as this industrial",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 399.88,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "reactor",
+      "keeps configuration of",
+      "same cathode and anode as industrial reactor"
+    ],
+    "text_evidence": "reactor, but it removes the middle electrolyte chamber and uses only one AM membrane. || In summary, this reactor keeps the same cathode and anode configuration as this industrial || reactor, but it removes the middle electrolyte chamber and uses only one AM membrane.",
+    "matched_keywords": [
+      "removes"
+    ]
+  },
+  {
+    "timestamp": 403.08,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "removes",
+      "middle electrolyte chamber"
+    ],
+    "text_evidence": "reactor, but it removes the middle electrolyte chamber and uses only one AM membrane.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 406.28,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "dual-dode gas CRAM H1 reactor",
+      "designed to",
+      "reduce flooding risk"
+    ],
+    "text_evidence": "reactor, but it removes the middle electrolyte chamber and uses only one AM membrane. || This carries a compact dual-dode gas CRAM H1 reactor designed to reduce flooding risk",
+    "matched_keywords": [],
+    "similarity": 0.488
+  },
+  {
+    "timestamp": 412.2,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "This carries a compact dual-dode gas CRAM H1 reactor designed to reduce flooding risk || and simplify the ion-transparent pathway.",
+    "matched_keywords": [],
+    "similarity": 0.251
+  },
+  {
+    "timestamp": 417.4,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "and simplify the ion-transparent pathway. || So this side would be CO gas in, so gas 2, and hydrogen gas in, hydrogen gas 2 in here.",
+    "matched_keywords": [],
+    "similarity": 0.247
+  },
+  {
+    "timestamp": 423.84,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "CO gas",
+      "input side",
+      "gas 2"
+    ],
+    "text_evidence": "So this side would be CO gas in, so gas 2, and hydrogen gas in, hydrogen gas 2 in here.",
+    "matched_keywords": []
+  }
+]

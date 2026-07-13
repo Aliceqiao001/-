@@ -1,0 +1,254 @@
+[
+  {
+    "triple": [
+      "four bolts",
+      "loosened in sequence",
+      "diagonal"
+    ],
+    "text_evidence": "Yes. After we loosen the four bolts in a diagonal sequence",
+    "timestamp": [
+      101.9,
+      108.94
+    ]
+  },
+  {
+    "triple": [
+      "composition",
+      "released",
+      "gradually"
+    ],
+    "text_evidence": "to gradually release the composition. After open the reactor, this is the anode",
+    "timestamp": [
+      108.94,
+      119.94
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "opened",
+      "anode revealed"
+    ],
+    "text_evidence": "to gradually release the composition. After open the reactor, this is the anode",
+    "timestamp": [
+      108.94,
+      119.94
+    ]
+  },
+  {
+    "triple": [
+      "anode",
+      "state",
+      "totally flooding"
+    ],
+    "text_evidence": "totally flooding. This is the anode flow plate.",
+    "timestamp": [
+      119.94,
+      128.94
+    ]
+  },
+  {
+    "triple": [
+      "anode flow plate",
+      "identified",
+      "present"
+    ],
+    "text_evidence": "totally flooding. This is the anode flow plate.",
+    "timestamp": [
+      119.94,
+      128.94
+    ]
+  },
+  {
+    "triple": [
+      "anode electrode",
+      "material spec",
+      "Pt-Ru-C-Carbon-Super-Recorded on A2-C3-C3-Carbon paper"
+    ],
+    "text_evidence": "This is the anode electrode. The anode is Pt-Ru-C-Carbon-Super-Recorded on A2-C3-C3-Carbon paper.",
+    "timestamp": [
+      137.94,
+      145.94
+    ]
+  },
+  {
+    "triple": [
+      "anode side",
+      "material spec",
+      "Sustainion X37-50 membrane"
+    ],
+    "text_evidence": "This is the anode side, Sustainion X37-50 membrane.",
+    "timestamp": [
+      153.94,
+      166.94
+    ]
+  },
+  {
+    "triple": [
+      "membrane",
+      "observation",
+      "damage"
+    ],
+    "text_evidence": "There is damage on the membrane.",
+    "timestamp": [
+      166.94,
+      173.94
+    ]
+  },
+  {
+    "triple": [
+      "experiment",
+      "observation",
+      "severe flooding"
+    ],
+    "text_evidence": "We check the cancer layer remains. There is a severe flooding.",
+    "timestamp": [
+      145.94,
+      153.94
+    ]
+  },
+  {
+    "triple": [
+      "experiment",
+      "observation",
+      "liquid accumulation"
+    ],
+    "text_evidence": "There are many liquid accumulation.",
+    "timestamp": [
+      128.94,
+      136.94
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "is",
+      "this"
+    ],
+    "text_evidence": "This is the middle chamber.",
+    "timestamp": [
+      173.94,
+      180.94
+    ]
+  },
+  {
+    "triple": [
+      "cathode side",
+      "is",
+      "Sustainion X37-50 membrane"
+    ],
+    "text_evidence": "This is the cathode side, Sustainion X37-50 membrane.",
+    "timestamp": [
+      183.94,
+      198.94
+    ]
+  },
+  {
+    "triple": [
+      "Sustainion X37-50 membrane",
+      "has",
+      "mechanical damage"
+    ],
+    "text_evidence": "There is a mechanical damage on this membrane.",
+    "timestamp": [
+      198.94,
+      204.94
+    ]
+  },
+  {
+    "triple": [
+      "anode electrode",
+      "is",
+      "this"
+    ],
+    "text_evidence": "This is the anode electrode. The cathode is Cu-3-Coated on A2-C3-C3-Carbon paper.",
+    "timestamp": [
+      205.94,
+      214.94
+    ]
+  },
+  {
+    "triple": [
+      "cathode",
+      "is",
+      "Cu-3-Coated on A2-C3-C3-Carbon paper"
+    ],
+    "text_evidence": "This is the anode electrode. The cathode is Cu-3-Coated on A2-C3-C3-Carbon paper.",
+    "timestamp": [
+      205.94,
+      214.94
+    ]
+  },
+  {
+    "triple": [
+      "cathode side",
+      "is",
+      "flooding"
+    ],
+    "text_evidence": "The cathode side is also flooding.",
+    "timestamp": [
+      214.94,
+      219.94
+    ]
+  },
+  {
+    "triple": [
+      "composition deposits",
+      "appearance",
+      "blue"
+    ],
+    "text_evidence": "There are some blue composition deposits in there.",
+    "timestamp": [
+      219.94,
+      228.94
+    ]
+  },
+  {
+    "triple": [
+      "color",
+      "state change",
+      "changed"
+    ],
+    "text_evidence": "The color is changed.",
+    "timestamp": [
+      229.94,
+      234.94
+    ]
+  },
+  {
+    "triple": [
+      "cathode flow plate",
+      "specification",
+      "without Pt-Ru-C-C3-Carbon paper"
+    ],
+    "text_evidence": "This is the cathode flow plate without Pt-Ru-C-C3-Carbon paper.",
+    "timestamp": [
+      234.94,
+      239.94
+    ]
+  },
+  {
+    "triple": [
+      "liquid accumulation",
+      "observation",
+      "checked"
+    ],
+    "text_evidence": "We check whether there is any liquid accumulation.",
+    "timestamp": [
+      239.94,
+      246.94
+    ]
+  },
+  {
+    "triple": [
+      "deposits",
+      "appearance",
+      "visible on the cathode"
+    ],
+    "text_evidence": "There are visible deposits on the cathode.",
+    "timestamp": [
+      247.94,
+      258.94
+    ]
+  }
+]

@@ -1,0 +1,151 @@
+06:15:25 [INFO] run_pipeline: ============================================================
+06:15:25 [INFO] run_pipeline: STAGE 1: ASR transcription
+06:15:25 [INFO] run_pipeline: ============================================================
+06:15:25 [INFO] stage1_asr: Video duration=145.2s, transcribing 145.2s (FULL RUN)
+06:15:25 [INFO] stage1_asr: Extracting audio chunk [0.0, 145.2)s -> chunk_000000.mp3
+06:15:26 [INFO] stage1_asr: Transcribing chunk chunk_000000.mp3 (1135.0 KB)...
+06:15:31 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 200 OK"
+06:15:31 [INFO] stage1_asr: Saved 10 transcript segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R2_1Cell_076\01_transcript.json
+06:15:31 [INFO] stage1_asr: --- Sanity check: first 5 segments ---
+06:15:31 [INFO] stage1_asr: [  0.00 -   7.00] This is the anode electrode.
+06:15:31 [INFO] stage1_asr: [  7.00 -  15.00] The anode is also provided by spray-coated potassium carbon catalysis onto this 82363 carbon paper.
+06:15:31 [INFO] stage1_asr: [ 15.00 -  21.00] The catalyst loading is also 2 mg cm2.
+06:15:31 [INFO] stage1_asr: [ 21.00 -  28.00] Step 9, this is the anode flow plate.
+06:15:31 [INFO] stage1_asr: [ 28.00 -  31.00] This also has a flow field.
+06:15:31 [INFO] run_pipeline: ------------------------------------------------------------
+06:15:31 [INFO] run_pipeline: STAGE 1b: Terminology/unit correction
+06:15:31 [INFO] run_pipeline: ------------------------------------------------------------
+06:15:31 [INFO] stage1b_correct_terminology: Applied 2 correction(s) across 10 segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R2_1Cell_076\01b_transcript_corrected.json
+06:15:31 [INFO] stage1b_correct_terminology:   seg 1 [terminology/substrate]: '82363 carbon paper.' -> 'H23C3 carbon paper'
+06:15:31 [INFO] stage1b_correct_terminology:   seg 1 [terminology/catalyst]: 'potassium carbon catalysis' -> 'Pt-Ru-C catalyst'
+06:15:31 [INFO] run_pipeline: ============================================================
+06:15:31 [INFO] run_pipeline: STAGE 2: Triple extraction
+06:15:31 [INFO] run_pipeline: ============================================================
+06:15:31 [INFO] stage2_extract: Reading transcript from 01b_transcript_corrected.json
+06:15:31 [INFO] stage2_extract: Extracting triples from segments 0-4...
+06:15:33 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:15:33 [INFO] stage2_extract: Extracting triples from segments 5-9...
+06:15:36 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:15:36 [INFO] stage2_extract: Saved 10 triples -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R2_1Cell_076\02_triples.json
+06:15:36 [INFO] stage2_extract: --- Sample triples ---
+06:15:36 [INFO] stage2_extract: ['anode electrode', 'is', 'anode'] | [0.00-7.00] This is the anode electrode.
+06:15:36 [INFO] stage2_extract: ['anode', 'provided by', 'spray-coated Pt-Ru-C catalyst onto H23C3 carbon paper'] | [7.00-15.00] The anode is also provided by spray-coated Pt-Ru-C catalyst 
+06:15:36 [INFO] stage2_extract: ['catalyst loading', 'is', '2 mg cm2'] | [15.00-21.00] The catalyst loading is also 2 mg cm2.
+06:15:36 [INFO] stage2_extract: ['anode flow plate', 'is', 'Step 9'] | [21.00-28.00] Step 9, this is the anode flow plate.
+06:15:36 [INFO] stage2_extract: ['anode flow plate', 'has', 'flow field'] | [28.00-31.00] This also has a flow field.
+06:15:36 [INFO] stage2_extract: ['reactor', 'assembly step', 'align all components'] | [31.00-37.00] Finally, we will align all components.
+06:15:36 [INFO] stage2_extract: ['reactor', 'assembly step', 'tighten using torque'] | [51.00-64.00] We assemble and tighten the rector using this torque.
+06:15:36 [INFO] stage2_extract: ['torque', 'parameter setting', '0.3 Nm'] | [81.00-109.00] Using a torque of 0.3 Nm.
+06:15:36 [INFO] stage2_extract: ['reactor', 'tightened using', '4 bolts in a diagonal sequence'] | [109.00-145.00] The rector is tightened using 4 bolts in a diagonal sequence
+06:15:36 [INFO] stage2_extract: ['reactor', 'purpose of tightening', 'ensure uniform compression'] | [109.00-145.00] The rector is tightened using 4 bolts in a diagonal sequence
+06:15:36 [INFO] run_pipeline: ============================================================
+06:15:36 [INFO] run_pipeline: STAGE 3: Keyframe localization
+06:15:36 [INFO] run_pipeline: ============================================================
+06:15:36 [INFO] stage3_keyframes: Triple candidates + keyword candidates: 13
+06:16:36 [INFO] openai._base_client: Retrying request to /embeddings in 0.402192 seconds
+06:16:38 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/embeddings "HTTP/1.1 200 OK"
+06:16:38 [INFO] stage3_keyframes: Semantic-shift candidates: 7
+06:16:38 [INFO] stage3_keyframes: Merged into 13 keyframe timestamps (merge window=3.0s)
+06:16:38 [INFO] stage3_keyframes: Saved -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R2_1Cell_076\03_keyframe_timestamps.json
+06:16:38 [INFO] stage3_keyframes: --- Sample keyframes ---
+06:16:38 [INFO] stage3_keyframes: [  3.50] sources=['triple'] triple=['anode electrode', 'is', 'anode']
+06:16:38 [INFO] stage3_keyframes: [ 11.00] sources=['triple'] triple=['anode', 'provided by', 'spray-coated Pt-Ru-C catalyst onto H23C3 carbon paper']
+06:16:38 [INFO] stage3_keyframes: [ 15.00] sources=['semantic_shift', 'triple'] triple=['catalyst loading', 'is', '2 mg cm2']
+06:16:38 [INFO] stage3_keyframes: [ 21.00] sources=['keyword', 'semantic_shift'] triple=['catalyst loading', 'is', '2 mg cm2']
+06:16:38 [INFO] stage3_keyframes: [ 24.50] sources=['triple'] triple=['anode flow plate', 'is', 'Step 9']
+06:16:38 [INFO] stage3_keyframes: [ 28.00] sources=['keyword', 'semantic_shift', 'triple'] triple=['anode flow plate', 'is', 'Step 9']
+06:16:38 [INFO] stage3_keyframes: [ 34.00] sources=['triple'] triple=['reactor', 'assembly step', 'align all components']
+06:16:38 [INFO] stage3_keyframes: [ 51.00] sources=['keyword', 'semantic_shift'] triple=['reactor', 'assembly step', 'tighten using torque']
+06:16:38 [INFO] stage3_keyframes: [ 57.50] sources=['triple'] triple=['reactor', 'assembly step', 'tighten using torque']
+06:16:38 [INFO] stage3_keyframes: [ 81.00] sources=['semantic_shift'] triple=None
+06:16:38 [INFO] run_pipeline: ============================================================
+06:16:38 [INFO] run_pipeline: STAGE 4: Visual analysis
+06:16:38 [INFO] run_pipeline: ============================================================
+06:16:38 [INFO] stage4_visual: Extracting frame at t=3.50s -> frame_0003.50.jpg
+06:16:38 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:16:49 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:16:49 [INFO] stage4_visual: Extracting frame at t=11.00s -> frame_0011.00.jpg
+06:16:49 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:16:55 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:16:55 [INFO] stage4_visual: Extracting frame at t=15.00s -> frame_0015.00.jpg
+06:16:55 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:17:00 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:17:00 [INFO] stage4_visual: Extracting frame at t=21.00s -> frame_0021.00.jpg
+06:17:01 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:17:06 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:17:06 [INFO] stage4_visual: Extracting frame at t=24.50s -> frame_0024.50.jpg
+06:17:06 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:17:16 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:17:16 [INFO] stage4_visual: Extracting frame at t=28.00s -> frame_0028.00.jpg
+06:17:16 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:17:21 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:17:21 [INFO] stage4_visual: Extracting frame at t=34.00s -> frame_0034.00.jpg
+06:17:22 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:17:30 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:17:30 [INFO] stage4_visual: Extracting frame at t=51.00s -> frame_0051.00.jpg
+06:17:30 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:17:36 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:17:36 [INFO] stage4_visual: Extracting frame at t=57.50s -> frame_0057.50.jpg
+06:17:37 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:17:41 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:17:41 [INFO] stage4_visual: Extracting frame at t=81.00s -> frame_0081.00.jpg
+06:17:43 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:17:47 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:17:47 [INFO] stage4_visual: Extracting frame at t=95.00s -> frame_0095.00.jpg
+06:17:49 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:17:53 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:17:53 [INFO] stage4_visual: Extracting frame at t=109.00s -> frame_0109.00.jpg
+06:17:55 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:18:00 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:00 [INFO] stage4_visual: Extracting frame at t=127.00s -> frame_0127.00.jpg
+06:18:02 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:18:06 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:06 [INFO] stage4_visual: Saved 13 visual evidence entries -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R2_1Cell_076\04_visual_evidence.json
+06:18:06 [INFO] stage4_visual: --- Sample visual evidence ---
+06:18:06 [INFO] stage4_visual: [  3.50] ['anode electrode', 'is', 'anode'] | 1.  **Does the image support this specific claim?** The image shows an electroch
+06:18:06 [INFO] stage4_visual: [ 11.00] ['anode', 'provided by', 'spray-coated Pt-Ru-C catalyst onto H23C3 carbon paper'] | 1.  The image partially supports the claim. It shows a thin, dark, flexible shee
+06:18:06 [INFO] stage4_visual: [ 15.00] ['catalyst loading', 'is', '2 mg cm2'] | 1.  The image cannot support or contradict the claim that the catalyst loading i
+06:18:06 [INFO] stage4_visual: [ 21.00] ['catalyst loading', 'is', '2 mg cm2'] | 1.  The image does not support or refute the claim that "The catalyst loading is
+06:18:06 [INFO] stage4_visual: [ 24.50] ['anode flow plate', 'is', 'Step 9'] | 1.  Yes, the image visually supports the claim that the central component is an 
+06:18:06 [INFO] run_pipeline: ============================================================
+06:18:06 [INFO] run_pipeline: STAGE 5: Knowledge graph binding
+06:18:06 [INFO] run_pipeline: ============================================================
+06:18:07 [INFO] stage5_bind: Checking conflict for triple ['anode electrode', 'is', 'anode'] (match=exact)...
+06:18:08 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:08 [INFO] stage5_bind: Checking conflict for triple ['anode', 'provided by', 'spray-coated Pt-Ru-C catalyst onto H23C3 carbon paper'] (match=exact)...
+06:18:09 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:09 [INFO] stage5_bind: Checking conflict for triple ['catalyst loading', 'is', '2 mg cm2'] (match=exact)...
+06:18:11 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:11 [INFO] stage5_bind: Checking conflict for triple ['anode flow plate', 'is', 'Step 9'] (match=exact)...
+06:18:12 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:12 [INFO] stage5_bind: Checking conflict for triple ['anode flow plate', 'has', 'flow field'] (match=within_range)...
+06:18:13 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:13 [INFO] stage5_bind: Checking conflict for triple ['reactor', 'assembly step', 'align all components'] (match=exact)...
+06:18:15 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:15 [INFO] stage5_bind: Checking conflict for triple ['reactor', 'assembly step', 'tighten using torque'] (match=exact)...
+06:18:16 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:16 [INFO] stage5_bind: Checking conflict for triple ['torque', 'parameter setting', '0.3 Nm'] (match=exact)...
+06:18:18 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:18 [INFO] stage5_bind: Checking conflict for triple ['reactor', 'tightened using', '4 bolts in a diagonal sequence'] (match=exact)...
+06:18:19 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:19 [INFO] stage5_bind: Checking conflict for triple ['reactor', 'purpose of tightening', 'ensure uniform compression'] (match=within_range)...
+06:18:21 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:21 [INFO] stage5_bind: Saved 10 knowledge-graph nodes -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R2_1Cell_076\05_knowledge_graph.json
+06:18:21 [INFO] stage5_bind: --- Summary: 10 nodes, 0 conflicts flagged ---
+06:18:21 [INFO] stage5_bind: [ok] ['anode electrode', 'is', 'anode'] (confidence=0.90)
+06:18:22 [INFO] stage5_bind: [ok] ['anode', 'provided by', 'spray-coated Pt-Ru-C catalyst onto H23C3 carbon paper'] (confidence=0.90)
+06:18:22 [INFO] stage5_bind: [ok] ['catalyst loading', 'is', '2 mg cm2'] (confidence=0.90)
+06:18:22 [INFO] stage5_bind: [ok] ['anode flow plate', 'is', 'Step 9'] (confidence=0.90)
+06:18:22 [INFO] stage5_bind: [ok] ['anode flow plate', 'has', 'flow field'] (confidence=0.75)
+06:18:22 [INFO] stage5_bind: [ok] ['reactor', 'assembly step', 'align all components'] (confidence=0.90)
+06:18:22 [INFO] stage5_bind: [ok] ['reactor', 'assembly step', 'tighten using torque'] (confidence=0.90)
+06:18:22 [INFO] stage5_bind: [ok] ['torque', 'parameter setting', '0.3 Nm'] (confidence=0.90)
+06:18:22 [INFO] stage5_bind: [ok] ['reactor', 'tightened using', '4 bolts in a diagonal sequence'] (confidence=0.90)
+06:18:22 [INFO] stage5_bind: [ok] ['reactor', 'purpose of tightening', 'ensure uniform compression'] (confidence=0.75)
+06:18:22 [INFO] run_pipeline: ============================================================
+06:18:22 [INFO] run_pipeline: STAGE 6: Knowledge graph visualization (optional)
+06:18:22 [INFO] run_pipeline: ============================================================
+06:18:22 [INFO] stage6_visualize_kg: Graph built: 15 nodes, 10 edges
+06:18:23 [INFO] stage6_visualize_kg: Saved static PNG -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R2_1Cell_076\knowledge_graph.png
+06:18:23 [INFO] stage6_visualize_kg: Saved interactive HTML -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R2_1Cell_076\knowledge_graph.html
+06:18:23 [INFO] run_pipeline: Pipeline complete.

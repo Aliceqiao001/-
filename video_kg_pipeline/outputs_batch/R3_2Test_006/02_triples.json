@@ -1,0 +1,122 @@
+[
+  {
+    "triple": [
+      "anode feed gas",
+      "is",
+      "hydrogen"
+    ],
+    "text_evidence": "The anode feed gas is hydrogen, which is a flow rate of 20 sccm.",
+    "timestamp": [
+      9.08,
+      16.0
+    ]
+  },
+  {
+    "triple": [
+      "anode feed gas flow rate",
+      "is",
+      "20 sccm"
+    ],
+    "text_evidence": "The anode feed gas is hydrogen, which is a flow rate of 20 sccm.",
+    "timestamp": [
+      9.08,
+      16.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode feed gas",
+      "is",
+      "carbon monoxide"
+    ],
+    "text_evidence": "The cathode flow feed gas is carbon monoxide with a flow rate of 10 sccm.",
+    "timestamp": [
+      16.0,
+      21.4
+    ]
+  },
+  {
+    "triple": [
+      "cathode feed gas flow rate",
+      "is",
+      "10 sccm"
+    ],
+    "text_evidence": "The cathode flow feed gas is carbon monoxide with a flow rate of 10 sccm.",
+    "timestamp": [
+      16.0,
+      21.4
+    ]
+  },
+  {
+    "triple": [
+      "working electrode",
+      "is connected to",
+      "cathode"
+    ],
+    "text_evidence": "In this electrochemical setup, the working electrode is also connected to the cathode.",
+    "timestamp": [
+      21.4,
+      27.4
+    ]
+  },
+  {
+    "triple": [
+      "counter electrodes",
+      "are connected to",
+      "anode side"
+    ],
+    "text_evidence": "And the counter electrodes are connected to the anode side.",
+    "timestamp": [
+      27.4,
+      33.4
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "filled with",
+      "solid electrolytes"
+    ],
+    "text_evidence": "During the test, there is a flowing, the middle chamber is filled with solid electrolytes",
+    "timestamp": [
+      33.4,
+      43.4
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "contains",
+      "water, air water"
+    ],
+    "text_evidence": "and there is a water, air water through the middle chamber.",
+    "timestamp": [
+      43.4,
+      52.4
+    ]
+  },
+  {
+    "triple": [
+      "water",
+      "flowing to",
+      "middle chamber"
+    ],
+    "text_evidence": "There is about 23 sccm water flowing to the middle chamber.",
+    "timestamp": [
+      52.4,
+      59.4
+    ]
+  },
+  {
+    "triple": [
+      "water",
+      "flow rate",
+      "23 sccm"
+    ],
+    "text_evidence": "There is about 23 sccm water flowing to the middle chamber.",
+    "timestamp": [
+      52.4,
+      59.4
+    ]
+  }
+]

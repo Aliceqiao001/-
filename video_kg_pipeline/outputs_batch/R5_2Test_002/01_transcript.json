@@ -1,0 +1,14 @@
+[
+  {
+    "index": 0,
+    "text": "When the reference electrode is connected to the middle electrolyte chamber, the measured impedance mainly reflects the resistance from the cathode to middle chamber, which we defined as R1.",
+    "start_ts": 0.0,
+    "end_ts": 14.0
+  },
+  {
+    "index": 1,
+    "text": "When the reference electrode is connected to the anode side, the measured impedance reflects the resistance of the 4-cell, which we defined as R3.",
+    "start_ts": 14.0,
+    "end_ts": 26.0
+  }
+]

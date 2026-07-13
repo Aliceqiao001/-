@@ -1,0 +1,282 @@
+06:13:20 [INFO] run_pipeline: ============================================================
+06:13:20 [INFO] run_pipeline: STAGE 1: ASR transcription
+06:13:20 [INFO] run_pipeline: ============================================================
+06:13:21 [INFO] stage1_asr: Video duration=373.3s, transcribing 373.3s (FULL RUN)
+06:13:21 [INFO] stage1_asr: Extracting audio chunk [0.0, 373.3)s -> chunk_000000.mp3
+06:13:27 [INFO] stage1_asr: Transcribing chunk chunk_000000.mp3 (2917.5 KB)...
+06:13:40 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 200 OK"
+06:13:40 [INFO] stage1_asr: Saved 34 transcript segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R10_1Cell_001\01_transcript.json
+06:13:40 [INFO] stage1_asr: --- Sanity check: first 5 segments ---
+06:13:40 [INFO] stage1_asr: [  0.00 -  11.00] OK,这个是我们设计的这种支撑SELL的架子,用来组装SELL的
+06:13:40 [INFO] stage1_asr: [ 11.00 -  17.00] OK,这个首先把这个先装羊脊
+06:13:40 [INFO] stage1_asr: [ 17.00 -  24.00] 把四个螺丝带这个绝缘圈的放上
+06:13:40 [INFO] stage1_asr: [ 24.00 -  42.00] 然后这样,这样就可以固定的装SELL
+06:13:40 [INFO] stage1_asr: [ 54.00 -  70.00] 然后这是我的羊脊的垫片,是这种硅胶材质的,很薄的这种,很软的这种,然后装上去
+06:13:40 [INFO] run_pipeline: ------------------------------------------------------------
+06:13:40 [INFO] run_pipeline: STAGE 1b: Terminology/unit correction
+06:13:40 [INFO] run_pipeline: ------------------------------------------------------------
+06:13:40 [INFO] stage1b_correct_terminology: Applied 0 correction(s) across 34 segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R10_1Cell_001\01b_transcript_corrected.json
+06:13:40 [INFO] run_pipeline: ============================================================
+06:13:40 [INFO] run_pipeline: STAGE 2: Triple extraction
+06:13:40 [INFO] run_pipeline: ============================================================
+06:13:40 [INFO] stage2_extract: Reading transcript from 01b_transcript_corrected.json
+06:13:40 [INFO] stage2_extract: Extracting triples from segments 0-4...
+06:13:44 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:13:44 [INFO] stage2_extract: Extracting triples from segments 5-9...
+06:13:46 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:13:46 [INFO] stage2_extract: Extracting triples from segments 10-14...
+06:13:49 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:13:49 [INFO] stage2_extract: Extracting triples from segments 15-19...
+06:13:52 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:13:52 [WARNING] stage2_extract: Skipping malformed triple: {'subject': '音极的垫片', 'relation': '装', 'object': '', 'segment_indices': [15]}
+06:13:52 [INFO] stage2_extract: Extracting triples from segments 20-24...
+06:13:54 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:13:54 [INFO] stage2_extract: Extracting triples from segments 25-29...
+06:13:56 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:13:56 [INFO] stage2_extract: Extracting triples from segments 30-33...
+06:13:58 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:13:58 [INFO] stage2_extract: Saved 24 triples -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R10_1Cell_001\02_triples.json
+06:13:58 [INFO] stage2_extract: --- Sample triples ---
+06:13:58 [INFO] stage2_extract: ['支撑SELL的架子', 'designed for', '组装SELL'] | [0.00-11.00] OK,这个是我们设计的这种支撑SELL的架子,用来组装SELL的
+06:13:58 [INFO] stage2_extract: ['羊脊的垫片', 'material', '硅胶'] | [54.00-70.00] 然后这是我的羊脊的垫片,是这种硅胶材质的,很薄的这种,很软的这种,然后装上去
+06:13:58 [INFO] stage2_extract: ['羊脊的垫片', 'property', '很薄'] | [54.00-70.00] 然后这是我的羊脊的垫片,是这种硅胶材质的,很薄的这种,很软的这种,然后装上去
+06:13:58 [INFO] stage2_extract: ['羊脊的垫片', 'property', '很软'] | [54.00-70.00] 然后这是我的羊脊的垫片,是这种硅胶材质的,很薄的这种,很软的这种,然后装上去
+06:13:58 [INFO] stage2_extract: ['羊脊的垫片', 'operation', '装上去'] | [54.00-70.00] 然后这是我的羊脊的垫片,是这种硅胶材质的,很薄的这种,很软的这种,然后装上去
+06:13:58 [INFO] stage2_extract: ['羊脊的口', 'size', '大一点'] | [70.00-76.00] 羊脊的这个口可以大一点,我这里是放的是二乘二的
+06:13:58 [INFO] stage2_extract: ['电极片', 'size', '2x2'] | [100.00-107.00] 电极片是二乘二,然后这个GASKET垫片的距离应该是2.5X2.5的
+06:13:58 [INFO] stage2_extract: ['GASKET垫片的距离', 'size', '2.5x2.5'] | [100.00-107.00] 电极片是二乘二,然后这个GASKET垫片的距离应该是2.5X2.5的
+06:13:58 [INFO] stage2_extract: ['PTFE膜', 'size', '10mm'] | [107.00-123.00] 这里就取一个10mm的PTFE的膜
+06:13:58 [INFO] stage2_extract: ['膜', 'orientation', '干的这一面朝向下面'] | [139.00-145.00] 单面认识我把它提起来,把干的这一面朝向下面
+06:13:58 [INFO] run_pipeline: ============================================================
+06:13:58 [INFO] run_pipeline: STAGE 3: Keyframe localization
+06:13:58 [INFO] run_pipeline: ============================================================
+06:13:58 [INFO] stage3_keyframes: Triple candidates + keyword candidates: 24
+06:14:00 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/embeddings "HTTP/1.1 200 OK"
+06:14:00 [INFO] stage3_keyframes: Semantic-shift candidates: 29
+06:14:00 [INFO] stage3_keyframes: Merged into 38 keyframe timestamps (merge window=3.0s)
+06:14:01 [INFO] stage3_keyframes: Saved -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R10_1Cell_001\03_keyframe_timestamps.json
+06:14:01 [INFO] stage3_keyframes: --- Sample keyframes ---
+06:14:01 [INFO] stage3_keyframes: [  5.50] sources=['triple'] triple=['支撑SELL的架子', 'designed for', '组装SELL']
+06:14:01 [INFO] stage3_keyframes: [ 11.00] sources=['semantic_shift'] triple=None
+06:14:01 [INFO] stage3_keyframes: [ 17.00] sources=['semantic_shift'] triple=None
+06:14:01 [INFO] stage3_keyframes: [ 24.00] sources=['semantic_shift'] triple=None
+06:14:01 [INFO] stage3_keyframes: [ 54.00] sources=['semantic_shift'] triple=None
+06:14:01 [INFO] stage3_keyframes: [ 62.00] sources=['triple'] triple=['羊脊的垫片', 'material', '硅胶']
+06:14:01 [INFO] stage3_keyframes: [ 70.00] sources=['semantic_shift', 'triple'] triple=['羊脊的口', 'size', '大一点']
+06:14:01 [INFO] stage3_keyframes: [ 76.00] sources=['semantic_shift'] triple=None
+06:14:01 [INFO] stage3_keyframes: [ 83.00] sources=['semantic_shift'] triple=None
+06:14:01 [INFO] stage3_keyframes: [100.00] sources=['semantic_shift'] triple=None
+06:14:01 [INFO] run_pipeline: ============================================================
+06:14:01 [INFO] run_pipeline: STAGE 4: Visual analysis
+06:14:01 [INFO] run_pipeline: ============================================================
+06:14:01 [INFO] stage4_visual: Extracting frame at t=5.50s -> frame_0005.50.jpg
+06:14:01 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:14:09 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:09 [INFO] stage4_visual: Extracting frame at t=11.00s -> frame_0011.00.jpg
+06:14:09 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:14:18 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:18 [INFO] stage4_visual: Extracting frame at t=17.00s -> frame_0017.00.jpg
+06:14:18 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:14:24 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:24 [INFO] stage4_visual: Extracting frame at t=24.00s -> frame_0024.00.jpg
+06:14:25 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:14:33 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:33 [INFO] stage4_visual: Extracting frame at t=54.00s -> frame_0054.00.jpg
+06:14:33 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:14:41 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:41 [INFO] stage4_visual: Extracting frame at t=62.00s -> frame_0062.00.jpg
+06:14:41 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:14:48 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:48 [INFO] stage4_visual: Extracting frame at t=70.00s -> frame_0070.00.jpg
+06:14:48 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:14:55 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:14:55 [INFO] stage4_visual: Extracting frame at t=76.00s -> frame_0076.00.jpg
+06:14:55 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:15:03 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:15:03 [INFO] stage4_visual: Extracting frame at t=83.00s -> frame_0083.00.jpg
+06:15:03 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:15:10 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:15:10 [INFO] stage4_visual: Extracting frame at t=100.00s -> frame_0100.00.jpg
+06:15:10 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:15:17 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:15:17 [INFO] stage4_visual: Extracting frame at t=103.50s -> frame_0103.50.jpg
+06:15:17 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:15:24 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:15:24 [INFO] stage4_visual: Extracting frame at t=107.00s -> frame_0107.00.jpg
+06:15:24 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:15:31 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:15:31 [INFO] stage4_visual: Extracting frame at t=115.00s -> frame_0115.00.jpg
+06:15:31 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:15:38 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:15:38 [INFO] stage4_visual: Extracting frame at t=123.00s -> frame_0123.00.jpg
+06:15:38 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:15:46 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:15:46 [INFO] stage4_visual: Extracting frame at t=142.00s -> frame_0142.00.jpg
+06:15:46 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:15:54 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:15:54 [INFO] stage4_visual: Extracting frame at t=149.50s -> frame_0149.50.jpg
+06:15:54 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:16:01 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:16:01 [INFO] stage4_visual: Extracting frame at t=154.00s -> frame_0154.00.jpg
+06:16:02 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:16:08 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:16:08 [INFO] stage4_visual: Extracting frame at t=164.50s -> frame_0164.50.jpg
+06:16:09 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:16:16 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:16:16 [INFO] stage4_visual: Extracting frame at t=184.00s -> frame_0184.00.jpg
+06:16:16 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:16:24 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:16:24 [INFO] stage4_visual: Extracting frame at t=214.00s -> frame_0214.00.jpg
+06:16:24 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:16:31 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:16:31 [INFO] stage4_visual: Extracting frame at t=244.00s -> frame_0244.00.jpg
+06:16:31 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:16:38 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:16:38 [INFO] stage4_visual: Extracting frame at t=254.00s -> frame_0254.00.jpg
+06:16:38 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:16:44 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:16:44 [INFO] stage4_visual: Extracting frame at t=274.00s -> frame_0274.00.jpg
+06:16:45 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:16:52 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:16:52 [INFO] stage4_visual: Extracting frame at t=279.00s -> frame_0279.00.jpg
+06:16:52 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:17:13 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:17:13 [INFO] stage4_visual: Extracting frame at t=284.00s -> frame_0284.00.jpg
+06:17:13 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:17:21 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:17:21 [INFO] stage4_visual: Extracting frame at t=287.50s -> frame_0287.50.jpg
+06:17:21 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:17:28 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:17:28 [INFO] stage4_visual: Extracting frame at t=291.00s -> frame_0291.00.jpg
+06:17:28 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:17:37 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:17:37 [INFO] stage4_visual: Extracting frame at t=296.00s -> frame_0296.00.jpg
+06:17:37 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:17:44 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:17:44 [INFO] stage4_visual: Extracting frame at t=311.00s -> frame_0311.00.jpg
+06:17:44 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:17:52 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:17:52 [INFO] stage4_visual: Extracting frame at t=317.50s -> frame_0317.50.jpg
+06:17:52 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:18:01 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:01 [INFO] stage4_visual: Extracting frame at t=324.00s -> frame_0324.00.jpg
+06:18:02 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:18:08 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:08 [INFO] stage4_visual: Extracting frame at t=330.00s -> frame_0330.00.jpg
+06:18:09 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:18:15 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:15 [INFO] stage4_visual: Extracting frame at t=336.00s -> frame_0336.00.jpg
+06:18:16 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:18:24 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:24 [INFO] stage4_visual: Extracting frame at t=341.00s -> frame_0341.00.jpg
+06:18:24 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:18:31 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:31 [INFO] stage4_visual: Extracting frame at t=346.00s -> frame_0346.00.jpg
+06:18:31 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:18:39 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:39 [INFO] stage4_visual: Extracting frame at t=352.50s -> frame_0352.50.jpg
+06:18:40 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:18:46 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:46 [INFO] stage4_visual: Extracting frame at t=356.00s -> frame_0356.00.jpg
+06:18:47 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:18:54 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:18:54 [INFO] stage4_visual: Extracting frame at t=362.00s -> frame_0362.00.jpg
+06:18:54 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:19:02 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:02 [INFO] stage4_visual: Saved 38 visual evidence entries -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R10_1Cell_001\04_visual_evidence.json
+06:19:02 [INFO] stage4_visual: --- Sample visual evidence ---
+06:19:02 [INFO] stage4_visual: [  5.50] ['支撑SELL的架子', 'designed for', '组装SELL'] | 1.  Yes, the image supports the claim. The object's rigid, block-like design wit
+06:19:02 [INFO] stage4_visual: [ 11.00] None | 1.  The image directly supports the first part of the claim, as it shows a dark,
+06:19:02 [INFO] stage4_visual: [ 17.00] None | 1.  The image does not support the claim. There are no screws or insulating ring
+06:19:02 [INFO] stage4_visual: [ 24.00] None | 1.  The image partially supports the claim. Three screws are visible on the meta
+06:19:02 [INFO] stage4_visual: [ 54.00] None | 1.  The image **does not support** the specific claim. The narrator states "This
+06:19:02 [INFO] run_pipeline: ============================================================
+06:19:02 [INFO] run_pipeline: STAGE 5: Knowledge graph binding
+06:19:02 [INFO] run_pipeline: ============================================================
+06:19:02 [INFO] stage5_bind: Checking conflict for triple ['支撑SELL的架子', 'designed for', '组装SELL'] (match=exact)...
+06:19:06 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:06 [INFO] stage5_bind: Checking conflict for triple ['羊脊的垫片', 'material', '硅胶'] (match=exact)...
+06:19:07 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:07 [INFO] stage5_bind: Checking conflict for triple ['羊脊的垫片', 'property', '很薄'] (match=within_range)...
+06:19:07 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:07 [INFO] stage5_bind: Checking conflict for triple ['羊脊的垫片', 'property', '很软'] (match=within_range)...
+06:19:10 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:10 [INFO] stage5_bind: Checking conflict for triple ['羊脊的垫片', 'operation', '装上去'] (match=within_range)...
+06:19:10 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:10 [INFO] stage5_bind: Checking conflict for triple ['羊脊的口', 'size', '大一点'] (match=exact)...
+06:19:11 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:11 [INFO] stage5_bind: Checking conflict for triple ['电极片', 'size', '2x2'] (match=exact)...
+06:19:12 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:12 [WARNING] stage5_bind: CONFLICT for ['电极片', 'size', '2x2']: The text claims the presence of an '电极片' (electrode sheet), but the visual description states it is not visible in the image.
+06:19:12 [INFO] stage5_bind: Checking conflict for triple ['GASKET垫片的距离', 'size', '2.5x2.5'] (match=within_range)...
+06:19:13 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:13 [INFO] stage5_bind: Checking conflict for triple ['PTFE膜', 'size', '10mm'] (match=exact)...
+06:19:15 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:15 [WARNING] stage5_bind: CONFLICT for ['PTFE膜', 'size', '10mm']: The text claims a 10mm PTFE membrane is present, but the visual description states no PTFE membrane is visible in the frame.
+06:19:15 [INFO] stage5_bind: Checking conflict for triple ['膜', 'orientation', '干的这一面朝向下面'] (match=exact)...
+06:19:16 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:16 [INFO] stage5_bind: Checking conflict for triple ['膜', 'action', '稍微按一下'] (match=exact)...
+06:19:17 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:17 [INFO] stage5_bind: Checking conflict for triple ['膜中间', 'action', '湿一下'] (match=within_range)...
+06:19:18 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:18 [INFO] stage5_bind: Checking conflict for triple ['音极的电极', '裁成', '0.5X0.5 或者 0.4X0.5'] (match=exact)...
+06:19:19 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:19 [INFO] stage5_bind: Checking conflict for triple ['音极的电极', '裁成', '0.5X0.5'] (match=exact)...
+06:19:20 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:20 [WARNING] stage5_bind: CONFLICT for ['音极的电极', '裁成', '0.5X0.5']: The text claims the electrode is cut to 0.5x0.5 and placed, but no electrode is visible in the image.
+06:19:20 [INFO] stage5_bind: Checking conflict for triple ['音极的电极', '放到', '这上面'] (match=within_range)...
+06:19:22 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:22 [WARNING] stage5_bind: CONFLICT for ['音极的电极', '放到', '这上面']: The electrode is not visible in the image.
+06:19:22 [INFO] stage5_bind: Checking conflict for triple ['孔', 'condition', '刚好放进去'] (match=exact)...
+06:19:23 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:23 [INFO] stage5_bind: Checking conflict for triple ['孔', 'condition', '大一点也没关系'] (match=within_range)...
+06:19:24 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:24 [INFO] stage5_bind: Checking conflict for triple ['材料', 'condition', '裁成1X1或0.5X0.5'] (match=exact)...
+06:19:25 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:25 [INFO] stage5_bind: Checking conflict for triple ['音极夹具', 'operation', '放置'] (match=exact)...
+06:19:26 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:26 [WARNING] stage5_bind: CONFLICT for ['音极夹具', 'operation', '放置']: The text describes the action of placing the cathode fixture, but the image shows it already placed and static.
+06:19:26 [INFO] stage5_bind: Checking conflict for triple ['装的过程', 'operation', '旋紧'] (match=exact)...
+06:19:28 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:28 [WARNING] stage5_bind: CONFLICT for ['装的过程', 'operation', '旋紧']: The visual description does not confirm the action of 'screwing tight' as stated in the text claim.
+06:19:28 [INFO] stage5_bind: Checking conflict for triple ['装的过程', 'condition', '不用旋得很死'] (match=within_range)...
+06:19:29 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:29 [INFO] stage5_bind: Checking conflict for triple ['扭矩扳手', '力调成', '0.3扭'] (match=exact)...
+06:19:30 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:30 [INFO] stage5_bind: Checking conflict for triple ['装', '成功', '对角线拧紧'] (match=exact)...
+06:19:31 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:31 [INFO] stage5_bind: Checking conflict for triple ['正极正负面', '展示', '好好看一下'] (match=exact)...
+06:19:33 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:19:33 [INFO] stage5_bind: Saved 24 knowledge-graph nodes -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R10_1Cell_001\05_knowledge_graph.json
+06:19:33 [INFO] stage5_bind: --- Summary: 24 nodes, 6 conflicts flagged ---
+06:19:33 [INFO] stage5_bind: [ok] ['支撑SELL的架子', 'designed for', '组装SELL'] (confidence=0.90)
+06:19:33 [INFO] stage5_bind: [ok] ['羊脊的垫片', 'material', '硅胶'] (confidence=0.90)
+06:19:33 [INFO] stage5_bind: [ok] ['羊脊的垫片', 'property', '很薄'] (confidence=0.75)
+06:19:33 [INFO] stage5_bind: [ok] ['羊脊的垫片', 'property', '很软'] (confidence=0.75)
+06:19:33 [INFO] stage5_bind: [ok] ['羊脊的垫片', 'operation', '装上去'] (confidence=0.75)
+06:19:33 [INFO] stage5_bind: [ok] ['羊脊的口', 'size', '大一点'] (confidence=0.90)
+06:19:33 [INFO] stage5_bind: [CONFLICT] ['电极片', 'size', '2x2'] (confidence=0.30)
+06:19:33 [INFO] stage5_bind: [ok] ['GASKET垫片的距离', 'size', '2.5x2.5'] (confidence=0.75)
+06:19:33 [INFO] stage5_bind: [CONFLICT] ['PTFE膜', 'size', '10mm'] (confidence=0.30)
+06:19:33 [INFO] stage5_bind: [ok] ['膜', 'orientation', '干的这一面朝向下面'] (confidence=0.90)
+06:19:33 [INFO] stage5_bind: [ok] ['膜', 'action', '稍微按一下'] (confidence=0.90)
+06:19:33 [INFO] stage5_bind: [ok] ['膜中间', 'action', '湿一下'] (confidence=0.75)
+06:19:33 [INFO] stage5_bind: [ok] ['音极的电极', '裁成', '0.5X0.5 或者 0.4X0.5'] (confidence=0.90)
+06:19:33 [INFO] stage5_bind: [CONFLICT] ['音极的电极', '裁成', '0.5X0.5'] (confidence=0.30)
+06:19:33 [INFO] stage5_bind: [CONFLICT] ['音极的电极', '放到', '这上面'] (confidence=0.30)
+06:19:33 [INFO] stage5_bind: [ok] ['孔', 'condition', '刚好放进去'] (confidence=0.90)
+06:19:33 [INFO] stage5_bind: [ok] ['孔', 'condition', '大一点也没关系'] (confidence=0.75)
+06:19:33 [INFO] stage5_bind: [ok] ['材料', 'condition', '裁成1X1或0.5X0.5'] (confidence=0.90)
+06:19:33 [INFO] stage5_bind: [CONFLICT] ['音极夹具', 'operation', '放置'] (confidence=0.30)
+06:19:33 [INFO] stage5_bind: [CONFLICT] ['装的过程', 'operation', '旋紧'] (confidence=0.30)
+06:19:33 [INFO] stage5_bind: [ok] ['装的过程', 'condition', '不用旋得很死'] (confidence=0.75)
+06:19:33 [INFO] stage5_bind: [ok] ['扭矩扳手', '力调成', '0.3扭'] (confidence=0.90)
+06:19:33 [INFO] stage5_bind: [ok] ['装', '成功', '对角线拧紧'] (confidence=0.90)
+06:19:33 [INFO] stage5_bind: [ok] ['正极正负面', '展示', '好好看一下'] (confidence=0.90)
+06:19:33 [INFO] run_pipeline: ============================================================
+06:19:33 [INFO] run_pipeline: STAGE 6: Knowledge graph visualization (optional)
+06:19:33 [INFO] run_pipeline: ============================================================
+06:19:33 [INFO] stage6_visualize_kg: Graph built: 40 nodes, 24 edges
+06:19:35 [INFO] stage6_visualize_kg: Saved static PNG -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R10_1Cell_001\knowledge_graph.png
+06:19:35 [INFO] stage6_visualize_kg: Saved interactive HTML -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R10_1Cell_001\knowledge_graph.html
+06:19:35 [INFO] run_pipeline: Pipeline complete.

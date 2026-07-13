@@ -1,0 +1,212 @@
+[
+  {
+    "index": 0,
+    "text": "Okay, this is the post-test disassembly and inspection of this reactor.",
+    "start_ts": 0.0,
+    "end_ts": 10.0,
+    "original_text": "Okay, this is the post-test disassembly and inspection of this reactor."
+  },
+  {
+    "index": 1,
+    "text": "Okay, after confirming that the system is safe, we will loosen the four bolts gradually in a diagonal sequence and open the reactor.",
+    "start_ts": 11.0,
+    "end_ts": 29.0,
+    "original_text": "Okay, after confirming that the system is safe, we will loosen the four bolts gradually in a diagonal sequence and open the reactor."
+  },
+  {
+    "index": 2,
+    "text": "First, we will inspect the anode flow plates at the back side of the anode carbon paper electrode.",
+    "start_ts": 29.0,
+    "end_ts": 47.0,
+    "original_text": "First, we will inspect the anode flow plates at the back side of the anode carbon paper electrode."
+  },
+  {
+    "index": 3,
+    "text": "This is the anode side.",
+    "start_ts": 47.0,
+    "end_ts": 57.0,
+    "original_text": "This is the anode side."
+  },
+  {
+    "index": 4,
+    "text": "This is the anode side.",
+    "start_ts": 58.0,
+    "end_ts": 60.0,
+    "original_text": "This is the anode side."
+  },
+  {
+    "index": 5,
+    "text": "Flow plate at the back side of the anode carbon paper electrode.",
+    "start_ts": 60.0,
+    "end_ts": 67.0,
+    "original_text": "Flow plate at the back side of the anode carbon paper electrode."
+  },
+  {
+    "index": 6,
+    "text": "Here, the back side refers to the side facing the anode gas flow field.",
+    "start_ts": 67.0,
+    "end_ts": 77.0,
+    "original_text": "Here, the back side refers to the side facing the anode gas flow field."
+  },
+  {
+    "index": 7,
+    "text": "Oh, a large number of visible water droplets are present on the back side of the anode carbon paper.",
+    "start_ts": 77.0,
+    "end_ts": 88.0,
+    "original_text": "Oh, a large number of visible water droplets are present on the back side of the anode carbon paper."
+  },
+  {
+    "index": 8,
+    "text": "This confirms that the micro-droplets generate a successful delivery of water-containing droplets into the anode gas compartment.",
+    "start_ts": 88.0,
+    "end_ts": 97.0,
+    "original_text": "This confirms that the micro-droplets generate a successful delivery of water-containing droplets into the anode gas compartment."
+  },
+  {
+    "index": 9,
+    "text": "Next, we carefully remove the anode carbon paper electrode and inspect the opposite side.",
+    "start_ts": 97.0,
+    "end_ts": 107.0,
+    "original_text": "Next, we carefully remove the anode carbon paper electrode and inspect the opposite side."
+  },
+  {
+    "index": 10,
+    "text": "This is the opposite side.",
+    "start_ts": 107.0,
+    "end_ts": 109.0,
+    "original_text": "This is the opposite side."
+  },
+  {
+    "index": 11,
+    "text": "This is the catalyst coating side facing the PTFE membrane.",
+    "start_ts": 109.0,
+    "end_ts": 113.0,
+    "original_text": "This is the catalyst coating side facing the PTFE membrane."
+  },
+  {
+    "index": 12,
+    "text": "Although many droplets are present on the back side of H23C3 carbon paper the catalyst layer remains relatively dry.",
+    "start_ts": 113.0,
+    "end_ts": 122.0,
+    "original_text": "Although many droplets are present on the back side of the carbon paper, the catalyst layer remains relatively dry."
+  },
+  {
+    "index": 13,
+    "text": "This side is relatively dry.",
+    "start_ts": 123.0,
+    "end_ts": 125.0,
+    "original_text": "This side is relatively dry."
+  },
+  {
+    "index": 14,
+    "text": "There is no clear evidence that the micro-droplets penetrated through H23C3 carbon paper and reached the catalyst membrane interface.",
+    "start_ts": 125.0,
+    "end_ts": 134.0,
+    "original_text": "There is no clear evidence that the micro-droplets penetrated through the carbon paper and reached the catalyst membrane interface."
+  },
+  {
+    "index": 15,
+    "text": "We then inspect the single PTFE membrane.",
+    "start_ts": 135.0,
+    "end_ts": 147.0,
+    "original_text": "We then inspect the single PTFE membrane."
+  },
+  {
+    "index": 16,
+    "text": "The PTFE membrane also appears very dry, especially in the region that was in contact with the anode catalyst layer.",
+    "start_ts": 147.0,
+    "end_ts": 155.0,
+    "original_text": "The PTFE membrane also appears very dry, especially in the region that was in contact with the anode catalyst layer."
+  },
+  {
+    "index": 17,
+    "text": "This is the catalyst.",
+    "start_ts": 156.0,
+    "end_ts": 160.0,
+    "original_text": "This is the catalyst."
+  },
+  {
+    "index": 18,
+    "text": "Still very dry on the anode side, especially in the region that was in contact with the anode catalyst layer.",
+    "start_ts": 160.0,
+    "end_ts": 170.0,
+    "original_text": "Still very dry on the anode side, especially in the region that was in contact with the anode catalyst layer."
+  },
+  {
+    "index": 19,
+    "text": "This observation reveals an important transport limitation in the structure.",
+    "start_ts": 170.0,
+    "end_ts": 178.0,
+    "original_text": "This observation reveals an important transport limitation in the structure."
+  },
+  {
+    "index": 20,
+    "text": "The micro-droplets successfully reached the back side of the anode carbon paper, but they did not effectively pass through the porous carbon paper electrode to reach the catalyst layer at the PTFE interface.",
+    "start_ts": 178.0,
+    "end_ts": 193.0,
+    "original_text": "The micro-droplets successfully reached the back side of the anode carbon paper, but they did not effectively pass through the porous carbon paper electrode to reach the catalyst layer at the PTFE interface."
+  },
+  {
+    "index": 21,
+    "text": "Therefore, maybe the main problem is no longer the generation or delivery of micro-droplets to the anode gas compartment.",
+    "start_ts": 193.0,
+    "end_ts": 201.0,
+    "original_text": "Therefore, maybe the main problem is no longer the generation or delivery of micro-droplets to the anode gas compartment."
+  },
+  {
+    "index": 22,
+    "text": "Instead, the main limitation is the through-play transport of water on the potassium-containing droplets across H23C3 carbon paper electrode.",
+    "start_ts": 201.0,
+    "end_ts": 214.0,
+    "original_text": "Instead, the main limitation is the through-play transport of water on the potassium-containing droplets across the carbon paper electrode."
+  },
+  {
+    "index": 23,
+    "text": "H23C3 carbon paper may act as a barrier because of its hydrophobicity, poor structural compression, or inefficient capillary transport.",
+    "start_ts": 214.0,
+    "end_ts": 227.0,
+    "original_text": "The carbon paper may act as a barrier because of its hydrophobicity, poor structural compression, or inefficient capillary transport."
+  },
+  {
+    "index": 24,
+    "text": "As a result, water accumulates on the gas phase side, while the electrochemical activity with the catalyst-separator interface remains dry.",
+    "start_ts": 227.0,
+    "end_ts": 238.0,
+    "original_text": "As a result, water accumulates on the gas phase side, while the electrochemical activity with the catalyst-separator interface remains dry."
+  },
+  {
+    "index": 25,
+    "text": "This explains why continuously micro-droplets still did not completely solve the draw-out problem.",
+    "start_ts": 238.0,
+    "end_ts": 245.0,
+    "original_text": "This explains why continuously micro-droplets still did not completely solve the draw-out problem."
+  },
+  {
+    "index": 26,
+    "text": "In summary, this reactor successfully introduced the micro-droplets in the anode compartment, but the droplets cannot effectively reach the catalysis layer through H23C3 carbon paper electrode.",
+    "start_ts": 246.0,
+    "end_ts": 262.0,
+    "original_text": "In summary, this reactor successfully introduced the micro-droplets in the anode compartment, but the droplets cannot effectively reach the catalysis layer through the carbon paper electrode."
+  },
+  {
+    "index": 27,
+    "text": "The next reactor design would improve liquid transparency from the gas channel to the catalyst-separator interface, or some other ways to improve the hydrogen transparency and avoid e-flow and flooding.",
+    "start_ts": 262.0,
+    "end_ts": 280.0,
+    "original_text": "The next reactor design would improve liquid transparency from the gas channel to the catalyst-separator interface, or some other ways to improve the hydrogen transparency and avoid e-flow and flooding."
+  },
+  {
+    "index": 28,
+    "text": "This is the PTFE membrane. It has become very dry.",
+    "start_ts": 280.0,
+    "end_ts": 293.0,
+    "original_text": "This is the PTFE membrane. It has become very dry."
+  },
+  {
+    "index": 29,
+    "text": "Anode plates, anode electrode, back side, catalyst side, PTFE membrane, cathode electrode and cathode flow field.",
+    "start_ts": 293.0,
+    "end_ts": 319.0,
+    "original_text": "Anode plates, anode electrode, back side, catalyst side, PTFE membrane, cathode electrode and cathode flow field."
+  }
+]

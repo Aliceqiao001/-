@@ -1,0 +1,112 @@
+06:00:48 [INFO] run_pipeline: ============================================================
+06:00:48 [INFO] run_pipeline: STAGE 1: ASR transcription
+06:00:48 [INFO] run_pipeline: ============================================================
+06:00:48 [INFO] stage1_asr: Video duration=213.6s, transcribing 213.6s (FULL RUN)
+06:00:48 [INFO] stage1_asr: Extracting audio chunk [0.0, 213.6)s -> chunk_000000.mp3
+06:00:51 [INFO] stage1_asr: Transcribing chunk chunk_000000.mp3 (1669.9 KB)...
+06:01:00 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 429 Too Many Requests"
+06:01:00 [INFO] openai._base_client: Retrying request to /audio/transcriptions in 0.484243 seconds
+06:01:07 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 429 Too Many Requests"
+06:01:07 [INFO] openai._base_client: Retrying request to /audio/transcriptions in 0.964753 seconds
+06:01:16 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 429 Too Many Requests"
+06:01:16 [WARNING] llm_client: ASR transcription of chunk_000000.mp3 failed (attempt 1/4): Error code: 429 - {'error': {'message': '当前分组上游负载已饱和，请稍后再试 (request id: 20260711190111105278021UrbyaeKf)', 'type': 'new_api_error', 'param': '', 'code': 'model_price_error'}}. Retrying in 2.0s...
+06:01:29 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 429 Too Many Requests"
+06:01:29 [INFO] openai._base_client: Retrying request to /audio/transcriptions in 0.414421 seconds
+06:01:39 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 429 Too Many Requests"
+06:01:39 [INFO] openai._base_client: Retrying request to /audio/transcriptions in 0.764414 seconds
+06:01:48 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 429 Too Many Requests"
+06:01:48 [WARNING] llm_client: ASR transcription of chunk_000000.mp3 failed (attempt 2/4): Error code: 429 - {'error': {'message': '当前分组上游负载已饱和，请稍后再试 (request id: 20260711190142403384333wIXJTpj9)', 'type': 'new_api_error', 'param': '', 'code': ''}}. Retrying in 4.0s...
+06:02:01 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 429 Too Many Requests"
+06:02:01 [INFO] openai._base_client: Retrying request to /audio/transcriptions in 0.448320 seconds
+06:02:35 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 200 OK"
+06:02:35 [INFO] stage1_asr: Saved 29 transcript segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R9_1Cell_025\01_transcript.json
+06:02:35 [INFO] stage1_asr: --- Sanity check: first 5 segments ---
+06:02:35 [INFO] stage1_asr: [  0.00 -   4.00] I've got a new camera.
+06:02:35 [INFO] stage1_asr: [  4.00 -   8.00] It's a Canon EOS M104.
+06:02:35 [INFO] stage1_asr: [  8.00 -  12.00] I'm going to record a video of a long-distance flight.
+06:02:35 [INFO] stage1_asr: [ 12.00 -  16.00] I'm using a Canon EOS M104.
+06:02:35 [INFO] stage1_asr: [ 16.00 -  20.00] I'm going to record a video of a long-distance flight.
+06:02:35 [INFO] run_pipeline: ------------------------------------------------------------
+06:02:35 [INFO] run_pipeline: STAGE 1b: Terminology/unit correction
+06:02:35 [INFO] run_pipeline: ------------------------------------------------------------
+06:02:35 [INFO] stage1b_correct_terminology: Applied 0 correction(s) across 29 segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R9_1Cell_025\01b_transcript_corrected.json
+06:02:35 [INFO] run_pipeline: ============================================================
+06:02:35 [INFO] run_pipeline: STAGE 2: Triple extraction
+06:02:35 [INFO] run_pipeline: ============================================================
+06:02:35 [INFO] stage2_extract: Reading transcript from 01b_transcript_corrected.json
+06:02:35 [INFO] stage2_extract: Extracting triples from segments 0-4...
+06:02:37 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:02:37 [INFO] stage2_extract: Extracting triples from segments 5-9...
+06:02:38 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:02:38 [INFO] stage2_extract: Extracting triples from segments 10-14...
+06:02:40 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:02:40 [INFO] stage2_extract: Extracting triples from segments 15-19...
+06:02:41 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:02:41 [INFO] stage2_extract: Extracting triples from segments 20-24...
+06:02:42 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:02:42 [INFO] stage2_extract: Extracting triples from segments 25-28...
+06:02:43 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:02:43 [INFO] stage2_extract: Saved 0 triples -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R9_1Cell_025\02_triples.json
+06:02:43 [INFO] stage2_extract: --- Sample triples ---
+06:02:43 [INFO] run_pipeline: ============================================================
+06:02:43 [INFO] run_pipeline: STAGE 3: Keyframe localization
+06:02:43 [INFO] run_pipeline: ============================================================
+06:02:43 [INFO] stage3_keyframes: Triple candidates + keyword candidates: 0
+06:03:44 [INFO] openai._base_client: Retrying request to /embeddings in 0.391136 seconds
+06:03:45 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/embeddings "HTTP/1.1 200 OK"
+06:03:45 [INFO] stage3_keyframes: Semantic-shift candidates: 7
+06:03:45 [INFO] stage3_keyframes: Merged into 7 keyframe timestamps (merge window=3.0s)
+06:03:45 [INFO] stage3_keyframes: Saved -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R9_1Cell_025\03_keyframe_timestamps.json
+06:03:45 [INFO] stage3_keyframes: --- Sample keyframes ---
+06:03:45 [INFO] stage3_keyframes: [  4.00] sources=['semantic_shift'] triple=None
+06:03:45 [INFO] stage3_keyframes: [  8.00] sources=['semantic_shift'] triple=None
+06:03:45 [INFO] stage3_keyframes: [ 12.00] sources=['semantic_shift'] triple=None
+06:03:46 [INFO] stage3_keyframes: [ 16.00] sources=['semantic_shift'] triple=None
+06:03:46 [INFO] stage3_keyframes: [ 20.00] sources=['semantic_shift'] triple=None
+06:03:46 [INFO] stage3_keyframes: [ 32.00] sources=['semantic_shift'] triple=None
+06:03:46 [INFO] stage3_keyframes: [ 41.00] sources=['semantic_shift'] triple=None
+06:03:46 [INFO] run_pipeline: ============================================================
+06:03:46 [INFO] run_pipeline: STAGE 4: Visual analysis
+06:03:46 [INFO] run_pipeline: ============================================================
+06:03:46 [INFO] stage4_visual: Extracting frame at t=4.00s -> frame_0004.00.jpg
+06:03:46 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:03:51 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:03:51 [INFO] stage4_visual: Extracting frame at t=8.00s -> frame_0008.00.jpg
+06:03:51 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:03:55 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:03:55 [INFO] stage4_visual: Extracting frame at t=12.00s -> frame_0012.00.jpg
+06:03:56 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:04:00 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:04:00 [INFO] stage4_visual: Extracting frame at t=16.00s -> frame_0016.00.jpg
+06:04:01 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:04:06 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:04:06 [INFO] stage4_visual: Extracting frame at t=20.00s -> frame_0020.00.jpg
+06:04:06 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:04:10 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:04:10 [INFO] stage4_visual: Extracting frame at t=32.00s -> frame_0032.00.jpg
+06:04:10 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:04:16 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:04:16 [INFO] stage4_visual: Extracting frame at t=41.00s -> frame_0041.00.jpg
+06:04:16 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:04:21 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:04:21 [INFO] stage4_visual: Saved 7 visual evidence entries -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R9_1Cell_025\04_visual_evidence.json
+06:04:21 [INFO] stage4_visual: --- Sample visual evidence ---
+06:04:21 [INFO] stage4_visual: [  4.00] None | 1.  The image does not support the claim. There is no camera visible in the fram
+06:04:21 [INFO] stage4_visual: [  8.00] None | 1.  **Does the image support this specific claim?**
+    The image does not suppo
+06:04:21 [INFO] stage4_visual: [ 12.00] None | 1.  The image does not support either specific claim. There is no visual evidenc
+06:04:21 [INFO] stage4_visual: [ 16.00] None | 1.  **Does the image support this specific claim?**
+    No, the image does not s
+06:04:22 [INFO] stage4_visual: [ 20.00] None | 1.  The image does not support this claim. No camera, specifically a Canon EOS M
+06:04:22 [INFO] run_pipeline: ============================================================
+06:04:22 [INFO] run_pipeline: STAGE 5: Knowledge graph binding
+06:04:22 [INFO] run_pipeline: ============================================================
+06:04:22 [INFO] stage5_bind: Saved 0 knowledge-graph nodes -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R9_1Cell_025\05_knowledge_graph.json
+06:04:22 [INFO] stage5_bind: --- Summary: 0 nodes, 0 conflicts flagged ---
+06:04:22 [INFO] run_pipeline: ============================================================
+06:04:22 [INFO] run_pipeline: STAGE 6: Knowledge graph visualization (optional)
+06:04:22 [INFO] run_pipeline: ============================================================
+06:04:22 [INFO] stage6_visualize_kg: Graph built: 0 nodes, 0 edges
+06:04:22 [INFO] stage6_visualize_kg: Saved static PNG -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R9_1Cell_025\knowledge_graph.png
+06:04:22 [INFO] stage6_visualize_kg: Saved interactive HTML -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R9_1Cell_025\knowledge_graph.html
+06:04:22 [INFO] run_pipeline: Pipeline complete.

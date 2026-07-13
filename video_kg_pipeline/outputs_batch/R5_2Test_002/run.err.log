@@ -1,0 +1,101 @@
+07:05:16 [INFO] run_pipeline: ============================================================
+07:05:16 [INFO] run_pipeline: STAGE 1: ASR transcription
+07:05:16 [INFO] run_pipeline: ============================================================
+07:05:16 [INFO] stage1_asr: Video duration=30.0s, transcribing 30.0s (FULL RUN)
+07:05:16 [INFO] stage1_asr: Extracting audio chunk [0.0, 30.0)s -> chunk_000000.mp3
+07:05:16 [INFO] stage1_asr: Transcribing chunk chunk_000000.mp3 (235.6 KB)...
+07:05:26 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 429 Too Many Requests"
+07:05:26 [INFO] openai._base_client: Retrying request to /audio/transcriptions in 0.410904 seconds
+07:05:28 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 200 OK"
+07:05:28 [INFO] stage1_asr: Saved 2 transcript segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R5_2Test_002\01_transcript.json
+07:05:28 [INFO] stage1_asr: --- Sanity check: first 5 segments ---
+07:05:28 [INFO] stage1_asr: [  0.00 -  14.00] When the reference electrode is connected to the middle electrolyte chamber, the measured impedance mainly reflects the resistance from the cathode to middle chamber, which we defined as R1.
+07:05:28 [INFO] stage1_asr: [ 14.00 -  26.00] When the reference electrode is connected to the anode side, the measured impedance reflects the resistance of the 4-cell, which we defined as R3.
+07:05:28 [INFO] run_pipeline: ------------------------------------------------------------
+07:05:28 [INFO] run_pipeline: STAGE 1b: Terminology/unit correction
+07:05:28 [INFO] run_pipeline: ------------------------------------------------------------
+07:05:28 [INFO] stage1b_correct_terminology: Applied 0 correction(s) across 2 segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R5_2Test_002\01b_transcript_corrected.json
+07:05:28 [INFO] run_pipeline: ============================================================
+07:05:28 [INFO] run_pipeline: STAGE 2: Triple extraction
+07:05:28 [INFO] run_pipeline: ============================================================
+07:05:28 [INFO] stage2_extract: Reading transcript from 01b_transcript_corrected.json
+07:05:28 [INFO] stage2_extract: Extracting triples from segments 0-1...
+07:05:32 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+07:05:32 [INFO] stage2_extract: Saved 6 triples -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R5_2Test_002\02_triples.json
+07:05:32 [INFO] stage2_extract: --- Sample triples ---
+07:05:32 [INFO] stage2_extract: ['reference electrode', 'connected to', 'middle electrolyte chamber'] | [0.00-14.00] When the reference electrode is connected to the middle elec
+07:05:32 [INFO] stage2_extract: ['measured impedance', 'reflects', 'resistance from cathode to middle chamber'] | [0.00-14.00] When the reference electrode is connected to the middle elec
+07:05:32 [INFO] stage2_extract: ['resistance from cathode to middle chamber', 'defined as', 'R1'] | [0.00-14.00] When the reference electrode is connected to the middle elec
+07:05:32 [INFO] stage2_extract: ['reference electrode', 'connected to', 'anode side'] | [14.00-26.00] When the reference electrode is connected to the anode side,
+07:05:32 [INFO] stage2_extract: ['measured impedance', 'reflects', 'resistance of the 4-cell'] | [14.00-26.00] When the reference electrode is connected to the anode side,
+07:05:32 [INFO] stage2_extract: ['resistance of the 4-cell', 'defined as', 'R3'] | [14.00-26.00] When the reference electrode is connected to the anode side,
+07:05:32 [INFO] run_pipeline: ============================================================
+07:05:32 [INFO] run_pipeline: STAGE 3: Keyframe localization
+07:05:32 [INFO] run_pipeline: ============================================================
+07:05:32 [INFO] stage3_keyframes: Triple candidates + keyword candidates: 8
+07:06:32 [INFO] openai._base_client: Retrying request to /embeddings in 0.440373 seconds
+07:07:32 [INFO] openai._base_client: Retrying request to /embeddings in 0.879540 seconds
+07:08:25 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/embeddings "HTTP/1.1 200 OK"
+07:08:25 [INFO] stage3_keyframes: Semantic-shift candidates: 0
+07:08:25 [INFO] stage3_keyframes: Merged into 4 keyframe timestamps (merge window=3.0s)
+07:08:25 [INFO] stage3_keyframes: Saved -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R5_2Test_002\03_keyframe_timestamps.json
+07:08:25 [INFO] stage3_keyframes: --- Sample keyframes ---
+07:08:25 [INFO] stage3_keyframes: [  0.00] sources=['keyword'] triple=['reference electrode', 'connected to', 'middle electrolyte chamber']
+07:08:25 [INFO] stage3_keyframes: [  7.00] sources=['triple'] triple=['reference electrode', 'connected to', 'middle electrolyte chamber']
+07:08:25 [INFO] stage3_keyframes: [ 14.00] sources=['keyword'] triple=['reference electrode', 'connected to', 'middle electrolyte chamber']
+07:08:25 [INFO] stage3_keyframes: [ 20.00] sources=['triple'] triple=['reference electrode', 'connected to', 'anode side']
+07:08:25 [INFO] run_pipeline: ============================================================
+07:08:25 [INFO] run_pipeline: STAGE 4: Visual analysis
+07:08:25 [INFO] run_pipeline: ============================================================
+07:08:25 [INFO] stage4_visual: Extracting frame at t=0.00s -> frame_0000.00.jpg
+07:08:25 [INFO] stage4_visual: Analyzing frame with Gemini...
+07:08:44 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+07:08:44 [INFO] stage4_visual: Extracting frame at t=7.00s -> frame_0007.00.jpg
+07:08:44 [INFO] stage4_visual: Analyzing frame with Gemini...
+07:08:54 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+07:08:54 [INFO] stage4_visual: Extracting frame at t=14.00s -> frame_0014.00.jpg
+07:08:55 [INFO] stage4_visual: Analyzing frame with Gemini...
+07:09:01 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+07:09:01 [INFO] stage4_visual: Extracting frame at t=20.00s -> frame_0020.00.jpg
+07:09:01 [INFO] stage4_visual: Analyzing frame with Gemini...
+07:09:07 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+07:09:07 [INFO] stage4_visual: Saved 4 visual evidence entries -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R5_2Test_002\04_visual_evidence.json
+07:09:07 [INFO] stage4_visual: --- Sample visual evidence ---
+07:09:07 [INFO] stage4_visual: [  0.00] ['reference electrode', 'connected to', 'middle electrolyte chamber'] | 1.  **Does the image support this specific claim?**
+    Yes, the image strongly 
+07:09:07 [INFO] stage4_visual: [  7.00] ['reference electrode', 'connected to', 'middle electrolyte chamber'] | 1.  The image partially supports the claim. The visible reference electrode is
+07:09:07 [INFO] stage4_visual: [ 14.00] ['reference electrode', 'connected to', 'middle electrolyte chamber'] | 1.  **Does the image support this specific claim?**
+    The image shows a refere
+07:09:07 [INFO] stage4_visual: [ 20.00] ['reference electrode', 'connected to', 'anode side'] | 1.  **Does the image support this specific claim?**
+    The image visually
+07:09:07 [INFO] run_pipeline: ============================================================
+07:09:07 [INFO] run_pipeline: STAGE 5: Knowledge graph binding
+07:09:07 [INFO] run_pipeline: ============================================================
+07:09:07 [INFO] stage5_bind: Checking conflict for triple ['reference electrode', 'connected to', 'middle electrolyte chamber'] (match=exact)...
+07:09:30 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+07:09:30 [INFO] stage5_bind: Checking conflict for triple ['measured impedance', 'reflects', 'resistance from cathode to middle chamber'] (match=within_range)...
+07:09:33 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+07:09:33 [INFO] stage5_bind: Checking conflict for triple ['resistance from cathode to middle chamber', 'defined as', 'R1'] (match=within_range)...
+07:09:35 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+07:09:35 [INFO] stage5_bind: Checking conflict for triple ['reference electrode', 'connected to', 'anode side'] (match=exact)...
+07:09:37 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+07:09:37 [WARNING] stage5_bind: CONFLICT for ['reference electrode', 'connected to', 'anode side']: The visual description is incomplete and does not confirm the connection of the reference electrode to the anode side.
+07:09:37 [INFO] stage5_bind: Checking conflict for triple ['measured impedance', 'reflects', 'resistance of the 4-cell'] (match=within_range)...
+07:09:39 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+07:09:39 [INFO] stage5_bind: Checking conflict for triple ['resistance of the 4-cell', 'defined as', 'R3'] (match=within_range)...
+07:09:41 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+07:09:41 [INFO] stage5_bind: Saved 6 knowledge-graph nodes -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R5_2Test_002\05_knowledge_graph.json
+07:09:41 [INFO] stage5_bind: --- Summary: 6 nodes, 1 conflicts flagged ---
+07:09:41 [INFO] stage5_bind: [ok] ['reference electrode', 'connected to', 'middle electrolyte chamber'] (confidence=0.90)
+07:09:41 [INFO] stage5_bind: [ok] ['measured impedance', 'reflects', 'resistance from cathode to middle chamber'] (confidence=0.75)
+07:09:41 [INFO] stage5_bind: [ok] ['resistance from cathode to middle chamber', 'defined as', 'R1'] (confidence=0.75)
+07:09:41 [INFO] stage5_bind: [CONFLICT] ['reference electrode', 'connected to', 'anode side'] (confidence=0.30)
+07:09:41 [INFO] stage5_bind: [ok] ['measured impedance', 'reflects', 'resistance of the 4-cell'] (confidence=0.75)
+07:09:41 [INFO] stage5_bind: [ok] ['resistance of the 4-cell', 'defined as', 'R3'] (confidence=0.75)
+07:09:41 [INFO] run_pipeline: ============================================================
+07:09:41 [INFO] run_pipeline: STAGE 6: Knowledge graph visualization (optional)
+07:09:41 [INFO] run_pipeline: ============================================================
+07:09:41 [INFO] stage6_visualize_kg: Graph built: 8 nodes, 6 edges
+07:09:43 [INFO] stage6_visualize_kg: Saved static PNG -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R5_2Test_002\knowledge_graph.png
+07:09:43 [INFO] stage6_visualize_kg: Saved interactive HTML -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R5_2Test_002\knowledge_graph.html
+07:09:43 [INFO] run_pipeline: Pipeline complete.

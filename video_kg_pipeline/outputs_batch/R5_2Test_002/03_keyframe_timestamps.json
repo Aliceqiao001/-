@@ -1,0 +1,58 @@
+[
+  {
+    "timestamp": 0.0,
+    "sources": [
+      "keyword"
+    ],
+    "triple": [
+      "reference electrode",
+      "connected to",
+      "middle electrolyte chamber"
+    ],
+    "text_evidence": "When the reference electrode is connected to the middle electrolyte chamber, the measured impedance mainly reflects the resistance from the cathode to middle chamber, which we defined as R1.",
+    "matched_keywords": [
+      "connected"
+    ]
+  },
+  {
+    "timestamp": 7.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reference electrode",
+      "connected to",
+      "middle electrolyte chamber"
+    ],
+    "text_evidence": "When the reference electrode is connected to the middle electrolyte chamber, the measured impedance mainly reflects the resistance from the cathode to middle chamber, which we defined as R1.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 14.0,
+    "sources": [
+      "keyword"
+    ],
+    "triple": [
+      "reference electrode",
+      "connected to",
+      "middle electrolyte chamber"
+    ],
+    "text_evidence": "When the reference electrode is connected to the anode side, the measured impedance reflects the resistance of the 4-cell, which we defined as R3.",
+    "matched_keywords": [
+      "connected"
+    ]
+  },
+  {
+    "timestamp": 20.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reference electrode",
+      "connected to",
+      "anode side"
+    ],
+    "text_evidence": "When the reference electrode is connected to the anode side, the measured impedance reflects the resistance of the 4-cell, which we defined as R3.",
+    "matched_keywords": []
+  }
+]

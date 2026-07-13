@@ -1,0 +1,288 @@
+[
+  {
+    "timestamp": 7.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Okay, this is the operating process of this reactor. || This reactor uses dual gas configuration with no middle electrolyte chamber",
+    "matched_keywords": [],
+    "similarity": 0.462
+  },
+  {
+    "timestamp": 11.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "uses",
+      "dual gas configuration"
+    ],
+    "text_evidence": "This reactor uses dual gas configuration with no middle electrolyte chamber",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 15.0,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "has",
+      "one EM membrane between the cathode and the anode"
+    ],
+    "text_evidence": "This reactor uses dual gas configuration with no middle electrolyte chamber || and only one EM membrane between the cathode and the anode.",
+    "matched_keywords": [],
+    "similarity": 0.435
+  },
+  {
+    "timestamp": 21.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "and only one EM membrane between the cathode and the anode. || First, I will describe the gas bed configuration.",
+    "matched_keywords": [],
+    "similarity": 0.201
+  },
+  {
+    "timestamp": 25.0,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "anode gas",
+      "is",
+      "hydrogen"
+    ],
+    "text_evidence": "The anode gas is hydrogen with a flow rate of 20 SACM. || First, I will describe the gas bed configuration. || The anode gas is hydrogen with a flow rate of 20 SACM.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 28.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode gas",
+      "is",
+      "hydrogen"
+    ],
+    "text_evidence": "The anode gas is hydrogen with a flow rate of 20 SACM.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 32.0,
+    "sources": [
+      "keyword"
+    ],
+    "triple": [
+      "anode gas",
+      "is",
+      "hydrogen"
+    ],
+    "text_evidence": "The cathode feed gas is carbon monoxide with a flow rate of 10 SACM.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 36.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode feed gas",
+      "is",
+      "carbon monoxide"
+    ],
+    "text_evidence": "The cathode feed gas is carbon monoxide with a flow rate of 10 SACM.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 41.0,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "cathode feed gas",
+      "is",
+      "carbon monoxide"
+    ],
+    "text_evidence": "In the electrolyte chemical setup, the working electrode is connected to the cathode. || The cathode feed gas is carbon monoxide with a flow rate of 10 SACM. || In the electrolyte chemical setup, the working electrode is connected to the cathode.",
+    "matched_keywords": [
+      "connected"
+    ]
+  },
+  {
+    "timestamp": 51.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "working electrode",
+      "connected to",
+      "cathode"
+    ],
+    "text_evidence": "In the electrolyte chemical setup, the working electrode is connected to the cathode.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 62.0,
+    "sources": [
+      "keyword",
+      "triple"
+    ],
+    "triple": [
+      "working electrode",
+      "connected to",
+      "cathode"
+    ],
+    "text_evidence": "Also, the counter electrode and the reference electrode are connected to the anode side.",
+    "matched_keywords": [
+      "connected"
+    ]
+  },
+  {
+    "timestamp": 67.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Also, the counter electrode and the reference electrode are connected to the anode side. || During the operation, we did not observe any cathode flooding or anode flooding.",
+    "matched_keywords": [],
+    "similarity": 0.383
+  },
+  {
+    "timestamp": 72.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode flooding",
+      "not observed during",
+      "operation"
+    ],
+    "text_evidence": "During the operation, we did not observe any cathode flooding or anode flooding.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 78.0,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "liquid droplets",
+      "not visible at",
+      "cathode gas gap"
+    ],
+    "text_evidence": "During the operation, we did not observe any cathode flooding or anode flooding. || There is no visible liquid droplets at the cathode or anode gas gap.",
+    "matched_keywords": [],
+    "similarity": 0.525
+  },
+  {
+    "timestamp": 84.0,
+    "sources": [
+      "keyword"
+    ],
+    "triple": [
+      "liquid droplets",
+      "not visible at",
+      "cathode gas gap"
+    ],
+    "text_evidence": "It indicates that the cathode and anode gas passivate remains open and a little dry.",
+    "matched_keywords": [
+      "open"
+    ]
+  },
+  {
+    "timestamp": 88.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode and anode gas passivate",
+      "state",
+      "remains open and a little dry"
+    ],
+    "text_evidence": "It indicates that the cathode and anode gas passivate remains open and a little dry.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 93.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "It indicates that the cathode and anode gas passivate remains open and a little dry. || This is an important difference from the previous liquid middle chamber design",
+    "matched_keywords": [],
+    "similarity": 0.341
+  },
+  {
+    "timestamp": 97.5,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "previous liquid middle chamber design",
+      "observation",
+      "liquid conservation and cathode flooding"
+    ],
+    "text_evidence": "This is an important difference from the previous liquid middle chamber design where liquid conservation and cathode flooding were observed. || This is an important difference from the previous liquid middle chamber design || where liquid conservation and cathode flooding were observed.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 102.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "where liquid conservation and cathode flooding were observed. || By removing the middle electrolyte chamber, this reactor reduces the risk of liquid accumulation and pressure imbalance.",
+    "matched_keywords": [],
+    "similarity": 0.397
+  },
+  {
+    "timestamp": 106.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "operation",
+      "removes middle electrolyte chamber"
+    ],
+    "text_evidence": "By removing the middle electrolyte chamber, this reactor reduces the risk of liquid accumulation and pressure imbalance.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 111.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "By removing the middle electrolyte chamber, this reactor reduces the risk of liquid accumulation and pressure imbalance. || The main goal of this test is to evaluate whether this compact dual gas CRAM HVAC configuration can maintain stable operation without cathode flooding.",
+    "matched_keywords": [],
+    "similarity": 0.383
+  },
+  {
+    "timestamp": 116.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "test",
+      "goal",
+      "evaluate stable operation without cathode flooding"
+    ],
+    "text_evidence": "The main goal of this test is to evaluate whether this compact dual gas CRAM HVAC configuration can maintain stable operation without cathode flooding.",
+    "matched_keywords": []
+  }
+]

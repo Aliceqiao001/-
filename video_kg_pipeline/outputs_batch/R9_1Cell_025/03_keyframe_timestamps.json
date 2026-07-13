@@ -1,0 +1,72 @@
+[
+  {
+    "timestamp": 4.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "I've got a new camera. || It's a Canon EOS M104.",
+    "matched_keywords": [],
+    "similarity": 0.433
+  },
+  {
+    "timestamp": 8.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "It's a Canon EOS M104. || I'm going to record a video of a long-distance flight.",
+    "matched_keywords": [],
+    "similarity": 0.217
+  },
+  {
+    "timestamp": 12.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "I'm going to record a video of a long-distance flight. || I'm using a Canon EOS M104.",
+    "matched_keywords": [],
+    "similarity": 0.282
+  },
+  {
+    "timestamp": 16.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "I'm using a Canon EOS M104. || I'm going to record a video of a long-distance flight.",
+    "matched_keywords": [],
+    "similarity": 0.282
+  },
+  {
+    "timestamp": 20.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "I'm going to record a video of a long-distance flight. || I'm using a Canon EOS M104.",
+    "matched_keywords": [],
+    "similarity": 0.282
+  },
+  {
+    "timestamp": 32.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "I'm using a Canon EOS M104. || Trigger insulation.",
+    "matched_keywords": [],
+    "similarity": 0.116
+  },
+  {
+    "timestamp": 41.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Trigger insulation. || I'm using a Canon EOS M104.",
+    "matched_keywords": [],
+    "similarity": 0.116
+  }
+]

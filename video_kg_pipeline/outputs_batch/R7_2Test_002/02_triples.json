@@ -1,0 +1,242 @@
+[
+  {
+    "triple": [
+      "reactor",
+      "uses",
+      "dual gas configuration"
+    ],
+    "text_evidence": "This reactor uses dual gas configuration with no middle electrolyte chamber",
+    "timestamp": [
+      7.0,
+      15.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "has",
+      "no middle electrolyte chamber"
+    ],
+    "text_evidence": "This reactor uses dual gas configuration with no middle electrolyte chamber",
+    "timestamp": [
+      7.0,
+      15.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "has",
+      "one EM membrane between the cathode and the anode"
+    ],
+    "text_evidence": "and only one EM membrane between the cathode and the anode.",
+    "timestamp": [
+      15.0,
+      21.0
+    ]
+  },
+  {
+    "triple": [
+      "anode gas",
+      "is",
+      "hydrogen"
+    ],
+    "text_evidence": "The anode gas is hydrogen with a flow rate of 20 SACM.",
+    "timestamp": [
+      25.0,
+      32.0
+    ]
+  },
+  {
+    "triple": [
+      "anode gas",
+      "has flow rate",
+      "20 SACM"
+    ],
+    "text_evidence": "The anode gas is hydrogen with a flow rate of 20 SACM.",
+    "timestamp": [
+      25.0,
+      32.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode feed gas",
+      "is",
+      "carbon monoxide"
+    ],
+    "text_evidence": "The cathode feed gas is carbon monoxide with a flow rate of 10 SACM.",
+    "timestamp": [
+      32.0,
+      41.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode feed gas flow rate",
+      "is",
+      "10 SACM"
+    ],
+    "text_evidence": "The cathode feed gas is carbon monoxide with a flow rate of 10 SACM.",
+    "timestamp": [
+      32.0,
+      41.0
+    ]
+  },
+  {
+    "triple": [
+      "working electrode",
+      "connected to",
+      "cathode"
+    ],
+    "text_evidence": "In the electrolyte chemical setup, the working electrode is connected to the cathode.",
+    "timestamp": [
+      41.0,
+      62.0
+    ]
+  },
+  {
+    "triple": [
+      "counter electrode",
+      "connected to",
+      "anode side"
+    ],
+    "text_evidence": "Also, the counter electrode and the reference electrode are connected to the anode side.",
+    "timestamp": [
+      62.0,
+      67.0
+    ]
+  },
+  {
+    "triple": [
+      "reference electrode",
+      "connected to",
+      "anode side"
+    ],
+    "text_evidence": "Also, the counter electrode and the reference electrode are connected to the anode side.",
+    "timestamp": [
+      62.0,
+      67.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode flooding",
+      "not observed during",
+      "operation"
+    ],
+    "text_evidence": "During the operation, we did not observe any cathode flooding or anode flooding.",
+    "timestamp": [
+      67.0,
+      78.0
+    ]
+  },
+  {
+    "triple": [
+      "anode flooding",
+      "not observed during",
+      "operation"
+    ],
+    "text_evidence": "During the operation, we did not observe any cathode flooding or anode flooding.",
+    "timestamp": [
+      67.0,
+      78.0
+    ]
+  },
+  {
+    "triple": [
+      "liquid droplets",
+      "not visible at",
+      "cathode gas gap"
+    ],
+    "text_evidence": "There is no visible liquid droplets at the cathode or anode gas gap.",
+    "timestamp": [
+      78.0,
+      84.0
+    ]
+  },
+  {
+    "triple": [
+      "liquid droplets",
+      "not visible at",
+      "anode gas gap"
+    ],
+    "text_evidence": "There is no visible liquid droplets at the cathode or anode gas gap.",
+    "timestamp": [
+      78.0,
+      84.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode and anode gas passivate",
+      "state",
+      "remains open and a little dry"
+    ],
+    "text_evidence": "It indicates that the cathode and anode gas passivate remains open and a little dry.",
+    "timestamp": [
+      84.0,
+      93.0
+    ]
+  },
+  {
+    "triple": [
+      "previous liquid middle chamber design",
+      "observation",
+      "liquid conservation and cathode flooding"
+    ],
+    "text_evidence": "This is an important difference from the previous liquid middle chamber design where liquid conservation and cathode flooding were observed.",
+    "timestamp": [
+      93.0,
+      102.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "operation",
+      "removes middle electrolyte chamber"
+    ],
+    "text_evidence": "By removing the middle electrolyte chamber, this reactor reduces the risk of liquid accumulation and pressure imbalance.",
+    "timestamp": [
+      102.0,
+      111.0
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "effect",
+      "reduces risk of liquid accumulation and pressure imbalance"
+    ],
+    "text_evidence": "By removing the middle electrolyte chamber, this reactor reduces the risk of liquid accumulation and pressure imbalance.",
+    "timestamp": [
+      102.0,
+      111.0
+    ]
+  },
+  {
+    "triple": [
+      "test",
+      "goal",
+      "evaluate stable operation without cathode flooding"
+    ],
+    "text_evidence": "The main goal of this test is to evaluate whether this compact dual gas CRAM HVAC configuration can maintain stable operation without cathode flooding.",
+    "timestamp": [
+      111.0,
+      121.0
+    ]
+  },
+  {
+    "triple": [
+      "compact dual gas CRAM HVAC configuration",
+      "goal",
+      "maintain stable operation without cathode flooding"
+    ],
+    "text_evidence": "The main goal of this test is to evaluate whether this compact dual gas CRAM HVAC configuration can maintain stable operation without cathode flooding.",
+    "timestamp": [
+      111.0,
+      121.0
+    ]
+  }
+]

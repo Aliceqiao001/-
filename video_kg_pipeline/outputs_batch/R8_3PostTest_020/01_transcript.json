@@ -1,0 +1,110 @@
+[
+  {
+    "index": 0,
+    "text": "This is a post-test inspection of this reactor.",
+    "start_ts": 0.0,
+    "end_ts": 7.0
+  },
+  {
+    "index": 1,
+    "text": "Now we disassemble the reactor and check the condition of each component after operation.",
+    "start_ts": 7.0,
+    "end_ts": 24.0
+  },
+  {
+    "index": 2,
+    "text": "First, we will inspect the anode side.",
+    "start_ts": 24.0,
+    "end_ts": 42.0
+  },
+  {
+    "index": 3,
+    "text": "Yeah, no stuck now.",
+    "start_ts": 42.0,
+    "end_ts": 46.0
+  },
+  {
+    "index": 4,
+    "text": "You can find there is no obvious liquid accumulation or any flooding.",
+    "start_ts": 46.0,
+    "end_ts": 56.0
+  },
+  {
+    "index": 5,
+    "text": "And the surface appears very dry after the test.",
+    "start_ts": 56.0,
+    "end_ts": 77.0
+  },
+  {
+    "index": 6,
+    "text": "Oh, this is the anode side. This is the anode catalytic. Very, very dry.",
+    "start_ts": 77.0,
+    "end_ts": 81.0
+  },
+  {
+    "index": 7,
+    "text": "No stuck.",
+    "start_ts": 81.0,
+    "end_ts": 88.0
+  },
+  {
+    "index": 8,
+    "text": "Now let's inspect the membrane region.",
+    "start_ts": 88.0,
+    "end_ts": 92.0
+  },
+  {
+    "index": 9,
+    "text": "Here we can see the membrane after test.",
+    "start_ts": 92.0,
+    "end_ts": 96.0
+  },
+  {
+    "index": 10,
+    "text": "Also, the membrane lost water.",
+    "start_ts": 96.0,
+    "end_ts": 102.0
+  },
+  {
+    "index": 11,
+    "text": "Very dry after operation.",
+    "start_ts": 102.0,
+    "end_ts": 107.0
+  },
+  {
+    "index": 12,
+    "text": "This shows that the pre-added 1-molecule H droplet is not efficient to maintain the long-term hydration during the test.",
+    "start_ts": 107.0,
+    "end_ts": 120.0
+  },
+  {
+    "index": 13,
+    "text": "Yeah, also the cathode side. The cathode side is also very dry.",
+    "start_ts": 120.0,
+    "end_ts": 127.0
+  },
+  {
+    "index": 14,
+    "text": "So, the main failure mode of this reactor is still dry out.",
+    "start_ts": 127.0,
+    "end_ts": 130.0
+  },
+  {
+    "index": 15,
+    "text": "Compared to the last one, pre-adding a fuel droplet molecule may improve the initial hydration,",
+    "start_ts": 130.0,
+    "end_ts": 136.0
+  },
+  {
+    "index": 16,
+    "text": "but this is only temporary water and ion supply during operation.",
+    "start_ts": 136.0,
+    "end_ts": 140.0
+  },
+  {
+    "index": 17,
+    "text": "The water can be absorbed, evaporated, or redistributed, but the membrane of PTFE can still lose hydration.",
+    "start_ts": 140.0,
+    "end_ts": 151.0
+  }
+]

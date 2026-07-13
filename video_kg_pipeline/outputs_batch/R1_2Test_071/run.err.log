@@ -1,0 +1,100 @@
+05:17:08 [INFO] run_pipeline: ============================================================
+05:17:08 [INFO] run_pipeline: STAGE 1: ASR transcription
+05:17:08 [INFO] run_pipeline: ============================================================
+05:17:08 [INFO] stage1_asr: Video duration=49.9s, transcribing 49.9s (FULL RUN)
+05:17:08 [INFO] stage1_asr: Extracting audio chunk [0.0, 49.9)s -> chunk_000000.mp3
+05:17:08 [INFO] stage1_asr: Transcribing chunk chunk_000000.mp3 (391.1 KB)...
+05:17:12 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 200 OK"
+05:17:12 [INFO] stage1_asr: Saved 4 transcript segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R1_2Test_071\01_transcript.json
+05:17:12 [INFO] stage1_asr: --- Sanity check: first 5 segments ---
+05:17:12 [INFO] stage1_asr: [  0.00 -  16.00] This is the anode gas. The anode gas is pure hydrogen. The cathode gas is pure CO. The
+05:17:12 [INFO] stage1_asr: [ 16.00 -  31.00] hydrogen fluid is 20 ssm. The silica gas is 10 ssm. This is the cathode workstation.
+05:17:12 [INFO] stage1_asr: [ 31.00 -  38.00] It is also the working electrode. This is the anode or the counter electrode for the
+05:17:12 [INFO] stage1_asr: [ 38.00 -  49.00] workstation. Okay, that's all for the cell symbol and the cell testing configuration.
+05:17:12 [INFO] run_pipeline: ------------------------------------------------------------
+05:17:12 [INFO] run_pipeline: STAGE 1b: Terminology/unit correction
+05:17:12 [INFO] run_pipeline: ------------------------------------------------------------
+05:17:12 [INFO] stage1b_correct_terminology: Applied 0 correction(s) across 4 segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R1_2Test_071\01b_transcript_corrected.json
+05:17:12 [INFO] run_pipeline: ============================================================
+05:17:12 [INFO] run_pipeline: STAGE 2: Triple extraction
+05:17:12 [INFO] run_pipeline: ============================================================
+05:17:12 [INFO] stage2_extract: Reading transcript from 01b_transcript_corrected.json
+05:17:12 [INFO] stage2_extract: Extracting triples from segments 0-3...
+05:17:13 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+05:17:13 [INFO] stage2_extract: Saved 6 triples -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R1_2Test_071\02_triples.json
+05:17:13 [INFO] stage2_extract: --- Sample triples ---
+05:17:13 [INFO] stage2_extract: ['anode gas', 'is', 'pure hydrogen'] | [0.00-16.00] This is the anode gas. The anode gas is pure hydrogen. The c
+05:17:13 [INFO] stage2_extract: ['cathode gas', 'is', 'pure CO'] | [0.00-16.00] This is the anode gas. The anode gas is pure hydrogen. The c
+05:17:13 [INFO] stage2_extract: ['hydrogen fluid', 'is', '20 ssm'] | [16.00-31.00] hydrogen fluid is 20 ssm. The silica gas is 10 ssm. This is 
+05:17:13 [INFO] stage2_extract: ['silica gas', 'is', '10 ssm'] | [16.00-31.00] hydrogen fluid is 20 ssm. The silica gas is 10 ssm. This is 
+05:17:13 [INFO] stage2_extract: ['cathode workstation', 'is', 'working electrode'] | [31.00-38.00] It is also the working electrode. This is the anode or the c
+05:17:13 [INFO] stage2_extract: ['anode', 'is', 'counter electrode'] | [31.00-49.00] It is also the working electrode. This is the anode or the c
+05:17:13 [INFO] run_pipeline: ============================================================
+05:17:13 [INFO] run_pipeline: STAGE 3: Keyframe localization
+05:17:13 [INFO] run_pipeline: ============================================================
+05:17:13 [INFO] stage3_keyframes: Triple candidates + keyword candidates: 6
+05:17:14 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/embeddings "HTTP/1.1 200 OK"
+05:17:14 [INFO] stage3_keyframes: Semantic-shift candidates: 2
+05:17:14 [INFO] stage3_keyframes: Merged into 5 keyframe timestamps (merge window=3.0s)
+05:17:14 [INFO] stage3_keyframes: Saved -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R1_2Test_071\03_keyframe_timestamps.json
+05:17:14 [INFO] stage3_keyframes: --- Sample keyframes ---
+05:17:14 [INFO] stage3_keyframes: [  8.00] sources=['triple'] triple=['anode gas', 'is', 'pure hydrogen']
+05:17:14 [INFO] stage3_keyframes: [ 23.50] sources=['triple'] triple=['hydrogen fluid', 'is', '20 ssm']
+05:17:14 [INFO] stage3_keyframes: [ 31.00] sources=['semantic_shift'] triple=None
+05:17:14 [INFO] stage3_keyframes: [ 34.50] sources=['triple'] triple=['cathode workstation', 'is', 'working electrode']
+05:17:14 [INFO] stage3_keyframes: [ 38.00] sources=['semantic_shift', 'triple'] triple=['anode', 'is', 'counter electrode']
+05:17:14 [INFO] run_pipeline: ============================================================
+05:17:14 [INFO] run_pipeline: STAGE 4: Visual analysis
+05:17:14 [INFO] run_pipeline: ============================================================
+05:17:14 [INFO] stage4_visual: Extracting frame at t=8.00s -> frame_0008.00.jpg
+05:17:14 [INFO] stage4_visual: Analyzing frame with Gemini...
+05:17:18 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+05:17:18 [INFO] stage4_visual: Extracting frame at t=23.50s -> frame_0023.50.jpg
+05:17:18 [INFO] stage4_visual: Analyzing frame with Gemini...
+05:17:35 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+05:17:35 [INFO] stage4_visual: Extracting frame at t=31.00s -> frame_0031.00.jpg
+05:17:35 [INFO] stage4_visual: Analyzing frame with Gemini...
+05:17:40 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+05:17:40 [INFO] stage4_visual: Extracting frame at t=34.50s -> frame_0034.50.jpg
+05:17:41 [INFO] stage4_visual: Analyzing frame with Gemini...
+05:17:46 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+05:17:46 [INFO] stage4_visual: Extracting frame at t=38.00s -> frame_0038.00.jpg
+05:17:47 [INFO] stage4_visual: Analyzing frame with Gemini...
+05:17:52 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+05:17:52 [INFO] stage4_visual: Saved 5 visual evidence entries -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R1_2Test_071\04_visual_evidence.json
+05:17:52 [INFO] stage4_visual: --- Sample visual evidence ---
+05:17:52 [INFO] stage4_visual: [  8.00] ['anode gas', 'is', 'pure hydrogen'] | 1.  The image does not visually support or refute the claim that "the anode gas 
+05:17:52 [INFO] stage4_visual: [ 23.50] ['hydrogen fluid', 'is', '20 ssm'] | 1.  The image does not support the specific claim that "hydrogen fluid
+05:17:52 [INFO] stage4_visual: [ 31.00] None | 1.  **Does the image support this specific claim?** The image does not
+05:17:52 [INFO] stage4_visual: [ 34.50] ['cathode workstation', 'is', 'working electrode'] | 1.  The image does not provide sufficient visual evidence to definitively suppor
+05:17:52 [INFO] stage4_visual: [ 38.00] ['anode', 'is', 'counter electrode'] | 1.  The image itself cannot directly verify the claim that an anode is a counter
+05:17:52 [INFO] run_pipeline: ============================================================
+05:17:52 [INFO] run_pipeline: STAGE 5: Knowledge graph binding
+05:17:52 [INFO] run_pipeline: ============================================================
+05:17:52 [INFO] stage5_bind: Checking conflict for triple ['anode gas', 'is', 'pure hydrogen'] (match=exact)...
+05:17:54 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+05:17:54 [INFO] stage5_bind: Checking conflict for triple ['cathode gas', 'is', 'pure CO'] (match=within_range)...
+05:17:55 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+05:17:55 [INFO] stage5_bind: Checking conflict for triple ['hydrogen fluid', 'is', '20 ssm'] (match=exact)...
+05:17:56 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+05:17:56 [INFO] stage5_bind: Checking conflict for triple ['silica gas', 'is', '10 ssm'] (match=within_range)...
+05:17:57 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+05:17:57 [INFO] stage5_bind: Checking conflict for triple ['cathode workstation', 'is', 'working electrode'] (match=exact)...
+05:17:59 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+05:17:59 [INFO] stage5_bind: Checking conflict for triple ['anode', 'is', 'counter electrode'] (match=exact)...
+05:18:00 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+05:18:00 [INFO] stage5_bind: Saved 6 knowledge-graph nodes -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R1_2Test_071\05_knowledge_graph.json
+05:18:00 [INFO] stage5_bind: --- Summary: 6 nodes, 0 conflicts flagged ---
+05:18:00 [INFO] stage5_bind: [ok] ['anode gas', 'is', 'pure hydrogen'] (confidence=0.90)
+05:18:00 [INFO] stage5_bind: [ok] ['cathode gas', 'is', 'pure CO'] (confidence=0.75)
+05:18:00 [INFO] stage5_bind: [ok] ['hydrogen fluid', 'is', '20 ssm'] (confidence=0.90)
+05:18:00 [INFO] stage5_bind: [ok] ['silica gas', 'is', '10 ssm'] (confidence=0.75)
+05:18:00 [INFO] stage5_bind: [ok] ['cathode workstation', 'is', 'working electrode'] (confidence=0.90)
+05:18:00 [INFO] stage5_bind: [ok] ['anode', 'is', 'counter electrode'] (confidence=0.90)
+05:18:00 [INFO] run_pipeline: ============================================================
+05:18:00 [INFO] run_pipeline: STAGE 6: Knowledge graph visualization (optional)
+05:18:00 [INFO] run_pipeline: ============================================================
+05:18:00 [INFO] stage6_visualize_kg: Graph built: 12 nodes, 6 edges
+05:18:01 [INFO] stage6_visualize_kg: Saved static PNG -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R1_2Test_071\knowledge_graph.png
+05:18:01 [INFO] stage6_visualize_kg: Saved interactive HTML -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R1_2Test_071\knowledge_graph.html
+05:18:01 [INFO] run_pipeline: Pipeline complete.

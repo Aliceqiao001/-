@@ -1,0 +1,644 @@
+[
+  {
+    "timestamp": 0.0,
+    "sources": [
+      "keyword"
+    ],
+    "triple": [
+      "cathode flow plate",
+      "has",
+      "laser-painting flow field"
+    ],
+    "text_evidence": "This is the assembly of this reactor. Step 1, this is the cathode flow plate. It has",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 10.08,
+    "sources": [
+      "keyword",
+      "triple"
+    ],
+    "triple": [
+      "cathode flow plate",
+      "has",
+      "laser-painting flow field"
+    ],
+    "text_evidence": "This is the assembly of this reactor. Step 1, this is the cathode flow plate. It has laser-painting flow field. Step 2, this is the cathode electrode. The cathode is also",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 20.16,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "laser-painting flow field. Step 2, this is the cathode electrode. The cathode is also || prepared by spray coating carbon dioxide catalysis onto 82363 carbon paper. The catalyst loading",
+    "matched_keywords": [],
+    "similarity": 0.376
+  },
+  {
+    "timestamp": 23.86,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode electrode",
+      "prepared by",
+      "spray coating carbon dioxide catalysis onto H23C3 carbon paper"
+    ],
+    "text_evidence": "prepared by spray coating carbon dioxide catalysis onto H23C3 carbon paper The catalyst loading",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 27.56,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "prepared by spray coating carbon dioxide catalysis onto 82363 carbon paper. The catalyst loading || is 3 mg per centimeter square and the active area is 1 by 1. Step 3, this is the cathode",
+    "matched_keywords": [],
+    "similarity": 0.363
+  },
+  {
+    "timestamp": 34.0,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "catalyst loading",
+      "is",
+      "3 mg per centimeter square"
+    ],
+    "text_evidence": "is 3 mg per centimeter square and the active area is 1 by 1. Step 3, this is the cathode",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 40.44,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "is 3 mg per centimeter square and the active area is 1 by 1. Step 3, this is the cathode || gasket. The gasket thickness is 0.3 micrometer and the ionizer window size is 1 by 1 centimeter.",
+    "matched_keywords": [],
+    "similarity": 0.416
+  },
+  {
+    "timestamp": 46.08,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode gasket",
+      "thickness",
+      "0.3 millimeter"
+    ],
+    "text_evidence": "gasket. The gasket thickness is 0.3 millimeter and the ionizer window size is 1 by 1 centimeter.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 51.72,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "cathode gasket",
+      "thickness",
+      "0.3 millimeter"
+    ],
+    "text_evidence": "Step 4, we will place the cathode-side membrane. This is the cathode-side alkaline ion-chloride || gasket. The gasket thickness is 0.3 micrometer and the ionizer window size is 1 by 1 centimeter. || Step 4, we will place the cathode-side membrane. This is the cathode-side alkaline ion-chloride",
+    "matched_keywords": [
+      "place"
+    ]
+  },
+  {
+    "timestamp": 58.66,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode-side membrane",
+      "placement",
+      "Step 4"
+    ],
+    "text_evidence": "Step 4, we will place the cathode-side membrane. This is the cathode-side alkaline ion-chloride",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 65.6,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Step 4, we will place the cathode-side membrane. This is the cathode-side alkaline ion-chloride || membrane. The membrane is sustained on X3750. Step 5, this is the middle air-flight chamber.",
+    "matched_keywords": [],
+    "similarity": 0.467
+  },
+  {
+    "timestamp": 73.32,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode-side membrane",
+      "material specification",
+      "Sustainion X37-50"
+    ],
+    "text_evidence": "membrane. The membrane is Sustainion X37-50. Step 5, this is the middle air-flight chamber.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 81.04,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "middle air-flight chamber",
+      "thickness",
+      "3 millimeter"
+    ],
+    "text_evidence": "membrane. The membrane is sustained on X3750. Step 5, this is the middle air-flight chamber. || The chamber thickness is 3 micrometer and the window size is 1 by 1. The chamber is || The chamber thickness is 3 millimeter and the window size is 1 by 1. The chamber is",
+    "matched_keywords": [],
+    "similarity": 0.379
+  },
+  {
+    "timestamp": 86.24,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "middle air-flight chamber",
+      "function",
+      "hold and circulate liquid electrolytes"
+    ],
+    "text_evidence": "The chamber thickness is 3 micrometer and the window size is 1 by 1. The chamber is || used to hold and circulate the liquid electrolytes. The electrolyte is 1 molecule each and it || used to hold and circulate the liquid electrolytes. The electrolyte is 1 molar KOH and it",
+    "matched_keywords": [],
+    "similarity": 0.293
+  },
+  {
+    "timestamp": 91.88,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "electrolyte",
+      "circulation",
+      "middle chamber during operation"
+    ],
+    "text_evidence": "used to hold and circulate the liquid electrolytes. The electrolyte is 1 molecule each and it || will be continuously circulated through the middle chamber during operation. Compared",
+    "matched_keywords": [],
+    "similarity": 0.337
+  },
+  {
+    "timestamp": 97.56,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "electrolyte",
+      "circulation",
+      "middle chamber during operation"
+    ],
+    "text_evidence": "to the previous design, the key change in this reactor is that the middle chamber thickness || will be continuously circulated through the middle chamber during operation. Compared || to the previous design, the key change in this reactor is that the middle chamber thickness",
+    "matched_keywords": [
+      "change"
+    ]
+  },
+  {
+    "timestamp": 103.0,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "to the previous design, the key change in this reactor is that the middle chamber thickness || is reduced to 3 micrometer. The purpose is to shorten the ion transparent distance, reduce",
+    "matched_keywords": [],
+    "similarity": 0.384
+  },
+  {
+    "timestamp": 106.16,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "middle chamber thickness",
+      "is reduced to",
+      "3 millimeter"
+    ],
+    "text_evidence": "is reduced to 3 millimeter. The purpose is to shorten the ion transparent distance, reduce",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 109.36,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "is reduced to 3 micrometer. The purpose is to shorten the ion transparent distance, reduce || the organic resistance from the liquid electro-layer and improve the overall and to decrease the",
+    "matched_keywords": [],
+    "similarity": 0.413
+  },
+  {
+    "timestamp": 113.86,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "middle chamber thickness reduction",
+      "purpose",
+      "reduce organic resistance from liquid electro-layer"
+    ],
+    "text_evidence": "the organic resistance from the liquid electro-layer and improve the overall and to decrease the",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 118.36,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "the organic resistance from the liquid electro-layer and improve the overall and to decrease the || cell voltage. In addition, we induce this reference electrode into the middle layer.",
+    "matched_keywords": [],
+    "similarity": 0.416
+  },
+  {
+    "timestamp": 126.86,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "middle chamber thickness reduction",
+      "purpose",
+      "decrease cell voltage"
+    ],
+    "text_evidence": "cell voltage. In addition, we induce this reference electrode into the middle layer.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 135.4,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "cell voltage. In addition, we induce this reference electrode into the middle layer. || The reference electrode is a mercury oxide electrode which allows us to monitor the electrode",
+    "matched_keywords": [],
+    "similarity": 0.542
+  },
+  {
+    "timestamp": 139.34,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reference electrode",
+      "is",
+      "mercury oxide electrode"
+    ],
+    "text_evidence": "The reference electrode is a mercury oxide electrode which allows us to monitor the electrode",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 143.28,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The reference electrode is a mercury oxide electrode which allows us to monitor the electrode || potentials more accurately during operation. Step 6, we add the anode gasket. The anode",
+    "matched_keywords": [],
+    "similarity": 0.372
+  },
+  {
+    "timestamp": 147.5,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode gasket",
+      "added",
+      "reactor"
+    ],
+    "text_evidence": "potentials more accurately during operation. Step 6, we add the anode gasket. The anode",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 151.72,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "anode gasket",
+      "thickness",
+      "0.3 millimeter"
+    ],
+    "text_evidence": "potentials more accurately during operation. Step 6, we add the anode gasket. The anode || gasket is also 0.3 micrometer. || gasket is also 0.3 millimeter.",
+    "matched_keywords": [],
+    "similarity": 0.425
+  },
+  {
+    "timestamp": 165.36,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "gasket is also 0.3 micrometer. || This is the anode side membrane.",
+    "matched_keywords": [],
+    "similarity": 0.289
+  },
+  {
+    "timestamp": 195.72,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "anode side membrane",
+      "placed",
+      "middle chamber"
+    ],
+    "text_evidence": "This is the anode side membrane. || Let us put the membrane first into the middle chamber and the gasket.",
+    "matched_keywords": [],
+    "similarity": 0.43
+  },
+  {
+    "timestamp": 202.72,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Let us put the membrane first into the middle chamber and the gasket. || At the anode side, the membrane is also sustained on X3750.",
+    "matched_keywords": [],
+    "similarity": 0.388
+  },
+  {
+    "timestamp": 206.72,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode side membrane",
+      "material",
+      "Sustainion X37-50"
+    ],
+    "text_evidence": "At the anode side, the membrane is also Sustainion X37-50.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 211.08,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "At the anode side, the membrane is also sustained on X3750. || Okay, under step 8, this is the anode electrode. The anode is also prepared by spray coating",
+    "matched_keywords": [],
+    "similarity": 0.469
+  },
+  {
+    "timestamp": 217.58,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode electrode",
+      "prepared by",
+      "spray coating"
+    ],
+    "text_evidence": "Okay, under step 8, this is the anode electrode. The anode is also prepared by spray coating",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 224.08,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "Okay, under step 8, this is the anode electrode. The anode is also prepared by spray coating || PT-Rosilium carbon catalysis onto L23-C3 carbon paper. The catalysis loading is 2 micrograms",
+    "matched_keywords": [],
+    "similarity": 0.325
+  },
+  {
+    "timestamp": 228.58,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "Pt-Ru-C catalyst",
+      "spray coated onto",
+      "H23C3 carbon paper"
+    ],
+    "text_evidence": "Pt-Ru-C catalyst onto H23C3 carbon paper The catalysis loading is 2 micrograms",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 233.44,
+    "sources": [
+      "keyword",
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "catalysis loading",
+      "set to",
+      "2 micrograms per centimeter square"
+    ],
+    "text_evidence": "per centimeter square. Step 9, this is the anode flow plate. It also has a 17 flow field. || PT-Rosilium carbon catalysis onto L23-C3 carbon paper. The catalysis loading is 2 micrograms || per centimeter square. Step 9, this is the anode flow plate. It also has a 17 flow field. || Pt-Ru-C catalyst onto H23C3 carbon paper The catalysis loading is 2 micrograms per centimeter square. Step 9, this is the anode flow plate. It also has a 17 flow field.",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 238.44,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "anode flow plate",
+      "has",
+      "17 flow field"
+    ],
+    "text_evidence": "per centimeter square. Step 9, this is the anode flow plate. It also has a 17 flow field.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 243.44,
+    "sources": [
+      "keyword",
+      "semantic_shift"
+    ],
+    "triple": [
+      "catalysis loading",
+      "set to",
+      "2 micrograms per centimeter square"
+    ],
+    "text_evidence": "Finally, after aligning all components, we assemble and tighten the reactor using a torque || per centimeter square. Step 9, this is the anode flow plate. It also has a 17 flow field. || Finally, after aligning all components, we assemble and tighten the reactor using a torque",
+    "matched_keywords": [
+      "assemble"
+    ]
+  },
+  {
+    "timestamp": 248.44,
+    "sources": [
+      "semantic_shift",
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "assembled and tightened using",
+      "torque of 2 Newton meter"
+    ],
+    "text_evidence": "Finally, after aligning all components, we assemble and tighten the reactor using a torque of 2 Newton meter. || Finally, after aligning all components, we assemble and tighten the reactor using a torque || of 2 Newton meter.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 263.08,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "of 2 Newton meter. || The reactor is tightened using 4 bolts in a diagonal sequence to ensure uniform compression.",
+    "matched_keywords": [],
+    "similarity": 0.257
+  },
+  {
+    "timestamp": 272.76,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "tightened using",
+      "4 bolts in a diagonal sequence"
+    ],
+    "text_evidence": "The reactor is tightened using 4 bolts in a diagonal sequence to ensure uniform compression.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 293.44,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The reactor is tightened using 4 bolts in a diagonal sequence to ensure uniform compression. || In summary, this reactor keeps the circulating 1 molecule OH liquid electrolytes in the middle",
+    "matched_keywords": [],
+    "similarity": 0.381
+  },
+  {
+    "timestamp": 299.94,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "reactor",
+      "keeps",
+      "1 molar KOH liquid electrolytes in the middle chamber"
+    ],
+    "text_evidence": "In summary, this reactor keeps the circulating 1 molar KOH liquid electrolytes in the middle",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 306.44,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "In summary, this reactor keeps the circulating 1 molecule OH liquid electrolytes in the middle || chamber but reduces the chamber thickness to 3 micrometer. Mercury oxide reference electrode",
+    "matched_keywords": [],
+    "similarity": 0.316
+  },
+  {
+    "timestamp": 311.44,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "chamber thickness",
+      "reduced to",
+      "3 millimeter"
+    ],
+    "text_evidence": "chamber but reduces the chamber thickness to 3 millimeter. Mercury oxide reference electrode",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 316.8,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "chamber but reduces the chamber thickness to 3 micrometer. Mercury oxide reference electrode || is also added to the middle chamber for more reliable potential monitoring.",
+    "matched_keywords": [],
+    "similarity": 0.443
+  },
+  {
+    "timestamp": 320.3,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "mercury oxide reference electrode",
+      "added to",
+      "middle chamber"
+    ],
+    "text_evidence": "is also added to the middle chamber for more reliable potential monitoring.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 323.8,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "is also added to the middle chamber for more reliable potential monitoring. || This design is intended to improve ionic transport, lower the cell resistance, and provide better",
+    "matched_keywords": [],
+    "similarity": 0.291
+  },
+  {
+    "timestamp": 341.8,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "This design is intended to improve ionic transport, lower the cell resistance, and provide better || electrochemical diagonal scattering operation.",
+    "matched_keywords": [],
+    "similarity": 0.274
+  },
+  {
+    "timestamp": 372.16,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "electrochemical diagonal scattering operation. || The torque, using a torque of 2 Newton meter.",
+    "matched_keywords": [],
+    "similarity": 0.191
+  },
+  {
+    "timestamp": 375.66,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "torque",
+      "set to",
+      "2 Newton meter"
+    ],
+    "text_evidence": "The torque, using a torque of 2 Newton meter.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 388.16,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "The torque, using a torque of 2 Newton meter. || Okay, finish this reactor.",
+    "matched_keywords": [],
+    "similarity": 0.18
+  }
+]

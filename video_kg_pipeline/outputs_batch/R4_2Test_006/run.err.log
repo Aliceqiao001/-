@@ -1,0 +1,176 @@
+06:29:14 [INFO] run_pipeline: ============================================================
+06:29:14 [INFO] run_pipeline: STAGE 1: ASR transcription
+06:29:14 [INFO] run_pipeline: ============================================================
+06:29:14 [INFO] stage1_asr: Video duration=103.9s, transcribing 103.9s (FULL RUN)
+06:29:14 [INFO] stage1_asr: Extracting audio chunk [0.0, 103.9)s -> chunk_000000.mp3
+06:29:15 [INFO] stage1_asr: Transcribing chunk chunk_000000.mp3 (812.7 KB)...
+06:29:24 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 200 OK"
+06:29:24 [INFO] stage1_asr: Saved 15 transcript segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_2Test_006\01_transcript.json
+06:29:24 [INFO] stage1_asr: --- Sanity check: first 5 segments ---
+06:29:24 [INFO] stage1_asr: [  0.00 -   4.00] This is a test process for this reactor.
+06:29:24 [INFO] stage1_asr: [  4.00 -   8.00] First, I will describe the gas feed conditions.
+06:29:24 [INFO] stage1_asr: [  8.00 -  15.00] The anode feed gas is hydrogen with a flow rate of 20 ccm.
+06:29:24 [INFO] stage1_asr: [ 15.00 -  21.00] The cathode feed gas is carbon monoxide with a flow rate of 10 ccm.
+06:29:24 [INFO] stage1_asr: [ 21.00 -  38.00] In the electrochemical setup, the working electrode is connected to the cathode,
+06:29:24 [INFO] run_pipeline: ------------------------------------------------------------
+06:29:24 [INFO] run_pipeline: STAGE 1b: Terminology/unit correction
+06:29:24 [INFO] run_pipeline: ------------------------------------------------------------
+06:29:24 [INFO] stage1b_correct_terminology: Applied 0 correction(s) across 15 segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_2Test_006\01b_transcript_corrected.json
+06:29:24 [INFO] run_pipeline: ============================================================
+06:29:24 [INFO] run_pipeline: STAGE 2: Triple extraction
+06:29:24 [INFO] run_pipeline: ============================================================
+06:29:24 [INFO] stage2_extract: Reading transcript from 01b_transcript_corrected.json
+06:29:24 [INFO] stage2_extract: Extracting triples from segments 0-4...
+06:29:26 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:29:26 [INFO] stage2_extract: Extracting triples from segments 5-9...
+06:29:29 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:29:29 [INFO] stage2_extract: Extracting triples from segments 10-14...
+06:29:32 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:29:32 [INFO] stage2_extract: Saved 14 triples -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_2Test_006\02_triples.json
+06:29:32 [INFO] stage2_extract: --- Sample triples ---
+06:29:32 [INFO] stage2_extract: ['anode feed gas', 'is', 'hydrogen'] | [8.00-15.00] The anode feed gas is hydrogen with a flow rate of 20 ccm.
+06:29:32 [INFO] stage2_extract: ['anode feed gas', 'flow rate', '20 ccm'] | [8.00-15.00] The anode feed gas is hydrogen with a flow rate of 20 ccm.
+06:29:32 [INFO] stage2_extract: ['cathode feed gas', 'is', 'carbon monoxide'] | [15.00-21.00] The cathode feed gas is carbon monoxide with a flow rate of 
+06:29:32 [INFO] stage2_extract: ['cathode feed gas', 'flow rate', '10 ccm'] | [15.00-21.00] The cathode feed gas is carbon monoxide with a flow rate of 
+06:29:32 [INFO] stage2_extract: ['working electrode', 'connected to', 'cathode'] | [21.00-38.00] In the electrochemical setup, the working electrode is conne
+06:29:32 [INFO] stage2_extract: ['counter electrode', 'connected with', 'reference electrode'] | [38.00-44.00] and both the counter electrode and the reference electrode a
+06:29:32 [INFO] stage2_extract: ['middle chamber', 'filled with', 'liquid electrolyte'] | [44.00-55.00] During the test, the middle chamber is filled with a liquid 
+06:29:32 [INFO] stage2_extract: ['liquid electrolyte', 'concentration', '1 molar KOH'] | [55.00-58.00] The liquid electrolyte is 1 molar KOH.
+06:29:32 [INFO] stage2_extract: ['previous reactor', 'requires', 'solid electrolyte in middle chamber'] | [58.00-64.00] Different from the previous reactor, where the middle chambe
+06:29:32 [INFO] stage2_extract: ['this reactor', 'uses', 'circulating liquid electrolyte in middle chamber'] | [64.00-69.00] this reactor uses a circulating liquid electrolyte in the mi
+06:29:32 [INFO] run_pipeline: ============================================================
+06:29:32 [INFO] run_pipeline: STAGE 3: Keyframe localization
+06:29:32 [INFO] run_pipeline: ============================================================
+06:29:32 [INFO] stage3_keyframes: Triple candidates + keyword candidates: 18
+06:29:33 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/embeddings "HTTP/1.1 200 OK"
+06:29:34 [INFO] stage3_keyframes: Semantic-shift candidates: 11
+06:29:34 [INFO] stage3_keyframes: Merged into 17 keyframe timestamps (merge window=3.0s)
+06:29:34 [INFO] stage3_keyframes: Saved -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_2Test_006\03_keyframe_timestamps.json
+06:29:34 [INFO] stage3_keyframes: --- Sample keyframes ---
+06:29:34 [INFO] stage3_keyframes: [  4.00] sources=['semantic_shift'] triple=None
+06:29:34 [INFO] stage3_keyframes: [  8.00] sources=['keyword', 'semantic_shift'] triple=['anode feed gas', 'is', 'hydrogen']
+06:29:34 [INFO] stage3_keyframes: [ 11.50] sources=['triple'] triple=['anode feed gas', 'is', 'hydrogen']
+06:29:34 [INFO] stage3_keyframes: [ 15.00] sources=['keyword', 'triple'] triple=['anode feed gas', 'is', 'hydrogen']
+06:29:34 [INFO] stage3_keyframes: [ 21.00] sources=['keyword', 'semantic_shift'] triple=['cathode feed gas', 'is', 'carbon monoxide']
+06:29:34 [INFO] stage3_keyframes: [ 29.50] sources=['triple'] triple=['working electrode', 'connected to', 'cathode']
+06:29:34 [INFO] stage3_keyframes: [ 38.00] sources=['keyword', 'triple'] triple=['working electrode', 'connected to', 'cathode']
+06:29:34 [INFO] stage3_keyframes: [ 44.00] sources=['semantic_shift'] triple=None
+06:29:34 [INFO] stage3_keyframes: [ 49.50] sources=['triple'] triple=['middle chamber', 'filled with', 'liquid electrolyte']
+06:29:34 [INFO] stage3_keyframes: [ 55.00] sources=['semantic_shift', 'triple'] triple=['liquid electrolyte', 'concentration', '1 molar KOH']
+06:29:34 [INFO] run_pipeline: ============================================================
+06:29:34 [INFO] run_pipeline: STAGE 4: Visual analysis
+06:29:34 [INFO] run_pipeline: ============================================================
+06:29:34 [INFO] stage4_visual: Extracting frame at t=4.00s -> frame_0004.00.jpg
+06:29:34 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:29:41 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:29:41 [INFO] stage4_visual: Extracting frame at t=8.00s -> frame_0008.00.jpg
+06:29:41 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:29:46 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:29:46 [INFO] stage4_visual: Extracting frame at t=11.50s -> frame_0011.50.jpg
+06:29:47 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:29:51 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:29:51 [INFO] stage4_visual: Extracting frame at t=15.00s -> frame_0015.00.jpg
+06:29:51 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:29:58 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:29:58 [INFO] stage4_visual: Extracting frame at t=21.00s -> frame_0021.00.jpg
+06:29:58 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:30:03 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:30:03 [INFO] stage4_visual: Extracting frame at t=29.50s -> frame_0029.50.jpg
+06:30:03 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:30:13 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:30:13 [INFO] stage4_visual: Extracting frame at t=38.00s -> frame_0038.00.jpg
+06:30:13 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:30:17 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:30:17 [INFO] stage4_visual: Extracting frame at t=44.00s -> frame_0044.00.jpg
+06:30:18 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:30:23 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:30:23 [INFO] stage4_visual: Extracting frame at t=49.50s -> frame_0049.50.jpg
+06:30:24 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:30:28 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:30:28 [INFO] stage4_visual: Extracting frame at t=55.00s -> frame_0055.00.jpg
+06:30:29 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:30:34 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:30:34 [INFO] stage4_visual: Extracting frame at t=61.00s -> frame_0061.00.jpg
+06:30:35 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:30:45 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:30:45 [INFO] stage4_visual: Extracting frame at t=66.50s -> frame_0066.50.jpg
+06:30:46 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:30:58 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:30:58 [INFO] stage4_visual: Extracting frame at t=77.00s -> frame_0077.00.jpg
+06:30:59 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:31:09 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:09 [INFO] stage4_visual: Extracting frame at t=81.00s -> frame_0081.00.jpg
+06:31:10 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:31:16 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:16 [INFO] stage4_visual: Extracting frame at t=87.00s -> frame_0087.00.jpg
+06:31:18 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:31:22 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:22 [INFO] stage4_visual: Extracting frame at t=91.00s -> frame_0091.00.jpg
+06:31:23 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:31:27 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:27 [INFO] stage4_visual: Extracting frame at t=95.00s -> frame_0095.00.jpg
+06:31:29 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:31:35 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:35 [INFO] stage4_visual: Saved 17 visual evidence entries -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_2Test_006\04_visual_evidence.json
+06:31:35 [INFO] stage4_visual: --- Sample visual evidence ---
+06:31:35 [INFO] stage4_visual: [  4.00] None | 1.  The image supports the idea that a "test process" is underway for a "reactor
+06:31:35 [INFO] stage4_visual: [  8.00] ['anode feed gas', 'is', 'hydrogen'] | 1.  The image partially supports the numerical flow rate but contradicts the sta
+06:31:35 [INFO] stage4_visual: [ 11.50] ['anode feed gas', 'is', 'hydrogen'] | 1.  The image strongly supports the claim regarding the flow rate and the gas ty
+06:31:36 [INFO] stage4_visual: [ 15.00] ['anode feed gas', 'is', 'hydrogen'] | 1.  **Does the image support this specific claim?**
+    Yes, the image strongly 
+06:31:36 [INFO] stage4_visual: [ 21.00] ['cathode feed gas', 'is', 'carbon monoxide'] | 1.  The image partially supports the claim. While the gas itself (carbon monoxid
+06:31:36 [INFO] run_pipeline: ============================================================
+06:31:36 [INFO] run_pipeline: STAGE 5: Knowledge graph binding
+06:31:36 [INFO] run_pipeline: ============================================================
+06:31:36 [INFO] stage5_bind: Checking conflict for triple ['anode feed gas', 'is', 'hydrogen'] (match=exact)...
+06:31:37 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:37 [WARNING] stage5_bind: CONFLICT for ['anode feed gas', 'is', 'hydrogen']: The visual description contradicts the stated gas type as hydrogen.
+06:31:37 [INFO] stage5_bind: Checking conflict for triple ['anode feed gas', 'flow rate', '20 ccm'] (match=within_range)...
+06:31:38 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:38 [INFO] stage5_bind: Checking conflict for triple ['cathode feed gas', 'is', 'carbon monoxide'] (match=exact)...
+06:31:39 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:39 [INFO] stage5_bind: Checking conflict for triple ['cathode feed gas', 'flow rate', '10 ccm'] (match=within_range)...
+06:31:40 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:40 [INFO] stage5_bind: Checking conflict for triple ['working electrode', 'connected to', 'cathode'] (match=exact)...
+06:31:41 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:41 [INFO] stage5_bind: Checking conflict for triple ['counter electrode', 'connected with', 'reference electrode'] (match=within_range)...
+06:31:42 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:42 [INFO] stage5_bind: Checking conflict for triple ['middle chamber', 'filled with', 'liquid electrolyte'] (match=exact)...
+06:31:43 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:43 [INFO] stage5_bind: Checking conflict for triple ['liquid electrolyte', 'concentration', '1 molar KOH'] (match=exact)...
+06:31:45 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:45 [INFO] stage5_bind: Checking conflict for triple ['previous reactor', 'requires', 'solid electrolyte in middle chamber'] (match=exact)...
+06:31:46 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:46 [INFO] stage5_bind: Checking conflict for triple ['this reactor', 'uses', 'circulating liquid electrolyte in middle chamber'] (match=exact)...
+06:31:47 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:47 [INFO] stage5_bind: Checking conflict for triple ['liquid electrolyte circulation rate', 'is', '30 ccm'] (match=exact)...
+06:31:48 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:48 [INFO] stage5_bind: Checking conflict for triple ['circulating electrolyte', 'concentration', '1 molar KOH'] (match=exact)...
+06:31:50 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:50 [INFO] stage5_bind: Checking conflict for triple ['test', 'monitor', 'cell voltage'] (match=within_range)...
+06:31:52 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:52 [INFO] stage5_bind: Checking conflict for triple ['test', 'evaluate', 'electrochemical performance and solubility of reactor'] (match=within_range)...
+06:31:53 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:31:53 [INFO] stage5_bind: Saved 14 knowledge-graph nodes -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_2Test_006\05_knowledge_graph.json
+06:31:53 [INFO] stage5_bind: --- Summary: 14 nodes, 1 conflicts flagged ---
+06:31:53 [INFO] stage5_bind: [CONFLICT] ['anode feed gas', 'is', 'hydrogen'] (confidence=0.30)
+06:31:53 [INFO] stage5_bind: [ok] ['anode feed gas', 'flow rate', '20 ccm'] (confidence=0.75)
+06:31:53 [INFO] stage5_bind: [ok] ['cathode feed gas', 'is', 'carbon monoxide'] (confidence=0.90)
+06:31:53 [INFO] stage5_bind: [ok] ['cathode feed gas', 'flow rate', '10 ccm'] (confidence=0.75)
+06:31:53 [INFO] stage5_bind: [ok] ['working electrode', 'connected to', 'cathode'] (confidence=0.90)
+06:31:53 [INFO] stage5_bind: [ok] ['counter electrode', 'connected with', 'reference electrode'] (confidence=0.75)
+06:31:53 [INFO] stage5_bind: [ok] ['middle chamber', 'filled with', 'liquid electrolyte'] (confidence=0.90)
+06:31:53 [INFO] stage5_bind: [ok] ['liquid electrolyte', 'concentration', '1 molar KOH'] (confidence=0.90)
+06:31:53 [INFO] stage5_bind: [ok] ['previous reactor', 'requires', 'solid electrolyte in middle chamber'] (confidence=0.90)
+06:31:53 [INFO] stage5_bind: [ok] ['this reactor', 'uses', 'circulating liquid electrolyte in middle chamber'] (confidence=0.90)
+06:31:53 [INFO] stage5_bind: [ok] ['liquid electrolyte circulation rate', 'is', '30 ccm'] (confidence=0.90)
+06:31:53 [INFO] stage5_bind: [ok] ['circulating electrolyte', 'concentration', '1 molar KOH'] (confidence=0.90)
+06:31:53 [INFO] stage5_bind: [ok] ['test', 'monitor', 'cell voltage'] (confidence=0.75)
+06:31:53 [INFO] stage5_bind: [ok] ['test', 'evaluate', 'electrochemical performance and solubility of reactor'] (confidence=0.75)
+06:31:53 [INFO] run_pipeline: ============================================================
+06:31:53 [INFO] run_pipeline: STAGE 6: Knowledge graph visualization (optional)
+06:31:53 [INFO] run_pipeline: ============================================================
+06:31:53 [INFO] stage6_visualize_kg: Graph built: 23 nodes, 14 edges
+06:31:55 [INFO] stage6_visualize_kg: Saved static PNG -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_2Test_006\knowledge_graph.png
+06:31:55 [INFO] stage6_visualize_kg: Saved interactive HTML -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_2Test_006\knowledge_graph.html
+06:31:55 [INFO] run_pipeline: Pipeline complete.

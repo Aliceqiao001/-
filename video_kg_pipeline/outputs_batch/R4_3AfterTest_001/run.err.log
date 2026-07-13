@@ -1,0 +1,70 @@
+06:33:06 [INFO] run_pipeline: ============================================================
+06:33:06 [INFO] run_pipeline: STAGE 1: ASR transcription
+06:33:06 [INFO] run_pipeline: ============================================================
+06:33:06 [INFO] stage1_asr: Video duration=92.3s, transcribing 92.3s (FULL RUN)
+06:33:06 [INFO] stage1_asr: Extracting audio chunk [0.0, 92.3)s -> chunk_000000.mp3
+06:33:07 [INFO] stage1_asr: Transcribing chunk chunk_000000.mp3 (722.4 KB)...
+06:34:08 [INFO] openai._base_client: Retrying request to /audio/transcriptions in 0.419383 seconds
+06:34:13 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/audio/transcriptions "HTTP/1.1 200 OK"
+06:34:13 [INFO] stage1_asr: Saved 7 transcript segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_3AfterTest_001\01_transcript.json
+06:34:13 [INFO] stage1_asr: --- Sanity check: first 5 segments ---
+06:34:13 [INFO] stage1_asr: [  0.00 -  27.48] This is the illustrizer after test.
+06:34:13 [INFO] stage1_asr: [ 27.48 -  42.84] This is the end of the part.
+06:34:13 [INFO] stage1_asr: [ 42.84 -  43.84] End of the electrode.
+06:34:13 [INFO] stage1_asr: [ 43.84 -  55.80] Oh, the end of the membrane.
+06:34:13 [INFO] stage1_asr: [ 55.80 -  60.88] Case of the membrane.
+06:34:13 [INFO] run_pipeline: ------------------------------------------------------------
+06:34:13 [INFO] run_pipeline: STAGE 1b: Terminology/unit correction
+06:34:13 [INFO] run_pipeline: ------------------------------------------------------------
+06:34:13 [INFO] stage1b_correct_terminology: Applied 0 correction(s) across 7 segments -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_3AfterTest_001\01b_transcript_corrected.json
+06:34:13 [INFO] run_pipeline: ============================================================
+06:34:13 [INFO] run_pipeline: STAGE 2: Triple extraction
+06:34:13 [INFO] run_pipeline: ============================================================
+06:34:13 [INFO] stage2_extract: Reading transcript from 01b_transcript_corrected.json
+06:34:13 [INFO] stage2_extract: Extracting triples from segments 0-4...
+06:34:43 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:34:43 [INFO] stage2_extract: Extracting triples from segments 5-6...
+06:34:45 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:34:45 [INFO] stage2_extract: Saved 0 triples -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_3AfterTest_001\02_triples.json
+06:34:45 [INFO] stage2_extract: --- Sample triples ---
+06:34:45 [INFO] run_pipeline: ============================================================
+06:34:45 [INFO] run_pipeline: STAGE 3: Keyframe localization
+06:34:45 [INFO] run_pipeline: ============================================================
+06:34:45 [INFO] stage3_keyframes: Triple candidates + keyword candidates: 0
+06:34:46 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/embeddings "HTTP/1.1 200 OK"
+06:34:46 [INFO] stage3_keyframes: Semantic-shift candidates: 3
+06:34:46 [INFO] stage3_keyframes: Merged into 3 keyframe timestamps (merge window=3.0s)
+06:34:46 [INFO] stage3_keyframes: Saved -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_3AfterTest_001\03_keyframe_timestamps.json
+06:34:46 [INFO] stage3_keyframes: --- Sample keyframes ---
+06:34:46 [INFO] stage3_keyframes: [ 27.48] sources=['semantic_shift'] triple=None
+06:34:46 [INFO] stage3_keyframes: [ 42.84] sources=['semantic_shift'] triple=None
+06:34:46 [INFO] stage3_keyframes: [ 85.80] sources=['semantic_shift'] triple=None
+06:34:46 [INFO] run_pipeline: ============================================================
+06:34:46 [INFO] run_pipeline: STAGE 4: Visual analysis
+06:34:46 [INFO] run_pipeline: ============================================================
+06:34:46 [INFO] stage4_visual: Extracting frame at t=27.48s -> frame_0027.48.jpg
+06:34:47 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:34:50 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:34:50 [INFO] stage4_visual: Extracting frame at t=42.84s -> frame_0042.84.jpg
+06:34:51 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:34:54 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:34:54 [INFO] stage4_visual: Extracting frame at t=85.80s -> frame_0085.80.jpg
+06:34:56 [INFO] stage4_visual: Analyzing frame with Gemini...
+06:34:59 [INFO] httpx: HTTP Request: POST https://api.vectorengine.cn/v1/chat/completions "HTTP/1.1 200 OK"
+06:34:59 [INFO] stage4_visual: Saved 3 visual evidence entries -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_3AfterTest_001\04_visual_evidence.json
+06:34:59 [INFO] stage4_visual: --- Sample visual evidence ---
+06:34:59 [INFO] stage4_visual: [ 27.48] None | 1.  The image supports the claim by showing what appears to be a disassembled ex
+06:34:59 [INFO] stage4_visual: [ 42.84] None | 1.  The image supports the claim. A purple-gloved hand is holding up a black, fl
+06:34:59 [INFO] stage4_visual: [ 85.80] None | 1.  The image generally supports the claim as it displays multiple disassembled 
+06:34:59 [INFO] run_pipeline: ============================================================
+06:34:59 [INFO] run_pipeline: STAGE 5: Knowledge graph binding
+06:34:59 [INFO] run_pipeline: ============================================================
+06:34:59 [INFO] stage5_bind: Saved 0 knowledge-graph nodes -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_3AfterTest_001\05_knowledge_graph.json
+06:34:59 [INFO] stage5_bind: --- Summary: 0 nodes, 0 conflicts flagged ---
+06:34:59 [INFO] run_pipeline: ============================================================
+06:34:59 [INFO] run_pipeline: STAGE 6: Knowledge graph visualization (optional)
+06:34:59 [INFO] run_pipeline: ============================================================
+06:34:59 [INFO] stage6_visualize_kg: Graph built: 0 nodes, 0 edges
+06:35:00 [INFO] stage6_visualize_kg: Saved static PNG -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_3AfterTest_001\knowledge_graph.png
+06:35:00 [INFO] stage6_visualize_kg: Saved interactive HTML -> D:\Data\6.QJX\实验视频分析\-\video_kg_pipeline\outputs_batch\R4_3AfterTest_001\knowledge_graph.html
+06:35:00 [INFO] run_pipeline: Pipeline complete.

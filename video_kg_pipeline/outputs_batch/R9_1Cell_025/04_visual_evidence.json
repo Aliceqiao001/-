@@ -1,0 +1,51 @@
+[
+  {
+    "timestamp": 4.0,
+    "frame_path": "outputs_batch/R9_1Cell_025/frames/frame_0004.00.jpg",
+    "text_context": "I've got a new camera. || It's a Canon EOS M104.",
+    "vlm_description": "1.  The image does not support the claim. There is no camera visible in the frame, nor is there any visual evidence to indicate what camera was used to record this footage.\n\n2.  The \"Canon EOS M104\" camera, which is the subject of the narrator's claim, is not present in this image. The visible items are an electric screwdriver in the",
+    "triple": null
+  },
+  {
+    "timestamp": 8.0,
+    "frame_path": "outputs_batch/R9_1Cell_025/frames/frame_0008.00.jpg",
+    "text_context": "It's a Canon EOS M104. || I'm going to record a video of a long-distance flight.",
+    "vlm_description": "1.  **Does the image support this specific claim?**\n    The image does not support the narrator's claim. No camera, specifically a \"Canon EOS M104,\" is visible in the frame. There is also no visual evidence related to recording a video or a \"long-distance flight.\"\n\n2.  **Describe the object/material/component named in the claim:**\n    The \"Canon EOS M104\" camera is not present in the image. The dominant object in the image is a rectangular metallic component, likely a flow field plate, held by gloved hands. This plate has a central embossed region with multiple parallel channels, and four bolt holes securing it to a darker, possibly polymeric, base plate.",
+    "triple": null
+  },
+  {
+    "timestamp": 12.0,
+    "frame_path": "outputs_batch/R9_1Cell_025/frames/frame_0012.00.jpg",
+    "text_context": "I'm going to record a video of a long-distance flight. || I'm using a Canon EOS M104.",
+    "vlm_description": "1.  The image does not support either specific claim. There is no visual evidence of a camera, specifically a Canon EOS M104, being used or present in the frame. The scene also does not depict a \"long-distance flight\" or any setup related to recording one; instead, it shows a close-up of what appears to be a laboratory or experimental setup.\n2.  The object named in the claim, a \"Canon EOS M104\" camera",
+    "triple": null
+  },
+  {
+    "timestamp": 16.0,
+    "frame_path": "outputs_batch/R9_1Cell_025/frames/frame_0016.00.jpg",
+    "text_context": "I'm using a Canon EOS M104. || I'm going to record a video of a long-distance flight.",
+    "vlm_description": "1.  **Does the image support this specific claim?**\n    No, the image does not support this claim. The claim is about the camera being used and the intent to record a video of a long-distance flight, but no camera is visible in the frame, nor is there any indication of video recording or a flight.\n\n2.  **Describe the object/material/component named in the claim:**",
+    "triple": null
+  },
+  {
+    "timestamp": 20.0,
+    "frame_path": "outputs_batch/R9_1Cell_025/frames/frame_0020.00.jpg",
+    "text_context": "I'm going to record a video of a long-distance flight. || I'm using a Canon EOS M104.",
+    "vlm_description": "1.  The image does not support this claim. No camera, specifically a Canon EOS M104, is visible in the frame, nor is there any visual indication that a video is being recorded or prepared.\n2.  The named object, a Canon EOS M104 camera, is not present in the image. The image shows a gloved hand manipulating a black square object with a pair of tweezers.",
+    "triple": null
+  },
+  {
+    "timestamp": 32.0,
+    "frame_path": "outputs_batch/R9_1Cell_025/frames/frame_0032.00.jpg",
+    "text_context": "I'm using a Canon EOS M104. || Trigger insulation.",
+    "vlm_description": "1.  The image does not support the first part of the claim (\"Canon EOS M",
+    "triple": null
+  },
+  {
+    "timestamp": 41.0,
+    "frame_path": "outputs_batch/R9_1Cell_025/frames/frame_0041.00.jpg",
+    "text_context": "Trigger insulation. || I'm using a Canon EOS M104.",
+    "vlm_description": "1.  The image does not provide any visual evidence to support the claim \"Trigger",
+    "triple": null
+  }
+]

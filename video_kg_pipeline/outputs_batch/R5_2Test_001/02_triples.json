@@ -1,0 +1,194 @@
+[
+  {
+    "triple": [
+      "anode feed gas",
+      "is",
+      "hydrogen"
+    ],
+    "text_evidence": "The anode feed gas is hydrogen with a flow rate of 20 fcl.",
+    "timestamp": [
+      9.0,
+      18.0
+    ]
+  },
+  {
+    "triple": [
+      "anode feed gas flow rate",
+      "is",
+      "20 fcl"
+    ],
+    "text_evidence": "The anode feed gas is hydrogen with a flow rate of 20 fcl.",
+    "timestamp": [
+      9.0,
+      18.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode feed gas",
+      "is",
+      "carbon monoxide"
+    ],
+    "text_evidence": "The cathode feed gas is carbon monoxide with a flow rate of 10 fcl.",
+    "timestamp": [
+      18.0,
+      26.0
+    ]
+  },
+  {
+    "triple": [
+      "cathode feed gas flow rate",
+      "is",
+      "10 fcl"
+    ],
+    "text_evidence": "The cathode feed gas is carbon monoxide with a flow rate of 10 fcl.",
+    "timestamp": [
+      18.0,
+      26.0
+    ]
+  },
+  {
+    "triple": [
+      "working electrode",
+      "is connected to",
+      "cathode"
+    ],
+    "text_evidence": "The working electrode is connected to the cathode.",
+    "timestamp": [
+      26.0,
+      34.0
+    ]
+  },
+  {
+    "triple": [
+      "counter electrode",
+      "connected to",
+      "anode"
+    ],
+    "text_evidence": "The counter electrode is connected to the anode.",
+    "timestamp": [
+      34.0,
+      37.0
+    ]
+  },
+  {
+    "triple": [
+      "reference electrode",
+      "placed in",
+      "middle electrolyte chamber"
+    ],
+    "text_evidence": "The reference electrode is placed in the middle electrolyte chamber.",
+    "timestamp": [
+      37.0,
+      45.0
+    ]
+  },
+  {
+    "triple": [
+      "reference electrode",
+      "is",
+      "mercury oxide electrode"
+    ],
+    "text_evidence": "The reference electrode is a mercury oxide electrode.",
+    "timestamp": [
+      45.0,
+      52.0
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "filled with",
+      "circulating 1-molecule H liquid electrolyte"
+    ],
+    "text_evidence": "During the test, the middle chamber is filled with a circulating 1-molecule H liquid electrolyte.",
+    "timestamp": [
+      52.0,
+      69.0
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber thickness",
+      "is",
+      "3 millimeter"
+    ],
+    "text_evidence": "The middle chamber thickness is 3 millimeter.",
+    "timestamp": [
+      69.0,
+      77.0
+    ]
+  },
+  {
+    "triple": [
+      "circulating 1-molecule H",
+      "provides",
+      "continuous ionic PSV between cathode side am and anode side am"
+    ],
+    "text_evidence": "The circulating 1-molecule H provides a continuous ionic PSV between the cathode side am and anode side am.",
+    "timestamp": [
+      77.0,
+      88.0
+    ]
+  },
+  {
+    "triple": [
+      "electrolyte flow rate",
+      "is",
+      "30 fcl"
+    ],
+    "text_evidence": "The electrolyte flow rate is 30 fcl.",
+    "timestamp": [
+      88.0,
+      99.0
+    ]
+  },
+  {
+    "triple": [
+      "chamber thickness",
+      "purpose of reducing",
+      "shorten ion transparent distance, reduce ionic resistance, improve overall cell, reduce cell voltage"
+    ],
+    "text_evidence": "The purpose of reducing the chamber thickness is to shorten the ion transparent distance, reduce the ionic resistance and improve the overall cell and reduce the cell voltage.",
+    "timestamp": [
+      99.0,
+      117.0
+    ]
+  },
+  {
+    "triple": [
+      "reference electrode",
+      "allows",
+      "monitor electrode potentials microdifferentially and on-off operation"
+    ],
+    "text_evidence": "At the same time, the reference electrode allows to monitor the electrode potentials microdifferentially and on-off operation.",
+    "timestamp": [
+      117.0,
+      129.0
+    ]
+  },
+  {
+    "triple": [
+      "test",
+      "operation performed",
+      "constant current operation to monitor cell voltage stability during electrolysis"
+    ],
+    "text_evidence": "For this test, we will first perform a constant current operation to monitor the cell voltage stability during electrolysis.",
+    "timestamp": [
+      129.0,
+      139.0
+    ]
+  },
+  {
+    "triple": [
+      "electrochemical impedance spectropase (PEIS)",
+      "purpose",
+      "evaluate the resistance of the electrode after generation"
+    ],
+    "text_evidence": "After the test, we will perform the electrochemical impedance spectropase or PEIS to evaluate the resistance of the electrode after generation.",
+    "timestamp": [
+      139.0,
+      155.0
+    ]
+  }
+]

@@ -1,0 +1,190 @@
+[
+  {
+    "timestamp": 0.0,
+    "sources": [
+      "keyword"
+    ],
+    "triple": null,
+    "text_evidence": "This is the symbol of this reactor, step 1, this is the cathode flow plate, it has a flow",
+    "matched_keywords": [
+      "flow"
+    ]
+  },
+  {
+    "timestamp": 20.96,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "This is the symbol of this reactor, step 1, this is the cathode flow plate, it has a flow || field, step 2, this is the cathode electrode, the cathode is prepared by spray coating",
+    "matched_keywords": [],
+    "similarity": 0.544
+  },
+  {
+    "timestamp": 42.02,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode electrode",
+      "prepared by",
+      "spray coating copper oxide catalyst on H23C3 carbon paper"
+    ],
+    "text_evidence": "field, step 2, this is the cathode electrode, the cathode is prepared by spray coating copper oxide catalyst on H23C3 carbon paper the catalyst loading is 3mg per cm2, the active",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 50.16,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "field, step 2, this is the cathode electrode, the cathode is prepared by spray coating || copper oxide catalyst on H23C3 carbon paper, the catalyst loading is 3mg per cm2, the active",
+    "matched_keywords": [],
+    "similarity": 0.38
+  },
+  {
+    "timestamp": 56.62,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "copper oxide catalyst",
+      "loading",
+      "3mg per cm2"
+    ],
+    "text_evidence": "copper oxide catalyst on H23C3 carbon paper the catalyst loading is 3mg per cm2, the active",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 80.16,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "copper oxide catalyst on H23C3 carbon paper, the catalyst loading is 3mg per cm2, the active || step 3, this is the cathode gasket, the gasket thickness is 0.2mm, the gasket thickness is",
+    "matched_keywords": [],
+    "similarity": 0.345
+  },
+  {
+    "timestamp": 106.04,
+    "sources": [
+      "keyword",
+      "triple"
+    ],
+    "triple": [
+      "cathode gasket",
+      "thickness",
+      "0.2mm"
+    ],
+    "text_evidence": "0.2mm, the inner window size is 1x1cm, step 4, we place the alkaline ion exchange membrane, || step 3, this is the cathode gasket, the gasket thickness is 0.2mm, the gasket thickness is 0.2mm, the inner window size is 1x1cm, step 4, we place the alkaline ion exchange membrane,",
+    "matched_keywords": [
+      "place"
+    ]
+  },
+  {
+    "timestamp": 120.24,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "cathode gasket inner window",
+      "size",
+      "1x1cm"
+    ],
+    "text_evidence": "0.2mm, the inner window size is 1x1cm, step 4, we place the alkaline ion exchange membrane,",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 134.44,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "0.2mm, the inner window size is 1x1cm, step 4, we place the alkaline ion exchange membrane, || this membrane is cysteine X3760, step 5, this is the middle chamber, the chamber thickness",
+    "matched_keywords": [],
+    "similarity": 0.538
+  },
+  {
+    "timestamp": 142.12,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "membrane",
+      "is",
+      "cysteine X3760"
+    ],
+    "text_evidence": "this membrane is cysteine X3760, step 5, this is the middle chamber, the chamber thickness",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 146.6,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "middle chamber",
+      "thickness",
+      "10mm"
+    ],
+    "text_evidence": "this membrane is cysteine X3760, step 5, this is the middle chamber, the chamber thickness is 10mm and the window size is 1x1cm, this chamber is used to hold this solid electrolyte,",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 149.8,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "this membrane is cysteine X3760, step 5, this is the middle chamber, the chamber thickness || is 10mm and the window size is 1x1cm, this chamber is used to hold this solid electrolyte,",
+    "matched_keywords": [],
+    "similarity": 0.535
+  },
+  {
+    "timestamp": 154.28,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "middle chamber",
+      "window size",
+      "1x1cm"
+    ],
+    "text_evidence": "is 10mm and the window size is 1x1cm, this chamber is used to hold this solid electrolyte,",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 158.76,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "is 10mm and the window size is 1x1cm, this chamber is used to hold this solid electrolyte, || this solid electrolyte is strong acid cation exchange resin base with a particle size of",
+    "matched_keywords": [],
+    "similarity": 0.524
+  },
+  {
+    "timestamp": 161.98,
+    "sources": [
+      "triple"
+    ],
+    "triple": [
+      "solid electrolyte",
+      "is",
+      "strong acid cation exchange resin base"
+    ],
+    "text_evidence": "this solid electrolyte is strong acid cation exchange resin base with a particle size of || this solid electrolyte is strong acid cation exchange resin base with a particle size of 1600-80.",
+    "matched_keywords": []
+  },
+  {
+    "timestamp": 165.2,
+    "sources": [
+      "semantic_shift"
+    ],
+    "triple": null,
+    "text_evidence": "this solid electrolyte is strong acid cation exchange resin base with a particle size of || 1600-80.",
+    "matched_keywords": [],
+    "similarity": 0.049
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "triple": [
+      "gas",
+      "end flow rate",
+      "20 ccm hydrogen"
+    ],
+    "text_evidence": "For this reactor, the end of the gas is 20 ccm hydrogen, end of the gas is 10 ccm steel.",
+    "image_evidence": {
+      "frame_path": "outputs_batch/R6_2Test_004/frames/frame_0008.50.jpg",
+      "vlm_description": "1.  Yes, the image strongly supports the claim that the end gas flow rate is"
+    },
+    "timestamp": [
+      0.0,
+      17.0
+    ],
+    "confidence": 0.3,
+    "conflict": true,
+    "conflict_explanation": "The text evidence mentions '10 ccm steel,' which contradicts the claim of '20 ccm hydrogen.'"
+  },
+  {
+    "triple": [
+      "gas",
+      "end flow rate",
+      "10 ccm steel"
+    ],
+    "text_evidence": "For this reactor, the end of the gas is 20 ccm hydrogen, end of the gas is 10 ccm steel.",
+    "image_evidence": {
+      "frame_path": "outputs_batch/R6_2Test_004/frames/frame_0008.50.jpg",
+      "vlm_description": "1.  Yes, the image strongly supports the claim that the end gas flow rate is"
+    },
+    "timestamp": [
+      0.0,
+      17.0
+    ],
+    "confidence": 0.3,
+    "conflict": true,
+    "conflict_explanation": "The text claim states the end gas flow rate is 10 ccm steel, but the visual description does not confirm this and appears incomplete."
+  }
+]

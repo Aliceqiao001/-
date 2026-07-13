@@ -1,0 +1,146 @@
+[
+  {
+    "triple": [
+      "middle chamber",
+      "thickness",
+      "10 millimeters"
+    ],
+    "text_evidence": "Step 5. This is the middle chamber. The chamber thickness is 10 millimeters and the window",
+    "timestamp": [
+      0.0,
+      11.08
+    ]
+  },
+  {
+    "triple": [
+      "window",
+      "size",
+      "1 by 1 centimeter"
+    ],
+    "text_evidence": "size is 1 by 1 centimeter. This chamber is used to hold the solid electrolytes. The solid",
+    "timestamp": [
+      11.08,
+      16.88
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "purpose",
+      "hold the solid electrolytes"
+    ],
+    "text_evidence": "size is 1 by 1 centimeter. This chamber is used to hold the solid electrolytes. The solid",
+    "timestamp": [
+      11.08,
+      16.88
+    ]
+  },
+  {
+    "triple": [
+      "solid electrolytes",
+      "material specification",
+      "strong acid cation exchange resin beads"
+    ],
+    "text_evidence": "electrolytes are strong acid cation exchange resin beads with a particle size of 600 to",
+    "timestamp": [
+      16.88,
+      24.52
+    ]
+  },
+  {
+    "triple": [
+      "resin beads",
+      "particle size",
+      "600 to 800 micrometers"
+    ],
+    "text_evidence": "electrolytes are strong acid cation exchange resin beads with a particle size of 600 to 800 micrometers. The resin beads are filled to fully occupy the middle chamber. In this",
+    "timestamp": [
+      16.88,
+      38.36
+    ]
+  },
+  {
+    "triple": [
+      "resin beads",
+      "state",
+      "filled to fully occupy the middle chamber"
+    ],
+    "text_evidence": "800 micrometers. The resin beads are filled to fully occupy the middle chamber. In this",
+    "timestamp": [
+      24.52,
+      38.36
+    ]
+  },
+  {
+    "triple": [
+      "reactor",
+      "operation",
+      "use air-water to increase ionic conductivity of solid electrolytes"
+    ],
+    "text_evidence": "reactor, we will use the air-water to increase the ionic conductivity of the solid electrolytes",
+    "timestamp": [
+      38.36,
+      46.0
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "contains",
+      "air-water inlet"
+    ],
+    "text_evidence": "inside the middle chamber. This is the air-water inlet and this is the air-water outlet. Step",
+    "timestamp": [
+      46.0,
+      57.0
+    ]
+  },
+  {
+    "triple": [
+      "middle chamber",
+      "contains",
+      "air-water outlet"
+    ],
+    "text_evidence": "inside the middle chamber. This is the air-water inlet and this is the air-water outlet. Step",
+    "timestamp": [
+      46.0,
+      57.0
+    ]
+  },
+  {
+    "triple": [
+      "anode side membrane",
+      "is",
+      "cation exchange membrane (CEM)"
+    ],
+    "text_evidence": "6. This is the anode side membrane. This is the cation exchange membrane or CEM. The membrane",
+    "timestamp": [
+      106.0,
+      115.12
+    ]
+  },
+  {
+    "triple": [
+      "anode",
+      "is provided by",
+      "orthobasic"
+    ],
+    "text_evidence": "Step 8. This is the anode. This is the anode electrode. The anode is provided by orthobasic",
+    "timestamp": [
+      165.96,
+      173.4
+    ]
+  },
+  {
+    "triple": [
+      "Pt-Ru-C catalyst",
+      "recoated onto",
+      "H23C3 carbon paper"
+    ],
+    "text_evidence": "recoating Pt-Ru-C catalyst onto this H23C3 carbon paper The catalyst loading",
+    "timestamp": [
+      173.4,
+      180.28
+    ]
+  }
+]
